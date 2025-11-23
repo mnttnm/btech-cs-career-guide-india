@@ -1,0 +1,303 @@
+File: BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_08_Data_Scientist.md
+Role: data-scientist
+Errors:
+  - Missing description
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_09_Machine_Learning_Engineer.md
+Role: machine-learning-engineer
+Errors:
+  - Missing description
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_10_AI_Engineer.md
+Role: ai-engineer
+Errors:
+  - Missing description
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_11_Data_Engineer.md
+Role: data-engineer
+Errors:
+  - Missing description
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_12_Data_Analyst.md
+Role: data-analyst
+Errors:
+  - Missing description
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_13_MLOps_Engineer.md
+Role: mlops-engineer
+Errors:
+  - Missing description
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_14_NLP_Computer_Vision_Specialist.md
+Role: nlp-computer-vision-specialist
+Errors:
+  - Missing description
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_15_DevOps_Engineer.md
+Role: role-15-devops-engineer
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_16_Site_Reliability_Engineer.md
+Role: role-16-site-reliability-engineer-sre
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_17_Cloud_Engineer_Architect.md
+Role: role-17-cloud-engineer-architect
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_18_Platform_Engineer.md
+Role: role-18-platform-engineer
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_19_Infrastructure_IT_Engineer.md
+Role: role-19-infrastructure-it-engineer
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_04_Security/Role_20_Cybersecurity_Analyst.md
+Role: rising-demand-due-to-cyber-threats
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_04_Security/Role_21_Security_Engineer.md
+Role: shift-left-security-devsecops
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_04_Security/Role_22_Penetration_Tester_Ethical_Hacker.md
+Role: big-4-consulting-high-volume-pentesting
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_05_Quality_Assurance_Testing/Role_23_QA_Engineer_SDET.md
+Role: qa-automation-engineer-sdet
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_05_Quality_Assurance_Testing/Role_24_Automation_Test_Engineer.md
+Role: junior-automation-test-engineer-0-2-years-4-7-lpa
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_06_Product_Design_Research/Role_25_Product_Manager_Technical.md
+Role: sql-mastery-critical-for-pm-interviews
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_06_Product_Design_Research/Role_26_UX_UI_Designer.md
+Role: master-figma-primary-tool
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_06_Product_Design_Research/Role_27_UX_Researcher.md
+Role: learn-research-methods-qualitative
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_06_Product_Design_Research/Role_28_Technical_Program_Manager.md
+Role: program-management-fundamentals-3-months
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_07_Consulting_Architecture/Role_29_Solution_Architect.md
+Role: role-29-solution-architect
+Errors:
+  - Missing description
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_07_Consulting_Architecture/Role_30_Enterprise_Architect.md
+Role: technology-strategy-roadmap
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_07_Consulting_Architecture/Role_31_IT_Consultant.md
+Role: strategy-consulting-technology-focus
+Errors:
+  - Missing description
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_32_Blockchain_Developer.md
+Role: role-32-blockchain-developer
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_33_IoT_Developer.md
+Role: role-33-iot-developer
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_34_AR_VR_Developer.md
+Role: role-34-ar-vr-developer
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_35_Quantum_Computing_Engineer.md
+Role: role-35-quantum-computing-engineer
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_09_Hybrid_Business_Tech/Role_36_Business_Analyst_Technical.md
+Role: business-analyst-technical
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_09_Hybrid_Business_Tech/Role_37_Sales_Engineer_Solutions_Engineer.md
+Role: sales-engineer-solutions-engineer
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_09_Hybrid_Business_Tech/Role_38_Growth_Hacker_Marketing_Technologist.md
+Role: growth-hacker-marketing-technologist
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_10_Content_Community/Role_39_Technical_Writer.md
+Role: technical-writer-complete-career-guide-india-2024-25
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years
+
+---
+
+File: BTech_Roles_Research/Part_10_Content_Community/Role_40_Developer_Advocate_DevRel.md
+Role: developer-advocate-devrel-complete-career-guide-india-2024-25
+Errors:
+  - Missing or empty jobTitles.fresher
+  - Missing or empty jobTitles.experienced
+  - College strategy must have 4 years

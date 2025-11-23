@@ -1,0 +1,546 @@
+{
+  "timestamp": "2025-11-23T07:17:02.552Z",
+  "totalFiles": 45,
+  "successful": 45,
+  "failed": 0,
+  "warnings": 33,
+  "conversionTime": "0.07s",
+  "details": {
+    "successful": [
+      {
+        "file": "BTech_Roles_Research/Part_01_Core_Software_Engineering/Role_01_Software_Engineer_General.md",
+        "roleId": "software-engineer-general",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/software-engineer-general.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_01_Core_Software_Engineering/Role_02_Backend_Engineer_Developer.md",
+        "roleId": "backend-engineer-developer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/backend-engineer-developer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_01_Core_Software_Engineering/Role_03_Frontend_Engineer_Developer.md",
+        "roleId": "frontend-engineer-developer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/frontend-engineer-developer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_01_Core_Software_Engineering/Role_04_Full_Stack_Engineer_Developer.md",
+        "roleId": "full-stack-engineer-developer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/full-stack-engineer-developer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_01_Core_Software_Engineering/Role_05_Mobile_Developer.md",
+        "roleId": "mobile-developer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/mobile-developer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_01_Core_Software_Engineering/Role_06_Embedded_Systems_Engineer.md",
+        "roleId": "embedded-systems-engineer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/embedded-systems-engineer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_01_Core_Software_Engineering/Role_07_Game_Developer.md",
+        "roleId": "game-developer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/game-developer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_08_Data_Scientist.md",
+        "roleId": "data-scientist",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/data-scientist.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_09_Machine_Learning_Engineer.md",
+        "roleId": "machine-learning-engineer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/machine-learning-engineer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_10_AI_Engineer.md",
+        "roleId": "ai-engineer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/ai-engineer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_11_Data_Engineer.md",
+        "roleId": "data-engineer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/data-engineer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_12_Data_Analyst.md",
+        "roleId": "data-analyst",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/data-analyst.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_13_MLOps_Engineer.md",
+        "roleId": "mlops-engineer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/mlops-engineer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_14_NLP_Computer_Vision_Specialist.md",
+        "roleId": "nlp-computer-vision-specialist",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/nlp-computer-vision-specialist.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_15_DevOps_Engineer.md",
+        "roleId": "role-15-devops-engineer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/role-15-devops-engineer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_16_Site_Reliability_Engineer.md",
+        "roleId": "role-16-site-reliability-engineer-sre",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/role-16-site-reliability-engineer-sre.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_17_Cloud_Engineer_Architect.md",
+        "roleId": "role-17-cloud-engineer-architect",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/role-17-cloud-engineer-architect.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_18_Platform_Engineer.md",
+        "roleId": "role-18-platform-engineer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/role-18-platform-engineer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_19_Infrastructure_IT_Engineer.md",
+        "roleId": "role-19-infrastructure-it-engineer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/role-19-infrastructure-it-engineer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_04_Security/Role_20_Cybersecurity_Analyst.md",
+        "roleId": "rising-demand-due-to-cyber-threats",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/rising-demand-due-to-cyber-threats.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_04_Security/Role_21_Security_Engineer.md",
+        "roleId": "shift-left-security-devsecops",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/shift-left-security-devsecops.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_04_Security/Role_22_Penetration_Tester_Ethical_Hacker.md",
+        "roleId": "big-4-consulting-high-volume-pentesting",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/big-4-consulting-high-volume-pentesting.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_05_Quality_Assurance_Testing/Role_23_QA_Engineer_SDET.md",
+        "roleId": "qa-automation-engineer-sdet",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/qa-automation-engineer-sdet.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_05_Quality_Assurance_Testing/Role_24_Automation_Test_Engineer.md",
+        "roleId": "junior-automation-test-engineer-0-2-years-4-7-lpa",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/junior-automation-test-engineer-0-2-years-4-7-lpa.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_06_Product_Design_Research/Role_25_Product_Manager_Technical.md",
+        "roleId": "sql-mastery-critical-for-pm-interviews",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/sql-mastery-critical-for-pm-interviews.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_06_Product_Design_Research/Role_26_UX_UI_Designer.md",
+        "roleId": "master-figma-primary-tool",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/master-figma-primary-tool.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_06_Product_Design_Research/Role_27_UX_Researcher.md",
+        "roleId": "learn-research-methods-qualitative",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/learn-research-methods-qualitative.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_06_Product_Design_Research/Role_28_Technical_Program_Manager.md",
+        "roleId": "program-management-fundamentals-3-months",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/program-management-fundamentals-3-months.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_07_Consulting_Architecture/Role_29_Solution_Architect.md",
+        "roleId": "role-29-solution-architect",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/role-29-solution-architect.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_07_Consulting_Architecture/Role_30_Enterprise_Architect.md",
+        "roleId": "technology-strategy-roadmap",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/technology-strategy-roadmap.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_07_Consulting_Architecture/Role_31_IT_Consultant.md",
+        "roleId": "strategy-consulting-technology-focus",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/strategy-consulting-technology-focus.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_32_Blockchain_Developer.md",
+        "roleId": "role-32-blockchain-developer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/role-32-blockchain-developer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_33_IoT_Developer.md",
+        "roleId": "role-33-iot-developer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/role-33-iot-developer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_34_AR_VR_Developer.md",
+        "roleId": "role-34-ar-vr-developer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/role-34-ar-vr-developer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_35_Quantum_Computing_Engineer.md",
+        "roleId": "role-35-quantum-computing-engineer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/role-35-quantum-computing-engineer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_09_Hybrid_Business_Tech/Role_36_Business_Analyst_Technical.md",
+        "roleId": "business-analyst-technical",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/business-analyst-technical.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_09_Hybrid_Business_Tech/Role_37_Sales_Engineer_Solutions_Engineer.md",
+        "roleId": "sales-engineer-solutions-engineer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/sales-engineer-solutions-engineer.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_09_Hybrid_Business_Tech/Role_38_Growth_Hacker_Marketing_Technologist.md",
+        "roleId": "growth-hacker-marketing-technologist",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/growth-hacker-marketing-technologist.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_10_Content_Community/Role_39_Technical_Writer.md",
+        "roleId": "technical-writer-complete-career-guide-india-2024-25",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/technical-writer-complete-career-guide-india-2024-25.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_10_Content_Community/Role_40_Developer_Advocate_DevRel.md",
+        "roleId": "developer-advocate-devrel-complete-career-guide-india-2024-25",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/developer-advocate-devrel-complete-career-guide-india-2024-25.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_11_Alternative_Paths/Role_41_Research_Scientist_Industry.md",
+        "roleId": "research-scientist-industry",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/research-scientist-industry.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_11_Alternative_Paths/Role_42_Academic_Researcher_Faculty.md",
+        "roleId": "academic-researcher-faculty",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/academic-researcher-faculty.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_11_Alternative_Paths/Role_43_Startup_Founder_Technical_Cofounder.md",
+        "roleId": "startup-founder-technical-co-founder",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/startup-founder-technical-co-founder.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_11_Alternative_Paths/Role_44_Freelancer_Independent_Consultant.md",
+        "roleId": "freelancer-independent-consultant",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/freelancer-independent-consultant.json"
+      },
+      {
+        "file": "BTech_Roles_Research/Part_11_Alternative_Paths/Role_45_Open_Source_Developer_Maintainer.md",
+        "roleId": "open-source-developer-maintainer",
+        "outputPath": "/home/user/btech-cs-career-guide-india/output/roles/open-source-developer-maintainer.json"
+      }
+    ],
+    "failed": [],
+    "warnings": [
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_08_Data_Scientist.md",
+        "roleId": "data-scientist",
+        "errors": [
+          "Missing description",
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_09_Machine_Learning_Engineer.md",
+        "roleId": "machine-learning-engineer",
+        "errors": [
+          "Missing description",
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_10_AI_Engineer.md",
+        "roleId": "ai-engineer",
+        "errors": [
+          "Missing description",
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_11_Data_Engineer.md",
+        "roleId": "data-engineer",
+        "errors": [
+          "Missing description",
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_12_Data_Analyst.md",
+        "roleId": "data-analyst",
+        "errors": [
+          "Missing description",
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_13_MLOps_Engineer.md",
+        "roleId": "mlops-engineer",
+        "errors": [
+          "Missing description",
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_02_Data_AI_Machine_Learning/Role_14_NLP_Computer_Vision_Specialist.md",
+        "roleId": "nlp-computer-vision-specialist",
+        "errors": [
+          "Missing description",
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_15_DevOps_Engineer.md",
+        "roleId": "role-15-devops-engineer",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_16_Site_Reliability_Engineer.md",
+        "roleId": "role-16-site-reliability-engineer-sre",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_17_Cloud_Engineer_Architect.md",
+        "roleId": "role-17-cloud-engineer-architect",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_18_Platform_Engineer.md",
+        "roleId": "role-18-platform-engineer",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_03_Cloud_DevOps_Infrastructure/Role_19_Infrastructure_IT_Engineer.md",
+        "roleId": "role-19-infrastructure-it-engineer",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_04_Security/Role_20_Cybersecurity_Analyst.md",
+        "roleId": "rising-demand-due-to-cyber-threats",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_04_Security/Role_21_Security_Engineer.md",
+        "roleId": "shift-left-security-devsecops",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_04_Security/Role_22_Penetration_Tester_Ethical_Hacker.md",
+        "roleId": "big-4-consulting-high-volume-pentesting",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_05_Quality_Assurance_Testing/Role_23_QA_Engineer_SDET.md",
+        "roleId": "qa-automation-engineer-sdet",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_05_Quality_Assurance_Testing/Role_24_Automation_Test_Engineer.md",
+        "roleId": "junior-automation-test-engineer-0-2-years-4-7-lpa",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_06_Product_Design_Research/Role_25_Product_Manager_Technical.md",
+        "roleId": "sql-mastery-critical-for-pm-interviews",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_06_Product_Design_Research/Role_26_UX_UI_Designer.md",
+        "roleId": "master-figma-primary-tool",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_06_Product_Design_Research/Role_27_UX_Researcher.md",
+        "roleId": "learn-research-methods-qualitative",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_06_Product_Design_Research/Role_28_Technical_Program_Manager.md",
+        "roleId": "program-management-fundamentals-3-months",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_07_Consulting_Architecture/Role_29_Solution_Architect.md",
+        "roleId": "role-29-solution-architect",
+        "errors": [
+          "Missing description",
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_07_Consulting_Architecture/Role_30_Enterprise_Architect.md",
+        "roleId": "technology-strategy-roadmap",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_07_Consulting_Architecture/Role_31_IT_Consultant.md",
+        "roleId": "strategy-consulting-technology-focus",
+        "errors": [
+          "Missing description",
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_32_Blockchain_Developer.md",
+        "roleId": "role-32-blockchain-developer",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_33_IoT_Developer.md",
+        "roleId": "role-33-iot-developer",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_34_AR_VR_Developer.md",
+        "roleId": "role-34-ar-vr-developer",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_08_Emerging_Specialized_Technologies/Role_35_Quantum_Computing_Engineer.md",
+        "roleId": "role-35-quantum-computing-engineer",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_09_Hybrid_Business_Tech/Role_36_Business_Analyst_Technical.md",
+        "roleId": "business-analyst-technical",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_09_Hybrid_Business_Tech/Role_37_Sales_Engineer_Solutions_Engineer.md",
+        "roleId": "sales-engineer-solutions-engineer",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_09_Hybrid_Business_Tech/Role_38_Growth_Hacker_Marketing_Technologist.md",
+        "roleId": "growth-hacker-marketing-technologist",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_10_Content_Community/Role_39_Technical_Writer.md",
+        "roleId": "technical-writer-complete-career-guide-india-2024-25",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      },
+      {
+        "file": "BTech_Roles_Research/Part_10_Content_Community/Role_40_Developer_Advocate_DevRel.md",
+        "roleId": "developer-advocate-devrel-complete-career-guide-india-2024-25",
+        "errors": [
+          "Missing or empty jobTitles.fresher",
+          "Missing or empty jobTitles.experienced",
+          "College strategy must have 4 years"
+        ]
+      }
+    ]
+  }
+}

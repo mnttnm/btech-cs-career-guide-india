@@ -1,0 +1,242 @@
+{
+  "roleId": "open-source-developer-maintainer",
+  "roleName": "Open Source Developer/Maintainer",
+  "description": "Very Hard - Extremely difficult to sustain full-time",
+  "jobTitles": {
+    "fresher": [
+      "*Part-Time/Volunteer (Most Common, 95% of open source contributors)",
+      "Open Source Contributor",
+      "Community Contributor"
+    ],
+    "experienced": [
+      "OSS Maintainer (nights/weekends)",
+      "Part-time OSS Developer",
+      "Volunteer Developer",
+      "Side Project Maintainer",
+      "*Full-Time (Very Rare, <5% of contributors)"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "JavaScript",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Java",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C++",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Deep understanding of software architecture and design patterns",
+      "--"
+    ],
+    "frameworks": [],
+    "tools": []
+  },
+  "dailyWork": [
+    "*As Part-Time Contributor (Evenings/Weekends)",
+    "5-15 hours per week on open source (after full-time job)",
+    "Reviewing pull requests from community contributors",
+    "Responding to issues and bug reports",
+    "Writing code for new features or bug fixes",
+    "Updating documentation based on user feedback",
+    "Occasional releases and version updates",
+    "Participating in community discussions (Discord, Slack, GitHub Discussions)"
+  ],
+  "careerProgression": {
+    "timeline": [],
+    "tracks": {
+      "leadership": [],
+      "individualContributor": []
+    },
+    "timelineToSenior": "",
+    "alternativePaths": [
+      "*Alternative Paths",
+      "Developer Advocate at tech companies (₹15-35 LPA)",
+      "Technical Writer focused on OSS (₹8-18 LPA)",
+      "Start OSS-based company (Hashicorp model: open core + commercial product)",
+      "Teaching/Training around OSS technologies"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 0,
+        "max": 0
+      },
+      "senior": {
+        "min": 0,
+        "max": 0
+      },
+      "topCompanies": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "topCompanies": []
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "6-12 months",
+    "description": "**Very Steep** - Requires not just exceptional technical skills but also community building, marketing, and persistence. Timeline:"
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "*Why Very High (Full-Time)",
+      "Extreme income uncertainty (sponsorship income fluctuates monthly)",
+      "No job security or benefits (health insurance, PF, etc.)",
+      "Constant pressure to maintain project relevance",
+      "Dealing with demanding users (free software = entitled users)",
+      "Burnout from unpaid work and community management"
+    ],
+    "mitigatingFactors": [
+      "*Mitigating Factors",
+      "Incredible satisfaction from helping thousands of developers",
+      "Creative freedom (build exactly what you want)",
+      "Global recognition and reputation",
+      "Flexibility in work hours and location"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "*You'll Thrive If",
+      "You're intrinsically motivated (love coding for its own sake, not just money)",
+      "You have thick skin (can handle criticism, entitled users, negative comments)",
+      "You're patient and enjoy helping others learn",
+      "You love building tools that thousands of developers use",
+      "You're comfortable with public visibility (your code is scrutinized publicly)",
+      "You can manage uncertainty and irregular income (if going full-time)",
+      "You're self-motivated and disciplined (no manager telling you what to do)"
+    ],
+    "avoidIf": [
+      "*Avoid If",
+      "You need stable, predictable income (OSS income is extremely variable)",
+      "You get demotivated by criticism or negative feedback",
+      "You dislike community management and dealing with people",
+      "You want immediate financial rewards for your work",
+      "You prefer working on greenfield projects (OSS = lots of maintenance)"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation + First Contributions",
+      "goals": [
+        "*Year 1 (Foundation + First Contributions)",
+        "Master Git and GitHub workflows (fork, clone, branch, PR, issues)",
+        "Choose 2-3 popular OSS projects in your areas of interest",
+        "Look for \"good first issue\" or \"beginner-friendly\" labels",
+        "Make first contributions: fix typos, improve documentation, small bug fixes",
+        "Read CONTRIBUTING.md files to understand project norms"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Regular Contributions + Building Reputation",
+      "goals": [
+        "*Year 2 (Regular Contributions + Building Reputation)",
+        "Contribute regularly (aim for 2-4 PRs per month across projects)",
+        "Move beyond docs: fix real bugs, implement small features",
+        "Review other contributors' PRs (learn from code review feedback)",
+        "Build relationships with maintainers (engage in discussions)",
+        "Start following influential OSS developers on Twitter/GitHub"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Major Contributions + Starting Own Project",
+      "goals": [
+        "*Year 3 (Major Contributions + Starting Own Project)",
+        "Become a regular contributor to 1-2 major projects",
+        "Implement significant features (not just bug fixes)",
+        "Summer internship: Target companies hiring OSS contributors (₹40k-80k/month)",
+        "Google Summer of Code (GSoC): ₹1.5-3 lakhs stipend for 3 months",
+        "Outreachy: Similar to GSoC, paid OSS internships"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Establishing Reputation + Job Applications",
+      "goals": [
+        "*Year 4 (Establishing Reputation + Job Applications)",
+        "Have 100-200+ contributions across multiple projects",
+        "Maintain 1-2 projects of your own with active users",
+        "Get co-maintainer status on at least one established project",
+        "Present at national conferences (PyCon, JSConf, GopherCon India)",
+        "Build strong GitHub profile (pinned projects, good README, documentation)"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [],
+    "applicationStrategy": [],
+    "interviewPrep": [],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": ""
+    },
+    "differentiators": []
+  }
+}

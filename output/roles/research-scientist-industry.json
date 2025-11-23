@@ -1,0 +1,267 @@
+{
+  "roleId": "research-scientist-industry",
+  "roleName": "Research Scientist (Industry)",
+  "description": "Very Hard - Requires advanced education (PhD preferred), publications, deep specialization, and strong mathematical foundations",
+  "jobTitles": {
+    "fresher": [
+      "*Entry Level (Fresh PhD / 0-2 years post-PhD)",
+      "Research Scientist",
+      "Research Engineer",
+      "Research Associate",
+      "Junior Research Scientist"
+    ],
+    "experienced": [
+      "Applied Scientist",
+      "Postdoctoral Researcher (Industry)",
+      "AI Research Scientist",
+      "Machine Learning Researcher",
+      "Computer Vision Researcher"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C++",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Strong publication record in top-tier conferences (NeurIPS, ICML, CVPR, ACL, SIGIR, etc.)",
+      "Master's degree minimum (PhD highly preferred, often mandatory)",
+      "Research experience during PhD (3-6 years of focused research)",
+      "Evidence of original contributions to the field",
+      "Deep learning frameworks: PyTorch, TensorFlow, JAX",
+      "Research tools: Jupyter, NumPy, SciPy, scikit-learn",
+      "Distributed computing: Ray, Horovod, multi-GPU training",
+      "Version control: Git, experiment tracking (Weights & Biases, MLflow)"
+    ],
+    "frameworks": [
+      {
+        "name": "TensorFlow",
+        "popularity": "High"
+      },
+      {
+        "name": "PyTorch",
+        "popularity": "High"
+      }
+    ],
+    "tools": []
+  },
+  "dailyWork": [
+    "Reading latest research papers in your domain (1-2 hours daily)",
+    "Formulating research hypotheses and designing experiments",
+    "Writing code to implement novel algorithms or systems",
+    "Running large-scale experiments on GPU clusters or cloud infrastructure",
+    "Analyzing experimental results and debugging failed experiments",
+    "Writing research papers for top-tier conferences and journals",
+    "Collaborating with other researchers and PhD interns",
+    "Attending research seminars and presenting work-in-progress"
+  ],
+  "careerProgression": {
+    "timeline": [],
+    "tracks": {
+      "leadership": [
+        "Research Scientist",
+        "Research Lead",
+        "Research Manager",
+        "Director of Research",
+        "VP Research",
+        "Chief Scientist"
+      ],
+      "individualContributor": [
+        "Research Scientist",
+        "Senior Research Scientist",
+        "Staff/Principal Research Scientist",
+        "Distinguished Scientist",
+        "Research Fellow"
+      ]
+    },
+    "timelineToSenior": "5-8 years post-PhD with consistent publication record and research impact",
+    "alternativePaths": [
+      "*Alternative Paths",
+      "Move to product roles (Applied ML Engineer, ML Engineering Manager)",
+      "Transition to academia (faculty positions at universities)",
+      "Start a research-focused startup (spin off research into company)",
+      "Become a consultant or advisor to startups/VCs"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 0,
+        "max": 0
+      },
+      "senior": {
+        "min": 0,
+        "max": 0
+      },
+      "topCompanies": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "topCompanies": []
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "6-12 months",
+    "description": "**Very Steep** - Becoming a research scientist requires 8-12 years of education (4 years B.Tech + 4-6 years PhD, sometimes 2 years MS). The PhD itself is a journey of learning research methodology, critical thinking, and deep specialization. Even after PhD, it takes 2-3 years to become an independent researcher. The challenge is not just technical skills but also scientific thinking, paper writing, and handling the uncertainty of research (most experiments fail). Only pursue if you have genuine passion for pushing boundaries of knowledge."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "*Why Medium-High",
+      "Publication pressure (need to publish in top conferences to advance)",
+      "Experiment failures and debugging complex research code",
+      "Conference deadlines (hard deadlines, all-nighters before submissions)",
+      "Peer review process (facing criticism, dealing with rejections)",
+      "Competition with global researchers (research is worldwide)"
+    ],
+    "mitigatingFactors": [
+      "*Mitigating Factors",
+      "More autonomy than engineering roles (choose your research direction)",
+      "Intellectual freedom and creativity",
+      "Flexible work hours (research is often self-paced)",
+      "Supportive research community and collaboration"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "*You'll Thrive If",
+      "You have insatiable curiosity and love asking \"why\" and \"what if\"",
+      "You enjoy reading papers and staying at the frontier of knowledge",
+      "You're comfortable with ambiguity and failed experiments",
+      "You have strong mathematical aptitude and enjoy proofs/theory",
+      "You're passionate about a specific research area (AI, systems, HCI, etc.)",
+      "You're self-motivated and can work independently for long periods",
+      "You enjoy writing and communicating complex ideas clearly"
+    ],
+    "avoidIf": [
+      "*Avoid If",
+      "You prefer immediate, tangible results over long-term exploration",
+      "You dislike reading academic papers or writing technical documents",
+      "You're uncomfortable with uncertainty and failed experiments",
+      "You want a faster path to high income (engineering pays more initially)",
+      "You prefer building products over discovering new knowledge"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation + Exploration",
+      "goals": [
+        "*Year 1 (Foundation + Exploration)",
+        "Excel in mathematics (linear algebra, calculus, probability) - aim for top grades",
+        "Build strong programming foundations (Python, C++)",
+        "Take advanced courses in your area of interest (AI, theory, systems)",
+        "Start reading introductory research papers in areas that excite you",
+        "Identify 2-3 potential research areas you're curious about"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Research Exposure",
+      "goals": [
+        "*Year 2 (Research Exposure)",
+        "Take research-oriented electives (not just applied courses)",
+        "Start working with a professor on a small research project (reading group or mini-project)",
+        "Learn research tools: LaTeX, paper reading techniques, experiment design",
+        "Start following top conferences in your domain (NeurIPS, ICML, CVPR, etc.)",
+        "Attempt to replicate results from 1-2 research papers (hands-on understanding)"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Deep Specialization + Publications",
+      "goals": [
+        "*Year 3 (Deep Specialization + Publications)",
+        "Work on a substantial research project with a professor (aim for publication)",
+        "Apply for summer research internships at top labs (Microsoft Research India, Google Research, Adobe Research)",
+        "Summer internship at research lab (₹50k-1L/month) or university (IISc, IITs for research)",
+        "Start writing your first research paper (workshop or conference)",
+        "Learn advanced topics in your specialization area"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Publications + PhD Applications",
+      "goals": [
+        "*Year 4 (Publications + PhD Applications)",
+        "Complete a strong B.Tech thesis with publication potential",
+        "Apply to top PhD programs (Indian: IISc, IITs; International: CMU, Stanford, MIT, Berkeley, etc.)",
+        "Submit papers to workshops or conferences (even rejections teach you)",
+        "Attend major conferences if you have accepted papers",
+        "Build relationships with professors for strong PhD recommendation letters"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [],
+    "applicationStrategy": [],
+    "interviewPrep": [],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": ""
+    },
+    "differentiators": []
+  }
+}
