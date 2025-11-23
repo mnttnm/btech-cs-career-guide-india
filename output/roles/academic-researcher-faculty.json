@@ -4,36 +4,31 @@
   "description": "Very Hard - Requires PhD (mandatory), strong publication record, teaching experience, and navigating highly competitive faculty hiring",
   "jobTitles": {
     "fresher": [
-      "*Entry Level (0-3 years post-PhD)",
       "Assistant Professor",
       "Visiting Faculty",
-      "Research Associate (academic)",
-      "Junior Research Fellow (after PhD)"
+      "Adjunct Professor",
+      "Lecturer",
+      "Postdoctoral Researcher"
     ],
     "experienced": [
-      "Adjunct Professor",
-      "Lecturer (at universities/colleges)",
-      "Postdoctoral Researcher",
-      "Assistant Professor (Grade I)",
-      "Teaching Fellow"
+      "Professor",
+      "Senior Professor",
+      "Distinguished Professor",
+      "Chaired Professor",
+      "Emeritus Professor"
     ]
   },
   "skills": {
     "programmingLanguages": [
       {
-        "name": "TypeScript",
-        "level": "Advanced",
-        "priority": "Secondary"
-      },
-      {
         "name": "Python",
         "level": "Advanced",
-        "priority": "Secondary"
+        "priority": "Primary"
       },
       {
         "name": "Java",
         "level": "Advanced",
-        "priority": "Secondary"
+        "priority": "Primary"
       },
       {
         "name": "C++",
@@ -41,7 +36,17 @@
         "priority": "Primary"
       },
       {
+        "name": "Go",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
         "name": "C",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "R",
         "level": "Advanced",
         "priority": "Primary"
       }
@@ -60,14 +65,14 @@
     "tools": []
   },
   "dailyWork": [
-    "*Research (40-50% of time)",
-    "Reading latest papers in your field (staying current)",
+    "*Research (40-50% of time):",
+    "Reading latest papers in your field",
     "Guiding PhD students on research problems",
     "Writing research papers for conferences/journals",
     "Reviewing papers for conferences and journals",
     "Conducting experiments and analyzing results",
     "Attending research seminars and talks",
-    "Traveling to conferences to present work (2-4 per year)"
+    "Traveling to conferences to present work"
   ],
   "careerProgression": {
     "timeline": [],
@@ -133,45 +138,41 @@
     "topCompanies": []
   },
   "learningCurve": {
-    "difficulty": "Steep",
+    "difficulty": "Moderate",
     "timeToJobReady": "6-12 months",
-    "description": "**Very Steep** - The path to becoming a faculty member is one of the longest in any profession: 4 years B.Tech + 4-6 years PhD + 1-3 years postdoc (optional but helpful) = 9-13 years of education. During PhD, you learn not just research but also teaching, grant writing, and academic norms. Even after getting a faculty position, it takes 2-3 years to establish your lab, develop courses, and find your groove. The learning curve continues throughout your career as you mentor students, write grants, and navigate academic politics. Only pursue if you have genuine passion for research and teaching."
+    "description": "## Learning Curve"
   },
   "stressLevel": {
-    "level": "Medium-High",
+    "level": "Medium",
     "factors": [
-      "*Why Medium-High",
-      "Tenure pressure: First 5-7 years are extremely stressful (publish or perish)",
+      "*Why Medium-High:",
+      "Tenure pressure: First 5-7 years are extremely stressful",
       "Multiple competing demands: Research + teaching + admin + mentoring",
       "Grant writing: Constant need to secure funding for lab and students",
       "Student management: Dealing with underperforming PhD students, conflicts",
       "Publication pressure: Need to maintain research output throughout career"
     ],
     "mitigatingFactors": [
-      "*Mitigating Factors",
-      "Job security: Tenure provides lifetime employment (huge stress relief)",
-      "Flexible schedule: No 9-5 requirement, work from home often possible",
-      "Intellectual freedom: Choose your research topics and teaching style",
-      "Long breaks: Summer and winter breaks (though faculty often work through them)"
+      "*Mitigating Factors:"
     ]
   },
   "personalityFit": {
     "thriveIf": [
-      "*You'll Thrive If",
-      "You're passionate about both research AND teaching (not just one)",
+      "*You'll Thrive If:",
+      "You're passionate about both research AND teaching",
       "You love mentoring students and seeing them grow",
       "You're comfortable with autonomy and self-direction",
       "You can juggle multiple competing priorities",
-      "You're intrinsically motivated (not driven by external rewards like salary)",
+      "You're intrinsically motivated",
       "You enjoy intellectual debates and academic discourse",
-      "You're patient (academic career is a marathon, not a sprint)"
+      "You're patient"
     ],
     "avoidIf": [
-      "*Avoid If",
-      "You're primarily motivated by high income (industry pays 2-3x more)",
+      "*Avoid If:",
+      "You're primarily motivated by high income",
       "You dislike teaching or find it draining",
-      "You prefer focused work on one thing (research only or engineering only)",
-      "You get stressed by juggling many tasks (research + teaching + admin)",
+      "You prefer focused work on one thing",
+      "You get stressed by juggling many tasks",
       "You want clear structure and defined work hours"
     ]
   },
@@ -180,47 +181,47 @@
       "year": 1,
       "title": "Foundation + Exploration",
       "goals": [
-        "*Year 1 (Foundation + Exploration)",
-        "Excel academically (GPA 9.0+ critical for PhD admissions)",
+        "*Year 1 (Foundation + Exploration):",
+        "Excel academically",
         "Build strong foundations in mathematics and core CS",
         "Identify professors doing interesting research",
         "Attend departmental seminars and research talks",
-        "Start exploring different research areas (AI, systems, theory, HCI)"
+        "Start exploring different research areas"
       ]
     },
     {
       "year": 2,
       "title": "Research Immersion",
       "goals": [
-        "*Year 2 (Research Immersion)",
-        "Approach professors for research projects (reading groups, mini-projects)",
-        "Take research-oriented electives (not just applied courses)",
+        "*Year 2 (Research Immersion):",
+        "Approach professors for research projects",
+        "Take research-oriented electives",
         "Learn research tools: LaTeX, paper reading, critical thinking",
         "Start reading papers from top conferences in areas of interest",
-        "Attempt to replicate a research paper's results (hands-on learning)"
+        "Attempt to replicate a research paper's results"
       ]
     },
     {
       "year": 3,
       "title": "Publications + Deep Specialization",
       "goals": [
-        "*Year 3 (Publications + Deep Specialization)",
+        "*Year 3 (Publications + Deep Specialization):",
         "Work on substantial research project aiming for publication",
-        "Apply for research internships (Microsoft Research, Google Research, IISc)",
-        "Summer research internship (₹50k-1L/month at top labs, or unpaid at universities)",
-        "Start writing your first paper (even if it's a workshop paper)",
-        "Gain teaching experience (TA positions, teaching in local schools)"
+        "Apply for research internships",
+        "Summer research internship",
+        "Start writing your first paper",
+        "Gain teaching experience"
       ]
     },
     {
       "year": 4,
       "title": "PhD Applications + Research Output",
       "goals": [
-        "*Year 4 (PhD Applications + Research Output)",
+        "*Year 4 (PhD Applications + Research Output):",
         "Work on B.Tech thesis with publication potential",
-        "Apply to PhD programs (IISc, IITs, or abroad: CMU, Stanford, MIT, etc.)",
+        "Apply to PhD programs",
         "Aim for at least 1-2 workshop or conference papers",
-        "Gain more teaching experience (TA for multiple courses)",
+        "Gain more teaching experience",
         "Attend major conferences if you have accepted papers"
       ]
     }

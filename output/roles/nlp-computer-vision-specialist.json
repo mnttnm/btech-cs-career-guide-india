@@ -4,19 +4,84 @@
   "description": "",
   "jobTitles": {
     "fresher": [],
-    "experienced": []
+    "experienced": [
+      "Senior NLP Engineer",
+      "Lead NLP Engineer",
+      "Principal NLP Engineer",
+      "Staff NLP Scientist",
+      "NLP Architect"
+    ]
   },
   "skills": {
-    "programmingLanguages": [],
-    "coreConcepts": [],
-    "frameworks": [],
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "R",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Transformers (CRITICAL - backbone of modern NLP and emerging in CV)",
+      "CNNs (Convolutional Neural Networks - CV foundation)",
+      "RNNs, LSTMs, GRUs (older NLP, still relevant)",
+      "Attention mechanisms (self-attention, cross-attention, multi-head)",
+      "Vision Transformers (ViT) - merging CV and transformers",
+      "Backpropagation, gradient descent variants",
+      "Loss functions for different tasks",
+      "Regularization techniques (dropout, batch norm)"
+    ],
+    "frameworks": [
+      {
+        "name": "TensorFlow",
+        "popularity": "High"
+      },
+      {
+        "name": "PyTorch",
+        "popularity": "High"
+      },
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      },
+      {
+        "name": "Pandas",
+        "popularity": "High"
+      },
+      {
+        "name": "NumPy",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
-  "dailyWork": [],
+  "dailyWork": [
+    "Model Development & Experimentation (40-50%):",
+    "Fine-tuning transformers for specific tasks",
+    "Experimenting with different architectures",
+    "Hyperparameter tuning and optimization",
+    "Building custom NLP models for domain-specific problems",
+    "Data Preparation & Analysis (20-25%):",
+    "Text data cleaning and preprocessing",
+    "Creating training datasets, annotation"
+  ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
-      "leadership": [],
+      "leadership": [
+        "- Lead Specialist",
+        "Manager - NLP/CV",
+        "Director of AI Research",
+        "VP of AI"
+      ],
       "individualContributor": []
     },
     "timelineToSenior": "",
@@ -74,7 +139,7 @@
   "learningCurve": {
     "difficulty": "Moderate",
     "timeToJobReady": "6-12 months",
-    "description": ""
+    "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",

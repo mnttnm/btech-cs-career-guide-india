@@ -8,7 +8,7 @@
       "Software Developer",
       "Associate Software Engineer",
       "Junior Software Engineer",
-      "Graduate Engineer Trainee (GET)"
+      "Graduate Engineer Trainee"
     ],
     "experienced": [
       "Senior Software Engineer",
@@ -22,27 +22,67 @@
     "programmingLanguages": [
       {
         "name": "JavaScript",
-        "level": "Beginner",
+        "level": "Advanced",
         "priority": "Primary"
       },
       {
         "name": "TypeScript",
-        "level": "Beginner",
+        "level": "Advanced",
         "priority": "Primary"
       },
       {
         "name": "Python",
-        "level": "Beginner",
+        "level": "Advanced",
         "priority": "Primary"
       },
       {
         "name": "Java",
-        "level": "Beginner",
+        "level": "Advanced",
         "priority": "Primary"
       },
       {
         "name": "C++",
-        "level": "Beginner",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Rust",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "HTML",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "CSS",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Ruby",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Scala",
+        "level": "Advanced",
         "priority": "Primary"
       }
     ],
@@ -58,6 +98,26 @@
     ],
     "frameworks": [
       {
+        "name": "React",
+        "popularity": "High"
+      },
+      {
+        "name": "Django",
+        "popularity": "High"
+      },
+      {
+        "name": "Flask",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Spring Boot",
+        "popularity": "High"
+      },
+      {
+        "name": "Express.js",
+        "popularity": "High"
+      },
+      {
         "name": "Docker",
         "popularity": "High"
       }
@@ -67,11 +127,11 @@
   "dailyWork": [
     "Writing clean, maintainable, and efficient code for new features",
     "Implementing business logic based on product requirements",
-    "Debugging and fixing bugs in existing codebase (20-30% of time)",
+    "Debugging and fixing bugs in existing codebase",
     "Code reviews - reviewing peers' code for quality, bugs, and best practices",
     "Being reviewed - receiving feedback on your own code and implementing changes",
-    "Participating in daily standup meetings (15 minutes, sharing progress and blockers)",
-    "Sprint planning sessions (estimating work, understanding requirements)",
+    "Participating in daily standup meetings",
+    "Sprint planning sessions",
     "Collaborating with cross-functional teams - QA engineers, product managers, designers"
   ],
   "careerProgression": {
@@ -79,7 +139,7 @@
       {
         "level": "Entry Level",
         "years": "0-2",
-        "title": "Junior Software Engineer / Software Engineer I",
+        "title": "** Junior Software Engineer / Software Engineer I",
         "salary": {
           "min": 4.5,
           "max": 8,
@@ -89,7 +149,7 @@
       {
         "level": "Mid Level",
         "years": "3-6",
-        "title": "Software Engineer II / Senior Software Engineer",
+        "title": "** Software Engineer II / Senior Software Engineer",
         "salary": {
           "min": 8,
           "max": 18,
@@ -99,7 +159,7 @@
       {
         "level": "Senior Level",
         "years": "7-10",
-        "title": "Staff Engineer / Tech Lead / Engineering Manager",
+        "title": "** Staff Engineer / Tech Lead / Engineering Manager",
         "salary": {
           "min": 18,
           "max": 40,
@@ -127,9 +187,9 @@
     },
     "timelineToSenior": "5-7 years with consistent performance, strong technical skills, and demonstrated impact on projects",
     "alternativePaths": [
-      "*Alternative Paths",
-      "Specialize in specific domains (backend, frontend, mobile, DevOps, data engineering)",
-      "Transition to Product Management (leveraging technical background)",
+      "*Alternative Paths:",
+      "Specialize in specific domains",
+      "Transition to Product Management",
       "Move to Solution/Enterprise Architecture roles",
       "Switch to Data Science/Machine Learning engineering"
     ]
@@ -155,30 +215,30 @@
     },
     "threeYears": {
       "serviceBased": {
-        "min": 6,
-        "max": 8
+        "min": 0,
+        "max": 0
       },
       "productBased": {
-        "min": 10,
-        "max": 15
+        "min": 0,
+        "max": 0
       },
       "average": {
-        "min": 8,
-        "max": 12
+        "min": 0,
+        "max": 0
       }
     },
     "fivePlus": {
       "midLevel": {
-        "min": 15,
-        "max": 25
+        "min": 0,
+        "max": 0
       },
       "senior": {
-        "min": 25,
-        "max": 40
+        "min": 0,
+        "max": 0
       },
       "topCompanies": {
-        "min": 40,
-        "max": 60
+        "min": 0,
+        "max": 0
       }
     },
     "topCompanies": [
@@ -222,20 +282,20 @@
   "learningCurve": {
     "difficulty": "Moderate",
     "timeToJobReady": "6-12 months",
-    "description": "**Moderate** - Requires solid computer science fundamentals and consistent practice, but is the most well-documented and supported path. With 6-12 months of dedicated preparation, most B.Tech CS students can become job-ready."
+    "description": "## Learning Curve"
   },
   "stressLevel": {
-    "level": "Medium-High",
+    "level": "Medium",
     "factors": [
-      "*Why Medium-High",
+      "*Why Medium-High:",
       "Tight deadlines and sprint commitments create constant pressure",
-      "Production bugs and outages require immediate attention (sometimes at odd hours)",
+      "Production bugs and outages require immediate attention",
       "Code review pressure - feeling judged on your work quality",
       "Imposter syndrome is common, especially in competitive environments",
       "On-call rotations disrupt sleep and personal time"
     ],
     "mitigatingFactors": [
-      "*Mitigating Factors",
+      "*Mitigating Factors:",
       "Strong team support and mentorship in most product companies",
       "Flexible work arrangements (remote/hybrid) becoming standard",
       "Good compensation helps offset stress",
@@ -244,21 +304,21 @@
   },
   "personalityFit": {
     "thriveIf": [
-      "*You'll Thrive If",
+      "*You'll Thrive If:",
       "You genuinely enjoy solving problems through code",
       "You're curious and love continuous learning",
-      "You can work both independently (deep focus) and collaboratively (team projects)",
-      "You're detail-oriented and patient with debugging (can spend hours finding bugs)",
+      "You can work both independently",
+      "You're detail-oriented and patient with debugging",
       "You can handle constructive criticism during code reviews",
       "You enjoy building things from scratch and seeing them come to life",
       "You're comfortable with ambiguity and learning on the go"
     ],
     "avoidIf": [
-      "*Avoid If",
+      "*Avoid If:",
       "You strongly dislike coding or find programming tedious",
       "You prefer non-technical, people-facing work exclusively",
       "You can't handle long hours of desk work",
-      "You need immediate, tangible results (software takes time)",
+      "You need immediate, tangible results",
       "You get easily frustrated with bugs and errors"
     ]
   },
@@ -267,33 +327,33 @@
       "year": 1,
       "title": "Foundation",
       "goals": [
-        "*Year 1 (Foundation)",
-        "Master one programming language deeply (Python for versatility OR Java for industry demand)",
-        "Learn basic data structures (arrays, strings, linked lists, stacks, queues)",
-        "Start solving DSA problems on HackerRank (30-50 easy problems)",
+        "*Year 1 (Foundation):",
+        "Master one programming language deeply",
+        "Learn basic data structures",
+        "Start solving DSA problems on HackerRank",
         "Learn version control - create GitHub account and practice Git commands",
-        "Understand how the web works (HTTP, APIs, client-server architecture)"
+        "Understand how the web works"
       ]
     },
     {
       "year": 2,
       "title": "Deepening",
       "goals": [
-        "*Year 2 (Deepening)",
-        "Solve 100+ DSA problems (focus on LeetCode Easy and Medium)",
-        "Learn advanced data structures (trees, graphs, heaps, hash maps)",
-        "Study time complexity analysis (Big O notation)",
+        "*Year 2 (Deepening):",
+        "Solve 100+ DSA problems",
+        "Learn advanced data structures",
+        "Study time complexity analysis",
         "Master Object-Oriented Programming concepts with real projects",
-        "Build 3-4 substantial projects"
+        "Build 3-4 substantial projects:"
       ]
     },
     {
       "year": 3,
       "title": "Specialization",
       "goals": [
-        "*Year 3 (Specialization)",
-        "Solve 200+ DSA problems total (include LeetCode Medium and some Hard)",
-        "Learn system design basics",
+        "*Year 3 (Specialization):",
+        "Solve 200+ DSA problems total",
+        "Learn system design basics:",
         "Database design and normalization",
         "Caching strategies",
         "Load balancing concepts"
@@ -303,12 +363,12 @@
       "year": 4,
       "title": "Job Hunt",
       "goals": [
-        "*Year 4 (Job Hunt)",
-        "Complete 300+ DSA problems (70% Easy-Medium, 30% Medium-Hard)",
-        "Master system design for interviews",
+        "*Year 4 (Job Hunt):",
+        "Complete 300+ DSA problems",
+        "Master system design for interviews:",
         "Design URL shortener, Twitter, Instagram, Uber",
         "Understand CAP theorem, database choices, scaling patterns",
-        "Final year project should be"
+        "Final year project should be:"
       ]
     }
   ],
@@ -335,50 +395,22 @@
         "goal": "- AWS Certified Cloud Practitioner (basics)"
       }
     ],
-    "applicationStrategy": [
-      {
-        "channel": "Campus Placements (Highest Priority)",
-        "approach": "- **Advantages:** Pre-vetted companies, structured process, peer support"
-      },
-      {
-        "channel": "Off-Campus Applications",
-        "approach": "- **Company career pages:** Apply directly to job postings"
-      },
-      {
-        "channel": "Referrals (3x Better Success Rate)",
-        "approach": "- **Alumni network:** Reach out to college seniors on LinkedIn"
-      },
-      {
-        "channel": "Startup Ecosystem",
-        "approach": "- **Pros:** Easier interviews, broader learning, direct impact"
-      },
-      {
-        "channel": "Mass Hiring (Backup Option)",
-        "approach": "- **Companies:** TCS, Infosys, Wipro, HCL, Tech Mahindra, Accenture"
-      }
-    ],
-    "interviewPrep": [
-      "Technical Rounds (60% of focus):",
-      "System Design (For some companies):",
-      "Computer Science Fundamentals:",
-      "Project Discussion (Crucial):",
-      "Behavioral Interviews:",
-      "HR Round:"
-    ],
+    "applicationStrategy": [],
+    "interviewPrep": [],
     "salaryExpectations": {
       "service": {
-        "min": 0,
-        "max": 0
+        "min": 3.5,
+        "max": 5
       },
       "midTierProduct": {
-        "min": 0,
-        "max": 0
+        "min": 6,
+        "max": 10
       },
       "topProduct": {
-        "min": 0,
-        "max": 0
+        "min": 12,
+        "max": 20
       },
-      "gcc": ""
+      "gcc": "₹10-18 LPA"
     },
     "differentiators": []
   }

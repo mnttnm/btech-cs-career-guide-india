@@ -1,66 +1,71 @@
 {
-  "roleId": "role-34-ar-vr-developer",
-  "roleName": "Role #34: AR/VR Developer",
-  "description": "Moderate - 3D Skills + Programming Required",
+  "roleId": "site-reliability-engineer-sre",
+  "roleName": "Site Reliability Engineer (SRE)",
+  "description": "Requires Experience - Rarely Entry-Level",
   "jobTitles": {
     "fresher": [
-      "AR/VR Developer",
-      "Unity Developer",
-      "Unreal Engine Developer"
+      "Site Reliability Engineer",
+      "Junior SRE",
+      "Production Engineer"
     ],
     "experienced": [
-      "XR (Extended Reality) Developer",
-      "Mixed Reality Developer",
-      "AR Developer",
-      "VR Game Developer",
-      "Metaverse Developer"
+      "Reliability Engineer",
+      "SRE I/II",
+      "Senior Site Reliability Engineer",
+      "Staff SRE",
+      "SRE Team Lead"
     ]
   },
   "skills": {
     "programmingLanguages": [
-      {
-        "name": "JavaScript",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
       {
         "name": "Python",
         "level": "Advanced",
         "priority": "Primary"
       },
       {
-        "name": "C++",
+        "name": "Java",
         "level": "Advanced",
         "priority": "Primary"
       },
       {
-        "name": "C",
+        "name": "Go",
         "level": "Advanced",
         "priority": "Primary"
+      },
+      {
+        "name": "Scala",
+        "level": "Advanced",
+        "priority": "Secondary"
       }
     ],
     "coreConcepts": [
-      "Image tracking and recognition",
-      "Face tracking and filters",
-      "SLAM (Simultaneous Localization and Mapping)",
-      "Occlusion and depth sensing",
-      "6DoF (Six Degrees of Freedom) tracking",
-      "Hand tracking and controllers",
-      "Locomotion systems (teleportation, smooth movement)",
-      "VR comfort and avoiding motion sickness"
+      "Data structures and algorithms",
+      "System design and architecture",
+      "Software development best practices",
+      "Object-oriented programming",
+      "Error budgets and reliability targets",
+      "Prometheus, Grafana",
+      "ELK Stack (Elasticsearch, Logstash, Kibana)",
+      "Distributed tracing (Jaeger, Zipkin)"
     ],
-    "frameworks": [],
+    "frameworks": [
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
   "dailyWork": [
-    "Developing AR/VR applications in Unity or Unreal Engine",
-    "Implementing user interactions",
-    "Creating and optimizing 3D environments and assets",
-    "Integrating AR features",
-    "Building VR locomotion systems",
-    "Implementing physics and collision detection",
-    "Optimizing frame rate for VR comfort",
-    "Testing on AR/VR devices"
+    "Writing code to automate operational tasks",
+    "Building tools for monitoring and observability",
+    "Capacity planning and infrastructure scaling",
+    "Performance optimization and tuning",
+    "Improving deployment processes",
+    "Conducting chaos engineering experiments",
+    "Reviewing and improving system architecture",
+    "Creating and updating runbooks"
   ],
   "careerProgression": {
     "timeline": [],
@@ -70,7 +75,11 @@
     },
     "timelineToSenior": "",
     "alternativePaths": [
-      "*Alternative paths: Game development, 3D graphics programming, metaverse development, XR product management"
+      "*Alternative paths:",
+      "Cloud Architect",
+      "Platform Engineering Lead",
+      "Engineering Manager",
+      "Systems Architect"
     ]
   },
   "salaryRanges": {
@@ -124,7 +133,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "10-14 months",
+    "timeToJobReady": "18-24 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {

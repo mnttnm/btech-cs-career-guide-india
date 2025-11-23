@@ -1,19 +1,19 @@
 {
-  "roleId": "role-34-ar-vr-developer",
-  "roleName": "Role #34: AR/VR Developer",
-  "description": "Moderate - 3D Skills + Programming Required",
+  "roleId": "penetration-tester-ethical-hacker",
+  "roleName": "Penetration Tester / Ethical Hacker",
+  "description": "Moderate - Certifications Critical, Can Start as Junior",
   "jobTitles": {
     "fresher": [
-      "AR/VR Developer",
-      "Unity Developer",
-      "Unreal Engine Developer"
+      "Penetration Tester",
+      "Ethical Hacker",
+      "Security Researcher"
     ],
     "experienced": [
-      "XR (Extended Reality) Developer",
-      "Mixed Reality Developer",
-      "AR Developer",
-      "VR Game Developer",
-      "Metaverse Developer"
+      "Offensive Security Engineer",
+      "Red Team Specialist",
+      "Vulnerability Assessment Analyst",
+      "Application Penetration Tester",
+      "Network Penetration Tester"
     ]
   },
   "skills": {
@@ -37,30 +37,45 @@
         "name": "C",
         "level": "Advanced",
         "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Scala",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Bash",
+        "level": "Advanced",
+        "priority": "Primary"
       }
     ],
-    "coreConcepts": [
-      "Image tracking and recognition",
-      "Face tracking and filters",
-      "SLAM (Simultaneous Localization and Mapping)",
-      "Occlusion and depth sensing",
-      "6DoF (Six Degrees of Freedom) tracking",
-      "Hand tracking and controllers",
-      "Locomotion systems (teleportation, smooth movement)",
-      "VR comfort and avoiding motion sickness"
-    ],
+    "coreConcepts": [],
     "frameworks": [],
-    "tools": []
+    "tools": [
+      "Reconnaissance: Nmap, Masscan, Shodan, theHarvester, Recon-ng, Amass",
+      "Web Application: Burp Suite Professional, OWASP ZAP, SQLmap, Nikto, wfuzz, ffuf",
+      "Exploitation: Metasploit Framework, Exploit-DB, searchsploit, custom exploit development",
+      "Post-Exploitation: Mimikatz, BloodHound, PowerShell Empire, Covenant, Cobalt Strike",
+      "Wireless: Aircrack-ng, Kismet, Wifite, Reaver",
+      "Password Cracking: John the Ripper, Hashcat, Hydra, Medusa",
+      "Privilege Escalation: LinPEAS, WinPEAS, GTFOBins, LOLBAS",
+      "Evasion: Veil, Shellter, obfuscation techniques"
+    ]
   },
   "dailyWork": [
-    "Developing AR/VR applications in Unity or Unreal Engine",
-    "Implementing user interactions",
-    "Creating and optimizing 3D environments and assets",
-    "Integrating AR features",
-    "Building VR locomotion systems",
-    "Implementing physics and collision detection",
-    "Optimizing frame rate for VR comfort",
-    "Testing on AR/VR devices"
+    "Scoping the engagement with client",
+    "Defining rules of engagement",
+    "Getting proper authorization and legal agreements",
+    "Setting up testing environment, VPNs, tools",
+    "Passive reconnaissance",
+    "Active reconnaissance",
+    "Identifying attack surface",
+    "Enumerating users, emails, technologies used"
   ],
   "careerProgression": {
     "timeline": [],
@@ -70,7 +85,11 @@
     },
     "timelineToSenior": "",
     "alternativePaths": [
-      "*Alternative paths: Game development, 3D graphics programming, metaverse development, XR product management"
+      "*Alternative Paths:",
+      "Bug Bounty Full-Time: Top hunters earn ₹20-50 LPA+ from bounties alone",
+      "Security Researcher: Focus on vulnerability research, CVE discovery, conference talks",
+      "Security Training: Teaching pentesting courses",
+      "Consulting: Independent pentesting consultant"
     ]
   },
   "salaryRanges": {
@@ -124,7 +143,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "10-14 months",
+    "timeToJobReady": "12-24 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {

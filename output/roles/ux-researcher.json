@@ -1,30 +1,25 @@
 {
-  "roleId": "ai-engineer",
-  "roleName": "AI Engineer",
-  "description": "",
+  "roleId": "ux-researcher",
+  "roleName": "UX Researcher",
+  "description": "Moderate - Specialized Background Preferred",
   "jobTitles": {
     "fresher": [
-      "AI Engineer",
-      "Junior AI Engineer",
-      "Associate AI Engineer",
-      "Generative AI Engineer",
-      "LLM Engineer"
+      "UX Researcher",
+      "User Researcher",
+      "Product Researcher",
+      "Junior UX Researcher",
+      "User Research Associate"
     ],
     "experienced": [
-      "Senior AI Engineer",
-      "Lead AI Engineer",
-      "Principal AI Engineer",
-      "Staff AI Engineer",
-      "AI Architect"
+      "User Experience Researcher",
+      "Design Researcher",
+      "Qualitative Researcher",
+      "Quantitative Researcher",
+      "Senior UX Researcher"
     ]
   },
   "skills": {
     "programmingLanguages": [
-      {
-        "name": "JavaScript",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
       {
         "name": "Python",
         "level": "Advanced",
@@ -42,67 +37,52 @@
       }
     ],
     "coreConcepts": [
-      "Transformers (BERT, GPT, T5 family)",
-      "Attention mechanisms (self-attention, multi-head attention)",
-      "CNNs (for computer vision tasks)",
-      "RNNs/LSTMs (legacy, but good to know)",
-      "Diffusion models (Stable Diffusion, DALL-E architecture)",
-      "GANs (generative adversarial networks)",
-      "Open-source LLMs: Llama 2, Mistral, Falcon",
-      "Vector databases: Pinecone, Weaviate, Chroma, FAISS"
+      "Combining qualitative + quantitative (most common in practice)",
+      "Example: Survey (quant) + follow-up interviews (qual)",
+      "Active listening without bias",
+      "Reading between the lines (unstated needs)",
+      "Creating safe space for honest feedback",
+      "Storytelling with data (turn insights into narratives)",
+      "Stakeholder presentations (designers, PMs, leadership)",
+      "Writing research reports (clear, actionable recommendations)"
     ],
     "frameworks": [
       {
-        "name": "React",
+        "name": "Pandas",
         "popularity": "High"
       },
       {
-        "name": "Flask",
-        "popularity": "Medium"
-      },
-      {
-        "name": "FastAPI",
-        "popularity": "Medium"
-      },
-      {
-        "name": "TensorFlow",
-        "popularity": "High"
-      },
-      {
-        "name": "PyTorch",
-        "popularity": "High"
-      },
-      {
-        "name": "Kubernetes",
-        "popularity": "High"
-      },
-      {
-        "name": "Docker",
+        "name": "NumPy",
         "popularity": "High"
       }
     ],
-    "tools": []
+    "tools": [
+      "*Research Platforms:",
+      "UserTesting: Remote unmoderated usability testing",
+      "Lookback: Moderated remote testing",
+      "Maze: Prototype testing, analytics",
+      "Optimal Workshop: Card sorting, tree testing",
+      "UsabilityHub: Quick 5-second tests, preference tests",
+      "Dovetail: Research repository, analysis",
+      "*Survey Tools:",
+      "Typeform, Google Forms: Survey creation",
+      "Qualtrics: Advanced survey logic"
+    ]
   },
   "dailyWork": [
-    "Model Integration & Development (35-40%):",
-    "Building LLM-powered applications",
-    "Fine-tuning pre-trained models for specific use cases",
-    "Implementing RAG pipelines for knowledge retrieval",
-    "Experimenting with different AI models and APIs",
-    "Prompt Engineering & Optimization (15-20%):",
-    "Crafting and optimizing prompts for LLMs",
-    "Testing different prompting strategies"
+    "*Morning (9:00 AM - 12:00 PM):",
+    "Check Calendar: 2 user interviews today",
+    "Prep for Interview: Review discussion guide, test recording setup",
+    "Conduct User Interview (1 hour):",
+    "Video call with user",
+    "Ask open-ended questions about pain points",
+    "Observe user completing tasks in app",
+    "Record session for later analysis"
   ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
-      "leadership": [
-        "- Lead AI Engineer",
-        "AI Engineering Manager",
-        "Director of AI",
-        "VP of AI/Product",
-        "Chief AI Officer"
-      ],
+      "leadership": [],
       "individualContributor": []
     },
     "timelineToSenior": "",
@@ -159,7 +139,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "3-6 months",
+    "timeToJobReady": "6-12 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {
@@ -178,18 +158,18 @@
     "interviewPrep": [],
     "salaryExpectations": {
       "service": {
-        "min": 0,
-        "max": 0
+        "min": 3.5,
+        "max": 5
       },
       "midTierProduct": {
-        "min": 0,
-        "max": 0
+        "min": 6,
+        "max": 10
       },
       "topProduct": {
-        "min": 0,
-        "max": 0
+        "min": 12,
+        "max": 20
       },
-      "gcc": ""
+      "gcc": "₹10-18 LPA"
     },
     "differentiators": []
   }

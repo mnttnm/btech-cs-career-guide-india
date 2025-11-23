@@ -22,27 +22,47 @@
     "programmingLanguages": [
       {
         "name": "JavaScript",
-        "level": "Beginner",
+        "level": "Advanced",
         "priority": "Primary"
       },
       {
         "name": "TypeScript",
-        "level": "Beginner",
+        "level": "Advanced",
         "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Secondary"
       },
       {
         "name": "Java",
-        "level": "Beginner",
+        "level": "Advanced",
         "priority": "Primary"
       },
       {
-        "name": "Go",
-        "level": "Beginner",
+        "name": "Rust",
+        "level": "Advanced",
         "priority": "Secondary"
       },
       {
         "name": "C",
-        "level": "Beginner",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Swift",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Kotlin",
+        "level": "Advanced",
         "priority": "Primary"
       }
     ],
@@ -65,11 +85,11 @@
     "tools": []
   },
   "dailyWork": [
-    "Developing new features for mobile applications (iOS/Android)",
+    "Developing new features for mobile applications",
     "Writing clean, maintainable code following platform-specific best practices",
     "Implementing responsive UI designs that work across different screen sizes",
-    "Integrating third-party libraries and APIs (payments, maps, social media)",
-    "Optimizing app performance (reducing load times, memory usage, battery consumption)",
+    "Integrating third-party libraries and APIs",
+    "Optimizing app performance",
     "Debugging crashes and fixing bugs reported by QA or users",
     "Writing unit tests and UI tests for new features",
     "Collaborating with designers to implement pixel-perfect UIs"
@@ -79,7 +99,7 @@
       {
         "level": "Entry Level",
         "years": "0-2",
-        "title": "Junior Mobile Developer / Associate Mobile Engineer",
+        "title": "** Junior Mobile Developer / Associate Mobile Engineer",
         "salary": {
           "min": 4,
           "max": 8,
@@ -89,7 +109,7 @@
       {
         "level": "Mid Level",
         "years": "3-6",
-        "title": "Mobile Developer / Senior Mobile Developer",
+        "title": "** Mobile Developer / Senior Mobile Developer",
         "salary": {
           "min": 8,
           "max": 18,
@@ -99,7 +119,7 @@
       {
         "level": "Senior Level",
         "years": "7-10",
-        "title": "Lead Mobile Developer / Mobile Architect",
+        "title": "** Lead Mobile Developer / Mobile Architect",
         "salary": {
           "min": 18,
           "max": 35,
@@ -125,9 +145,9 @@
     },
     "timelineToSenior": "5-7 years with consistent skill development and portfolio building",
     "alternativePaths": [
-      "*Alternative Paths",
-      "Specialize in platform (become iOS/Android expert)",
-      "Cross-platform specialist (Flutter/React Native expert)",
+      "*Alternative Paths:",
+      "Specialize in platform",
+      "Cross-platform specialist",
       "Mobile DevOps and CI/CD specialist",
       "Mobile SDK/Library development"
     ]
@@ -153,26 +173,26 @@
     },
     "threeYears": {
       "serviceBased": {
-        "min": 6,
-        "max": 9
+        "min": 0,
+        "max": 0
       },
       "productBased": {
-        "min": 10,
-        "max": 15
+        "min": 0,
+        "max": 0
       },
       "average": {
-        "min": 8,
-        "max": 14
+        "min": 0,
+        "max": 0
       }
     },
     "fivePlus": {
       "midLevel": {
-        "min": 18,
-        "max": 28
+        "min": 0,
+        "max": 0
       },
       "senior": {
-        "min": 28,
-        "max": 45
+        "min": 0,
+        "max": 0
       },
       "topCompanies": {
         "min": 0,
@@ -220,20 +240,20 @@
   "learningCurve": {
     "difficulty": "Moderate",
     "timeToJobReady": "6-9 months",
-    "description": "**Moderate** - Can become job-ready in 6-9 months with dedicated learning. Native development (iOS/Android) requires platform-specific knowledge and understanding of design guidelines. Cross-platform frameworks (Flutter/React Native) can be easier to start with if you know web development. The challenge is keeping up with frequent platform updates, device fragmentation (especially Android), and building a strong portfolio with published apps. Understanding both frontend design and backend integration is crucial."
+    "description": "## Learning Curve"
   },
   "stressLevel": {
-    "level": "Medium-High",
+    "level": "Medium",
     "factors": [
-      "*Why Medium-High",
-      "App store review and rejection stress (especially iOS App Store)",
-      "Device fragmentation testing (hundreds of Android devices)",
+      "*Why Medium-High:",
+      "App store review and rejection stress",
+      "Device fragmentation testing",
       "Tight deadlines for app launches and feature releases",
       "Platform updates breaking existing functionality",
       "Performance optimization challenges on older devices"
     ],
     "mitigatingFactors": [
-      "*Mitigating Factors",
+      "*Mitigating Factors:",
       "Strong community support and extensive documentation",
       "Emulators and testing tools reduce device testing burden",
       "Beta testing programs (TestFlight, Google Play Beta) catch issues early",
@@ -242,17 +262,17 @@
   },
   "personalityFit": {
     "thriveIf": [
-      "*You'll Thrive If",
+      "*You'll Thrive If:",
       "You love creating apps people use daily on their phones",
       "You're detail-oriented and care about smooth, polished user experiences",
       "You enjoy visual/interactive work and seeing immediate results",
       "You're patient with platform-specific quirks and constraints",
       "You like staying updated with latest mobile technologies",
-      "You can handle working within device resource constraints (battery, memory, storage)",
+      "You can handle working within device resource constraints",
       "You enjoy optimizing for performance and responsiveness"
     ],
     "avoidIf": [
-      "*Avoid If",
+      "*Avoid If:",
       "You dislike dealing with UI/design work",
       "You get frustrated with platform limitations and restrictions",
       "You can't handle frequent platform changes and updates",
@@ -265,35 +285,35 @@
       "year": 1,
       "title": "Foundation",
       "goals": [
-        "*Year 1 (Foundation)",
-        "Learn programming fundamentals (Java/Python)",
+        "*Year 1 (Foundation):",
+        "Learn programming fundamentals",
         "Understand OOP concepts thoroughly",
-        "Build basic Android apps or iOS apps (start with Android if no Mac)",
+        "Build basic Android apps or iOS apps",
         "Learn Git and create GitHub account",
-        "Build 2-3 simple apps (calculator, to-do list, weather app)"
+        "Build 2-3 simple apps"
       ]
     },
     {
       "year": 2,
       "title": "Deepening",
       "goals": [
-        "*Year 2 (Deepening)",
-        "Master Kotlin (for Android) or Swift (for iOS)",
-        "Learn modern UI frameworks (Jetpack Compose for Android, SwiftUI for iOS)",
+        "*Year 2 (Deepening):",
+        "Master Kotlin",
+        "Learn modern UI frameworks",
         "Build 3-4 feature-rich apps with API integration",
         "Learn REST APIs, JSON parsing, and network programming",
-        "Implement Firebase for backend (authentication, database, storage)"
+        "Implement Firebase for backend"
       ]
     },
     {
       "year": 3,
       "title": "Specialization",
       "goals": [
-        "*Year 3 (Specialization)",
-        "Master advanced mobile concepts (MVVM architecture, dependency injection, testing)",
+        "*Year 3 (Specialization):",
+        "Master advanced mobile concepts",
         "Build complex apps with offline support, push notifications, payment integration",
-        "Learn both platforms if possible (Android + iOS, or Native + Cross-platform)",
-        "Summer internship at product company targeting mobile role (₹40k-80k/month)",
+        "Learn both platforms if possible",
+        "Summer internship at product company targeting mobile role",
         "Implement CI/CD for your apps using GitHub Actions or Fastlane"
       ]
     },
@@ -301,12 +321,12 @@
       "year": 4,
       "title": "Job Hunt",
       "goals": [
-        "*Year 4 (Job Hunt)",
+        "*Year 4 (Job Hunt):",
         "Polish portfolio with 5-6 high-quality published apps",
         "Complete 200+ DSA problems for coding interviews",
         "Build one showcase app with clean code, tests, and documentation",
-        "Apply to mobile developer roles (campus + off-campus)",
-        "Practice mobile-specific interview questions (activity lifecycle, memory management, etc.)"
+        "Apply to mobile developer roles",
+        "Practice mobile-specific interview questions"
       ]
     }
   ],
@@ -316,26 +336,26 @@
     "interviewPrep": [],
     "salaryExpectations": {
       "service": {
-        "min": 0,
-        "max": 0
+        "min": 3.5,
+        "max": 5
       },
       "midTierProduct": {
-        "min": 0,
-        "max": 0
+        "min": 6,
+        "max": 10
       },
       "topProduct": {
-        "min": 0,
-        "max": 0
+        "min": 12,
+        "max": 20
       },
-      "gcc": ""
+      "gcc": "₹10-18 LPA"
     },
     "differentiators": [
-      "*Key Differentiators",
+      "*Key Differentiators:",
       "Published apps with real users and positive reviews",
       "Contributions to popular open-source mobile libraries",
       "Strong GitHub with well-documented mobile projects",
       "Knowledge of both native and cross-platform development",
-      "Understanding of mobile DevOps (CI/CD, automated testing)"
+      "Understanding of mobile DevOps"
     ]
   }
 }

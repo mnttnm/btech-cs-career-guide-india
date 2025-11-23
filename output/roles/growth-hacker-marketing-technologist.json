@@ -1,18 +1,72 @@
 {
   "roleId": "growth-hacker-marketing-technologist",
   "roleName": "Growth Hacker / Marketing Technologist",
-  "description": "🟡 Moderate - Requires Technical + Marketing Skills",
+  "description": "Moderate - Requires Technical + Marketing Skills",
   "jobTitles": {
-    "fresher": [],
-    "experienced": []
+    "fresher": [
+      "Growth Hacker",
+      "Growth Engineer",
+      "Growth Product Manager"
+    ],
+    "experienced": [
+      "Marketing Technologist",
+      "Growth Marketing Manager",
+      "Performance Marketing Analyst",
+      "Growth Analyst",
+      "Product Growth Manager"
+    ]
   },
   "skills": {
-    "programmingLanguages": [],
+    "programmingLanguages": [
+      {
+        "name": "JavaScript",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "HTML",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "CSS",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
     "coreConcepts": [],
-    "frameworks": [],
+    "frameworks": [
+      {
+        "name": "Pandas",
+        "popularity": "High"
+      },
+      {
+        "name": "NumPy",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
-  "dailyWork": [],
+  "dailyWork": [
+    "*Data Analysis & Reporting (30-40%):",
+    "Analyzing user acquisition funnels",
+    "Cohort analysis",
+    "Building dashboards in Mixpanel/Amplitude/Looker",
+    "SQL queries to extract user data from production database",
+    "Weekly/monthly growth reports",
+    "Attribution analysis",
+    "LTV (Lifetime Value) and CAC (Customer Acquisition Cost) analysis"
+  ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
@@ -73,8 +127,8 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "6-12 months",
-    "description": ""
+    "timeToJobReady": "6-9 months",
+    "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",
@@ -92,18 +146,18 @@
     "interviewPrep": [],
     "salaryExpectations": {
       "service": {
-        "min": 0,
-        "max": 0
+        "min": 3.5,
+        "max": 5
       },
       "midTierProduct": {
-        "min": 0,
-        "max": 0
+        "min": 6,
+        "max": 10
       },
       "topProduct": {
-        "min": 0,
-        "max": 0
+        "min": 12,
+        "max": 20
       },
-      "gcc": ""
+      "gcc": "₹10-18 LPA"
     },
     "differentiators": []
   }

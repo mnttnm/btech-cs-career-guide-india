@@ -3,20 +3,81 @@
   "roleName": "Data Analyst",
   "description": "",
   "jobTitles": {
-    "fresher": [],
-    "experienced": []
+    "fresher": [
+      "Data Analyst",
+      "Junior Data Analyst",
+      "Associate Data Analyst",
+      "Analyst I",
+      "Business Analyst - Data"
+    ],
+    "experienced": [
+      "Data Analyst II / Senior Data Analyst",
+      "Lead Data Analyst",
+      "Principal Data Analyst",
+      "Analytics Manager",
+      "Senior Business Analyst"
+    ]
   },
   "skills": {
-    "programmingLanguages": [],
-    "coreConcepts": [],
-    "frameworks": [],
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "R",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Complex queries: Joins, aggregations, subqueries",
+      "Window functions, CTEs (Common Table Expressions)",
+      "Query optimization basics",
+      "Database: PostgreSQL, MySQL, SQL Server",
+      "Advanced formulas: VLOOKUP, INDEX-MATCH, SUMIFS",
+      "Pivot tables and pivot charts",
+      "Data validation and conditional formatting",
+      "Basic VBA/macros (beneficial but not always required)"
+    ],
+    "frameworks": [
+      {
+        "name": "Pandas",
+        "popularity": "High"
+      },
+      {
+        "name": "NumPy",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
-  "dailyWork": [],
+  "dailyWork": [
+    "SQL Queries & Data Extraction (40-50%):",
+    "Writing SQL queries to extract data from databases",
+    "Joining multiple tables to create analysis datasets",
+    "Data validation and quality checks",
+    "Ad-hoc data requests from stakeholders",
+    "Data Analysis & Exploration (20-30%):",
+    "Exploratory data analysis",
+    "Identifying trends, patterns, anomalies"
+  ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
-      "leadership": [],
+      "leadership": [
+        "- Lead Analyst",
+        "Analytics Manager",
+        "Senior Manager",
+        "Director of Analytics",
+        "VP of Analytics/Insights"
+      ],
       "individualContributor": []
     },
     "timelineToSenior": "",
@@ -73,8 +134,8 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "6-12 months",
-    "description": ""
+    "timeToJobReady": "1-3 months",
+    "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",

@@ -31,7 +31,7 @@
         "priority": "Primary"
       },
       {
-        "name": "Java",
+        "name": "Rust",
         "level": "Advanced",
         "priority": "Primary"
       },
@@ -42,6 +42,11 @@
       },
       {
         "name": "CSS",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Scala",
         "level": "Advanced",
         "priority": "Primary"
       }
@@ -74,18 +79,16 @@
         "popularity": "High"
       }
     ],
-    "tools": [
-      "*Tools & Practices"
-    ]
+    "tools": []
   },
   "dailyWork": [
-    "Building user interfaces from design mockups (Figma, Adobe XD, Sketch)",
-    "Implementing pixel-perfect, responsive web pages (desktop, tablet, mobile)",
+    "Building user interfaces from design mockups",
+    "Implementing pixel-perfect, responsive web pages",
     "Writing clean, reusable React/Angular/Vue components",
-    "Managing application state (Redux, Context API, local state)",
-    "Integrating with backend APIs (RESTful, GraphQL)",
+    "Managing application state",
+    "Integrating with backend APIs",
     "Handling API responses, errors, and loading states",
-    "Implementing authentication flows (login, signup, protected routes)",
+    "Implementing authentication flows",
     "Ensuring cross-browser compatibility and fixing browser-specific bugs"
   ],
   "careerProgression": {
@@ -93,7 +96,7 @@
       {
         "level": "Entry Level",
         "years": "0-2",
-        "title": "Junior Frontend Developer / Frontend Engineer I",
+        "title": "** Junior Frontend Developer / Frontend Engineer I",
         "salary": {
           "min": 4.5,
           "max": 7,
@@ -103,7 +106,7 @@
       {
         "level": "Mid Level",
         "years": "3-6",
-        "title": "Frontend Developer / Senior Frontend Developer",
+        "title": "** Frontend Developer / Senior Frontend Developer",
         "salary": {
           "min": 8,
           "max": 18,
@@ -113,7 +116,7 @@
       {
         "level": "Senior Level",
         "years": "7-10",
-        "title": "Staff Engineer / Frontend Architect / Tech Lead",
+        "title": "** Staff Engineer / Frontend Architect / Tech Lead",
         "salary": {
           "min": 18,
           "max": 35,
@@ -141,8 +144,8 @@
     },
     "timelineToSenior": "5-7 years with strong portfolio, demonstrated expertise in modern frameworks, and experience building scalable, performant applications",
     "alternativePaths": [
-      "*Alternative Paths",
-      "Specializations",
+      "*Alternative Paths:",
+      "Specializations:",
       "React Specialist - Deep expertise in React ecosystem",
       "Performance Engineer - Focus on frontend performance optimization",
       "Design Systems Engineer - Building and maintaining component libraries"
@@ -169,30 +172,30 @@
     },
     "threeYears": {
       "serviceBased": {
-        "min": 6,
-        "max": 9
+        "min": 0,
+        "max": 0
       },
       "productBased": {
-        "min": 10,
-        "max": 15
+        "min": 0,
+        "max": 0
       },
       "average": {
-        "min": 8,
-        "max": 13
+        "min": 0,
+        "max": 0
       }
     },
     "fivePlus": {
       "midLevel": {
-        "min": 18,
-        "max": 28
+        "min": 0,
+        "max": 0
       },
       "senior": {
-        "min": 28,
-        "max": 45
+        "min": 0,
+        "max": 0
       },
       "topCompanies": {
-        "min": 45,
-        "max": 65
+        "min": 0,
+        "max": 0
       }
     },
     "topCompanies": [
@@ -236,29 +239,25 @@
   "learningCurve": {
     "difficulty": "Moderate",
     "timeToJobReady": "6-12 months",
-    "description": "**Moderate** - Frontend technologies are more accessible and visual than backend, making learning engaging with immediate feedback. However, mastering modern frameworks like React, understanding state management, performance optimization, and browser quirks takes dedicated practice. 6-12 months to become job-ready with a strong portfolio."
+    "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",
     "factors": [
-      "*Why Medium",
-      "Design changes and iteration cycles (designers change minds frequently)",
+      "*Why Medium:",
+      "Design changes and iteration cycles",
       "Browser compatibility issues can be frustrating and time-consuming",
-      "Pixel-perfect implementation pressure (designers notice 1px differences)",
-      "Performance optimization expectations (fast load times, smooth animations)",
+      "Pixel-perfect implementation pressure",
+      "Performance optimization expectations",
       "Accessibility compliance can be tedious"
     ],
     "mitigatingFactors": [
-      "*Mitigating Factors",
-      "Less on-call stress compared to backend (UI bugs rarely cause outages)",
-      "UI bugs are generally less critical than backend/database issues",
-      "Excellent tooling (React DevTools, browser DevTools, hot reload)",
-      "Strong community support (Stack Overflow, Discord, Reddit)"
+      "*Mitigating Factors:"
     ]
   },
   "personalityFit": {
     "thriveIf": [
-      "*You'll Thrive If",
+      "*You'll Thrive If:",
       "You enjoy visual, user-facing work and seeing your code come to life",
       "You have an eye for design, details, and aesthetics",
       "You like seeing immediate results of your code changes",
@@ -268,7 +267,7 @@
       "You enjoy making things look beautiful and work smoothly"
     ],
     "avoidIf": [
-      "*Avoid If",
+      "*Avoid If:",
       "You find UI/UX work tedious or boring",
       "You prefer backend logic, databases, and server-side work",
       "You have no interest in design or visual aesthetics",
@@ -281,23 +280,23 @@
       "year": 1,
       "title": "Foundation",
       "goals": [
-        "*Year 1 (Foundation)",
-        "Master HTML & CSS thoroughly",
-        "Build 10-15 static web pages (practice layouts)",
+        "*Year 1 (Foundation):",
+        "Master HTML & CSS thoroughly:",
+        "Build 10-15 static web pages",
         "Learn Flexbox and CSS Grid deeply",
-        "Study responsive design (mobile-first approach)",
-        "Clone simple websites (Google homepage, tribute pages)"
+        "Study responsive design",
+        "Clone simple websites"
       ]
     },
     {
       "year": 2,
       "title": "Deepening",
       "goals": [
-        "*Year 2 (Deepening)",
-        "Learn React.js (Most important decision)",
+        "*Year 2 (Deepening):",
+        "Learn React.js (Most important decision):",
         "Complete React documentation thoroughly",
         "Understand components, props, state",
-        "Master hooks (useState, useEffect, useContext)",
+        "Master hooks",
         "React Router for navigation"
       ]
     },
@@ -305,11 +304,11 @@
       "year": 3,
       "title": "Specialization",
       "goals": [
-        "*Year 3 (Specialization)",
-        "Advanced React",
-        "TypeScript with React (increasingly required)",
+        "*Year 3 (Specialization):",
+        "Advanced React:",
+        "TypeScript with React",
         "Custom hooks",
-        "Performance optimization (useMemo, useCallback, React.memo)",
+        "Performance optimization",
         "Code splitting and lazy loading"
       ]
     },
@@ -317,9 +316,9 @@
       "year": 4,
       "title": "Job Hunt",
       "goals": [
-        "*Year 4 (Job Hunt)",
-        "Polish portfolio (Most Important)",
-        "3-5 exceptional projects (quality over quantity)",
+        "*Year 4 (Job Hunt):",
+        "Polish portfolio (Most Important):",
+        "3-5 exceptional projects",
         "Each project should demonstrate different skills",
         "Live demos, GitHub repos, documentation",
         "Screenshots/GIFs showing features"
@@ -349,55 +348,27 @@
         "goal": "- Flexbox (must know by heart)"
       }
     ],
-    "applicationStrategy": [
-      {
-        "channel": "Target Frontend-Heavy Companies",
-        "approach": "- **Product companies** (all need strong frontend)"
-      },
-      {
-        "channel": "Portfolio-First Approach",
-        "approach": "- Portfolio website is your **primary marketing tool**"
-      },
-      {
-        "channel": "Campus Placements",
-        "approach": "- Participate in all drives"
-      },
-      {
-        "channel": "Off-Campus",
-        "approach": "- LinkedIn job search (filter \"React Developer\", \"Frontend Engineer\")"
-      },
-      {
-        "channel": "Internship Conversion",
-        "approach": "- Summer internships often convert to full-time (60-70% conversion rate)"
-      }
-    ],
-    "interviewPrep": [
-      "JavaScript/React Technical Questions:",
-      "Coding Challenges:",
-      "System Design (Frontend):",
-      "Portfolio Deep-Dive (Crucial):",
-      "DSA (For Top Companies):",
-      "Behavioral Questions:"
-    ],
+    "applicationStrategy": [],
+    "interviewPrep": [],
     "salaryExpectations": {
       "service": {
         "min": 3.5,
         "max": 5
       },
       "midTierProduct": {
-        "min": 14,
-        "max": 22
+        "min": 6,
+        "max": 10
       },
       "topProduct": {
-        "min": 10,
-        "max": 15
+        "min": 12,
+        "max": 20
       },
-      "gcc": ""
+      "gcc": "₹10-18 LPA"
     },
     "differentiators": [
-      "*Key Differentiators",
-      "Stunning portfolio website (immediately stands out)",
-      "Published apps with users (even 100 users counts)",
+      "*Key Differentiators:",
+      "Stunning portfolio website",
+      "Published apps with users",
       "Open-source contributions to popular React libraries",
       "Technical blog (dev.to, Medium, Hashnode) - write about frontend topics",
       "CodePen/CodeSandbox demos showing creative UI solutions"

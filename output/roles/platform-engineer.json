@@ -1,66 +1,75 @@
 {
-  "roleId": "role-34-ar-vr-developer",
-  "roleName": "Role #34: AR/VR Developer",
-  "description": "Moderate - 3D Skills + Programming Required",
+  "roleId": "platform-engineer",
+  "roleName": "Platform Engineer",
+  "description": "Requires Experience - Emerging Role, Rarely Entry-Level",
   "jobTitles": {
     "fresher": [
-      "AR/VR Developer",
-      "Unity Developer",
-      "Unreal Engine Developer"
+      "Platform Engineer",
+      "Platform Software Engineer",
+      "Internal Tools Engineer"
     ],
     "experienced": [
-      "XR (Extended Reality) Developer",
-      "Mixed Reality Developer",
-      "AR Developer",
-      "VR Game Developer",
-      "Metaverse Developer"
+      "Senior Platform Engineer",
+      "Staff Platform Engineer",
+      "Developer Experience Engineer",
+      "Platform Infrastructure Engineer",
+      "Lead Platform Engineer"
     ]
   },
   "skills": {
     "programmingLanguages": [
       {
-        "name": "JavaScript",
-        "level": "Advanced",
+        "name": "TypeScript",
+        "level": "Beginner",
         "priority": "Primary"
       },
       {
         "name": "Python",
-        "level": "Advanced",
+        "level": "Beginner",
         "priority": "Primary"
       },
       {
-        "name": "C++",
-        "level": "Advanced",
+        "name": "Java",
+        "level": "Beginner",
         "priority": "Primary"
       },
       {
-        "name": "C",
-        "level": "Advanced",
+        "name": "Go",
+        "level": "Beginner",
         "priority": "Primary"
       }
     ],
     "coreConcepts": [
-      "Image tracking and recognition",
-      "Face tracking and filters",
-      "SLAM (Simultaneous Localization and Mapping)",
-      "Occlusion and depth sensing",
-      "6DoF (Six Degrees of Freedom) tracking",
-      "Hand tracking and controllers",
-      "Locomotion systems (teleportation, smooth movement)",
-      "VR comfort and avoiding motion sickness"
+      "Not just scripting - building production-grade tools",
+      "API design and development",
+      "Web development (for internal portals/dashboards)",
+      "Data structures and algorithms",
+      "Software architecture and design patterns",
+      "Testing and code quality",
+      "Deep Kubernetes knowledge (this is crucial)",
+      "Cloud platforms (AWS, GCP, Azure)"
     ],
-    "frameworks": [],
+    "frameworks": [
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
   "dailyWork": [
-    "Developing AR/VR applications in Unity or Unreal Engine",
-    "Implementing user interactions",
-    "Creating and optimizing 3D environments and assets",
-    "Integrating AR features",
-    "Building VR locomotion systems",
-    "Implementing physics and collision detection",
-    "Optimizing frame rate for VR comfort",
-    "Testing on AR/VR devices"
+    "Developing internal developer portals",
+    "Building self-service tools for infrastructure provisioning",
+    "Creating CLI tools for common developer tasks",
+    "Designing and implementing platform APIs",
+    "Building service catalogs and templates",
+    "Creating infrastructure abstractions",
+    "Managing Kubernetes clusters and platform infrastructure",
+    "Implementing GitOps workflows"
   ],
   "careerProgression": {
     "timeline": [],
@@ -70,7 +79,11 @@
     },
     "timelineToSenior": "",
     "alternativePaths": [
-      "*Alternative paths: Game development, 3D graphics programming, metaverse development, XR product management"
+      "*Alternative paths:",
+      "Engineering Manager",
+      "Product Manager",
+      "Developer Relations",
+      "CTO"
     ]
   },
   "salaryRanges": {
@@ -124,7 +137,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "10-14 months",
+    "timeToJobReady": "6-12 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {

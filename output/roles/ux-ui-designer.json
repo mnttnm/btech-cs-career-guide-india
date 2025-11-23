@@ -1,21 +1,21 @@
 {
-  "roleId": "ai-engineer",
-  "roleName": "AI Engineer",
-  "description": "",
+  "roleId": "ux-ui-designer",
+  "roleName": "UX/UI Designer",
+  "description": "Moderate - Portfolio Critical",
   "jobTitles": {
     "fresher": [
-      "AI Engineer",
-      "Junior AI Engineer",
-      "Associate AI Engineer",
-      "Generative AI Engineer",
-      "LLM Engineer"
+      "UX/UI Designer",
+      "Product Designer",
+      "UI/UX Designer",
+      "Junior UX/UI Designer",
+      "Associate Product Designer"
     ],
     "experienced": [
-      "Senior AI Engineer",
-      "Lead AI Engineer",
-      "Principal AI Engineer",
-      "Staff AI Engineer",
-      "AI Architect"
+      "Digital Designer",
+      "Visual Designer",
+      "Interaction Designer",
+      "Experience Designer",
+      "UX Designer"
     ]
   },
   "skills": {
@@ -26,83 +26,49 @@
         "priority": "Primary"
       },
       {
-        "name": "Python",
+        "name": "Rust",
         "level": "Advanced",
         "priority": "Primary"
       },
       {
-        "name": "SQL",
+        "name": "HTML",
         "level": "Advanced",
         "priority": "Primary"
       },
       {
-        "name": "R",
+        "name": "CSS",
         "level": "Advanced",
         "priority": "Primary"
       }
     ],
     "coreConcepts": [
-      "Transformers (BERT, GPT, T5 family)",
-      "Attention mechanisms (self-attention, multi-head attention)",
-      "CNNs (for computer vision tasks)",
-      "RNNs/LSTMs (legacy, but good to know)",
-      "Diffusion models (Stable Diffusion, DALL-E architecture)",
-      "GANs (generative adversarial networks)",
-      "Open-source LLMs: Llama 2, Mistral, Falcon",
-      "Vector databases: Pinecone, Weaviate, Chroma, FAISS"
+      "Design feasible interfaces (know CSS limitations)",
+      "Better collaboration with developers",
+      "Can build coded prototypes (Framer, Webflow)",
+      "Competitive advantage in job market"
     ],
     "frameworks": [
       {
         "name": "React",
-        "popularity": "High"
-      },
-      {
-        "name": "Flask",
-        "popularity": "Medium"
-      },
-      {
-        "name": "FastAPI",
-        "popularity": "Medium"
-      },
-      {
-        "name": "TensorFlow",
-        "popularity": "High"
-      },
-      {
-        "name": "PyTorch",
-        "popularity": "High"
-      },
-      {
-        "name": "Kubernetes",
-        "popularity": "High"
-      },
-      {
-        "name": "Docker",
         "popularity": "High"
       }
     ],
     "tools": []
   },
   "dailyWork": [
-    "Model Integration & Development (35-40%):",
-    "Building LLM-powered applications",
-    "Fine-tuning pre-trained models for specific use cases",
-    "Implementing RAG pipelines for knowledge retrieval",
-    "Experimenting with different AI models and APIs",
-    "Prompt Engineering & Optimization (15-20%):",
-    "Crafting and optimizing prompts for LLMs",
-    "Testing different prompting strategies"
+    "*Morning (9:00 AM - 12:00 PM):",
+    "Check Feedback: Review comments on Figma from PM, engineers",
+    "Standup Meeting: 15-min sync with product team",
+    "Design Work (4-5 hours/day):",
+    "Create wireframes for new feature",
+    "Design high-fidelity mockups in Figma",
+    "Iterate on color palette, typography",
+    "Design icons for navigation bar"
   ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
-      "leadership": [
-        "- Lead AI Engineer",
-        "AI Engineering Manager",
-        "Director of AI",
-        "VP of AI/Product",
-        "Chief AI Officer"
-      ],
+      "leadership": [],
       "individualContributor": []
     },
     "timelineToSenior": "",
@@ -159,7 +125,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "3-6 months",
+    "timeToJobReady": "6-12 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {
@@ -178,18 +144,18 @@
     "interviewPrep": [],
     "salaryExpectations": {
       "service": {
-        "min": 0,
-        "max": 0
+        "min": 3.5,
+        "max": 5
       },
       "midTierProduct": {
-        "min": 0,
-        "max": 0
+        "min": 6,
+        "max": 10
       },
       "topProduct": {
-        "min": 0,
-        "max": 0
+        "min": 12,
+        "max": 20
       },
-      "gcc": ""
+      "gcc": "₹10-18 LPA"
     },
     "differentiators": []
   }

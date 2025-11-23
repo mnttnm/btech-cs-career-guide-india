@@ -1,0 +1,231 @@
+{
+  "roleId": "technical-program-manager",
+  "roleName": "Technical Program Manager",
+  "description": "Requires Prior Experience (3-5+ years)",
+  "jobTitles": {
+    "fresher": [
+      "Technical Program Manager",
+      "Program Manager - Engineering",
+      "Technical Program Manager - Platform/Infrastructure",
+      "Associate Technical Program Manager"
+    ],
+    "experienced": [
+      "Senior Technical Program Manager",
+      "Engineering Program Manager",
+      "Delivery Manager",
+      "Release Manager",
+      "Technical Project Manager"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "JavaScript",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "Java",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Rust",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "SQL",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "Scala",
+        "level": "Beginner",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Understand engineering estimates (can this be done in 2 weeks or 2 months?)",
+      "Identify technical risks (database migration will break auth service)",
+      "Evaluate trade-offs (monolith vs microservices for this use case)",
+      "Speak engineer's language (credibility)",
+      "Can read code (Python, Java, JavaScript) to understand complexity",
+      "No expectation to write production code (but should understand what's possible)",
+      "Influence engineers, designers, PMs without being their manager",
+      "Build trust through technical credibility and follow-through"
+    ],
+    "frameworks": [
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "*Project Management:",
+      "Jira: Sprint planning, backlog grooming, burndown charts",
+      "Asana, Monday.com, ClickUp: Alternative PM tools",
+      "Linear: Modern PM tool",
+      "Microsoft Project, Smartsheet: Gantt charts, waterfall planning",
+      "*Documentation & Collaboration:",
+      "Confluence, Notion: Technical documentation, runbooks, RFCs",
+      "Google Docs, Microsoft Office: Roadmaps, status reports",
+      "Miro, Mural, Lucidchart: Architecture diagrams, dependency maps",
+      "Slack, Microsoft Teams: Communication, standup bots"
+    ]
+  },
+  "dailyWork": [
+    "*Morning (9:00 AM - 12:00 PM):",
+    "*9:00 AM - Check Status & Dashboards (30 mins):",
+    "Jira: Review sprint progress, blocked tickets, overdue items",
+    "Slack: Check overnight messages, incidents",
+    "GitHub: PR review backlog, merge conflicts",
+    "Datadog: Production health",
+    "*9:30 AM - Standup #1 - Backend Team (15 mins):",
+    "Each engineer: Yesterday's progress, today's plan, blockers"
+  ],
+  "careerProgression": {
+    "timeline": [],
+    "tracks": {
+      "leadership": [],
+      "individualContributor": []
+    },
+    "timelineToSenior": "",
+    "alternativePaths": []
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 0,
+        "max": 0
+      },
+      "senior": {
+        "min": 0,
+        "max": 0
+      },
+      "topCompanies": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "topCompanies": []
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "## Learning Curve"
+  },
+  "stressLevel": {
+    "level": "Medium",
+    "factors": [],
+    "mitigatingFactors": []
+  },
+  "personalityFit": {
+    "thriveIf": [],
+    "avoidIf": []
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Engineer",
+      "goals": [
+        "*Year 1 (Engineer):",
+        "Focus: Become competent engineer",
+        "Deliver features, fix bugs, learn codebase",
+        "Understand production operations",
+        "Observe: How TPMs/PMs/EMs work in your company"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Engineer",
+      "goals": [
+        "*Year 2 (Engineer):",
+        "Grow: Take on larger features",
+        "Cross-team collaboration: Work with other teams",
+        "Volunteer for TPM-like tasks:",
+        "Offer to run sprint retrospectives",
+        "Create release checklists"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Senior Engineer / Tech Lead",
+      "goals": [
+        "*Year 3 (Senior Engineer / Tech Lead):",
+        "Lead: Coordinate 2-4 engineers on complex project",
+        "Practice program management:",
+        "Plan multi-sprint initiatives",
+        "Manage dependencies across 2-3 teams",
+        "Risk mitigation, timeline estimation"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [],
+    "applicationStrategy": [],
+    "interviewPrep": [],
+    "salaryExpectations": {
+      "service": {
+        "min": 3.5,
+        "max": 5
+      },
+      "midTierProduct": {
+        "min": 6,
+        "max": 10
+      },
+      "topProduct": {
+        "min": 12,
+        "max": 20
+      },
+      "gcc": "₹10-18 LPA"
+    },
+    "differentiators": []
+  }
+}

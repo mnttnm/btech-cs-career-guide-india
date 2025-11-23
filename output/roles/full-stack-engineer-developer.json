@@ -22,27 +22,57 @@
     "programmingLanguages": [
       {
         "name": "JavaScript",
-        "level": "Intermediate",
+        "level": "Advanced",
         "priority": "Primary"
       },
       {
         "name": "TypeScript",
-        "level": "Intermediate",
+        "level": "Advanced",
         "priority": "Primary"
       },
       {
         "name": "Python",
-        "level": "Intermediate",
+        "level": "Advanced",
         "priority": "Primary"
       },
       {
         "name": "Java",
-        "level": "Intermediate",
+        "level": "Advanced",
         "priority": "Primary"
       },
       {
         "name": "Go",
-        "level": "Intermediate",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "HTML",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "CSS",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "R",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Scala",
+        "level": "Advanced",
         "priority": "Primary"
       }
     ],
@@ -76,22 +106,36 @@
       {
         "name": "Django",
         "popularity": "High"
+      },
+      {
+        "name": "Flask",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Spring Boot",
+        "popularity": "High"
+      },
+      {
+        "name": "Express.js",
+        "popularity": "High"
+      },
+      {
+        "name": "FastAPI",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
       }
     ],
-    "tools": [
-      "*Tools & Practices",
-      "Postman / Insomnia (API testing)",
-      "Chrome DevTools, React DevTools",
-      "Logging and monitoring (basics)",
-      "Agile/Scrum methodology"
-    ]
+    "tools": []
   },
   "dailyWork": [
     "Building features end-to-end from database to user interface",
     "Designing and implementing both frontend components and backend APIs",
     "Creating database schemas and writing SQL queries",
-    "Implementing authentication and authorization flows (login, signup, JWT, sessions)",
-    "Integrating frontend with backend APIs (fetch, axios, handling responses)",
+    "Implementing authentication and authorization flows",
+    "Integrating frontend with backend APIs",
     "Building responsive UI components that work across devices",
     "Writing server-side logic and business rules",
     "Implementing real-time features using WebSockets or polling"
@@ -101,7 +145,7 @@
       {
         "level": "Entry Level",
         "years": "0-2",
-        "title": "Junior Full",
+        "title": "** Junior Full",
         "salary": {
           "min": 5,
           "max": 9,
@@ -111,7 +155,7 @@
       {
         "level": "Mid Level",
         "years": "3-6",
-        "title": "Full",
+        "title": "** Full",
         "salary": {
           "min": 9,
           "max": 20,
@@ -121,7 +165,7 @@
       {
         "level": "Senior Level",
         "years": "7-10",
-        "title": "Staff Engineer / Full",
+        "title": "** Staff Engineer / Full",
         "salary": {
           "min": 20,
           "max": 45,
@@ -149,11 +193,11 @@
     },
     "timelineToSenior": "5-7 years with demonstrated ability to build scalable, production-ready applications independently across the entire stack",
     "alternativePaths": [
-      "*Alternative Paths",
-      "Specialization (Choose a Side)",
-      "Specialize in Frontend (React expert, design systems engineer)",
-      "Specialize in Backend (API architect, microservices specialist)",
-      "Specialize in DevOps (infrastructure, CI/CD, cloud)"
+      "*Alternative Paths:",
+      "Specialization (Choose a Side):",
+      "Specialize in Frontend",
+      "Specialize in Backend",
+      "Specialize in DevOps"
     ]
   },
   "salaryRanges": {
@@ -177,30 +221,30 @@
     },
     "threeYears": {
       "serviceBased": {
-        "min": 7,
-        "max": 10
+        "min": 0,
+        "max": 0
       },
       "productBased": {
-        "min": 12,
-        "max": 18
+        "min": 0,
+        "max": 0
       },
       "average": {
-        "min": 10,
-        "max": 16
+        "min": 0,
+        "max": 0
       }
     },
     "fivePlus": {
       "midLevel": {
-        "min": 20,
-        "max": 30
+        "min": 0,
+        "max": 0
       },
       "senior": {
-        "min": 30,
-        "max": 50
+        "min": 0,
+        "max": 0
       },
       "topCompanies": {
-        "min": 50,
-        "max": 70
+        "min": 0,
+        "max": 0
       }
     },
     "topCompanies": [
@@ -244,44 +288,36 @@
   "learningCurve": {
     "difficulty": "Moderate",
     "timeToJobReady": "12-18 months",
-    "description": "**Moderate** - More breadth than depth required. Need to learn both frontend and backend, but can be less deep in each compared to specialists. Modern full-stack frameworks (Next.js, Blitz.js) simplify development. Realistic timeline: 12-18 months to become proficient in a full stack (MERN/MEAN)."
+    "description": "## Learning Curve"
   },
   "stressLevel": {
-    "level": "Medium-High",
+    "level": "Medium",
     "factors": [
-      "*Why Medium-High",
+      "*Why Medium-High:",
       "Responsible for entire application - bugs can be anywhere in the stack",
-      "Context switching between frontend and backend work (mentally demanding)",
+      "Context switching between frontend and backend work",
       "Broader responsibility - need to handle UI bugs, API issues, database problems",
       "Higher expectations - expected to be productive across the entire stack",
       "On-call for full stack - can't pass issues to specialists"
     ],
     "mitigatingFactors": [
-      "*Mitigating Factors",
-      "High satisfaction - see complete features come to life (very rewarding)",
-      "Versatility - can switch contexts, not monotonous",
-      "High demand - easy job mobility if stressed",
-      "Better compensation - 10-20% premium justifies the effort"
+      "*Mitigating Factors:"
     ]
   },
   "personalityFit": {
     "thriveIf": [
-      "*You'll Thrive If",
+      "*You'll Thrive If:",
       "You enjoy variety and don't want to specialize too early in your career",
       "You like understanding the complete application flow from database to UI",
       "You're comfortable switching contexts between frontend and backend work",
       "You enjoy being self-sufficient and building complete features independently",
       "You're a generalist who likes learning broadly rather than deep specialization",
-      "You want maximum flexibility in the job market (most job opportunities)",
+      "You want maximum flexibility in the job market",
       "You're curious about all aspects of software development"
     ],
     "avoidIf": [
-      "*Avoid If",
-      "You prefer deep specialization in one specific area",
-      "You find context switching stressful and disorienting",
-      "You want to focus only on frontend OR backend, not both",
-      "You dislike managing deployment and infrastructure responsibilities",
-      "You prefer working in large teams with clear role boundaries"
+      "*Avoid If:",
+      "You prefer"
     ]
   },
   "collegeStrategy": [
@@ -289,11 +325,11 @@
       "year": 1,
       "title": "Foundation",
       "goals": [
-        "*Year 1 (Foundation)",
-        "Choose your full-stack path early",
+        "*Year 1 (Foundation):",
+        "Choose your full-stack path early:",
         "MERN Stack (MongoDB, Express, React, Node.js) - Most Popular in India",
         "MEAN Stack (MongoDB, Express, Angular, Node.js) - Enterprise",
-        "Python Stack (Django/FastAPI + React + PostgreSQL)",
+        "Python Stack",
         "Java Stack (Spring Boot + React + MySQL) - Enterprise jobs"
       ]
     },
@@ -301,10 +337,10 @@
       "year": 2,
       "title": "Deepening",
       "goals": [
-        "*Year 2 (Deepening)",
-        "Master React.js",
+        "*Year 2 (Deepening):",
+        "Master React.js:",
         "Complete React documentation",
-        "Hooks (useState, useEffect, useContext)",
+        "Hooks",
         "Component architecture",
         "React Router"
       ]
@@ -313,11 +349,11 @@
       "year": 3,
       "title": "Specialization",
       "goals": [
-        "*Year 3 (Specialization)",
-        "Learn Next.js (Critical for 2024-2025)",
-        "Server-Side Rendering (SSR)",
-        "Static Site Generation (SSG)",
-        "API routes (backend in Next.js)",
+        "*Year 3 (Specialization):",
+        "Learn Next.js (Critical for 2024-2025):",
+        "Server-Side Rendering",
+        "Static Site Generation",
+        "API routes",
         "File-based routing"
       ]
     },
@@ -325,8 +361,8 @@
       "year": 4,
       "title": "Job Hunt",
       "goals": [
-        "*Year 4 (Job Hunt)",
-        "Polish portfolio with 3-5 exceptional full-stack projects",
+        "*Year 4 (Job Hunt):",
+        "Polish portfolio with 3-5 exceptional full-stack projects:",
         "Each showing different skills and complexity",
         "Production-ready, deployed, documented",
         "Clean code, proper architecture",
@@ -357,49 +393,29 @@
         "goal": "- Target: 250-300 LeetCode problems"
       }
     ],
-    "applicationStrategy": [
-      {
-        "channel": "Target Full-Stack Friendly Companies",
-        "approach": "- Early-stage startups need full-stack engineers (can do everything)"
-      },
-      {
-        "channel": "Application Channels",
-        "approach": "- **Campus Placements:** Specify full-stack preference"
-      },
-      {
-        "channel": "Portfolio-First Strategy",
-        "approach": "- Lead with portfolio in all applications"
-      }
-    ],
-    "interviewPrep": [
-      "Frontend Technical Questions:",
-      "Backend Technical Questions:",
-      "System Design (Very Important for Full-Stack):",
-      "DSA (Still Required):",
-      "Project Deep-Dive (Critical - 30-40% of interview):",
-      "Behavioral Questions:"
-    ],
+    "applicationStrategy": [],
+    "interviewPrep": [],
     "salaryExpectations": {
       "service": {
-        "min": 4,
-        "max": 5.5
+        "min": 3.5,
+        "max": 5
       },
       "midTierProduct": {
-        "min": 15,
-        "max": 24
+        "min": 6,
+        "max": 10
       },
       "topProduct": {
         "min": 12,
-        "max": 18
+        "max": 20
       },
-      "gcc": ""
+      "gcc": "₹10-18 LPA"
     },
     "differentiators": [
-      "*Key Differentiators",
-      "Complete, deployed full-stack applications (not just frontend or backend)",
-      "Both MongoDB AND PostgreSQL experience (versatility)",
-      "TypeScript across full stack (modern, in-demand)",
-      "Real-time features (WebSockets, Socket.io)",
+      "*Key Differentiators:",
+      "Complete, deployed full-stack applications",
+      "Both MongoDB AND PostgreSQL experience",
+      "TypeScript across full stack",
+      "Real-time features",
       "Payment integration experience"
     ]
   }

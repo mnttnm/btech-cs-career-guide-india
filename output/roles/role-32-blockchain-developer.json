@@ -1,18 +1,86 @@
 {
   "roleId": "role-32-blockchain-developer",
   "roleName": "Role #32: Blockchain Developer",
-  "description": "🟡 Moderate - Specialized Skills, Volatile Market",
+  "description": "Moderate - Specialized Skills, Volatile Market",
   "jobTitles": {
-    "fresher": [],
-    "experienced": []
+    "fresher": [
+      "Blockchain Developer",
+      "Smart Contract Developer",
+      "Web3 Developer"
+    ],
+    "experienced": [
+      "Blockchain Engineer",
+      "DApp Developer",
+      "Solidity Developer",
+      "Cryptocurrency Developer",
+      "Blockchain Solutions Architect"
+    ]
   },
   "skills": {
-    "programmingLanguages": [],
-    "coreConcepts": [],
-    "frameworks": [],
+    "programmingLanguages": [
+      {
+        "name": "JavaScript",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Rust",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Intermediate",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Ethereum (most common in India)",
+      "Polygon (Mumbai-based, high activity)",
+      "Hyperledger Fabric (enterprise)",
+      "Binance Smart Chain",
+      "Hardhat, Truffle (smart contract development)",
+      "Remix IDE (Solidity development)",
+      "Metamask integration",
+      "IPFS (decentralized storage)"
+    ],
+    "frameworks": [
+      {
+        "name": "React",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
-  "dailyWork": [],
+  "dailyWork": [
+    "Writing and deploying smart contracts in Solidity",
+    "Developing decentralized applications",
+    "Integrating Web3 wallets",
+    "Implementing token standards",
+    "Testing smart contracts for security vulnerabilities",
+    "Gas optimization to reduce transaction costs",
+    "Building frontend interfaces for blockchain interaction",
+    "Auditing smart contracts for security issues"
+  ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
@@ -20,7 +88,9 @@
       "individualContributor": []
     },
     "timelineToSenior": "",
-    "alternativePaths": []
+    "alternativePaths": [
+      "*Alternative paths: Move to Web3 product management, blockchain consulting, crypto research, or start own Web3 startup"
+    ]
   },
   "salaryRanges": {
     "fresher": {
@@ -73,8 +143,8 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "6-12 months",
-    "description": ""
+    "timeToJobReady": "9-15 months",
+    "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",
@@ -92,18 +162,18 @@
     "interviewPrep": [],
     "salaryExpectations": {
       "service": {
-        "min": 0,
-        "max": 0
+        "min": 3.5,
+        "max": 5
       },
       "midTierProduct": {
-        "min": 0,
-        "max": 0
+        "min": 6,
+        "max": 10
       },
       "topProduct": {
-        "min": 0,
-        "max": 0
+        "min": 12,
+        "max": 20
       },
-      "gcc": ""
+      "gcc": "₹10-18 LPA"
     },
     "differentiators": []
   }

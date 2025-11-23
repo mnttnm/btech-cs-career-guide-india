@@ -1,18 +1,80 @@
 {
   "roleId": "role-35-quantum-computing-engineer",
   "roleName": "Role #35: Quantum Computing Engineer",
-  "description": "🔴 VERY HARD - Research-Focused, Usually Requires MS/PhD",
+  "description": "VERY HARD - Research-Focused, Usually Requires MS/PhD",
   "jobTitles": {
-    "fresher": [],
-    "experienced": []
+    "fresher": [
+      "*Research/Academia:",
+      "Quantum Computing Researcher",
+      "Research Scientist - Quantum Computing"
+    ],
+    "experienced": [
+      "Postdoctoral Researcher - Quantum Information",
+      "Quantum Algorithms Researcher",
+      "Quantum Software Engineer",
+      "*Industry (Rare in India):",
+      "Quantum Software Engineer"
+    ]
   },
   "skills": {
-    "programmingLanguages": [],
-    "coreConcepts": [],
-    "frameworks": [],
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "C++",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "Rust",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "C",
+        "level": "Beginner",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Superposition, entanglement, measurement",
+      "Quantum states, operators, observables",
+      "Schrödinger equation",
+      "Quantum measurement theory",
+      "Qubits, quantum gates",
+      "Quantum teleportation",
+      "Quantum error correction",
+      "Vector spaces, matrices, eigenvalues/eigenvectors"
+    ],
+    "frameworks": [
+      {
+        "name": "TensorFlow",
+        "popularity": "High"
+      },
+      {
+        "name": "PyTorch",
+        "popularity": "High"
+      },
+      {
+        "name": "NumPy",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
-  "dailyWork": [],
+  "dailyWork": [
+    "*In Academia/Research Labs:",
+    "Reading research papers",
+    "Implementing quantum algorithms in Qiskit/Cirq",
+    "Running simulations on quantum simulators",
+    "Submitting jobs to real quantum computers",
+    "Analyzing experimental results and noise characteristics",
+    "Developing new quantum algorithms",
+    "Writing research papers for publication"
+  ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
@@ -74,7 +136,7 @@
   "learningCurve": {
     "difficulty": "Moderate",
     "timeToJobReady": "6-12 months",
-    "description": ""
+    "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",
@@ -92,18 +154,18 @@
     "interviewPrep": [],
     "salaryExpectations": {
       "service": {
-        "min": 0,
-        "max": 0
+        "min": 3.5,
+        "max": 5
       },
       "midTierProduct": {
-        "min": 0,
-        "max": 0
+        "min": 6,
+        "max": 10
       },
       "topProduct": {
-        "min": 0,
-        "max": 0
+        "min": 12,
+        "max": 20
       },
-      "gcc": ""
+      "gcc": "₹10-18 LPA"
     },
     "differentiators": []
   }

@@ -1,64 +1,84 @@
 {
-  "roleId": "role-29-solution-architect",
-  "roleName": "Role #29: Solution Architect",
-  "description": "A Solution Architect is a senior technical role responsible for designing comprehensive technology solutions to solve specific business problems. Unli",
+  "roleId": "role-24-automation-test-engineer",
+  "roleName": "Role #24: Automation Test Engineer",
+  "description": "Moderate (Requires Programming Skills)",
   "jobTitles": {
-    "fresher": [],
+    "fresher": [
+      "Automation Test Engineer",
+      "Test Automation Engineer",
+      "QA Automation Engineer",
+      "Junior Automation Test Engineer"
+    ],
     "experienced": [
-      "Solution Architect",
-      "Solutions Architect",
-      "Technical Architect",
-      "Application Architect",
-      "Senior Solutions Architect"
+      "Automation Engineer - Testing",
+      "Senior Automation Test Engineer",
+      "Lead Automation Engineer",
+      "Automation Test Analyst",
+      "Test Automation Specialist"
     ]
   },
   "skills": {
     "programmingLanguages": [
       {
         "name": "JavaScript",
-        "level": "Advanced",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Intermediate",
         "priority": "Primary"
       },
       {
         "name": "Python",
-        "level": "Advanced",
+        "level": "Intermediate",
         "priority": "Primary"
       },
       {
         "name": "Java",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
-        "name": "Go",
-        "level": "Advanced",
+        "level": "Intermediate",
         "priority": "Primary"
       },
       {
         "name": "C",
-        "level": "Advanced",
+        "level": "Intermediate",
         "priority": "Primary"
       },
       {
         "name": "SQL",
-        "level": "Advanced",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Swift",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Ruby",
+        "level": "Intermediate",
         "priority": "Primary"
       },
       {
         "name": "Scala",
-        "level": "Advanced",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Bash",
+        "level": "Intermediate",
         "priority": "Primary"
       }
     ],
     "coreConcepts": [
-      "Distributed systems design",
-      "Microservices vs Monolithic architecture",
-      "Service-Oriented Architecture (SOA)",
-      "Event-driven architecture",
-      "API design patterns (REST, GraphQL, gRPC)",
-      "Database architecture (SQL, NoSQL, data modeling)",
-      "Caching strategies (Redis, Memcached, CDN)",
-      "Message queues (Kafka, RabbitMQ, AWS SQS)"
+      "Most popular for Selenium + TestNG",
+      "Used in enterprise automation frameworks",
+      "Android mobile automation (Appium)",
+      "Easiest to learn for beginners",
+      "Growing in API automation",
+      "Cypress, Playwright, Puppeteer",
+      "Modern frontend testing",
+      "Node.js API automation"
     ],
     "frameworks": [
       {
@@ -70,10 +90,6 @@
         "popularity": "High"
       },
       {
-        "name": "Kubernetes",
-        "popularity": "High"
-      },
-      {
         "name": "Docker",
         "popularity": "High"
       }
@@ -81,14 +97,14 @@
     "tools": []
   },
   "dailyWork": [
-    "*Morning (9 AM - 12 PM):",
-    "Review overnight production issues and architectural implications",
-    "Architecture review meetings with development teams",
-    "Whiteboarding session for new feature design",
-    "One-on-one with senior developers on technical challenges",
-    "*Afternoon (12 PM - 5 PM):",
-    "Create architecture diagrams",
-    "Document architectural decisions"
+    "Write new automated test scripts",
+    "Convert manual test cases to automation",
+    "Implement page object models",
+    "Create reusable test functions and libraries",
+    "Review and refactor existing test code",
+    "*Example Tasks:",
+    "Automate login flow with multiple user types",
+    "Create API automation for new endpoints"
   ],
   "careerProgression": {
     "timeline": [],
@@ -150,7 +166,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "6-12 months",
+    "timeToJobReady": "4-6 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {

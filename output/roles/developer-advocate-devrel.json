@@ -1,50 +1,25 @@
 {
-  "roleId": "role-33-iot-developer",
-  "roleName": "Role #33: IoT Developer",
-  "description": "Moderate - Hardware + Software Skills Required",
+  "roleId": "developer-advocate-devrel",
+  "roleName": "Developer Advocate / DevRel",
+  "description": "Requires Experience (Usually 2-3 years of software development)",
   "jobTitles": {
     "fresher": [
-      "IoT Developer",
-      "IoT Engineer",
-      "Embedded IoT Developer"
+      "Developer Advocate",
+      "Developer Relations Engineer",
+      "Technical Evangelist"
     ],
     "experienced": [
-      "IoT Solutions Engineer",
-      "IoT Software Engineer",
-      "IoT Application Developer",
-      "IoT Full-Stack Developer",
-      "Senior IoT Developer"
+      "Senior Developer Advocate",
+      "Developer Experience Engineer",
+      "Community Engineer",
+      "Solutions Engineer",
+      "Developer Marketing Engineer"
     ]
   },
   "skills": {
     "programmingLanguages": [
       {
-        "name": "JavaScript",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
-        "name": "Python",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
-        "name": "Java",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
-        "name": "C++",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
         "name": "Rust",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
-        "name": "C",
         "level": "Advanced",
         "priority": "Primary"
       },
@@ -55,36 +30,32 @@
       }
     ],
     "coreConcepts": [
-      "Local data processing",
-      "Fog computing concepts",
-      "Edge AI (TensorFlow Lite on embedded)",
-      "Grafana (time-series dashboards)",
-      "Custom web dashboards (React, D3.js)",
-      "WiFi, Bluetooth, BLE (Bluetooth Low Energy)",
-      "LoRaWAN (long-range, low-power)",
-      "Zigbee, Z-Wave (mesh networks)"
+      "Ability to build demo apps, SDKs, code samples quickly",
+      "Understanding of your company's tech stack deeply",
+      "Debugging and troubleshooting skills",
+      "Reading and reviewing code",
+      "System design fundamentals",
+      "API design and usage",
+      "Git/GitHub proficiency",
+      "Terminal/command-line expertise"
     ],
     "frameworks": [
       {
-        "name": "React",
-        "popularity": "High"
-      },
-      {
-        "name": "TensorFlow",
+        "name": "Docker",
         "popularity": "High"
       }
     ],
     "tools": []
   },
   "dailyWork": [
-    "Programming microcontrollers",
-    "Connecting and testing sensors and actuators",
-    "Writing firmware in C/C++ for embedded devices",
-    "Implementing communication protocols",
-    "Integrating IoT devices with cloud platforms",
-    "Building backend services to process sensor data",
-    "Creating web/mobile dashboards for device monitoring",
-    "Debugging hardware-software integration issues"
+    "*NOTE: DevRel is highly varied. No \"typical\" day exists. Work depends on company, product, and your focus area.",
+    "*Monday:",
+    "9:00 AM - Check community channels (Discord, Slack) for developer questions",
+    "10:00 AM - Weekly DevRel team sync - discuss metrics, upcoming events, content calendar",
+    "11:00 AM - Code a demo app using new API feature for upcoming conference talk",
+    "1:00 PM - Lunch",
+    "2:00 PM - Write blog post: \"5 Ways to Optimize Your API Calls\"",
+    "4:00 PM - Product team meeting - provide feedback on developer experience for new feature"
   ],
   "careerProgression": {
     "timeline": [],
@@ -94,7 +65,11 @@
     },
     "timelineToSenior": "",
     "alternativePaths": [
-      "*Alternative paths: Hardware engineer, embedded systems engineer, industrial automation, smart home solutions, IoT product management"
+      "*Alternative Paths:",
+      "Transition to Product Management",
+      "Move to Developer Marketing or Growth",
+      "Become Technical Program Manager",
+      "Join startups as founding DevRel or Head of Community"
     ]
   },
   "salaryRanges": {
@@ -148,12 +123,19 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "8-12 months",
+    "timeToJobReady": "6-12 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",
-    "factors": [],
+    "factors": [
+      "*Why It Can Be Stressful:",
+      "*High Stress Factors:",
+      "Always \"On\" Publicly: Your social media presence is tied to your job; mistakes are visible",
+      "Travel Fatigue: Frequent travel (even if exciting) is exhausting",
+      "Public Speaking Anxiety: Presenting to hundreds of people is nerve-wracking",
+      "Imposter Syndrome: Constantly learning new things, hard to feel like an expert"
+    ],
     "mitigatingFactors": []
   },
   "personalityFit": {

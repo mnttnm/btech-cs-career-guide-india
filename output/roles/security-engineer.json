@@ -1,66 +1,76 @@
 {
-  "roleId": "role-34-ar-vr-developer",
-  "roleName": "Role #34: AR/VR Developer",
-  "description": "Moderate - 3D Skills + Programming Required",
+  "roleId": "security-engineer",
+  "roleName": "Security Engineer",
+  "description": "Moderate - Often Requires Dev Experience or Certifications",
   "jobTitles": {
     "fresher": [
-      "AR/VR Developer",
-      "Unity Developer",
-      "Unreal Engine Developer"
+      "Security Engineer",
+      "Application Security Engineer",
+      "Cloud Security Engineer"
     ],
     "experienced": [
-      "XR (Extended Reality) Developer",
-      "Mixed Reality Developer",
-      "AR Developer",
-      "VR Game Developer",
-      "Metaverse Developer"
+      "Infrastructure Security Engineer",
+      "Product Security Engineer",
+      "Security Software Engineer",
+      "DevSecOps Engineer",
+      "Senior Security Engineer"
     ]
   },
   "skills": {
     "programmingLanguages": [
       {
         "name": "JavaScript",
-        "level": "Advanced",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Beginner",
         "priority": "Primary"
       },
       {
         "name": "Python",
-        "level": "Advanced",
+        "level": "Beginner",
         "priority": "Primary"
       },
       {
-        "name": "C++",
-        "level": "Advanced",
+        "name": "Java",
+        "level": "Beginner",
         "priority": "Primary"
       },
       {
-        "name": "C",
-        "level": "Advanced",
+        "name": "Go",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "Rust",
+        "level": "Beginner",
         "priority": "Primary"
       }
     ],
-    "coreConcepts": [
-      "Image tracking and recognition",
-      "Face tracking and filters",
-      "SLAM (Simultaneous Localization and Mapping)",
-      "Occlusion and depth sensing",
-      "6DoF (Six Degrees of Freedom) tracking",
-      "Hand tracking and controllers",
-      "Locomotion systems (teleportation, smooth movement)",
-      "VR comfort and avoiding motion sickness"
+    "coreConcepts": [],
+    "frameworks": [
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      }
     ],
-    "frameworks": [],
     "tools": []
   },
   "dailyWork": [
-    "Developing AR/VR applications in Unity or Unreal Engine",
-    "Implementing user interactions",
-    "Creating and optimizing 3D environments and assets",
-    "Integrating AR features",
-    "Building VR locomotion systems",
-    "Implementing physics and collision detection",
-    "Optimizing frame rate for VR comfort",
-    "Testing on AR/VR devices"
+    "Security Architecture (30%): Designing security controls for new features/systems",
+    "Code Review & Scanning (25%): Reviewing code for security issues, analyzing SAST/DAST findings",
+    "Tooling & Automation (20%): Building security tools, automating security checks in CI/CD",
+    "Collaboration (15%): Working with dev teams, threat modeling sessions, security consultations",
+    "Incident Response Support (5%): Helping with security incidents, post-incident improvements",
+    "Research & Learning (5%): Staying updated on new vulnerabilities, security techniques",
+    "Performing threat modeling for new features",
+    "Reviewing code for security vulnerabilities"
   ],
   "careerProgression": {
     "timeline": [],
@@ -69,9 +79,7 @@
       "individualContributor": []
     },
     "timelineToSenior": "",
-    "alternativePaths": [
-      "*Alternative paths: Game development, 3D graphics programming, metaverse development, XR product management"
-    ]
+    "alternativePaths": []
   },
   "salaryRanges": {
     "fresher": {
@@ -124,7 +132,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "10-14 months",
+    "timeToJobReady": "12-24 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {

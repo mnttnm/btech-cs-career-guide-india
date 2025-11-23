@@ -1,18 +1,53 @@
 {
-  "roleId": "program-management-fundamentals-3-months",
-  "roleName": "Program Management Fundamentals (3 months)",
-  "description": "🔴 Requires Prior Experience (3-5+ years)",
+  "roleId": "role-30-enterprise-architect",
+  "roleName": "Role #30: Enterprise Architect",
+  "description": "Moderate",
   "jobTitles": {
     "fresher": [],
-    "experienced": []
+    "experienced": [
+      "Enterprise Architect",
+      "Chief Architect",
+      "Principal Enterprise Architect",
+      "Lead Enterprise Architect",
+      "VP - Technology Architecture"
+    ]
   },
   "skills": {
-    "programmingLanguages": [],
-    "coreConcepts": [],
+    "programmingLanguages": [
+      {
+        "name": "Rust",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "C",
+        "level": "Beginner",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Translate business strategy into technology roadmap",
+      "Understand business models, revenue streams, market dynamics",
+      "Conduct cost-benefit analysis at enterprise scale",
+      "ROI calculation and business case development",
+      "Vendor negotiation and contract management",
+      "Risk assessment and mitigation planning",
+      "Think 3-5 years ahead (technology roadmap)",
+      "Balance innovation with stability"
+    ],
     "frameworks": [],
     "tools": []
   },
-  "dailyWork": [],
+  "dailyWork": [
+    "*Monday: Strategic Planning",
+    "*9:00 AM - 10:30 AM: Executive Leadership Meeting",
+    "Present technology roadmap updates to CTO and CEO",
+    "Discuss Q3 technology initiatives alignment with business goals",
+    "Report on architecture health metrics",
+    "*10:30 AM - 12:00 PM: Architecture Review Board (ARB) Chair",
+    "Review 3 architectural proposals from solution architects",
+    "Assess alignment with enterprise standards"
+  ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
@@ -74,7 +109,7 @@
   "learningCurve": {
     "difficulty": "Moderate",
     "timeToJobReady": "6-12 months",
-    "description": ""
+    "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",

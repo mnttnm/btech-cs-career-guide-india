@@ -3,21 +3,117 @@
   "roleName": "Machine Learning Engineer",
   "description": "",
   "jobTitles": {
-    "fresher": [],
-    "experienced": []
+    "fresher": [
+      "Machine Learning Engineer",
+      "Junior ML Engineer",
+      "Associate ML Engineer",
+      "ML Engineer I",
+      "Applied Scientist I"
+    ],
+    "experienced": [
+      "Machine Learning Engineer II / Senior ML Engineer",
+      "Staff ML Engineer",
+      "Lead ML Engineer",
+      "Principal ML Engineer",
+      "Senior Applied Scientist"
+    ]
   },
   "skills": {
-    "programmingLanguages": [],
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Java",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C++",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Scala",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Bash",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
     "coreConcepts": [],
-    "frameworks": [],
+    "frameworks": [
+      {
+        "name": "Flask",
+        "popularity": "Medium"
+      },
+      {
+        "name": "FastAPI",
+        "popularity": "Medium"
+      },
+      {
+        "name": "TensorFlow",
+        "popularity": "High"
+      },
+      {
+        "name": "PyTorch",
+        "popularity": "High"
+      },
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      },
+      {
+        "name": "Scikit-learn",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
-  "dailyWork": [],
+  "dailyWork": [
+    "Model Development (25-30%): Implementing ML algorithms, experimenting with architectures, training models on large datasets",
+    "Production Engineering (30-35%): Deploying models to production, building ML pipelines, optimizing inference latency, scaling systems",
+    "Code Reviews & Collaboration (15-20%): Reviewing code from team members, pair programming, technical discussions",
+    "Monitoring & Debugging (10-15%): Monitoring model performance in production, debugging issues, handling model drift",
+    "Infrastructure Work (10-15%): Setting up training infrastructure, optimizing GPU utilization, managing cloud resources",
+    "Meetings (10%): Sprint planning, standup, technical design discussions, cross-team collaboration",
+    "Documentation (5%): Writing technical specs, API docs, deployment guides",
+    "Building recommendation engines at scale"
+  ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
-      "leadership": [],
-      "individualContributor": []
+      "leadership": [
+        "- Lead ML Engineer",
+        "ML Engineering Manager",
+        "Director of ML",
+        "VP of Engineering/AI",
+        "Chief AI Officer"
+      ],
+      "individualContributor": [
+        "- Principal ML Engineer",
+        "Distinguished Engineer",
+        "Fellow (very rare)"
+      ]
     },
     "timelineToSenior": "",
     "alternativePaths": []
@@ -73,8 +169,8 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "6-12 months",
-    "description": ""
+    "timeToJobReady": "3-6 months",
+    "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",

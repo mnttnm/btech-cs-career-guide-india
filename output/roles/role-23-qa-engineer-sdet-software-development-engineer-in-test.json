@@ -1,21 +1,21 @@
 {
-  "roleId": "ai-engineer",
-  "roleName": "AI Engineer",
-  "description": "",
+  "roleId": "role-23-qa-engineer-sdet-software-development-engineer-in-test",
+  "roleName": "Role #23: QA Engineer / SDET (Software Development Engineer in Test)",
+  "description": "Entry-Level Friendly (QA Engineer) |  Moderate (SDET)",
   "jobTitles": {
     "fresher": [
-      "AI Engineer",
-      "Junior AI Engineer",
-      "Associate AI Engineer",
-      "Generative AI Engineer",
-      "LLM Engineer"
+      "QA Engineer",
+      "Quality Assurance Engineer",
+      "Software Test Engineer",
+      "Junior QA Engineer",
+      "Associate QA Engineer"
     ],
     "experienced": [
-      "Senior AI Engineer",
-      "Lead AI Engineer",
-      "Principal AI Engineer",
-      "Staff AI Engineer",
-      "AI Architect"
+      "Manual Test Engineer",
+      "Quality Analyst",
+      "QA Analyst",
+      "Software Development Engineer in Test",
+      "Test Automation Engineer"
     ]
   },
   "skills": {
@@ -26,7 +26,22 @@
         "priority": "Primary"
       },
       {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "priority": "Secondary"
+      },
+      {
         "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Java",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C",
         "level": "Advanced",
         "priority": "Primary"
       },
@@ -36,46 +51,22 @@
         "priority": "Primary"
       },
       {
-        "name": "R",
+        "name": "Ruby",
         "level": "Advanced",
-        "priority": "Primary"
+        "priority": "Secondary"
       }
     ],
     "coreConcepts": [
-      "Transformers (BERT, GPT, T5 family)",
-      "Attention mechanisms (self-attention, multi-head attention)",
-      "CNNs (for computer vision tasks)",
-      "RNNs/LSTMs (legacy, but good to know)",
-      "Diffusion models (Stable Diffusion, DALL-E architecture)",
-      "GANs (generative adversarial networks)",
-      "Open-source LLMs: Llama 2, Mistral, Falcon",
-      "Vector databases: Pinecone, Weaviate, Chroma, FAISS"
+      "Manual testing methodologies",
+      "Test case design and execution",
+      "Bug reporting and tracking",
+      "Exploratory testing",
+      "Integration testing",
+      "User acceptance testing (UAT)",
+      "Basic programming (Python, Java, or JavaScript)",
+      "SQL for database testing"
     ],
     "frameworks": [
-      {
-        "name": "React",
-        "popularity": "High"
-      },
-      {
-        "name": "Flask",
-        "popularity": "Medium"
-      },
-      {
-        "name": "FastAPI",
-        "popularity": "Medium"
-      },
-      {
-        "name": "TensorFlow",
-        "popularity": "High"
-      },
-      {
-        "name": "PyTorch",
-        "popularity": "High"
-      },
-      {
-        "name": "Kubernetes",
-        "popularity": "High"
-      },
       {
         "name": "Docker",
         "popularity": "High"
@@ -84,25 +75,19 @@
     "tools": []
   },
   "dailyWork": [
-    "Model Integration & Development (35-40%):",
-    "Building LLM-powered applications",
-    "Fine-tuning pre-trained models for specific use cases",
-    "Implementing RAG pipelines for knowledge retrieval",
-    "Experimenting with different AI models and APIs",
-    "Prompt Engineering & Optimization (15-20%):",
-    "Crafting and optimizing prompts for LLMs",
-    "Testing different prompting strategies"
+    "*Manual Testing (40-60% of time):",
+    "Execute test cases on new features",
+    "Perform exploratory testing",
+    "Verify bug fixes",
+    "Conduct regression testing",
+    "Review requirements and create test scenarios",
+    "*Automation (20-40% of time):",
+    "Write and maintain automated test scripts"
   ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
-      "leadership": [
-        "- Lead AI Engineer",
-        "AI Engineering Manager",
-        "Director of AI",
-        "VP of AI/Product",
-        "Chief AI Officer"
-      ],
+      "leadership": [],
       "individualContributor": []
     },
     "timelineToSenior": "",
@@ -159,7 +144,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "3-6 months",
+    "timeToJobReady": "2-3 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {
@@ -178,18 +163,18 @@
     "interviewPrep": [],
     "salaryExpectations": {
       "service": {
-        "min": 0,
-        "max": 0
+        "min": 3.5,
+        "max": 5
       },
       "midTierProduct": {
-        "min": 0,
-        "max": 0
+        "min": 6,
+        "max": 10
       },
       "topProduct": {
-        "min": 0,
-        "max": 0
+        "min": 12,
+        "max": 20
       },
-      "gcc": ""
+      "gcc": "₹10-18 LPA"
     },
     "differentiators": []
   }

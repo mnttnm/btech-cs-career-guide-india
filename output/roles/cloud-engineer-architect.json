@@ -1,66 +1,70 @@
 {
-  "roleId": "role-34-ar-vr-developer",
-  "roleName": "Role #34: AR/VR Developer",
-  "description": "Moderate - 3D Skills + Programming Required",
+  "roleId": "cloud-engineer-architect",
+  "roleName": "Cloud Engineer/Architect",
+  "description": "Moderate - Certifications Make It Fresher-Friendly",
   "jobTitles": {
     "fresher": [
-      "AR/VR Developer",
-      "Unity Developer",
-      "Unreal Engine Developer"
+      "Cloud Engineer",
+      "Junior Cloud Engineer",
+      "Cloud Infrastructure Engineer"
     ],
     "experienced": [
-      "XR (Extended Reality) Developer",
-      "Mixed Reality Developer",
-      "AR Developer",
-      "VR Game Developer",
-      "Metaverse Developer"
+      "Cloud Solutions Engineer",
+      "Cloud DevOps Engineer",
+      "AWS Engineer / Azure Engineer / GCP Engineer",
+      "Senior Cloud Engineer",
+      "Lead Cloud Engineer"
     ]
   },
   "skills": {
     "programmingLanguages": [
       {
-        "name": "JavaScript",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
         "name": "Python",
-        "level": "Advanced",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "SQL",
+        "level": "Beginner",
         "priority": "Primary"
       },
       {
-        "name": "C++",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
-        "name": "C",
-        "level": "Advanced",
-        "priority": "Primary"
+        "name": "Bash",
+        "level": "Beginner",
+        "priority": "Secondary"
       }
     ],
     "coreConcepts": [
-      "Image tracking and recognition",
-      "Face tracking and filters",
-      "SLAM (Simultaneous Localization and Mapping)",
-      "Occlusion and depth sensing",
-      "6DoF (Six Degrees of Freedom) tracking",
-      "Hand tracking and controllers",
-      "Locomotion systems (teleportation, smooth movement)",
-      "VR comfort and avoiding motion sickness"
+      "Virtual Machines, AKS, Azure Functions",
+      "Blob Storage, Azure SQL, Cosmos DB",
+      "Virtual Networks, Application Gateway, Azure CDN",
+      "Azure Active Directory, Key Vault",
+      "Azure Monitor, Application Insights",
+      "ARM Templates, Bicep",
+      "Compute Engine, GKE, Cloud Functions",
+      "Cloud Storage, Cloud SQL, BigQuery"
     ],
-    "frameworks": [],
+    "frameworks": [
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
   "dailyWork": [
-    "Developing AR/VR applications in Unity or Unreal Engine",
-    "Implementing user interactions",
-    "Creating and optimizing 3D environments and assets",
-    "Integrating AR features",
-    "Building VR locomotion systems",
-    "Implementing physics and collision detection",
-    "Optimizing frame rate for VR comfort",
-    "Testing on AR/VR devices"
+    "Provisioning cloud resources using IaC",
+    "Managing and monitoring cloud infrastructure",
+    "Implementing security best practices",
+    "Setting up CI/CD pipelines for cloud deployments",
+    "Migrating applications to the cloud",
+    "Cost optimization",
+    "Troubleshooting cloud infrastructure issues",
+    "Creating and updating documentation"
   ],
   "careerProgression": {
     "timeline": [],
@@ -70,7 +74,11 @@
     },
     "timelineToSenior": "",
     "alternativePaths": [
-      "*Alternative paths: Game development, 3D graphics programming, metaverse development, XR product management"
+      "*Alternative paths:",
+      "DevOps Engineer/Architect",
+      "Site Reliability Engineer",
+      "Platform Engineering",
+      "Cloud Security Specialist"
     ]
   },
   "salaryRanges": {
@@ -124,7 +132,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "10-14 months",
+    "timeToJobReady": "6-9 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {

@@ -3,21 +3,101 @@
   "roleName": "Data Scientist",
   "description": "",
   "jobTitles": {
-    "fresher": [],
-    "experienced": []
+    "fresher": [
+      "Data Scientist",
+      "Junior Data Scientist",
+      "Associate Data Scientist",
+      "Data Scientist I",
+      "Graduate Data Scientist"
+    ],
+    "experienced": [
+      "Data Scientist II / Senior Data Scientist",
+      "Lead Data Scientist",
+      "Principal Data Scientist",
+      "Staff Data Scientist",
+      "Data Science Manager"
+    ]
   },
   "skills": {
-    "programmingLanguages": [],
-    "coreConcepts": [],
-    "frameworks": [],
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "R",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Julia (optional, emerging in scientific computing)",
+      "Supervised Learning: Regression, Classification (Logistic, SVM, Decision Trees)",
+      "Unsupervised Learning: Clustering (K-means, DBSCAN), PCA, t-SNE",
+      "Deep Learning basics: Neural Networks, CNNs (image data), RNNs/LSTM (time series)",
+      "Statistical methods: Hypothesis testing, A/B testing, probability distributions",
+      "Feature engineering and selection",
+      "Model evaluation metrics and validation techniques",
+      "Time series analysis and forecasting"
+    ],
+    "frameworks": [
+      {
+        "name": "TensorFlow",
+        "popularity": "High"
+      },
+      {
+        "name": "PyTorch",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      },
+      {
+        "name": "Scikit-learn",
+        "popularity": "High"
+      },
+      {
+        "name": "Pandas",
+        "popularity": "High"
+      },
+      {
+        "name": "NumPy",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
-  "dailyWork": [],
+  "dailyWork": [
+    "Data Exploration & Cleaning",
+    "Feature Engineering (15-20%): Creating new features, transforming variables, encoding categorical data, scaling/normalization",
+    "Model Building & Experimentation (25-30%): Training various ML models, hyperparameter tuning, cross-validation, comparing model performance",
+    "Analysis & Insights (15-20%): Statistical analysis, A/B test evaluation, generating business insights from data",
+    "Meetings & Communication (10-15%): Stakeholder discussions, presenting findings to non-technical teams, collaborating with engineers and product managers",
+    "Documentation (5-10%): Writing experiment reports, documenting model assumptions, creating reproducible notebooks",
+    "Deployment Support",
+    "Customer churn prediction models"
+  ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
-      "leadership": [],
-      "individualContributor": []
+      "leadership": [
+        "- Data Science Manager",
+        "Director of Data Science",
+        "VP of Analytics/AI",
+        "Chief Data Officer (CDO)"
+      ],
+      "individualContributor": [
+        "- Principal Data Scientist",
+        "Distinguished Scientist",
+        "Research Scientist"
+      ]
     },
     "timelineToSenior": "",
     "alternativePaths": []
@@ -73,8 +153,8 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "6-12 months",
-    "description": ""
+    "timeToJobReady": "3-6 months",
+    "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",

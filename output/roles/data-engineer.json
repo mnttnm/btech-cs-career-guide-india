@@ -3,20 +3,91 @@
   "roleName": "Data Engineer",
   "description": "",
   "jobTitles": {
-    "fresher": [],
-    "experienced": []
+    "fresher": [
+      "Data Engineer",
+      "Junior Data Engineer",
+      "Associate Data Engineer",
+      "Data Engineer I",
+      "Big Data Engineer"
+    ],
+    "experienced": [
+      "Data Engineer II / Senior Data Engineer",
+      "Lead Data Engineer",
+      "Principal Data Engineer",
+      "Staff Data Engineer",
+      "Big Data Architect"
+    ]
   },
   "skills": {
-    "programmingLanguages": [],
-    "coreConcepts": [],
-    "frameworks": [],
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Java",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Scala",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Bash",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Shell scripting (Bash): For automation and ops",
+      "PostgreSQL, MySQL (strong SQL proficiency)",
+      "Query optimization, indexing, transactions",
+      "MongoDB (document store)",
+      "Cassandra (wide-column store)",
+      "Redis (in-memory, caching)",
+      "Elasticsearch (search and analytics)",
+      "Snowflake (popular in modern companies)"
+    ],
+    "frameworks": [
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
-  "dailyWork": [],
+  "dailyWork": [
+    "Building Data Pipelines (35-40%):",
+    "Developing ETL/ELT workflows",
+    "Writing Spark jobs for large-scale data processing",
+    "Creating Airflow DAGs for pipeline orchestration",
+    "Data ingestion from various sources",
+    "Data Modeling & Optimization (20-25%):",
+    "Designing data warehouse schemas",
+    "Optimizing SQL queries and Spark jobs"
+  ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
-      "leadership": [],
+      "leadership": [
+        "- Lead Data Engineer",
+        "Data Engineering Manager",
+        "Director of Data Engineering",
+        "VP of Data",
+        "Chief Data Officer"
+      ],
       "individualContributor": []
     },
     "timelineToSenior": "",
@@ -73,8 +144,8 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "6-12 months",
-    "description": ""
+    "timeToJobReady": "3-6 months",
+    "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",

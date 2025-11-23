@@ -1,76 +1,56 @@
 {
-  "roleId": "sales-engineer-solutions-engineer",
-  "roleName": "Sales Engineer / Solutions Engineer",
-  "description": "Moderate - Usually Requires 1-2 Years Dev Experience First",
+  "roleId": "technical-writer",
+  "roleName": "Technical Writer",
+  "description": "Entry-Level Friendly",
   "jobTitles": {
     "fresher": [
-      "Sales Engineer",
-      "Solutions Engineer",
-      "Pre-Sales Engineer"
+      "Technical Writer",
+      "Documentation Engineer",
+      "API Documentation Specialist"
     ],
     "experienced": [
-      "Solutions Consultant",
-      "Technical Sales Engineer",
-      "Solutions Architect",
-      "Field Engineer",
-      "Customer Engineer"
+      "Senior Technical Writer",
+      "Content Developer",
+      "Developer Documentation Writer",
+      "Information Developer",
+      "Technical Content Writer"
     ]
   },
   "skills": {
     "programmingLanguages": [
       {
-        "name": "JavaScript",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
-        "name": "Python",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
-        "name": "Go",
+        "name": "HTML",
         "level": "Advanced",
         "priority": "Secondary"
       },
       {
-        "name": "C",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
-        "name": "SQL",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
-        "name": "Scala",
+        "name": "CSS",
         "level": "Advanced",
         "priority": "Secondary"
       }
     ],
     "coreConcepts": [
-      "Sales process understanding (lead → demo → POC → close)",
-      "Solution selling methodology",
-      "ROI calculations and business case development",
-      "Competitive analysis and positioning",
-      "Pricing and licensing models",
-      "CRM tools (Salesforce, HubSpot)",
-      "Sales forecasting and pipeline management",
-      "Technical discovery and requirement gathering"
+      "Excellent written English (grammar, clarity, conciseness)",
+      "Information architecture and content organization",
+      "Writing for different audiences (beginners, advanced users, developers)",
+      "Creating tutorials, how-to guides, references, and explanations",
+      "Technical editing and proofreading",
+      "Ability to read and understand code (not write production code)",
+      "Basic programming concepts (variables, functions, APIs, data structures)",
+      "Understanding REST APIs, JSON, HTTP methods"
     ],
     "frameworks": [],
     "tools": []
   },
   "dailyWork": [
-    "*Customer Calls & Demos (40-50%):",
-    "Discovery calls with prospective customers",
-    "Product demos tailored to customer use case",
-    "Deep-dive technical sessions with customer's engineering team",
-    "Whiteboarding solutions on customer calls",
-    "Presenting to C-level executives and decision-makers",
-    "Handling technical questions during sales calls",
-    "*POCs & Technical Validation (20-30%):"
+    "*Typical Day:",
+    "*Morning (9 AM - 12 PM):",
+    "Review Jira tickets for documentation requests",
+    "Attend product standup to learn about new features",
+    "Meet with engineering team to understand upcoming API changes",
+    "Draft documentation outline for new SDK feature",
+    "Test API endpoints using Postman to understand behavior",
+    "*Afternoon (1 PM - 3 PM):"
   ],
   "careerProgression": {
     "timeline": [],
@@ -79,7 +59,13 @@
       "individualContributor": []
     },
     "timelineToSenior": "",
-    "alternativePaths": []
+    "alternativePaths": [
+      "*Alternative Paths:",
+      "Transition to Developer Advocate",
+      "Move to Technical Program Management",
+      "Become UX Writer or Content Designer",
+      "Specialize in API documentation consulting"
+    ]
   },
   "salaryRanges": {
     "fresher": {
@@ -137,7 +123,14 @@
   },
   "stressLevel": {
     "level": "Medium",
-    "factors": [],
+    "factors": [
+      "*Why It's Low Stress:",
+      "No Production Emergencies: Documentation doesn't break at 2 AM",
+      "No On-Call: No weekend pager duty or production incidents",
+      "Flexible Deadlines: Documentation is important but rarely urgent",
+      "No Code Review Pressure: Your \"code\" is text, easier to iterate",
+      "Predictable Hours: Rare to work beyond 6 PM"
+    ],
     "mitigatingFactors": []
   },
   "personalityFit": {

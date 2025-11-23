@@ -3,20 +3,97 @@
   "roleName": "MLOps Engineer",
   "description": "",
   "jobTitles": {
-    "fresher": [],
-    "experienced": []
+    "fresher": [
+      "MLOps Engineer",
+      "Associate MLOps Engineer",
+      "ML Infrastructure Engineer",
+      "ML Platform Engineer",
+      "DevOps Engineer - ML"
+    ],
+    "experienced": [
+      "MLOps Engineer / Senior MLOps Engineer",
+      "Lead MLOps Engineer",
+      "Principal MLOps Engineer",
+      "Staff MLOps Engineer",
+      "ML Platform Engineer"
+    ]
   },
   "skills": {
-    "programmingLanguages": [],
-    "coreConcepts": [],
-    "frameworks": [],
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Bash",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Helm charts for package management",
+      "Container registries: Docker Hub, AWS ECR, Google GCR",
+      "Building ML-specific CI/CD pipelines",
+      "Automated testing for ML models",
+      "Continuous training pipelines",
+      "Model deployment automation",
+      "Ansible, Puppet (configuration management)",
+      "GitOps practices (ArgoCD, FluxCD)"
+    ],
+    "frameworks": [
+      {
+        "name": "TensorFlow",
+        "popularity": "High"
+      },
+      {
+        "name": "PyTorch",
+        "popularity": "High"
+      },
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      },
+      {
+        "name": "Scikit-learn",
+        "popularity": "High"
+      }
+    ],
     "tools": []
   },
-  "dailyWork": [],
+  "dailyWork": [
+    "ML Pipeline Development (30-35%):",
+    "Building automated training pipelines",
+    "Creating model deployment workflows",
+    "Implementing feature engineering pipelines",
+    "Setting up experiment tracking systems",
+    "Infrastructure Management (25-30%):",
+    "Managing Kubernetes clusters for ML workloads",
+    "Provisioning GPU instances for training"
+  ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
-      "leadership": [],
+      "leadership": [
+        "- Lead MLOps Engineer",
+        "MLOps Engineering Manager",
+        "Director of MLOps/ML Infrastructure",
+        "VP of Engineering"
+      ],
       "individualContributor": []
     },
     "timelineToSenior": "",
@@ -73,8 +150,8 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "6-12 months",
-    "description": ""
+    "timeToJobReady": "3-6 months",
+    "description": "## Learning Curve"
   },
   "stressLevel": {
     "level": "Medium",

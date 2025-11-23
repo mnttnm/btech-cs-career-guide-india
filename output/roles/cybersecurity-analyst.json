@@ -1,66 +1,49 @@
 {
-  "roleId": "role-34-ar-vr-developer",
-  "roleName": "Role #34: AR/VR Developer",
-  "description": "Moderate - 3D Skills + Programming Required",
+  "roleId": "cybersecurity-analyst",
+  "roleName": "Cybersecurity Analyst",
+  "description": "Entry-Level Friendly (with certifications)",
   "jobTitles": {
     "fresher": [
-      "AR/VR Developer",
-      "Unity Developer",
-      "Unreal Engine Developer"
+      "Cybersecurity Analyst",
+      "Security Analyst",
+      "SOC Analyst",
+      "Junior Cybersecurity Analyst",
+      "Associate Security Analyst"
     ],
     "experienced": [
-      "XR (Extended Reality) Developer",
-      "Mixed Reality Developer",
-      "AR Developer",
-      "VR Game Developer",
-      "Metaverse Developer"
+      "L1/L2/L3 Security Analyst",
+      "Threat Analyst",
+      "Security Operations Analyst",
+      "Cyber Defense Analyst",
+      "Information Security Analyst"
     ]
   },
   "skills": {
     "programmingLanguages": [
       {
-        "name": "JavaScript",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
         "name": "Python",
-        "level": "Advanced",
-        "priority": "Primary"
+        "level": "Beginner",
+        "priority": "Secondary"
       },
       {
-        "name": "C++",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
-        "name": "C",
-        "level": "Advanced",
-        "priority": "Primary"
+        "name": "Bash",
+        "level": "Beginner",
+        "priority": "Secondary"
       }
     ],
-    "coreConcepts": [
-      "Image tracking and recognition",
-      "Face tracking and filters",
-      "SLAM (Simultaneous Localization and Mapping)",
-      "Occlusion and depth sensing",
-      "6DoF (Six Degrees of Freedom) tracking",
-      "Hand tracking and controllers",
-      "Locomotion systems (teleportation, smooth movement)",
-      "VR comfort and avoiding motion sickness"
-    ],
+    "coreConcepts": [],
     "frameworks": [],
     "tools": []
   },
   "dailyWork": [
-    "Developing AR/VR applications in Unity or Unreal Engine",
-    "Implementing user interactions",
-    "Creating and optimizing 3D environments and assets",
-    "Integrating AR features",
-    "Building VR locomotion systems",
-    "Implementing physics and collision detection",
-    "Optimizing frame rate for VR comfort",
-    "Testing on AR/VR devices"
+    "Monitoring Security Alerts (40-50%): Reviewing SIEM alerts, identifying true vs. false positives",
+    "Incident Investigation (30%): Analyzing suspicious activities, gathering evidence, determining scope",
+    "Threat Hunting (10-15%): Proactively searching for indicators of compromise in the network",
+    "Documentation (10%): Writing incident reports, updating runbooks, maintaining logs",
+    "Tool Management (5-10%): Configuring SIEM rules, updating threat intelligence feeds",
+    "Collaboration: Daily standups with SOC team, escalating incidents to L2/L3 analysts",
+    "Analyzing security logs from firewalls, IDS/IPS, endpoints, servers",
+    "Investigating phishing emails and malware alerts"
   ],
   "careerProgression": {
     "timeline": [],
@@ -69,9 +52,7 @@
       "individualContributor": []
     },
     "timelineToSenior": "",
-    "alternativePaths": [
-      "*Alternative paths: Game development, 3D graphics programming, metaverse development, XR product management"
-    ]
+    "alternativePaths": []
   },
   "salaryRanges": {
     "fresher": {
@@ -124,7 +105,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "10-14 months",
+    "timeToJobReady": "9-15 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {

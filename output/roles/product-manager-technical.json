@@ -1,66 +1,76 @@
 {
-  "roleId": "role-34-ar-vr-developer",
-  "roleName": "Role #34: AR/VR Developer",
-  "description": "Moderate - 3D Skills + Programming Required",
+  "roleId": "product-manager-technical",
+  "roleName": "Product Manager (Technical)",
+  "description": "Requires Prior Experience (2-4+ years)",
   "jobTitles": {
     "fresher": [
-      "AR/VR Developer",
-      "Unity Developer",
-      "Unreal Engine Developer"
+      "Product Manager",
+      "Associate Product Manager",
+      "Product Manager - Platform/APIs"
     ],
     "experienced": [
-      "XR (Extended Reality) Developer",
-      "Mixed Reality Developer",
-      "AR Developer",
-      "VR Game Developer",
-      "Metaverse Developer"
+      "Technical Product Manager",
+      "Senior Product Manager",
+      "Product Manager - Engineering",
+      "Platform Product Manager",
+      "API Product Manager"
     ]
   },
   "skills": {
     "programmingLanguages": [
       {
         "name": "JavaScript",
-        "level": "Advanced",
+        "level": "Intermediate",
         "priority": "Primary"
       },
       {
         "name": "Python",
-        "level": "Advanced",
+        "level": "Intermediate",
         "priority": "Primary"
       },
       {
-        "name": "C++",
-        "level": "Advanced",
+        "name": "Java",
+        "level": "Intermediate",
         "priority": "Primary"
       },
       {
-        "name": "C",
-        "level": "Advanced",
+        "name": "Go",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Scala",
+        "level": "Intermediate",
         "priority": "Primary"
       }
     ],
     "coreConcepts": [
-      "Image tracking and recognition",
-      "Face tracking and filters",
-      "SLAM (Simultaneous Localization and Mapping)",
-      "Occlusion and depth sensing",
-      "6DoF (Six Degrees of Freedom) tracking",
-      "Hand tracking and controllers",
-      "Locomotion systems (teleportation, smooth movement)",
-      "VR comfort and avoiding motion sickness"
+      "Ability to read and understand code (Python, Java, JavaScript)",
+      "System design fundamentals (scalability, databases, caching, APIs)",
+      "Database knowledge (SQL is mandatory, NoSQL helpful)",
+      "API design and RESTful services",
+      "Cloud platforms basics (AWS/Azure/GCP)",
+      "Understanding of backend/frontend architecture",
+      "Agile/Scrum methodologies",
+      "SQL for data analysis (critical skill)"
     ],
     "frameworks": [],
     "tools": []
   },
   "dailyWork": [
-    "Developing AR/VR applications in Unity or Unreal Engine",
-    "Implementing user interactions",
-    "Creating and optimizing 3D environments and assets",
-    "Integrating AR features",
-    "Building VR locomotion systems",
-    "Implementing physics and collision detection",
-    "Optimizing frame rate for VR comfort",
-    "Testing on AR/VR devices"
+    "*Morning:",
+    "Review key metrics dashboards",
+    "Check user feedback from support tickets, app reviews",
+    "Standup with engineering team",
+    "Unblock engineers on technical or product questions",
+    "*Afternoon:",
+    "Write/refine PRDs for upcoming features",
+    "Data analysis to inform product decisions"
   ],
   "careerProgression": {
     "timeline": [],
@@ -69,9 +79,7 @@
       "individualContributor": []
     },
     "timelineToSenior": "",
-    "alternativePaths": [
-      "*Alternative paths: Game development, 3D graphics programming, metaverse development, XR product management"
-    ]
+    "alternativePaths": []
   },
   "salaryRanges": {
     "fresher": {
@@ -124,7 +132,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "10-14 months",
+    "timeToJobReady": "6-12 months",
     "description": "## Learning Curve"
   },
   "stressLevel": {

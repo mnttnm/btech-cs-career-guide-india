@@ -1,19 +1,21 @@
 {
-  "roleId": "role-34-ar-vr-developer",
-  "roleName": "Role #34: AR/VR Developer",
-  "description": "Moderate - 3D Skills + Programming Required",
+  "roleId": "role-31-it-consultant",
+  "roleName": "Role #31: IT Consultant",
+  "description": "An IT Consultant is a professional who provides expert technology advice to client organizations to help them solve business problems, improve process",
   "jobTitles": {
     "fresher": [
-      "AR/VR Developer",
-      "Unity Developer",
-      "Unreal Engine Developer"
+      "Analyst",
+      "Associate Consultant",
+      "Technology Analyst",
+      "Junior Consultant",
+      "Consultant Trainee"
     ],
     "experienced": [
-      "XR (Extended Reality) Developer",
-      "Mixed Reality Developer",
-      "AR Developer",
-      "VR Game Developer",
-      "Metaverse Developer"
+      "Business Technology Analyst",
+      "Graduate Consultant",
+      "Consultant",
+      "Senior Analyst",
+      "Technology Consultant"
     ]
   },
   "skills": {
@@ -29,38 +31,48 @@
         "priority": "Primary"
       },
       {
-        "name": "C++",
+        "name": "Java",
         "level": "Advanced",
         "priority": "Primary"
       },
       {
-        "name": "C",
+        "name": "Rust",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "R",
         "level": "Advanced",
         "priority": "Primary"
       }
     ],
     "coreConcepts": [
-      "Image tracking and recognition",
-      "Face tracking and filters",
-      "SLAM (Simultaneous Localization and Mapping)",
-      "Occlusion and depth sensing",
-      "6DoF (Six Degrees of Freedom) tracking",
-      "Hand tracking and controllers",
-      "Locomotion systems (teleportation, smooth movement)",
-      "VR comfort and avoiding motion sickness"
+      "Cloud platforms (AWS, Azure, GCP) - basics to expert",
+      "Application architecture",
+      "APIs and integration",
+      "Databases (SQL, NoSQL)",
+      "Programming (Python, Java, JavaScript) - working knowledge",
+      "Python / R for analytics",
+      "Tableau, Power BI, Qlik",
+      "Data warehousing concepts"
     ],
     "frameworks": [],
     "tools": []
   },
   "dailyWork": [
-    "Developing AR/VR applications in Unity or Unreal Engine",
-    "Implementing user interactions",
-    "Creating and optimizing 3D environments and assets",
-    "Integrating AR features",
-    "Building VR locomotion systems",
-    "Implementing physics and collision detection",
-    "Optimizing frame rate for VR comfort",
-    "Testing on AR/VR devices"
+    "*Monday: Client Site (Delhi) - Banking Sector Client",
+    "*9:00 AM - 10:30 AM: Project status meeting with client stakeholders",
+    "Present progress on cloud migration project",
+    "Discuss risks and mitigation plans",
+    "Get approval for next phase",
+    "*10:30 AM - 12:30 PM: Workshop with client IT team",
+    "Design session for new microservices architecture",
+    "Whiteboarding technical approach"
   ],
   "careerProgression": {
     "timeline": [],
@@ -69,9 +81,7 @@
       "individualContributor": []
     },
     "timelineToSenior": "",
-    "alternativePaths": [
-      "*Alternative paths: Game development, 3D graphics programming, metaverse development, XR product management"
-    ]
+    "alternativePaths": []
   },
   "salaryRanges": {
     "fresher": {
@@ -124,7 +134,7 @@
   },
   "learningCurve": {
     "difficulty": "Moderate",
-    "timeToJobReady": "10-14 months",
+    "timeToJobReady": "0-6 Months",
     "description": "## Learning Curve"
   },
   "stressLevel": {

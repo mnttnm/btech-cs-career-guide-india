@@ -1,77 +1,52 @@
 {
-  "roleId": "ai-engineer",
-  "roleName": "AI Engineer",
-  "description": "",
+  "roleId": "infrastructure-it-engineer",
+  "roleName": "Infrastructure/IT Engineer",
+  "description": "Entry-Level Friendly - Many Companies Hire Freshers",
   "jobTitles": {
     "fresher": [
-      "AI Engineer",
-      "Junior AI Engineer",
-      "Associate AI Engineer",
-      "Generative AI Engineer",
-      "LLM Engineer"
+      "Infrastructure Engineer",
+      "IT Infrastructure Engineer",
+      "Systems Engineer",
+      "Junior Infrastructure Engineer",
+      "Associate Systems Engineer"
     ],
     "experienced": [
-      "Senior AI Engineer",
-      "Lead AI Engineer",
-      "Principal AI Engineer",
-      "Staff AI Engineer",
-      "AI Architect"
+      "IT Support Engineer",
+      "Network Engineer",
+      "Systems Administrator",
+      "IT Operations Engineer",
+      "Infrastructure Support Engineer"
     ]
   },
   "skills": {
     "programmingLanguages": [
       {
-        "name": "JavaScript",
-        "level": "Advanced",
-        "priority": "Primary"
-      },
-      {
         "name": "Python",
-        "level": "Advanced",
+        "level": "Intermediate",
         "priority": "Primary"
       },
       {
         "name": "SQL",
-        "level": "Advanced",
+        "level": "Intermediate",
         "priority": "Primary"
       },
       {
-        "name": "R",
-        "level": "Advanced",
+        "name": "Bash",
+        "level": "Intermediate",
         "priority": "Primary"
       }
     ],
     "coreConcepts": [
-      "Transformers (BERT, GPT, T5 family)",
-      "Attention mechanisms (self-attention, multi-head attention)",
-      "CNNs (for computer vision tasks)",
-      "RNNs/LSTMs (legacy, but good to know)",
-      "Diffusion models (Stable Diffusion, DALL-E architecture)",
-      "GANs (generative adversarial networks)",
-      "Open-source LLMs: Llama 2, Mistral, Falcon",
-      "Vector databases: Pinecone, Weaviate, Chroma, FAISS"
+      "System administration (Ubuntu, CentOS, RHEL)",
+      "File systems, permissions, user management",
+      "Package management (apt, yum)",
+      "Process management and troubleshooting",
+      "Shell scripting (Bash)",
+      "System logs and monitoring",
+      "Active Directory (AD) administration",
+      "User and group management"
     ],
     "frameworks": [
-      {
-        "name": "React",
-        "popularity": "High"
-      },
-      {
-        "name": "Flask",
-        "popularity": "Medium"
-      },
-      {
-        "name": "FastAPI",
-        "popularity": "Medium"
-      },
-      {
-        "name": "TensorFlow",
-        "popularity": "High"
-      },
-      {
-        "name": "PyTorch",
-        "popularity": "High"
-      },
       {
         "name": "Kubernetes",
         "popularity": "High"
@@ -84,25 +59,19 @@
     "tools": []
   },
   "dailyWork": [
-    "Model Integration & Development (35-40%):",
-    "Building LLM-powered applications",
-    "Fine-tuning pre-trained models for specific use cases",
-    "Implementing RAG pipelines for knowledge retrieval",
-    "Experimenting with different AI models and APIs",
-    "Prompt Engineering & Optimization (15-20%):",
-    "Crafting and optimizing prompts for LLMs",
-    "Testing different prompting strategies"
+    "Managing servers",
+    "Provisioning new infrastructure resources",
+    "Capacity planning and resource allocation",
+    "Performance monitoring and optimization",
+    "Patching and updates",
+    "Infrastructure inventory management",
+    "Cloud resource management",
+    "Responding to infrastructure incidents"
   ],
   "careerProgression": {
     "timeline": [],
     "tracks": {
-      "leadership": [
-        "- Lead AI Engineer",
-        "AI Engineering Manager",
-        "Director of AI",
-        "VP of AI/Product",
-        "Chief AI Officer"
-      ],
+      "leadership": [],
       "individualContributor": []
     },
     "timelineToSenior": "",
@@ -178,18 +147,18 @@
     "interviewPrep": [],
     "salaryExpectations": {
       "service": {
-        "min": 0,
-        "max": 0
+        "min": 3.5,
+        "max": 5
       },
       "midTierProduct": {
-        "min": 0,
-        "max": 0
+        "min": 6,
+        "max": 10
       },
       "topProduct": {
-        "min": 0,
-        "max": 0
+        "min": 12,
+        "max": 20
       },
-      "gcc": ""
+      "gcc": "₹10-18 LPA"
     },
     "differentiators": []
   }
