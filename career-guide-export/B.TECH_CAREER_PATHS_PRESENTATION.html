@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Tech CS Career Paths Guide - Presentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-center;
+            padding: 2rem;
+        }
+
+        .slide {
+            display: none;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 1200px;
+            height: 85vh;
+            padding: 3rem 4rem;
+            position: relative;
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #764ba2;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .role-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .role-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .role-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .role-salary {
+            font-size: 1rem;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .role-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.3rem;
+        }
+
+        .comparison-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .comparison-list li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .checkmark {
+            color: #10b981;
+            font-size: 1.5rem;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .nav-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 2rem;
+            right: 4rem;
+            font-size: 1rem;
+            color: #999;
+            font-weight: 600;
+        }
+
+        .category-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0.25rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        tr:hover {
+            background: #f8f9fa;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #fef3c7 0%, #fef3c7 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <div class="slide-number">1 / 12</div>
+            <div style="display: flex; flex-direction: column; justify-content: center; height: 100%; text-align: center;">
+                <h1 style="font-size: 4.5rem; margin-bottom: 2rem;">Complete Career Paths Guide</h1>
+                <p class="subtitle" style="font-size: 2rem;">for B.Tech Computer Science Graduates in India</p>
+                <div class="stats" style="margin-top: 3rem;">
+                    <div class="stat-card">
+                        <div class="stat-number">45+</div>
+                        <div class="stat-label">Career Paths</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Data Sources</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2024-25</div>
+                        <div class="stat-label">Latest Data</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">₹2.5-60</div>
+                        <div class="stat-label">LPA Range</div>
+                    </div>
+                </div>
+                <p style="margin-top: 3rem; color: #666; font-size: 1.1rem;">
+                    Comprehensive research on salaries, skills, and strategies for every major tech career in India
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Overview -->
+        <div class="slide">
+            <div class="slide-number">2 / 12</div>
+            <h2>What's Covered in This Guide</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                <div>
+                    <h3>📊 For Each Career Path:</h3>
+                    <ul class="comparison-list">
+                        <li><span class="checkmark">✓</span> Real job titles in India</li>
+                        <li><span class="checkmark">✓</span> Required technical & soft skills</li>
+                        <li><span class="checkmark">✓</span> Day-to-day work description</li>
+                        <li><span class="checkmark">✓</span> Career progression timeline</li>
+                        <li><span class="checkmark">✓</span> Salary ranges (0-1yr, 3yr, 5+yr)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>🎯 Plus Practical Guidance:</h3>
+                    <ul class="comparison-list">
+                        <li><span class="checkmark">✓</span> Learning curve assessment</li>
+                        <li><span class="checkmark">✓</span> Stress level & work-life balance</li>
+                        <li><span class="checkmark">✓</span> Personality fit indicators</li>
+                        <li><span class="checkmark">✓</span> From Day 1 college strategy</li>
+                        <li><span class="checkmark">✓</span> First job hunting tips</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Highest Starting Salaries -->
+        <div class="slide">
+            <div class="slide-number">3 / 12</div>
+            <h2>🏆 Highest Starting Salaries (Freshers)</h2>
+            <div class="role-grid" style="margin-top: 2rem;">
+                <div class="role-card" style="border-left-color: #10b981;">
+                    <div class="role-title">1. Product Manager</div>
+                    <div class="role-salary">₹10-15 LPA</div>
+                    <div class="role-note">Very competitive, not truly entry-level</div>
+                </div>
+                <div class="role-card" style="border-left-color: #3b82f6;">
+                    <div class="role-title">2. ML Engineer</div>
+                    <div class="role-salary">₹6-10 LPA</div>
+                    <div class="role-note">High demand, requires strong skills</div>
+                </div>
+                <div class="role-card" style="border-left-color: #8b5cf6;">
+                    <div class="role-title">3. Blockchain Developer</div>
+                    <div class="role-salary">₹6-7.5 LPA</div>
+                    <div class="role-note">Niche, rapidly evolving field</div>
+                </div>
+                <div class="role-card" style="border-left-color: #f59e0b;">
+                    <div class="role-title">4. Full-Stack (MERN)</div>
+                    <div class="role-salary">₹5-8 LPA</div>
+                    <div class="role-note">Versatile, high job opportunities</div>
+                </div>
+                <div class="role-card" style="border-left-color: #ef4444;">
+                    <div class="role-title">5. AI Engineer</div>
+                    <div class="role-salary">₹5-9 LPA</div>
+                    <div class="role-note">Cutting-edge, research-oriented</div>
+                </div>
+                <div class="role-card" style="border-left-color: #06b6d4;">
+                    <div class="role-title">6. Backend Developer</div>
+                    <div class="role-salary">₹4.5-7 LPA</div>
+                    <div class="role-note">Solid, consistent demand</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Easiest Entry Points -->
+        <div class="slide">
+            <div class="slide-number">4 / 12</div>
+            <h2>🚀 Easiest Entry for Fresh Graduates</h2>
+            <div class="role-grid" style="margin-top: 2rem;">
+                <div class="role-card" style="border-left-color: #10b981;">
+                    <div class="role-title">1. Data Analyst</div>
+                    <div class="role-salary">₹2.5-6 LPA</div>
+                    <div class="role-note">Highest hiring volume, 4-6 months learning</div>
+                </div>
+                <div class="role-card" style="border-left-color: #3b82f6;">
+                    <div class="role-title">2. QA/Automation Engineer</div>
+                    <div class="role-salary">₹3-6 LPA</div>
+                    <div class="role-note">Mass hiring by service companies</div>
+                </div>
+                <div class="role-card" style="border-left-color: #8b5cf6;">
+                    <div class="role-title">3. Frontend Developer</div>
+                    <div class="role-salary">₹4.5-6 LPA</div>
+                    <div class="role-note">Portfolio-based hiring, visual work</div>
+                </div>
+                <div class="role-card" style="border-left-color: #f59e0b;">
+                    <div class="role-title">4. Technical Writer</div>
+                    <div class="role-salary">₹2.9-5 LPA</div>
+                    <div class="role-note">Writing + tech knowledge, low stress</div>
+                </div>
+                <div class="role-card" style="border-left-color: #ef4444;">
+                    <div class="role-title">5. Cybersecurity Analyst</div>
+                    <div class="role-salary">₹3.5-7 LPA</div>
+                    <div class="role-note">60% vacancy rate, good certifications</div>
+                </div>
+                <div class="role-card" style="border-left-color: #06b6d4;">
+                    <div class="role-title">6. Software Engineer (General)</div>
+                    <div class="role-salary">₹4.5-8 LPA</div>
+                    <div class="role-note">Universal role, hired everywhere</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Best Work-Life Balance -->
+        <div class="slide">
+            <div class="slide-number">5 / 12</div>
+            <h2>⚖️ Best Work-Life Balance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Stress Level</th>
+                        <th>Salary Range</th>
+                        <th>Why Good Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Technical Writer</strong></td>
+                        <td>🟢 Low</td>
+                        <td>₹2.9-15 LPA</td>
+                        <td>Remote-friendly, predictable hours</td>
+                    </tr>
+                    <tr>
+                        <td><strong>UX Researcher</strong></td>
+                        <td>🟡 Low-Medium</td>
+                        <td>₹5-20 LPA</td>
+                        <td>Structured research work</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Frontend Developer</strong></td>
+                        <td>🟡 Medium</td>
+                        <td>₹4.5-25 LPA</td>
+                        <td>Less on-call than backend</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Analyst</strong></td>
+                        <td>🟡 Low-Medium</td>
+                        <td>₹2.5-15 LPA</td>
+                        <td>Predictable reporting cycles</td>
+                    </tr>
+                    <tr>
+                        <td><strong>UX/UI Designer</strong></td>
+                        <td>🟡 Medium</td>
+                        <td>₹3.5-25 LPA</td>
+                        <td>Creative work, good balance</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 2rem; color: #666; font-style: italic;">
+                * Work-life balance varies by company. Startups typically demand more hours than established companies.
+            </p>
+        </div>
+
+        <!-- Slide 6: Highest Growth Potential -->
+        <div class="slide">
+            <div class="slide-number">6 / 12</div>
+            <h2>📈 Highest Long-Term Growth (5+ Years)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>5+ Year Salary</th>
+                        <th>Peak Salary</th>
+                        <th>Career Ceiling</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>Product Manager</strong></td>
+                        <td>₹25-35 LPA</td>
+                        <td>₹1 Cr+</td>
+                        <td>VP Product, CPO</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ML/AI Engineer</strong></td>
+                        <td>₹20-50 LPA</td>
+                        <td>₹60+ LPA</td>
+                        <td>Principal Engineer, AI Director</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Solution/Enterprise Architect</strong></td>
+                        <td>₹26-40 LPA</td>
+                        <td>₹50+ LPA</td>
+                        <td>CTO, Chief Architect</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SRE / Platform Engineer</strong></td>
+                        <td>₹19-30 LPA</td>
+                        <td>₹40+ LPA</td>
+                        <td>Principal SRE, VP Eng</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Backend Architect</strong></td>
+                        <td>₹15-25 LPA</td>
+                        <td>₹40+ LPA</td>
+                        <td>Technical Director</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Slide 7: Career Categories Overview -->
+        <div class="slide">
+            <div class="slide-number">7 / 12</div>
+            <h2>Career Path Categories</h2>
+            <div style="margin-top: 2rem;">
+                <div style="margin-bottom: 2rem;">
+                    <h3>Core Software Engineering (7 roles)</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                        <span class="category-badge">Software Engineer</span>
+                        <span class="category-badge">Backend</span>
+                        <span class="category-badge">Frontend</span>
+                        <span class="category-badge">Full-Stack</span>
+                        <span class="category-badge">Mobile</span>
+                        <span class="category-badge">Embedded Systems</span>
+                        <span class="category-badge">Game Dev</span>
+                    </div>
+                </div>
+                <div style="margin-bottom: 2rem;">
+                    <h3>Data & AI/ML (7 roles)</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                        <span class="category-badge">Data Scientist</span>
+                        <span class="category-badge">ML Engineer</span>
+                        <span class="category-badge">AI Engineer</span>
+                        <span class="category-badge">Data Engineer</span>
+                        <span class="category-badge">Data Analyst</span>
+                        <span class="category-badge">MLOps</span>
+                        <span class="category-badge">NLP/CV</span>
+                    </div>
+                </div>
+                <div style="margin-bottom: 2rem;">
+                    <h3>Cloud, DevOps & Infrastructure (5 roles)</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                        <span class="category-badge">DevOps</span>
+                        <span class="category-badge">SRE</span>
+                        <span class="category-badge">Cloud Engineer</span>
+                        <span class="category-badge">Platform Engineer</span>
+                        <span class="category-badge">Infrastructure</span>
+                    </div>
+                </div>
+                <div style="margin-bottom: 2rem;">
+                    <h3>Plus: Security, QA, Product, Design, Consulting, Specialized, Research & More...</h3>
+                    <p style="color: #666; margin-top: 0.5rem;">45+ total career paths covered in the complete guide</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Key Market Trends 2024-2025 -->
+        <div class="slide">
+            <div class="slide-number">8 / 12</div>
+            <h2>🔥 Key Market Trends 2024-2025</h2>
+            <ul class="comparison-list" style="margin-top: 2rem;">
+                <li>
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <strong>40% surge in fresher hiring</strong>
+                        <div class="role-note">IT companies planning to hire 82,000+ freshers in FY25</div>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <strong>AI/ML skills boost salaries by 54%+</strong>
+                        <div class="role-note">Even basic AI knowledge adds ₹3-5 LPA premium</div>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <strong>Full-stack developers in highest demand</strong>
+                        <div class="role-note">MERN/MEAN stack seeing 25% higher salaries</div>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <strong>GCCs offering 30% premium over service companies</strong>
+                        <div class="role-note">Global Capability Centers expanding rapidly in India</div>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <strong>Cloud certifications = ₹2-5 LPA salary boost</strong>
+                        <div class="role-note">AWS/Azure certifications highly valued even for non-cloud roles</div>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <strong>60% vacancy rate in cybersecurity</strong>
+                        <div class="role-note">Massive opportunity for security professionals</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Slide 9: Don't Want to Code? -->
+        <div class="slide">
+            <div class="slide-number">9 / 12</div>
+            <h2>💡 If You DON'T Want to Code Heavily</h2>
+            <div class="role-grid" style="margin-top: 2rem;">
+                <div class="role-card">
+                    <div class="role-title">Product Manager</div>
+                    <div class="role-salary">₹10-35+ LPA</div>
+                    <div class="role-note">Strategy, no coding required. Requires 2+ years experience</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-title">Business Analyst</div>
+                    <div class="role-salary">₹1.5-20 LPA</div>
+                    <div class="role-note">Requirements analysis, light SQL only</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-title">UX Researcher</div>
+                    <div class="role-salary">₹5-20 LPA</div>
+                    <div class="role-note">User research, no coding needed</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-title">Technical Writer</div>
+                    <div class="role-salary">₹2.9-15 LPA</div>
+                    <div class="role-note">Writing + technical understanding</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-title">Sales Engineer</div>
+                    <div class="role-salary">₹2.2-22 LPA</div>
+                    <div class="role-note">Technical sales, presentations</div>
+                </div>
+                <div class="role-card">
+                    <div class="role-title">Growth Hacker</div>
+                    <div class="role-salary">₹4.5-15 LPA</div>
+                    <div class="role-note">Marketing + tech, analytics focus</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Success Formula -->
+        <div class="slide">
+            <div class="slide-number">10 / 12</div>
+            <h2>🎯 Universal Success Formula</h2>
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem; border-radius: 20px; margin: 2rem 0; text-align: center;">
+                <div style="font-size: 2rem; font-weight: 700; margin-bottom: 2rem;">
+                    SUCCESS = <br/>
+                    (Strong DSA × Portfolio Projects × Communication Skills) <br/>
+                    + Networking + Persistence
+                </div>
+            </div>
+            <div style="margin-top: 3rem;">
+                <h3>Year-by-Year College Strategy:</h3>
+                <ul class="comparison-list">
+                    <li><span class="checkmark">✓</span><strong>Year 1:</strong> Master one language, start DSA (Easy problems)</li>
+                    <li><span class="checkmark">✓</span><strong>Year 2:</strong> 100+ DSA problems, 3-4 projects, choose specialization</li>
+                    <li><span class="checkmark">✓</span><strong>Year 3:</strong> 200+ DSA, summer internship, advanced projects</li>
+                    <li><span class="checkmark">✓</span><strong>Year 4:</strong> 300+ DSA, polish resume, apply to 50+ companies</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 11: First Job Tips -->
+        <div class="slide">
+            <div class="slide-number">11 / 12</div>
+            <h2>🚀 First Job Strategy (Universal Tips)</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                <div>
+                    <h3>Technical Preparation</h3>
+                    <ul class="comparison-list">
+                        <li><span class="checkmark">✓</span>300+ LeetCode problems minimum</li>
+                        <li><span class="checkmark">✓</span>4-5 solid projects on GitHub</li>
+                        <li><span class="checkmark">✓</span>System design fundamentals</li>
+                        <li><span class="checkmark">✓</span>ATS-optimized resume (90% filtered)</li>
+                        <li><span class="checkmark">✓</span>Cloud basics (even for non-DevOps)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Application Strategy</h3>
+                    <ul class="comparison-list">
+                        <li><span class="checkmark">✓</span>Campus placements (easiest entry)</li>
+                        <li><span class="checkmark">✓</span>Referrals (3x better chance)</li>
+                        <li><span class="checkmark">✓</span>Apply to 50+ companies minimum</li>
+                        <li><span class="checkmark">✓</span>Target product companies over service</li>
+                        <li><span class="checkmark">✓</span>Network actively on LinkedIn</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="background: #fef3c7; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+                <p style="font-size: 1.1rem; color: #666;"><strong>Reality Check:</strong> First job is just the beginning. Focus on learning, not just salary. Skills compound over time.</p>
+            </div>
+        </div>
+
+        <!-- Slide 12: Get the Complete Guide -->
+        <div class="slide">
+            <div class="slide-number">12 / 12</div>
+            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; text-align: center;">
+                <h2 style="font-size: 3rem; margin-bottom: 2rem;">Ready to Dive Deeper?</h2>
+                <p class="subtitle" style="max-width: 800px;">
+                    This presentation covers highlights. The complete guide includes:
+                </p>
+                <ul class="comparison-list" style="max-width: 600px; margin: 2rem 0; text-align: left;">
+                    <li><span class="checkmark">✓</span>Detailed breakdown of all 45 career paths</li>
+                    <li><span class="checkmark">✓</span>Complete salary comparison tables</li>
+                    <li><span class="checkmark">✓</span>Year-by-year college preparation roadmaps</li>
+                    <li><span class="checkmark">✓</span>Interview preparation strategies per role</li>
+                    <li><span class="checkmark">✓</span>Higher education paths (MS/PhD) ROI analysis</li>
+                </ul>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 3rem; border-radius: 15px; margin-top: 2rem;">
+                    <div style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem;">
+                        📥 Download the Complete Guide
+                    </div>
+                    <div style="font-size: 1rem; opacity: 0.9;">
+                        50,000+ words • 100+ sources • Updated November 2024
+                    </div>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                        github.com/mnttnm/best-of-frontend
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <span style="padding: 0.8rem 1rem; color: #667eea; font-weight: 600;" id="slideIndicator">1 / 12</span>
+        <button class="nav-btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('slideIndicator').textContent = `${currentSlide + 1} / ${totalSlides}`;
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
+        // Initialize
+        document.getElementById('prevBtn').disabled = true;
+    </script>
+</body>
+</html>
