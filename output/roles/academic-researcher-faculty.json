@@ -1,0 +1,249 @@
+{
+  "roleId": "academic-researcher-faculty",
+  "roleName": "Academic Researcher/Faculty",
+  "description": "Very Hard - Requires PhD (mandatory), strong publication record, teaching experience, and navigating highly competitive faculty hiring",
+  "jobTitles": {
+    "fresher": [
+      "*Entry Level (0-3 years post-PhD)",
+      "Assistant Professor",
+      "Visiting Faculty",
+      "Research Associate (academic)",
+      "Junior Research Fellow (after PhD)"
+    ],
+    "experienced": [
+      "Adjunct Professor",
+      "Lecturer (at universities/colleges)",
+      "Postdoctoral Researcher",
+      "Assistant Professor (Grade I)",
+      "Teaching Fellow"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Java",
+        "level": "Advanced",
+        "priority": "Secondary"
+      },
+      {
+        "name": "C++",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Strong publication record (10-15+ papers for Assistant Professor at top institutions)",
+      "Publications in top-tier conferences/journals (A* venues like NeurIPS, ICML, SIGMOD, etc.)",
+      "Strong recommendation letters from well-known researchers",
+      "Teaching experience during PhD (TA positions)",
+      "Postdoc experience preferred (1-3 years, especially for top institutions)",
+      "Deep expertise in specialization area (narrow focus)",
+      "Ability to formulate novel research problems",
+      "Grant writing (applying for DST, SERB, industry funding)"
+    ],
+    "frameworks": [],
+    "tools": []
+  },
+  "dailyWork": [
+    "*Research (40-50% of time)",
+    "Reading latest papers in your field (staying current)",
+    "Guiding PhD students on research problems",
+    "Writing research papers for conferences/journals",
+    "Reviewing papers for conferences and journals",
+    "Conducting experiments and analyzing results",
+    "Attending research seminars and talks",
+    "Traveling to conferences to present work (2-4 per year)"
+  ],
+  "careerProgression": {
+    "timeline": [],
+    "tracks": {
+      "leadership": [
+        "Professor",
+        "Head of Department",
+        "Dean",
+        "Director/Vice-Chancellor (focus on administration and institution-building)"
+      ],
+      "individualContributor": []
+    },
+    "timelineToSenior": "",
+    "alternativePaths": []
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 0,
+        "max": 0
+      },
+      "senior": {
+        "min": 0,
+        "max": 0
+      },
+      "topCompanies": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "topCompanies": []
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "6-12 months",
+    "description": "**Very Steep** - The path to becoming a faculty member is one of the longest in any profession: 4 years B.Tech + 4-6 years PhD + 1-3 years postdoc (optional but helpful) = 9-13 years of education. During PhD, you learn not just research but also teaching, grant writing, and academic norms. Even after getting a faculty position, it takes 2-3 years to establish your lab, develop courses, and find your groove. The learning curve continues throughout your career as you mentor students, write grants, and navigate academic politics. Only pursue if you have genuine passion for research and teaching."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "*Why Medium-High",
+      "Tenure pressure: First 5-7 years are extremely stressful (publish or perish)",
+      "Multiple competing demands: Research + teaching + admin + mentoring",
+      "Grant writing: Constant need to secure funding for lab and students",
+      "Student management: Dealing with underperforming PhD students, conflicts",
+      "Publication pressure: Need to maintain research output throughout career"
+    ],
+    "mitigatingFactors": [
+      "*Mitigating Factors",
+      "Job security: Tenure provides lifetime employment (huge stress relief)",
+      "Flexible schedule: No 9-5 requirement, work from home often possible",
+      "Intellectual freedom: Choose your research topics and teaching style",
+      "Long breaks: Summer and winter breaks (though faculty often work through them)"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "*You'll Thrive If",
+      "You're passionate about both research AND teaching (not just one)",
+      "You love mentoring students and seeing them grow",
+      "You're comfortable with autonomy and self-direction",
+      "You can juggle multiple competing priorities",
+      "You're intrinsically motivated (not driven by external rewards like salary)",
+      "You enjoy intellectual debates and academic discourse",
+      "You're patient (academic career is a marathon, not a sprint)"
+    ],
+    "avoidIf": [
+      "*Avoid If",
+      "You're primarily motivated by high income (industry pays 2-3x more)",
+      "You dislike teaching or find it draining",
+      "You prefer focused work on one thing (research only or engineering only)",
+      "You get stressed by juggling many tasks (research + teaching + admin)",
+      "You want clear structure and defined work hours"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation + Exploration",
+      "goals": [
+        "*Year 1 (Foundation + Exploration)",
+        "Excel academically (GPA 9.0+ critical for PhD admissions)",
+        "Build strong foundations in mathematics and core CS",
+        "Identify professors doing interesting research",
+        "Attend departmental seminars and research talks",
+        "Start exploring different research areas (AI, systems, theory, HCI)"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Research Immersion",
+      "goals": [
+        "*Year 2 (Research Immersion)",
+        "Approach professors for research projects (reading groups, mini-projects)",
+        "Take research-oriented electives (not just applied courses)",
+        "Learn research tools: LaTeX, paper reading, critical thinking",
+        "Start reading papers from top conferences in areas of interest",
+        "Attempt to replicate a research paper's results (hands-on learning)"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Publications + Deep Specialization",
+      "goals": [
+        "*Year 3 (Publications + Deep Specialization)",
+        "Work on substantial research project aiming for publication",
+        "Apply for research internships (Microsoft Research, Google Research, IISc)",
+        "Summer research internship (₹50k-1L/month at top labs, or unpaid at universities)",
+        "Start writing your first paper (even if it's a workshop paper)",
+        "Gain teaching experience (TA positions, teaching in local schools)"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "PhD Applications + Research Output",
+      "goals": [
+        "*Year 4 (PhD Applications + Research Output)",
+        "Work on B.Tech thesis with publication potential",
+        "Apply to PhD programs (IISc, IITs, or abroad: CMU, Stanford, MIT, etc.)",
+        "Aim for at least 1-2 workshop or conference papers",
+        "Gain more teaching experience (TA for multiple courses)",
+        "Attend major conferences if you have accepted papers"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [],
+    "applicationStrategy": [],
+    "interviewPrep": [],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": ""
+    },
+    "differentiators": []
+  }
+}

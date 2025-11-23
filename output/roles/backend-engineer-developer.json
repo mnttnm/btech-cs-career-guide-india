@@ -1,0 +1,407 @@
+{
+  "roleId": "backend-engineer-developer",
+  "roleName": "Backend Engineer/Developer",
+  "description": "Moderate - Portfolio Important - Requires deeper understanding of databases, APIs, system architecture, and server-side programming compared to general software engineering",
+  "jobTitles": {
+    "fresher": [
+      "Backend Engineer",
+      "Backend Developer",
+      "Server-Side Developer",
+      "API Developer",
+      "Junior Backend Engineer"
+    ],
+    "experienced": [
+      "Senior Backend Engineer",
+      "Senior Backend Developer",
+      "Backend Architect",
+      "Principal Backend Engineer",
+      "Lead Backend Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "JavaScript",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Java",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "RESTful API design principles and best practices",
+      "GraphQL API design and implementation",
+      "HTTP/HTTPS protocols, status codes, headers",
+      "Database design and normalization (1NF to 3NF)",
+      "SQL query optimization and indexing strategies",
+      "NoSQL database patterns and use cases",
+      "Transactions, ACID properties, isolation levels",
+      "Authentication (JWT, OAuth 2.0, sessions, cookies)"
+    ],
+    "frameworks": [
+      {
+        "name": "Django",
+        "popularity": "High"
+      },
+      {
+        "name": "Flask",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Spring Boot",
+        "popularity": "High"
+      },
+      {
+        "name": "Express.js",
+        "popularity": "High"
+      },
+      {
+        "name": "FastAPI",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": []
+  },
+  "dailyWork": [
+    "Designing and building RESTful or GraphQL APIs from scratch",
+    "Implementing complex business logic and data processing workflows",
+    "Database schema design, migrations, and query optimization",
+    "Writing efficient SQL queries and optimizing slow queries",
+    "Integrating third-party services and APIs (payment gateways, SMS, email)",
+    "Implementing authentication systems (JWT, OAuth, SSO)",
+    "Building authorization logic and access control systems",
+    "Developing microservices and inter-service communication"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Backend Developer / Backend Engineer I",
+        "salary": {
+          "min": 4.5,
+          "max": 8,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-6",
+        "title": "Backend Developer / Senior Backend Developer",
+        "salary": {
+          "min": 8,
+          "max": 18,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "7-10",
+        "title": "Staff Engineer / Backend Architect / Tech Lead",
+        "salary": {
+          "min": 18,
+          "max": 40,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Backend Developer",
+        "Senior Backend Developer",
+        "Tech Lead (Backend)",
+        "Engineering Manager",
+        "Senior Engineering Manager",
+        "Director of Engineering",
+        "VP Engineering"
+      ],
+      "individualContributor": [
+        "Backend Developer",
+        "Senior Backend Developer",
+        "Staff Backend Engineer",
+        "Senior Staff Engineer",
+        "Principal Engineer"
+      ]
+    },
+    "timelineToSenior": "5-7 years with strong system design knowledge, architectural decision-making experience, and proven track record of building scalable systems",
+    "alternativePaths": [
+      "*Alternative Paths",
+      "Specializations",
+      "API Architect (designing large-scale API ecosystems)",
+      "Microservices Architect (distributed systems expert)",
+      "Cloud Backend Specialist (AWS/Azure/GCP certified solutions architect)"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3.5,
+        "max": 5
+      },
+      "productBased": {
+        "min": 6,
+        "max": 10
+      },
+      "topTech": {
+        "min": 12,
+        "max": 20
+      },
+      "average": {
+        "min": 4.5,
+        "max": 8
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 6,
+        "max": 9
+      },
+      "productBased": {
+        "min": 10,
+        "max": 16
+      },
+      "average": {
+        "min": 8,
+        "max": 14
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 18,
+        "max": 28
+      },
+      "senior": {
+        "min": 28,
+        "max": 45
+      },
+      "topCompanies": {
+        "min": 45,
+        "max": 70
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 18,
+          "max": 25
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 15,
+          "max": 22
+        }
+      },
+      {
+        "name": "Microsoft",
+        "range": {
+          "min": 16,
+          "max": 24
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "name": "Uber",
+        "range": {
+          "min": 15,
+          "max": 22
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "9-15 months",
+    "description": "**Moderate-Steep** - Requires understanding databases, API design, system architecture, and multiple technologies. More complex than general software engineering due to focus on scalability, performance, and data management. Typically 9-15 months to become job-ready with production-quality skills."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "*Why Medium-High",
+      "Backend bugs can bring down entire applications (high responsibility)",
+      "On-call rotations for production issues (24/7 availability in some companies)",
+      "Database migrations and schema changes are risky (potential data loss)",
+      "Performance bottlenecks directly impact user experience",
+      "Security vulnerabilities in backend can have serious legal/financial consequences"
+    ],
+    "mitigatingFactors": [
+      "*Mitigating Factors",
+      "Strong monitoring and alerting tools catch issues early",
+      "Comprehensive testing (unit, integration, load tests) reduce production bugs",
+      "Good documentation makes debugging easier",
+      "DevOps practices and automation reduce manual errors"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "*You'll Thrive If",
+      "You enjoy working with data and business logic more than UI/design",
+      "You're methodical and think deeply about edge cases and failure scenarios",
+      "You like designing robust, scalable systems that handle growth",
+      "You're comfortable with server-side programming and databases",
+      "You enjoy problem-solving at scale (optimizing for thousands/millions of users)",
+      "You have patience for debugging complex, non-obvious issues",
+      "You're security-conscious and think about potential vulnerabilities"
+    ],
+    "avoidIf": [
+      "*Avoid If",
+      "You prefer visual, user-facing work (frontend is better fit)",
+      "You dislike working extensively with databases and SQL",
+      "You can't handle production outages and urgent fixes",
+      "You get stressed by on-call responsibilities",
+      "You prefer technologies that change less frequently"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "*Year 1 (Foundation)",
+        "Choose one backend language to master",
+        "Python (easiest, fastest to build, great for beginners)",
+        "Java (most enterprise jobs, slightly steeper learning curve)",
+        "Node.js (if you know JavaScript, full-stack synergy)",
+        "Master SQL deeply"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "*Year 2 (Deepening)",
+        "Build 3-4 complete backend APIs",
+        "User authentication system (signup, login, JWT)",
+        "CRUD API with database (PostgreSQL or MySQL)",
+        "API with third-party integration (send emails, SMS)",
+        "Simple e-commerce backend (products, cart, orders)"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "*Year 3 (Specialization)",
+        "Study system design for backend systems",
+        "Scalability patterns (horizontal vs vertical scaling)",
+        "Load balancing strategies",
+        "Database sharding and replication",
+        "Caching strategies at scale"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "*Year 4 (Job Hunt)",
+        "Build 2-3 complex backend projects",
+        "Multi-service microservices architecture",
+        "Real-time system with WebSockets",
+        "High-performance API with caching and optimization",
+        "Data-intensive application with analytics"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Framework Expertise (Choose One Stack)",
+        "goal": "- **Java Backend:** Spring Boot + Spring Security + JPA/Hibernate + PostgreSQL/MySQL"
+      },
+      {
+        "skill": "Database Mastery",
+        "goal": "- **SQL Skills:**"
+      },
+      {
+        "skill": "Production-Quality APIs (3-4 projects)",
+        "goal": "- **Project 1:** E-commerce backend API"
+      },
+      {
+        "skill": "System Design Preparation",
+        "goal": "- Study fundamentals:"
+      },
+      {
+        "skill": "DSA Preparation (Still Important)",
+        "goal": "- Target: 250-300 LeetCode problems"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Target Backend-Heavy Companies",
+        "approach": "- **Fintech:** Razorpay, PhonePe, CRED, Paytm, Slice, Jupiter (heavy backend work)"
+      },
+      {
+        "channel": "Campus Placements",
+        "approach": "- Specify \"backend\" preference if given option"
+      },
+      {
+        "channel": "Off-Campus Applications",
+        "approach": "- Filter job postings for \"Backend Engineer\" specifically"
+      },
+      {
+        "channel": "Portfolio Presentation",
+        "approach": "- GitHub with deployed backend projects"
+      },
+      {
+        "channel": "Networking",
+        "approach": "- Connect with backend engineers on LinkedIn"
+      }
+    ],
+    "interviewPrep": [
+      "Backend-Specific Technical Questions:",
+      "DSA (Still Required):",
+      "Project Deep-Dive:",
+      "Practical Coding:",
+      "Behavioral Questions:"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3.5,
+        "max": 5
+      },
+      "midTierProduct": {
+        "min": 15,
+        "max": 25
+      },
+      "topProduct": {
+        "min": 12,
+        "max": 18
+      },
+      "gcc": "**GCCs (Finance):** ₹10-18 LPA (Goldman Sachs, Morgan Stanley)"
+    },
+    "differentiators": [
+      "*Key Differentiators",
+      "Published, deployed APIs with documentation",
+      "System design portfolio (architecture diagrams, design documents)",
+      "Performance optimization case studies",
+      "Contributions to backend frameworks/libraries",
+      "AWS/Azure certifications"
+    ]
+  }
+}

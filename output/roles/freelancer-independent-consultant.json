@@ -1,0 +1,248 @@
+{
+  "roleId": "freelancer-independent-consultant",
+  "roleName": "Freelancer/Independent Consultant",
+  "description": "Moderate - Entry is easier than research/academic paths, but building sustainable income requires 2-3 years of experience, strong portfolio, self-discipline, and business skills",
+  "jobTitles": {
+    "fresher": [
+      "*Note: As a freelancer, you define your own title. Common designations on profiles/business cards",
+      "*Technical Freelance Roles",
+      "Freelance Software Developer"
+    ],
+    "experienced": [
+      "Independent Full-Stack Developer",
+      "Freelance Mobile Developer",
+      "Freelance Frontend/Backend Developer",
+      "Contract Software Engineer",
+      "Independent Web Developer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "JavaScript",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Java",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "--"
+    ],
+    "frameworks": [
+      {
+        "name": "React",
+        "popularity": "High"
+      },
+      {
+        "name": "Django",
+        "popularity": "High"
+      },
+      {
+        "name": "Flask",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": []
+  },
+  "dailyWork": [
+    "*Note: Freelance work varies significantly based on clients and projects. Here's a typical breakdown",
+    "*Active Project Phase (60-70% of time)",
+    "Coding and developing client projects (4-6 hours/day of focused work)",
+    "Client calls and meetings (30-60 min/day)",
+    "Writing documentation and handover materials",
+    "Testing and bug fixing",
+    "Responding to client messages and feedback",
+    "Managing project tasks and timelines"
+  ],
+  "careerProgression": {
+    "timeline": [],
+    "tracks": {
+      "leadership": [],
+      "individualContributor": []
+    },
+    "timelineToSenior": "",
+    "alternativePaths": []
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 0,
+        "max": 0
+      },
+      "senior": {
+        "min": 0,
+        "max": 0
+      },
+      "topCompanies": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "topCompanies": []
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "6-12 months",
+    "description": "**Moderate** - The technical skills are similar to employment (coding, problem-solving), but freelancing adds a business layer: finding clients, writing proposals, managing projects, handling finances. First 6-12 months are steep (low income, learning client management). After 1-2 years, it becomes more predictable. The challenge is discipline (no boss), irregular income (feast and famine cycles), and constantly finding next client. Easiest after 2-3 years of employment experience (you have skills, portfolio, and network to start)."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "*Why Medium-High",
+      "Income uncertainty: Irregular income, feast and famine cycles",
+      "Constant client hunting: Always need to find next project",
+      "No safety net: No PTO, sick leave, severance (you don't work = no income)",
+      "Client management stress: Difficult clients, scope creep, late payments",
+      "Isolation: Solo work, no team collaboration (can be lonely)"
+    ],
+    "mitigatingFactors": [
+      "*Mitigating Factors",
+      "Autonomy: You're the boss, control your schedule",
+      "Flexibility: Work from anywhere, choose your hours",
+      "Choose clients: Say no to bad clients (eventually)",
+      "Higher income potential: Can earn more than employment (top freelancers)"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "*You'll Thrive If",
+      "You're self-disciplined and don't need external structure",
+      "You're comfortable with income variability (some months high, some low)",
+      "You're good at self-promotion and networking",
+      "You enjoy autonomy and making your own decisions",
+      "You're comfortable wearing many hats (dev + sales + admin)",
+      "You like variety (different clients, projects, technologies)",
+      "You're organized and can manage multiple projects"
+    ],
+    "avoidIf": [
+      "*Avoid If",
+      "You need steady, predictable income",
+      "You prefer team collaboration and daily interactions",
+      "You struggle with self-discipline and motivation",
+      "You're uncomfortable with sales and self-promotion",
+      "You need clear structure and defined work hours"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Build Technical Foundation",
+      "goals": [
+        "*Year 1 (Build Technical Foundation)",
+        "Learn full-stack web development (React, Node.js, databases)",
+        "Build 5-10 projects (portfolio pieces)",
+        "Create personal website/portfolio",
+        "Learn Git, deployment basics",
+        "Understand basics of freelancing (read blogs, watch videos)"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Expand Skills + First \"Clients\"",
+      "goals": [
+        "*Year 2 (Expand Skills + First \"Clients\")",
+        "Learn additional tech stacks (mobile, cloud, different frameworks)",
+        "Build more complex projects (full-stack apps, APIs)",
+        "Offer services to friends, family, local businesses (₹5-20k projects, portfolio building)",
+        "Create Upwork/Freelancer profiles (start browsing projects)",
+        "Learn to write proposals (practice on sample projects)"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Serious Side Hustle",
+      "goals": [
+        "*Year 3 (Serious Side Hustle)",
+        "Start bidding on Upwork/Freelancer projects (small projects ₹10-30k)",
+        "Build portfolio with 3-5 paid projects",
+        "Learn client communication and project management",
+        "Create case studies from projects",
+        "Summer internship: Work at company to build experience (₹30-60k/month)"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Decide: Job First or Freelance",
+      "goals": [
+        "*Year 4 (Decide: Job First or Freelance)",
+        "*Recommended Path A (Safer): Job First, Then Freelance",
+        "Take job offer (₹6-12 LPA)",
+        "Work 2-3 years, build expertise and savings",
+        "Freelance on side (nights/weekends)",
+        "Build client base and reputation"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [],
+    "applicationStrategy": [],
+    "interviewPrep": [],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": ""
+    },
+    "differentiators": []
+  }
+}

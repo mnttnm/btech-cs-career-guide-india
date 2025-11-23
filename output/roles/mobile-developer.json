@@ -1,0 +1,341 @@
+{
+  "roleId": "mobile-developer",
+  "roleName": "Mobile Developer",
+  "description": "Entry-Level to Mid-Level - Entry is accessible with focused learning, but standing out requires strong portfolio and platform-specific expertise",
+  "jobTitles": {
+    "fresher": [
+      "Mobile Application Developer",
+      "Android Developer",
+      "iOS Developer",
+      "Junior Mobile Developer",
+      "React Native Developer"
+    ],
+    "experienced": [
+      "Senior Mobile Developer",
+      "Senior Android Engineer",
+      "Senior iOS Engineer",
+      "Lead Mobile Developer",
+      "Mobile Architect"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "JavaScript",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "Java",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "C",
+        "level": "Beginner",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Understanding of mobile-specific languages and their ecosystems",
+      "Mobile UI/UX design principles and patterns",
+      "RESTful APIs and GraphQL integration",
+      "Mobile database management (SQLite, Realm, Firebase)",
+      "Asynchronous programming and state management",
+      "Mobile app lifecycle and memory management",
+      "Push notifications and background services",
+      "Authentication and secure data storage"
+    ],
+    "frameworks": [
+      {
+        "name": "React",
+        "popularity": "High"
+      }
+    ],
+    "tools": []
+  },
+  "dailyWork": [
+    "Developing new features for mobile applications (iOS/Android)",
+    "Writing clean, maintainable code following platform-specific best practices",
+    "Implementing responsive UI designs that work across different screen sizes",
+    "Integrating third-party libraries and APIs (payments, maps, social media)",
+    "Optimizing app performance (reducing load times, memory usage, battery consumption)",
+    "Debugging crashes and fixing bugs reported by QA or users",
+    "Writing unit tests and UI tests for new features",
+    "Collaborating with designers to implement pixel-perfect UIs"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Mobile Developer / Associate Mobile Engineer",
+        "salary": {
+          "min": 4,
+          "max": 8,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-6",
+        "title": "Mobile Developer / Senior Mobile Developer",
+        "salary": {
+          "min": 8,
+          "max": 18,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "7-10",
+        "title": "Lead Mobile Developer / Mobile Architect",
+        "salary": {
+          "min": 18,
+          "max": 35,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Mobile Developer",
+        "Senior Mobile Developer",
+        "Tech Lead (Mobile)",
+        "Engineering Manager (Mobile)",
+        "Director of Mobile Engineering",
+        "VP Engineering"
+      ],
+      "individualContributor": [
+        "Senior Mobile Developer",
+        "Staff Mobile Engineer",
+        "Principal Mobile Engineer",
+        "Distinguished Engineer (Mobile)"
+      ]
+    },
+    "timelineToSenior": "5-7 years with consistent skill development and portfolio building",
+    "alternativePaths": [
+      "*Alternative Paths",
+      "Specialize in platform (become iOS/Android expert)",
+      "Cross-platform specialist (Flutter/React Native expert)",
+      "Mobile DevOps and CI/CD specialist",
+      "Mobile SDK/Library development"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3.5,
+        "max": 5
+      },
+      "productBased": {
+        "min": 6,
+        "max": 10
+      },
+      "topTech": {
+        "min": 12,
+        "max": 18
+      },
+      "average": {
+        "min": 4,
+        "max": 8
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 6,
+        "max": 9
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 8,
+        "max": 14
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 18,
+        "max": 28
+      },
+      "senior": {
+        "min": 28,
+        "max": 45
+      },
+      "topCompanies": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 18,
+          "max": 25
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 15,
+          "max": 20
+        }
+      },
+      {
+        "name": "Microsoft",
+        "range": {
+          "min": 16,
+          "max": 22
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "name": "Swiggy/Zomato",
+        "range": {
+          "min": 10,
+          "max": 16
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-9 months",
+    "description": "**Moderate** - Can become job-ready in 6-9 months with dedicated learning. Native development (iOS/Android) requires platform-specific knowledge and understanding of design guidelines. Cross-platform frameworks (Flutter/React Native) can be easier to start with if you know web development. The challenge is keeping up with frequent platform updates, device fragmentation (especially Android), and building a strong portfolio with published apps. Understanding both frontend design and backend integration is crucial."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "*Why Medium-High",
+      "App store review and rejection stress (especially iOS App Store)",
+      "Device fragmentation testing (hundreds of Android devices)",
+      "Tight deadlines for app launches and feature releases",
+      "Platform updates breaking existing functionality",
+      "Performance optimization challenges on older devices"
+    ],
+    "mitigatingFactors": [
+      "*Mitigating Factors",
+      "Strong community support and extensive documentation",
+      "Emulators and testing tools reduce device testing burden",
+      "Beta testing programs (TestFlight, Google Play Beta) catch issues early",
+      "Analytics and crash reporting tools help identify issues quickly"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "*You'll Thrive If",
+      "You love creating apps people use daily on their phones",
+      "You're detail-oriented and care about smooth, polished user experiences",
+      "You enjoy visual/interactive work and seeing immediate results",
+      "You're patient with platform-specific quirks and constraints",
+      "You like staying updated with latest mobile technologies",
+      "You can handle working within device resource constraints (battery, memory, storage)",
+      "You enjoy optimizing for performance and responsiveness"
+    ],
+    "avoidIf": [
+      "*Avoid If",
+      "You dislike dealing with UI/design work",
+      "You get frustrated with platform limitations and restrictions",
+      "You can't handle frequent platform changes and updates",
+      "You prefer backend/systems programming over user-facing work",
+      "You dislike testing on multiple devices and screen sizes"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "*Year 1 (Foundation)",
+        "Learn programming fundamentals (Java/Python)",
+        "Understand OOP concepts thoroughly",
+        "Build basic Android apps or iOS apps (start with Android if no Mac)",
+        "Learn Git and create GitHub account",
+        "Build 2-3 simple apps (calculator, to-do list, weather app)"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "*Year 2 (Deepening)",
+        "Master Kotlin (for Android) or Swift (for iOS)",
+        "Learn modern UI frameworks (Jetpack Compose for Android, SwiftUI for iOS)",
+        "Build 3-4 feature-rich apps with API integration",
+        "Learn REST APIs, JSON parsing, and network programming",
+        "Implement Firebase for backend (authentication, database, storage)"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "*Year 3 (Specialization)",
+        "Master advanced mobile concepts (MVVM architecture, dependency injection, testing)",
+        "Build complex apps with offline support, push notifications, payment integration",
+        "Learn both platforms if possible (Android + iOS, or Native + Cross-platform)",
+        "Summer internship at product company targeting mobile role (₹40k-80k/month)",
+        "Implement CI/CD for your apps using GitHub Actions or Fastlane"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "*Year 4 (Job Hunt)",
+        "Polish portfolio with 5-6 high-quality published apps",
+        "Complete 200+ DSA problems for coding interviews",
+        "Build one showcase app with clean code, tests, and documentation",
+        "Apply to mobile developer roles (campus + off-campus)",
+        "Practice mobile-specific interview questions (activity lifecycle, memory management, etc.)"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [],
+    "applicationStrategy": [],
+    "interviewPrep": [],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": ""
+    },
+    "differentiators": [
+      "*Key Differentiators",
+      "Published apps with real users and positive reviews",
+      "Contributions to popular open-source mobile libraries",
+      "Strong GitHub with well-documented mobile projects",
+      "Knowledge of both native and cross-platform development",
+      "Understanding of mobile DevOps (CI/CD, automated testing)"
+    ]
+  }
+}

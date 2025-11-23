@@ -1,0 +1,244 @@
+{
+  "roleId": "startup-founder-technical-co-founder",
+  "roleName": "Startup Founder/Technical Co-founder",
+  "description": "Extreme - Requires technical skills, business acumen, risk tolerance, fundraising ability, and resilience",
+  "jobTitles": {
+    "fresher": [
+      "*Note: As a founder, you don't have traditional \"job titles\" - you define your own role. Common designations",
+      "*Solo/Technical Founder",
+      "Founder & CEO"
+    ],
+    "experienced": [
+      "Founder & CTO",
+      "Solo Founder",
+      "Technical Founder",
+      "Chief Executive Officer & Founder",
+      "*Co-founder Scenarios"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "JavaScript",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Python",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Beginner",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "--"
+    ],
+    "frameworks": [
+      {
+        "name": "React",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      }
+    ],
+    "tools": []
+  },
+  "dailyWork": [
+    "*Note: As a founder, there's no \"typical\" day. Work varies wildly based on stage.",
+    "*Pre-Funding Stage (Bootstrapping, 0-6 months)",
+    "Coding the MVP (80% of time)",
+    "Talking to potential customers, validating problem (10%)",
+    "Refining product based on feedback (5%)",
+    "Networking with other founders, mentors (3%)",
+    "Learning about fundraising, business basics (2%)",
+    "Hours: 60-80/week, including nights and weekends"
+  ],
+  "careerProgression": {
+    "timeline": [],
+    "tracks": {
+      "leadership": [],
+      "individualContributor": []
+    },
+    "timelineToSenior": "",
+    "alternativePaths": []
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 0,
+        "max": 0
+      },
+      "senior": {
+        "min": 0,
+        "max": 0
+      },
+      "topCompanies": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "topCompanies": []
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "6-12 months",
+    "description": "**Extremely Steep and Continuous** - Starting a company requires learning everything: coding, product, design, sales, marketing, finance, legal, hiring, fundraising, leadership. Even experienced engineers find 80% of startup work unfamiliar. You're constantly in over your head, figuring things out on the fly. The learning never stops. What you don't know can kill your startup (bad unit economics, legal mistakes, wrong market). Most founders spend 2-3 years learning through failures before finding success. Only pursue if you love learning through painful trial and error."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "*Why Extreme",
+      "Financial instability: No steady income, burning savings",
+      "Uncertainty: No roadmap, no guarantee of success",
+      "Responsibility: Team depends on you for salaries, livelihood",
+      "Fundraising pressure: Constant pitch meetings, rejections (90%+ rejection rate)",
+      "Long hours: 70-90 hour weeks, always on call, work bleeds into life"
+    ],
+    "mitigatingFactors": [
+      "*Mitigating Factors",
+      "Autonomy: You're in control, building your vision",
+      "Purpose: Working on something you care deeply about",
+      "Learning: Intense personal growth",
+      "Community: Startup ecosystem is supportive (other founders understand)"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "*You'll Thrive If",
+      "You're comfortable with extreme uncertainty and risk",
+      "You're self-motivated and don't need external structure",
+      "You have high risk tolerance (financial and emotional)",
+      "You're resilient and bounce back from failures quickly",
+      "You're comfortable wearing many hats (tech + business + sales)",
+      "You love learning new things rapidly",
+      "You're passionate about solving a specific problem"
+    ],
+    "avoidIf": [
+      "*Avoid If",
+      "You need financial stability and steady income",
+      "You prefer clear structure and defined work hours",
+      "You're risk-averse (financial or emotional)",
+      "You get demoralized by failure or rejection",
+      "You prefer specializing in one area (coding only)"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Build Foundation",
+      "goals": [
+        "*Year 1 (Build Foundation)",
+        "Learn programming (Python, web development)",
+        "Build 3-5 projects (apps, websites) - learn to ship",
+        "Understand basics of startups (read Paul Graham essays, YC library)",
+        "Attend entrepreneurship events, talks by founders",
+        "Join E-Cell or entrepreneurship club"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Explore and Experiment",
+      "goals": [
+        "*Year 2 (Explore and Experiment)",
+        "Build more substantial projects (full-stack apps with users)",
+        "Learn product thinking (not just coding, but what to build)",
+        "Attend startup events, hackathons (meet other builders)",
+        "Start following startup ecosystem (follow VCs, founders on Twitter)",
+        "Consider joining a startup as intern (₹15-30k/month, learn from inside)"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Serious Experimentation",
+      "goals": [
+        "*Year 3 (Serious Experimentation)",
+        "Start working on a real idea (identify problem worth solving)",
+        "Build MVP and get first users (friends, college students)",
+        "Summer internship at startup (₹30-60k/month, see how startups work)",
+        "Alternatively: Work on your own startup full-time in summer",
+        "Learn about fundraising (pitch decks, talking to investors)"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Decide: Job or Startup",
+      "goals": [
+        "*Year 4 (Decide: Job or Startup)",
+        "Option A: Launch startup, defer placements, go all-in",
+        "Option B: Take job offer, work on startup nights/weekends, quit after 6-12 months",
+        "Option C: Join a well-funded startup, learn for 2-3 years, then start your own",
+        "Apply to accelerators (YC, Antler, 100X.VC, etc.)",
+        "If starting: Raise pre-seed funding (₹20-50 lakhs from angels/accelerators)"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [],
+    "applicationStrategy": [],
+    "interviewPrep": [],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": ""
+    },
+    "differentiators": []
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "roleId": "embedded-systems-engineer",
+  "roleName": "Embedded Systems Engineer",
+  "description": "Mid-Level - Requires hardware knowledge alongside software skills, more specialized than general software roles",
+  "jobTitles": {
+    "fresher": [
+      "Embedded Software Engineer",
+      "Firmware Engineer",
+      "Embedded Developer",
+      "Junior Embedded Systems Engineer",
+      "Embedded Software Developer - Trainee"
+    ],
+    "experienced": [
+      "Senior Embedded Systems Engineer",
+      "Senior Firmware Engineer",
+      "Embedded Software Architect",
+      "Lead Embedded Engineer",
+      "Principal Embedded Systems Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "TypeScript",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "C++",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "Rust",
+        "level": "Beginner",
+        "priority": "Primary"
+      },
+      {
+        "name": "C",
+        "level": "Beginner",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Understanding of embedded-specific coding practices (bit manipulation, memory management)",
+      "Microcontroller and microprocessor architecture (ARM, AVR, PIC, ESP32)",
+      "Real-Time Operating Systems (RTOS) - FreeRTOS, VxWorks, QNX, ThreadX",
+      "Embedded Linux development and device drivers",
+      "Memory management (stack, heap, flash, RAM optimization)",
+      "Interrupt handling and timing-critical code",
+      "Communication protocols (UART, SPI, I2C, CAN, Modbus, Ethernet)",
+      "Digital and analog electronics fundamentals"
+    ],
+    "frameworks": [],
+    "tools": []
+  },
+  "dailyWork": [
+    "Writing low-level C/C++ code for microcontrollers and embedded processors",
+    "Developing and debugging firmware for hardware devices",
+    "Implementing communication protocols (UART, SPI, I2C, CAN bus)",
+    "Working with hardware schematics and datasheets to understand pin configurations",
+    "Using debugging tools (JTAG debuggers, oscilloscopes, logic analyzers) to trace issues",
+    "Optimizing code for memory, performance, and power consumption",
+    "Porting and configuring RTOS for specific hardware platforms",
+    "Writing device drivers for sensors, displays, and peripherals"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Embedded Engineer / Firmware Engineer",
+        "salary": {
+          "min": 3.5,
+          "max": 6,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-6",
+        "title": "Embedded Systems Engineer / Senior Firmware Engineer",
+        "salary": {
+          "min": 7,
+          "max": 15,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "7-10",
+        "title": "Lead Embedded Engineer / Embedded Architect",
+        "salary": {
+          "min": 15,
+          "max": 25,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Embedded Engineer",
+        "Senior Embedded Engineer",
+        "Technical Lead",
+        "Engineering Manager",
+        "Director of Embedded Engineering",
+        "VP Hardware/Firmware"
+      ],
+      "individualContributor": [
+        "Senior Embedded Engineer",
+        "Staff Engineer",
+        "Principal Engineer",
+        "Distinguished Engineer (Embedded Systems)"
+      ]
+    },
+    "timelineToSenior": "6-8 years with strong hardware and software skills, industry-specific expertise adds value",
+    "alternativePaths": [
+      "*Alternative Paths",
+      "IoT Solutions Architect (combining embedded with cloud)",
+      "Automotive Systems Engineer (ADAS, EV, autonomous vehicles)",
+      "Robotics Engineer (embedded systems in robots)",
+      "FPGA/ASIC Design Engineer (hardware design)"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3,
+        "max": 4.5
+      },
+      "productBased": {
+        "min": 4.5,
+        "max": 7
+      },
+      "topTech": {
+        "min": 7,
+        "max": 12
+      },
+      "average": {
+        "min": 3.5,
+        "max": 6
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 5,
+        "max": 8
+      },
+      "productBased": {
+        "min": 8,
+        "max": 12
+      },
+      "average": {
+        "min": 7,
+        "max": 11
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 15,
+        "max": 22
+      },
+      "senior": {
+        "min": 22,
+        "max": 35
+      },
+      "topCompanies": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Qualcomm",
+        "range": {
+          "min": 10,
+          "max": 15
+        }
+      },
+      {
+        "name": "Intel",
+        "range": {
+          "min": 9,
+          "max": 14
+        }
+      },
+      {
+        "name": "NVIDIA",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "name": "Bosch",
+        "range": {
+          "min": 6,
+          "max": 10
+        }
+      },
+      {
+        "name": "Continental",
+        "range": {
+          "min": 5,
+          "max": 9
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "12-18 months",
+    "description": "**Steep** - Requires understanding both hardware and software, which takes 12-18 months of dedicated learning to become job-ready. Need to learn C/C++ thoroughly, understand electronics fundamentals, work with actual hardware, and grasp low-level concepts like memory maps, interrupts, and peripheral registers. The challenge is the intersection of hardware and software - you need to read datasheets, use oscilloscopes, understand circuit diagrams, and debug issues that could be in hardware or software. However, once you understand the fundamentals, the concepts remain consistent across different platforms."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "*Why Medium-High",
+      "Debugging can be extremely challenging (hardware + software issues)",
+      "Limited visibility into what's happening (no console.log on microcontrollers)",
+      "Production bugs can require hardware recalls (very expensive)",
+      "Tight resource constraints (memory, processing power, power consumption)",
+      "Safety-critical applications (automotive, medical, aerospace) have zero tolerance for errors"
+    ],
+    "mitigatingFactors": [
+      "*Mitigating Factors",
+      "Systematic debugging methodologies and tools (JTAG, logic analyzers)",
+      "Strong community support and extensive documentation for popular platforms",
+      "Many companies have dedicated hardware teams to support firmware developers",
+      "Lower frequency of releases compared to web/mobile (more time to test)"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "*You'll Thrive If",
+      "You love working at the intersection of hardware and software",
+      "You enjoy understanding how things work at the lowest level",
+      "You're patient with debugging complex, hard-to-reproduce issues",
+      "You like working with physical devices and tangible products",
+      "You're detail-oriented and comfortable reading technical datasheets",
+      "You enjoy optimization challenges (memory, power, performance)",
+      "You appreciate long-term projects with real-world impact"
+    ],
+    "avoidIf": [
+      "*Avoid If",
+      "You prefer rapid iteration and quick feedback loops",
+      "You dislike hardware and electronics concepts",
+      "You get frustrated easily when debugging takes days/weeks",
+      "You want to work purely on software without hardware constraints",
+      "You need constant visible progress and results"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "*Year 1 (Foundation)",
+        "Master C programming (pointers, structures, memory management)",
+        "Learn basic digital electronics (logic gates, flip-flops, counters)",
+        "Understand microprocessor and microcontroller architecture (8051 basics)",
+        "Start with Arduino projects (blinking LED, sensor reading, motor control)",
+        "Build 3-4 simple embedded projects (temperature monitor, line follower, etc.)"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "*Year 2 (Deepening)",
+        "Learn ARM Cortex-M architecture (STM32 or ESP32)",
+        "Study communication protocols in depth (UART, SPI, I2C)",
+        "Build projects using STM32 or ESP32 with HAL/LL libraries",
+        "Learn basics of RTOS (FreeRTOS) - task scheduling, semaphores, queues",
+        "Implement interrupt-driven programming"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "*Year 3 (Specialization)",
+        "Master advanced embedded concepts (DMA, low-power modes, bootloaders)",
+        "Learn embedded Linux basics (device drivers, kernel modules)",
+        "Choose specialization: Automotive (CAN, LIN), IoT (MQTT, connectivity), or Industrial (PLC, automation)",
+        "Build complex projects with RTOS, sensor fusion, and actuator control",
+        "Summer internship at automotive/semiconductor/IoT company (₹30k-60k/month)"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "*Year 4 (Job Hunt)",
+        "Build 2-3 advanced portfolio projects with complete documentation",
+        "Learn automotive embedded (if targeting auto industry) - CAN, AUTOSAR basics",
+        "Complete online certifications (ARM Accredited Engineer, Embedded Systems courses)",
+        "Prepare embedded-specific interview topics (interrupts, RTOS, memory management)",
+        "Practice C programming problems focused on bit manipulation and optimization"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [],
+    "applicationStrategy": [],
+    "interviewPrep": [],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": ""
+    },
+    "differentiators": [
+      "*Key Differentiators",
+      "Portfolio of working hardware projects with code and documentation",
+      "Experience with industry-standard tools (Keil, IAR, STM32Cube)",
+      "Knowledge of automotive standards (ISO 26262, AUTOSAR) for automotive roles",
+      "Contributions to embedded open-source projects",
+      "Technical blog explaining embedded concepts or project implementations"
+    ]
+  }
+}
