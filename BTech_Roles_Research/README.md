@@ -6,9 +6,9 @@ This repository contains **comprehensive, India-specific career documentation** 
 
 ## ✅ Documentation Status: COMPLETE
 
-- **Total Roles Documented:** 41 roles (Roles #5-45)
-- **Total Files:** 41 detailed markdown files
-- **Total Content:** ~1.4 MB of career guidance
+- **Total Roles Documented:** 45 roles (ALL roles #1-45)
+- **Total Files:** 45 detailed markdown files
+- **Total Content:** ~1.5 MB of career guidance
 - **Geographic Focus:** India market (salaries in INR, Indian companies, Indian context)
 - **Time Period:** 2024-2025
 
@@ -18,7 +18,7 @@ This repository contains **comprehensive, India-specific career documentation** 
 
 ```
 BTech_Roles_Research/
-├── Part_01_Core_Software_Engineering/ (3 roles)
+├── Part_01_Core_Software_Engineering/ (7 roles)
 ├── Part_02_Data_AI_Machine_Learning/ (7 roles)
 ├── Part_03_Cloud_DevOps_Infrastructure/ (5 roles)
 ├── Part_04_Security/ (3 roles)
@@ -35,10 +35,14 @@ BTech_Roles_Research/
 
 ## 📋 Complete Role List
 
-### Part 1: Core Software Engineering (3 roles)
-1. **Role #5** - Mobile Developer
-2. **Role #6** - Embedded Systems Engineer
-3. **Role #7** - Game Developer
+### Part 1: Core Software Engineering (7 roles)
+1. **Role #1** - Software Engineer (General)
+2. **Role #2** - Backend Engineer/Developer
+3. **Role #3** - Frontend Engineer/Developer
+4. **Role #4** - Full-Stack Engineer/Developer
+5. **Role #5** - Mobile Developer
+6. **Role #6** - Embedded Systems Engineer
+7. **Role #7** - Game Developer
 
 ### Part 2: Data, AI & Machine Learning (7 roles)
 4. **Role #8** - Data Scientist
