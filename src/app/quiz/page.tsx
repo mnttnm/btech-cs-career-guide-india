@@ -1,21 +1,42 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award } from 'lucide-react'
+import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award, Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Progress } from '@/components/ui/progress'
 import { quizQuestions, calculateQuizResults } from '@/data/quiz'
 import { useQuizStore } from '@/stores/useQuizStore'
 import { getRoleById, categoryLabels } from '@/data/roles'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
 import { getRoleIcon } from '@/lib/icons'
+import { springs, stagger, easings } from '@/lib/motion'
+
+// Progress dots component
+function QuizProgress({ current, total }: { current: number; total: number }) {
+  return (
+    <div className="flex items-center justify-center gap-1.5">
+      {Array.from({ length: total }).map((_, i) => (
+        <motion.div
+          key={i}
+          initial={false}
+          animate={{
+            scale: i === current ? 1.2 : 1,
+            backgroundColor: i < current ? 'var(--primary)' : i === current ? 'var(--primary)' : 'var(--muted)',
+          }}
+          transition={springs.snappy}
+          className={cn(
+            'w-2 h-2 rounded-full',
+            i <= current ? 'bg-primary' : 'bg-muted'
+          )}
+        />
+      ))}
+    </div>
+  )
+}
 
 export default function QuizPage() {
-  const router = useRouter()
   const {
     answers,
     results,
@@ -30,6 +51,7 @@ export default function QuizPage() {
   } = useQuizStore()
 
   const [isCalculating, setIsCalculating] = useState(false)
+  const [direction, setDirection] = useState<'forward' | 'backward'>('forward')
 
   const question = quizQuestions[currentQuestion]
   const progress = ((currentQuestion + 1) / quizQuestions.length) * 100
@@ -42,9 +64,20 @@ export default function QuizPage() {
     // Auto-advance after short delay
     setTimeout(() => {
       if (currentQuestion < quizQuestions.length - 1) {
+        setDirection('forward')
         nextQuestion()
       }
-    }, 300)
+    }, 400)
+  }
+
+  const handlePrevQuestion = () => {
+    setDirection('backward')
+    prevQuestion()
+  }
+
+  const handleNextQuestion = () => {
+    setDirection('forward')
+    nextQuestion()
   }
 
   const handleFinishQuiz = async () => {
@@ -135,28 +168,50 @@ export default function QuizPage() {
     const medalColors = ['text-yellow-500', 'text-gray-400', 'text-amber-600']
 
     return (
-      <div className="container mx-auto px-4 py-8">
+      <div className="container relative mx-auto px-4 py-8 overflow-hidden">
+        {/* Subtle glow effect */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] pointer-events-none"
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,var(--brand-subtle),transparent_60%)] opacity-60" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,var(--success)/0.1,transparent_50%)]" />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="max-w-2xl mx-auto"
+          transition={springs.smooth}
+          className="relative max-w-2xl mx-auto"
         >
           {/* Header */}
           <div className="text-center mb-8">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ type: 'spring', duration: 0.5 }}
+              transition={springs.bouncy}
               className="flex items-center justify-center w-20 h-20 mx-auto mb-4 rounded-2xl bg-success/10"
             >
               <PartyPopper className="w-10 h-10 text-success" />
             </motion.div>
-            <h1 className="text-2xl md:text-3xl font-bold mb-2">
+            <motion.h1
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-2xl md:text-3xl font-bold mb-2"
+            >
               Your Top Role Matches
-            </h1>
-            <p className="text-muted-foreground">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-muted-foreground"
+            >
               Based on your personality and preferences
-            </p>
+            </motion.p>
           </div>
 
           {/* Results */}
@@ -269,17 +324,33 @@ export default function QuizPage() {
     )
   }
 
+  // Animation variants for directional transitions
+  const slideVariants = {
+    enter: (dir: 'forward' | 'backward') => ({
+      x: dir === 'forward' ? 30 : -30,
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (dir: 'forward' | 'backward') => ({
+      x: dir === 'forward' ? -30 : 30,
+      opacity: 0,
+    }),
+  }
+
   // Quiz questions
   return (
     <div className="container mx-auto px-4 py-6">
       <div className="max-w-xl mx-auto">
         {/* Progress */}
         <div className="mb-8">
-          <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center justify-between mb-4">
             <Button
               variant="ghost"
               size="sm"
-              onClick={prevQuestion}
+              onClick={handlePrevQuestion}
               disabled={currentQuestion === 0}
               className="gap-2"
             >
@@ -290,17 +361,20 @@ export default function QuizPage() {
               {currentQuestion + 1} of {quizQuestions.length}
             </span>
           </div>
-          <Progress value={progress} className="h-2" />
+          <QuizProgress current={currentQuestion} total={quizQuestions.length} />
         </div>
 
         {/* Question */}
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" custom={direction}>
           {question && (
             <motion.div
               key={question.id}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.25, ease: easings.easeOut }}
               className="mb-8"
             >
               <h2 className="text-xl md:text-2xl font-semibold mb-6">
@@ -309,22 +383,55 @@ export default function QuizPage() {
 
               {/* Options */}
               <div className="space-y-3">
-                {question.options?.map((option) => (
-                  <motion.button
-                    key={option.value}
-                    whileHover={{ scale: 1.01 }}
-                    whileTap={{ scale: 0.99 }}
-                    onClick={() => handleSelectOption(option.value)}
-                    className={cn(
-                      'w-full text-left p-4 rounded-xl border transition-all',
-                      currentAnswer === option.value
-                        ? 'border-primary bg-primary/5 ring-2 ring-primary/20'
-                        : 'border-border hover:border-primary/50 hover:bg-muted/50'
-                    )}
-                  >
-                    <div className="font-medium">{option.label}</div>
-                  </motion.button>
-                ))}
+                {question.options?.map((option, index) => {
+                  const isSelected = currentAnswer === option.value
+                  return (
+                    <motion.button
+                      key={option.value}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      whileHover={{ scale: 1.01 }}
+                      whileTap={{ scale: 0.99 }}
+                      onClick={() => handleSelectOption(option.value)}
+                      className={cn(
+                        'w-full text-left p-4 rounded-xl border transition-all duration-200 relative overflow-hidden',
+                        isSelected
+                          ? 'border-primary bg-primary/5 ring-2 ring-primary/20'
+                          : 'border-border hover:border-primary/50 hover:bg-muted/50'
+                      )}
+                    >
+                      <div className="flex items-center gap-3">
+                        <motion.div
+                          initial={false}
+                          animate={{
+                            scale: isSelected ? 1 : 0.8,
+                            backgroundColor: isSelected ? 'var(--primary)' : 'var(--muted)',
+                          }}
+                          transition={springs.snappy}
+                          className={cn(
+                            'flex items-center justify-center w-5 h-5 rounded-full shrink-0',
+                            isSelected ? 'bg-primary' : 'bg-muted'
+                          )}
+                        >
+                          <AnimatePresence>
+                            {isSelected && (
+                              <motion.div
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                exit={{ scale: 0 }}
+                                transition={springs.bouncy}
+                              >
+                                <Check className="w-3 h-3 text-primary-foreground" />
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </motion.div>
+                        <span className="font-medium">{option.label}</span>
+                      </div>
+                    </motion.button>
+                  )
+                })}
               </div>
             </motion.div>
           )}
@@ -340,7 +447,7 @@ export default function QuizPage() {
             </Button>
           ) : (
             <Button
-              onClick={nextQuestion}
+              onClick={handleNextQuestion}
               disabled={!currentAnswer}
               className="gap-2"
             >

@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { X, Plus, ArrowRight, Lightbulb, Trophy } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -10,6 +10,36 @@ import { useComparisonStore } from '@/stores/useComparisonStore'
 import { getRoleById, getRoleSummaries } from '@/data/roles'
 import { cn } from '@/lib/utils'
 import { Role } from '@/types/role'
+import { springs, stagger } from '@/lib/motion'
+import { difficultyColors, stressColors } from '@/lib/icons'
+
+// Metric bar component for salary visualization
+function MetricBar({
+  value,
+  maxValue,
+  isBest,
+  delay = 0,
+}: {
+  value: number
+  maxValue: number
+  isBest: boolean
+  delay?: number
+}) {
+  const percentage = (value / maxValue) * 100
+  return (
+    <div className="w-full h-2 rounded-full bg-muted overflow-hidden">
+      <motion.div
+        initial={{ width: 0 }}
+        animate={{ width: `${percentage}%` }}
+        transition={{ delay, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        className={cn(
+          'h-full rounded-full',
+          isBest ? 'bg-green-500' : 'bg-primary/60'
+        )}
+      />
+    </div>
+  )
+}
 
 type CompareRole = Role | undefined
 
@@ -212,39 +242,48 @@ export default function ComparePage() {
 
       {/* Selected Roles */}
       <div className="flex flex-wrap gap-3 mb-6">
-        {roles.map((role) => (
-          <motion.div
-            key={role?.roleId}
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="flex items-center gap-2 px-3 py-2 rounded-full bg-muted"
-          >
-            <span>{role?.icon}</span>
-            <span className="font-medium">{role?.roleName}</span>
-            <button
-              onClick={() => removeRole(role?.roleId || '')}
-              className="p-1 hover:bg-background rounded-full"
+        <AnimatePresence mode="popLayout">
+          {roles.map((role) => (
+            <motion.div
+              key={role?.roleId}
+              layout
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={springs.snappy}
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted"
             >
-              <X className="w-4 h-4" />
-            </button>
-          </motion.div>
-        ))}
+              <span>{role?.icon}</span>
+              <span className="font-medium">{role?.roleName}</span>
+              <button
+                onClick={() => removeRole(role?.roleId || '')}
+                className="p-1 hover:bg-background rounded-full transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </motion.div>
+          ))}
+        </AnimatePresence>
         {selectedRoles.length < 3 && (
-          <Button asChild variant="outline" className="rounded-full gap-2">
-            <Link href="/browse">
-              <Plus className="w-4 h-4" />
-              Add Role
-            </Link>
-          </Button>
+          <motion.div layout>
+            <Button asChild variant="outline" className="rounded-full gap-2">
+              <Link href="/browse">
+                <Plus className="w-4 h-4" />
+                Add Role
+              </Link>
+            </Button>
+          </motion.div>
         )}
         {selectedRoles.length > 0 && (
-          <Button
-            variant="ghost"
-            onClick={clearRoles}
-            className="text-muted-foreground"
-          >
-            Clear All
-          </Button>
+          <motion.div layout>
+            <Button
+              variant="ghost"
+              onClick={clearRoles}
+              className="text-muted-foreground"
+            >
+              Clear All
+            </Button>
+          </motion.div>
         )}
       </div>
 
@@ -282,11 +321,11 @@ export default function ComparePage() {
             <table className="w-full min-w-[600px]">
               <thead>
                 <tr>
-                  <th className="text-left p-3 bg-muted rounded-tl-xl">Metric</th>
+                  <th className="text-left p-4 bg-muted rounded-tl-xl">Metric</th>
                   {roles.map((role) => (
                     <th
                       key={role?.roleId}
-                      className="text-left p-3 bg-muted last:rounded-tr-xl"
+                      className="text-left p-4 bg-muted last:rounded-tr-xl"
                     >
                       <div className="flex items-center gap-2">
                         <span>{role?.icon}</span>
@@ -299,32 +338,103 @@ export default function ComparePage() {
               <tbody>
                 {metrics.map((metric, index) => {
                   const bestRoleId = metric.getBest(roles)
+                  // Get max salary value for metric bars
+                  const maxSalary = metric.label.includes('Salary')
+                    ? Math.max(...roles.map((r) => {
+                        if (metric.label === 'Fresher Salary') {
+                          return r?.salaryRanges?.fresher?.average?.max || 0
+                        }
+                        return r?.salaryRanges?.fivePlus?.senior?.max || 0
+                      }))
+                    : 0
+
                   return (
-                    <tr
+                    <motion.tr
                       key={metric.label}
-                      className={cn(index % 2 === 0 && 'bg-muted/30')}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      className={cn(
+                        'transition-colors hover:bg-muted/50',
+                        index % 2 === 0 && 'bg-muted/30'
+                      )}
                     >
-                      <td className="p-3 font-medium">{metric.label}</td>
-                      {roles.map((role) => {
+                      <td className="p-4 font-medium">{metric.label}</td>
+                      {roles.map((role, roleIndex) => {
                         const isBest = bestRoleId === role?.roleId
+                        const value = metric.getValue(role)
+
+                        // Get numeric value for bar
+                        const numericValue = metric.label === 'Fresher Salary'
+                          ? role?.salaryRanges?.fresher?.average?.max || 0
+                          : metric.label === '5+ Year Salary'
+                          ? role?.salaryRanges?.fivePlus?.senior?.max || 0
+                          : 0
+
+                        // Get badge colors for difficulty/stress
+                        const isDifficulty = metric.label === 'Difficulty'
+                        const isStress = metric.label === 'Stress Level'
+                        const difficultyValue = role?.learningCurve?.difficulty as keyof typeof difficultyColors
+                        const stressValue = role?.stressLevel?.level as keyof typeof stressColors
+
                         return (
-                          <td key={role?.roleId} className="p-3">
-                            <div className="flex items-center gap-2">
-                              <span
-                                className={cn(
-                                  isBest && 'font-semibold text-green-600'
+                          <td key={role?.roleId} className="p-4">
+                            <div className="space-y-2">
+                              <div className="flex items-center gap-2">
+                                {isDifficulty ? (
+                                  <Badge
+                                    variant="secondary"
+                                    className={cn(
+                                      'text-xs',
+                                      difficultyColors[difficultyValue]?.bg,
+                                      difficultyColors[difficultyValue]?.text
+                                    )}
+                                  >
+                                    {value}
+                                  </Badge>
+                                ) : isStress ? (
+                                  <Badge
+                                    variant="secondary"
+                                    className={cn(
+                                      'text-xs',
+                                      stressColors[stressValue]?.bg,
+                                      stressColors[stressValue]?.text
+                                    )}
+                                  >
+                                    {value}
+                                  </Badge>
+                                ) : (
+                                  <span
+                                    className={cn(
+                                      isBest && 'font-semibold text-green-600'
+                                    )}
+                                  >
+                                    {value}
+                                  </span>
                                 )}
-                              >
-                                {metric.getValue(role)}
-                              </span>
-                              {isBest && (
-                                <Trophy className="w-4 h-4 text-yellow-500" />
+                                {isBest && (
+                                  <motion.div
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
+                                    transition={springs.bouncy}
+                                  >
+                                    <Trophy className="w-4 h-4 text-yellow-500" />
+                                  </motion.div>
+                                )}
+                              </div>
+                              {metric.label.includes('Salary') && maxSalary > 0 && (
+                                <MetricBar
+                                  value={numericValue}
+                                  maxValue={maxSalary}
+                                  isBest={isBest}
+                                  delay={index * 0.05 + roleIndex * 0.1}
+                                />
                               )}
                             </div>
                           </td>
                         )
                       })}
-                    </tr>
+                    </motion.tr>
                   )
                 })}
               </tbody>

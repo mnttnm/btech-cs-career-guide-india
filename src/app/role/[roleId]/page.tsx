@@ -1,6 +1,6 @@
 'use client'
 
-import { use } from 'react'
+import { use, useState, useEffect } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -8,8 +8,6 @@ import {
   ArrowLeft,
   Heart,
   GitCompare,
-  Download,
-  Share2,
   TrendingUp,
   Clock,
   Briefcase,
@@ -17,6 +15,7 @@ import {
   CheckCircle2,
   XCircle,
   ChevronRight,
+  ChevronLeft,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -26,12 +25,34 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import { Progress } from '@/components/ui/progress'
-import { getRoleById, categoryLabels } from '@/data/roles'
+import { getRoleById, getRoleSummaries, categoryLabels } from '@/data/roles'
 import { useFavoritesStore } from '@/stores/useFavoritesStore'
 import { useComparisonStore } from '@/stores/useComparisonStore'
 import { cn } from '@/lib/utils'
 import { getRoleIcon, difficultyColors, stressColors } from '@/lib/icons'
+import { RoleCard } from '@/components/RoleCard'
+import { springs } from '@/lib/motion'
+
+// Hook to track scroll progress
+function useScrollProgress() {
+  const [progress, setProgress] = useState(0)
+  const [hasScrolled, setHasScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight
+      const scrollProgress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0
+      setProgress(scrollProgress)
+      setHasScrolled(scrollTop > 10)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  return { progress, hasScrolled }
+}
 
 interface PageProps {
   params: Promise<{ roleId: string }>
@@ -40,9 +61,15 @@ interface PageProps {
 export default function RoleDetailPage({ params }: PageProps) {
   const { roleId } = use(params)
   const role = getRoleById(roleId)
+  const { progress, hasScrolled } = useScrollProgress()
 
   const { toggleFavorite, isFavorite } = useFavoritesStore()
   const { addRole, removeRole, isSelected, selectedRoles } = useComparisonStore()
+
+  // Get related roles (same category, excluding current)
+  const relatedRoles = getRoleSummaries()
+    .filter((r) => r.category === role?.category && r.roleId !== roleId)
+    .slice(0, 6)
 
   if (!role) {
     notFound()
@@ -62,8 +89,20 @@ export default function RoleDetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen pb-24">
+      {/* Scroll Progress Indicator */}
+      <motion.div
+        className="fixed top-14 md:top-16 left-0 right-0 h-0.5 bg-primary z-50 origin-left"
+        style={{ scaleX: progress / 100 }}
+        initial={{ scaleX: 0 }}
+      />
+
       {/* Header */}
-      <div className="sticky top-14 md:top-16 z-40 bg-background/95 backdrop-blur-lg border-b">
+      <div
+        className={cn(
+          'sticky top-14 md:top-16 z-40 bg-background/95 backdrop-blur-lg border-b transition-shadow duration-200',
+          hasScrolled && 'shadow-md'
+        )}
+      >
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <Button asChild variant="ghost" size="sm" className="gap-2">
             <Link href="/browse">
@@ -79,8 +118,8 @@ export default function RoleDetailPage({ params }: PageProps) {
             >
               <Heart
                 className={cn(
-                  'w-5 h-5',
-                  isRoleFavorite && 'fill-red-500 text-red-500'
+                  'w-5 h-5 transition-all',
+                  isRoleFavorite && 'fill-red-500 text-red-500 scale-110'
                 )}
               />
             </Button>
@@ -131,54 +170,64 @@ export default function RoleDetailPage({ params }: PageProps) {
           transition={{ delay: 0.1 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
         >
-          <div className="p-4 rounded-xl bg-card border">
-            <div className="flex items-center gap-2 text-muted-foreground mb-1">
-              <TrendingUp className="w-4 h-4" />
-              <span className="text-sm">Fresher Salary</span>
-            </div>
-            <div className="font-semibold text-lg">
-              ₹{role.salaryRanges?.fresher?.average?.min || '4'}-
-              {role.salaryRanges?.fresher?.average?.max || '8'} LPA
-            </div>
-          </div>
-          <div className="p-4 rounded-xl bg-card border">
-            <div className="flex items-center gap-2 text-muted-foreground mb-1">
-              <Clock className="w-4 h-4" />
-              <span className="text-sm">Time to Job-Ready</span>
-            </div>
-            <div className="font-semibold text-lg">
-              {role.learningCurve?.timeToJobReady || '6-12 months'}
-            </div>
-          </div>
-          <div className="p-4 rounded-xl bg-card border">
-            <div className="flex items-center gap-2 text-muted-foreground mb-1">
-              <GraduationCap className="w-4 h-4" />
-              <span className="text-sm">Difficulty</span>
-            </div>
-            <Badge
-              className={cn(
-                'text-sm',
-                difficultyColors[role.learningCurve?.difficulty || 'Moderate']?.bg,
-                difficultyColors[role.learningCurve?.difficulty || 'Moderate']?.text
-              )}
+          {[
+            {
+              icon: TrendingUp,
+              label: 'Fresher Salary',
+              value: `₹${role.salaryRanges?.fresher?.average?.min || '4'}-${role.salaryRanges?.fresher?.average?.max || '8'} LPA`,
+              color: 'text-success',
+            },
+            {
+              icon: Clock,
+              label: 'Time to Job-Ready',
+              value: role.learningCurve?.timeToJobReady || '6-12 months',
+              color: 'text-primary',
+            },
+            {
+              icon: GraduationCap,
+              label: 'Difficulty',
+              value: role.learningCurve?.difficulty || 'Moderate',
+              isBadge: true,
+              badgeColors: difficultyColors[role.learningCurve?.difficulty || 'Moderate'],
+            },
+            {
+              icon: Briefcase,
+              label: 'Stress Level',
+              value: role.stressLevel?.level || 'Medium',
+              color: stressColors[role.stressLevel?.level || 'Medium']?.text,
+            },
+          ].map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 + index * 0.05 }}
+              whileHover={{ y: -4 }}
+              className="group p-4 rounded-xl bg-card border transition-all duration-200 hover:shadow-[var(--shadow-card-hover)] hover:border-primary/30 cursor-default"
             >
-              {role.learningCurve?.difficulty || 'Moderate'}
-            </Badge>
-          </div>
-          <div className="p-4 rounded-xl bg-card border">
-            <div className="flex items-center gap-2 text-muted-foreground mb-1">
-              <Briefcase className="w-4 h-4" />
-              <span className="text-sm">Stress Level</span>
-            </div>
-            <div
-              className={cn(
-                'font-semibold',
-                stressColors[role.stressLevel?.level || 'Medium']?.text
+              <div className="flex items-center gap-2 text-muted-foreground mb-2">
+                <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 group-hover:bg-primary/15 transition-colors">
+                  <stat.icon className="w-4 h-4 text-primary" />
+                </div>
+                <span className="text-sm">{stat.label}</span>
+              </div>
+              {stat.isBadge ? (
+                <Badge
+                  className={cn(
+                    'text-sm',
+                    stat.badgeColors?.bg,
+                    stat.badgeColors?.text
+                  )}
+                >
+                  {stat.value}
+                </Badge>
+              ) : (
+                <div className={cn('font-semibold text-lg', stat.color)}>
+                  {stat.value}
+                </div>
               )}
-            >
-              {role.stressLevel?.level || 'Medium'}
-            </div>
-          </div>
+            </motion.div>
+          ))}
         </motion.div>
 
         {/* Accordion Sections */}
@@ -500,6 +549,39 @@ export default function RoleDetailPage({ params }: PageProps) {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
+
+        {/* Related Roles Carousel */}
+        {relatedRoles.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12"
+          >
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h2 className="text-xl font-semibold">Related Roles</h2>
+                <p className="text-sm text-muted-foreground">
+                  Other roles in {categoryLabels[role.category]}
+                </p>
+              </div>
+            </div>
+
+            {/* Horizontal scrolling carousel */}
+            <div className="relative -mx-4 px-4">
+              <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory">
+                {relatedRoles.map((relatedRole, index) => (
+                  <div
+                    key={relatedRole.roleId}
+                    className="flex-shrink-0 w-[280px] sm:w-[320px] snap-start"
+                  >
+                    <RoleCard role={relatedRole} variant="compact" index={index} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
       </div>
 
       {/* Sticky Footer Actions */}
