@@ -47,6 +47,26 @@ src/
 - Zustand stores persist to localStorage
 - Role data loaded from JSON files via `src/data/roles.ts`
 
+## Interaction Style
+
+### UI/UX Changes
+When working on UI or UX changes:
+- If there are multiple valid UX patterns for a feature, present 2-3 options with brief pros/cons before implementing
+- Suggest better alternatives if the requested approach has known usability issues
+- Consider accessibility, mobile responsiveness, and user mental models
+- Ask which direction to take rather than assuming
+
+### General Checkpoints
+- Pause and confirm approach before starting significant changes
+- When requirements are ambiguous, ask clarifying questions upfront
+- After completing a feature, ask if the result matches expectations before moving on
+- Share reasoning behind technical or design decisions to help build product intuition
+
+### Learning-Oriented
+- Explain the "why" behind suggestions, not just the "what"
+- Point out patterns, anti-patterns, and trade-offs when relevant
+- If a request could be improved, suggest enhancements as options (not mandates)
+
 ## Git Commits
 
 Do not include "Co-Authored-By: Claude" in commit messages.
