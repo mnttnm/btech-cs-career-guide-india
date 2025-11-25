@@ -1,0 +1,357 @@
+{
+  "roleId": "machine-learning-engineer",
+  "roleName": "Machine Learning Engineer",
+  "description": "Focuses on designing, building, and deploying scalable machine learning models and systems into production.",
+  "jobTitles": {
+    "fresher": [
+      "Machine Learning Engineer (Trainee)",
+      "Junior ML Engineer",
+      "Associate ML Engineer",
+      "ML Engineer I",
+      "Applied Scientist I"
+    ],
+    "experienced": [
+      "Senior ML Engineer",
+      "Staff ML Engineer",
+      "Principal ML Engineer",
+      "ML Infrastructure Engineer",
+      "Director of ML Engineering"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C++",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Java",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Software Engineering Best Practices",
+      "Data Structures & Algorithms",
+      "System Design (Scalability)",
+      "ML Model Deployment & Serving",
+      "ML Pipelines",
+      "Model Monitoring"
+    ],
+    "frameworks": [
+      {
+        "name": "TensorFlow/PyTorch",
+        "popularity": "High"
+      },
+      {
+        "name": "FastAPI/Flask",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker/Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Spark",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Hugging Face",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Git",
+      "Docker",
+      "Kubernetes",
+      "AWS SageMaker/GCP Vertex AI",
+      "MLflow",
+      "Airflow",
+      "Jenkins/GitHub Actions"
+    ]
+  },
+  "dailyWork": [
+    "Model Development (25-30%)",
+    "Production Engineering (30-35%)",
+    "Code Reviews & Collaboration (15-20%)",
+    "Monitoring & Debugging (10-15%)",
+    "Infrastructure Work (10-15%)"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior ML Engineer",
+        "salary": {
+          "min": 10,
+          "max": 15,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-6",
+        "title": "Senior ML Engineer",
+        "salary": {
+          "min": 18,
+          "max": 25,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "7-10",
+        "title": "Staff/Principal ML Engineer",
+        "salary": {
+          "min": 30,
+          "max": 45,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "ML Engineering Manager",
+        "Director of ML",
+        "VP of Engineering/AI",
+        "Chief AI Officer"
+      ],
+      "individualContributor": [
+        "Principal ML Engineer",
+        "Distinguished Engineer",
+        "Fellow"
+      ]
+    },
+    "timelineToSenior": "4-6 years",
+    "alternativePaths": [
+      "Data Scientist",
+      "MLOps Engineer",
+      "Backend Engineer",
+      "Applied Scientist"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 5,
+        "max": 8
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "topTech": {
+        "min": 25,
+        "max": 40
+      },
+      "average": {
+        "min": 12,
+        "max": 18
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 10,
+        "max": 15
+      },
+      "productBased": {
+        "min": 18,
+        "max": 25
+      },
+      "average": {
+        "min": 20,
+        "max": 30
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 30,
+        "max": 45
+      },
+      "senior": {
+        "min": 40,
+        "max": 70
+      },
+      "topCompanies": {
+        "min": 60,
+        "max": 100
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 25,
+          "max": 40
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 25,
+          "max": 40
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 15,
+          "max": 22
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate to High",
+    "timeToJobReady": "6-12 months",
+    "description": "Requires strong software engineering AND ML knowledge. System design for ML is complex, involving scalability, latency, and resource management."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Production responsibility (uptime, failures)",
+      "Performance pressure (latency SLAs)",
+      "On-call duties",
+      "Resource constraints (GPU costs)",
+      "Scalability challenges"
+    ],
+    "mitigatingFactors": [
+      "High compensation",
+      "Cutting-edge technology",
+      "Strong job security",
+      "Intellectually challenging",
+      "High impact on millions of users"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Enjoy both software engineering and ML",
+      "Like building production systems",
+      "Comfortable with experimentation and ambiguity",
+      "Enjoy optimization challenges",
+      "Have a pragmatic mindset"
+    ],
+    "avoidIf": [
+      "Prefer pure research",
+      "Dislike infrastructure and DevOps",
+      "Get frustrated with debugging complex systems",
+      "Prefer stable/predictable work",
+      "Don't enjoy collaborative work"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master Python and C++/Java",
+        "Data Structures & Algorithms (LeetCode)",
+        "Learn Git and Linux command line",
+        "Core CS fundamentals (OS, Networks, DBs)"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "ML Fundamentals",
+      "goals": [
+        "Andrew Ng's Machine Learning Course",
+        "Deep Learning Specialization",
+        "Learn PyTorch or TensorFlow",
+        "Build end-to-end ML projects"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Engineering & Production",
+      "goals": [
+        "Learn Flask/FastAPI for serving",
+        "Docker basics",
+        "Deploy models to cloud (AWS/GCP)",
+        "System Design for ML"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Advanced & Job Hunt",
+      "goals": [
+        "Advanced topics (Distributed training, MLOps)",
+        "Contribute to Open Source ML projects",
+        "Mock Interviews (System Design + DSA)",
+        "Apply to top product companies and startups"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "DSA",
+        "goal": "Solve 200+ LeetCode problems"
+      },
+      {
+        "skill": "ML Engineering",
+        "goal": "Build deployed ML projects with API and UI"
+      },
+      {
+        "skill": "System Design",
+        "goal": "Understand ML system design trade-offs"
+      },
+      {
+        "skill": "Frameworks",
+        "goal": "Deep expertise in PyTorch or TensorFlow"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Careers Pages",
+        "approach": "Apply directly to product companies"
+      },
+      {
+        "channel": "LinkedIn",
+        "approach": "Connect with ML teams and recruiters"
+      },
+      {
+        "channel": "AngelList",
+        "approach": "Apply to AI Startups"
+      },
+      {
+        "channel": "Campus",
+        "approach": "Leverage campus placements for top tech"
+      }
+    ],
+    "interviewPrep": [
+      "Data Structures & Algorithms (standard)",
+      "ML Theory & Basics",
+      "ML System Design",
+      "Resume Project Deep Dive"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 5,
+        "max": 8
+      },
+      "midTierProduct": {
+        "min": 10,
+        "max": 15
+      },
+      "topProduct": {
+        "min": 15,
+        "max": 22
+      },
+      "gcc": "12-20 LPA"
+    },
+    "differentiators": [
+      "Deployed projects (not just notebooks)",
+      "Open source contributions to ML tools",
+      "Strong LeetCode performance",
+      "Knowledge of MLOps tools",
+      "Kaggle medals"
+    ]
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "roleId": "nlp-cv-specialist",
+  "roleName": "NLP/Computer Vision Specialist",
+  "description": "Researches and develops specialized deep learning models for Natural Language Processing or Computer Vision tasks.",
+  "jobTitles": {
+    "fresher": [
+      "NLP Engineer (Junior)",
+      "Computer Vision Engineer (Junior)",
+      "Research Engineer",
+      "AI Research Engineer",
+      "Applied Scientist I"
+    ],
+    "experienced": [
+      "Senior NLP Engineer",
+      "Principal CV Engineer",
+      "Applied Scientist",
+      "Staff Research Scientist",
+      "AI Architect"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C++",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Deep Learning (Transformers, CNNs)",
+      "Linear Algebra & Calculus",
+      "Probability & Statistics",
+      "Research Paper Implementation",
+      "Model Optimization",
+      "Generative AI"
+    ],
+    "frameworks": [
+      {
+        "name": "PyTorch",
+        "popularity": "High"
+      },
+      {
+        "name": "TensorFlow",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Hugging Face (NLP)",
+        "popularity": "High"
+      },
+      {
+        "name": "OpenCV (CV)",
+        "popularity": "High"
+      },
+      {
+        "name": "LangChain (NLP)",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Git",
+      "Docker",
+      "Weights & Biases",
+      "CUDA",
+      "LaTeX"
+    ]
+  },
+  "dailyWork": [
+    "Model Development & Experimentation (40-50%)",
+    "Data Preparation & Analysis (20-25%)",
+    "Research & Learning (15-20%)",
+    "Deployment & Optimization (10-15%)",
+    "Collaboration (5-10%)"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-3",
+        "title": "Junior NLP/CV Engineer",
+        "salary": {
+          "min": 12,
+          "max": 18,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "4-7",
+        "title": "Senior NLP/CV Engineer",
+        "salary": {
+          "min": 22,
+          "max": 35,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "8-10",
+        "title": "Principal Specialist/Scientist",
+        "salary": {
+          "min": 40,
+          "max": 65,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Manager - NLP/CV",
+        "Director of AI Research",
+        "VP of AI"
+      ],
+      "individualContributor": [
+        "Principal Scientist",
+        "Research Lead",
+        "Distinguished Engineer"
+      ]
+    },
+    "timelineToSenior": "5-7 years",
+    "alternativePaths": [
+      "Applied Scientist",
+      "ML Engineer",
+      "AI Research Scientist",
+      "Product Manager (AI)"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 6,
+        "max": 9
+      },
+      "productBased": {
+        "min": 10,
+        "max": 16
+      },
+      "topTech": {
+        "min": 20,
+        "max": 35
+      },
+      "average": {
+        "min": 12,
+        "max": 18
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 12,
+        "max": 18
+      },
+      "productBased": {
+        "min": 18,
+        "max": 28
+      },
+      "average": {
+        "min": 22,
+        "max": 35
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 35,
+        "max": 55
+      },
+      "senior": {
+        "min": 50,
+        "max": 85
+      },
+      "topCompanies": {
+        "min": 70,
+        "max": 120
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "FAANG (Google/Microsoft)",
+        "range": {
+          "min": 20,
+          "max": 35
+        }
+      },
+      {
+        "name": "AI Startups",
+        "range": {
+          "min": 12,
+          "max": 22
+        }
+      },
+      {
+        "name": "Research Labs",
+        "range": {
+          "min": 15,
+          "max": 25
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "High",
+    "timeToJobReady": "1-2 years",
+    "description": "Requires deep theoretical understanding of mathematics and deep learning architectures. High competition from MS/PhD candidates makes entry challenging for BTech graduates."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Cutting-edge expectations",
+      "Rapid field evolution",
+      "Research pressure",
+      "Complex debugging",
+      "High competition"
+    ],
+    "mitigatingFactors": [
+      "Intellectually stimulating",
+      "High compensation",
+      "Research opportunities",
+      "Flexible work"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Fascinated by AI theory and math",
+      "Love reading research papers",
+      "Strong mathematical aptitude",
+      "Patient with experimentation",
+      "Want to specialize deeply"
+    ],
+    "avoidIf": [
+      "Dislike mathematics",
+      "Prefer stable tech",
+      "Want immediate results",
+      "Frustrated by failure",
+      "Overwhelmed by change"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Math Foundation",
+      "goals": [
+        "Master Linear Algebra & Calculus",
+        "Probability & Statistics",
+        "Python Programming",
+        "ML Basics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deep Learning",
+      "goals": [
+        "Deep Learning Specialization",
+        "Fast.ai",
+        "Choose NLP or CV track",
+        "Implement basic papers"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Advanced NLP (Transformers) or CV (CNNs/ViTs)",
+        "Research Internships",
+        "Implement complex papers",
+        "Project Portfolio"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Research & Job",
+      "goals": [
+        "Publish/Submit Research Paper",
+        "Open Source Contributions (Hugging Face)",
+        "Apply to Research Labs/AI Teams",
+        "Mock Research Interviews"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Paper Implementation",
+        "goal": "Implement 3-4 recent papers"
+      },
+      {
+        "skill": "Deep Learning",
+        "goal": "Master PyTorch & Architectures"
+      },
+      {
+        "skill": "Math",
+        "goal": "Deep understanding of DL theory"
+      },
+      {
+        "skill": "Domain",
+        "goal": "Expertise in NLP or CV tasks"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Research Labs",
+        "approach": "Apply for Research Fellow/Engineer"
+      },
+      {
+        "channel": "AI Startups",
+        "approach": "Direct application"
+      },
+      {
+        "channel": "LinkedIn",
+        "approach": "Connect with Researchers"
+      }
+    ],
+    "interviewPrep": [
+      "Deep Learning Theory",
+      "Paper Walkthrough",
+      "Coding (Python/DL)",
+      "Math Puzzles"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 6,
+        "max": 9
+      },
+      "midTierProduct": {
+        "min": 10,
+        "max": 16
+      },
+      "topProduct": {
+        "min": 20,
+        "max": 35
+      },
+      "gcc": "15-25 LPA"
+    },
+    "differentiators": [
+      "Research publications",
+      "High-quality paper implementations on GitHub",
+      "Contributions to major libraries (HF/OpenCV)",
+      "Research internship experience"
+    ]
+  }
+}

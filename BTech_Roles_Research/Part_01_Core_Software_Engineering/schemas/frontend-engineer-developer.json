@@ -1,0 +1,224 @@
+{
+  "roleId": "frontend-engineer-developer",
+  "roleName": "Frontend Engineer/Developer",
+  "description": "Visual results make learning engaging, but mastering modern frameworks, performance, and cross-browser compatibility requires dedication.",
+  "jobTitles": {
+    "fresher": [
+      "Frontend Engineer",
+      "Frontend Developer",
+      "UI Developer",
+      "Web Developer",
+      "React Developer"
+    ],
+    "experienced": [
+      "Senior Frontend Engineer",
+      "Lead Frontend Developer",
+      "Frontend Architect",
+      "Principal Frontend Engineer",
+      "Staff Frontend Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      { "name": "JavaScript", "level": "Advanced", "priority": "Primary" },
+      { "name": "TypeScript", "level": "Intermediate", "priority": "Primary" },
+      { "name": "HTML5", "level": "Advanced", "priority": "Primary" },
+      { "name": "CSS3", "level": "Advanced", "priority": "Primary" }
+    ],
+    "coreConcepts": [
+      "DOM manipulation",
+      "Responsive design",
+      "Web accessibility (WCAG)",
+      "Performance optimization",
+      "Cross-browser compatibility",
+      "State management"
+    ],
+    "frameworks": [
+      { "name": "React.js", "popularity": "High" },
+      { "name": "Next.js", "popularity": "High" },
+      { "name": "Angular", "popularity": "Medium" },
+      { "name": "Vue.js", "popularity": "Low" }
+    ],
+    "tools": [
+      "Git",
+      "Webpack/Vite",
+      "Redux",
+      "Tailwind CSS",
+      "Jest",
+      "Figma",
+      "Chrome DevTools"
+    ]
+  },
+  "dailyWork": [
+    "Building user interfaces from design mockups",
+    "Implementing responsive web pages",
+    "Writing clean, reusable components",
+    "Integrating with backend APIs",
+    "Optimizing application performance",
+    "Ensuring cross-browser compatibility",
+    "Writing unit tests for components"
+  ],
+  "careerProgression": {
+    "timeline": [
+      { "level": "Entry Level", "years": "0-2", "title": "Junior Frontend Developer", "salary": { "min": 4.5, "max": 7, "currency": "LPA" } },
+      { "level": "Mid Level", "years": "3-6", "title": "Senior Frontend Developer", "salary": { "min": 8, "max": 18, "currency": "LPA" } },
+      { "level": "Senior Level", "years": "7-10", "title": "Staff Engineer / Frontend Architect", "salary": { "min": 18, "max": 35, "currency": "LPA" } }
+    ],
+    "tracks": {
+      "leadership": [
+        "Frontend Developer",
+        "Senior Frontend Developer",
+        "Tech Lead",
+        "Engineering Manager",
+        "Director of Engineering",
+        "VP Engineering"
+      ],
+      "individualContributor": [
+        "Frontend Developer",
+        "Senior Frontend Developer",
+        "Staff Frontend Engineer",
+        "Principal Engineer",
+        "Distinguished Engineer"
+      ]
+    },
+    "timelineToSenior": "5-7 years with strong portfolio and expertise",
+    "alternativePaths": [
+      "React Specialist",
+      "Performance Engineer",
+      "Design Systems Engineer",
+      "Accessibility Specialist",
+      "UI/UX Engineer"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": { "min": 3.5, "max": 5 },
+      "productBased": { "min": 6, "max": 10 },
+      "topTech": { "min": 12, "max": 18 },
+      "average": { "min": 4.5, "max": 7 }
+    },
+    "threeYears": {
+      "serviceBased": { "min": 6, "max": 9 },
+      "productBased": { "min": 10, "max": 15 },
+      "average": { "min": 8, "max": 13 }
+    },
+    "fivePlus": {
+      "midLevel": { "min": 12, "max": 18 },
+      "senior": { "min": 18, "max": 28 },
+      "topCompanies": { "min": 28, "max": 45 }
+    },
+    "topCompanies": [
+      { "name": "Google", "range": { "min": 18, "max": 24 } },
+      { "name": "Microsoft", "range": { "min": 15, "max": 22 } },
+      { "name": "Amazon", "range": { "min": 14, "max": 20 } }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "Frontend technologies are more accessible and visual, but mastering modern frameworks and performance optimization takes dedicated practice."
+  },
+  "stressLevel": {
+    "level": "Medium",
+    "factors": [
+      "Design changes and iteration cycles",
+      "Browser compatibility issues",
+      "Pixel-perfect implementation pressure",
+      "Performance optimization expectations"
+    ],
+    "mitigatingFactors": [
+      "Less on-call stress compared to backend",
+      "UI bugs are generally less critical",
+      "Excellent tooling",
+      "Satisfying to see work live"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You enjoy visual, user-facing work",
+      "You have an eye for design and aesthetics",
+      "You like seeing immediate results",
+      "You're creative"
+    ],
+    "avoidIf": [
+      "You find UI/UX work tedious",
+      "You prefer backend logic",
+      "You have no interest in design",
+      "You get frustrated with browser quirks"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master HTML & CSS thoroughly",
+        "Learn JavaScript fundamentals deeply",
+        "Build beginner projects",
+        "Learn Git and GitHub"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Learn React.js",
+        "Build 5-7 React projects",
+        "Learn Tailwind CSS",
+        "Deploy all projects"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Advanced React and TypeScript",
+        "Learn Next.js",
+        "State Management (Redux)",
+        "Secure summer internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Polish portfolio with 3-5 exceptional projects",
+        "Advanced concepts (Accessibility, PWA)",
+        "DSA preparation (150-200 problems)",
+        "Final year project production-ready"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      { "skill": "React + TypeScript Mastery", "goal": "Deep understanding of hooks and lifecycle" },
+      { "skill": "Portfolio", "goal": "5 excellent projects with live demos" },
+      { "skill": "Modern Tech Stack", "goal": "React, Next.js, Tailwind, Redux" },
+      { "skill": "JavaScript Fundamentals", "goal": "Interview focus on closures, async, DOM" }
+    ],
+    "applicationStrategy": [
+      { "channel": "Target Frontend-Heavy Companies", "approach": "Product, SaaS, E-commerce" },
+      { "channel": "Portfolio-First Approach", "approach": "Primary marketing tool" },
+      { "channel": "Campus Placements", "approach": "Highlight frontend projects" }
+    ],
+    "interviewPrep": [
+      "JavaScript/React Technical Questions",
+      "Coding Challenges (Build components live)",
+      "System Design (Frontend)",
+      "Portfolio Deep-Dive"
+    ],
+    "salaryExpectations": {
+      "service": { "min": 3.5, "max": 5 },
+      "midTierProduct": { "min": 6, "max": 10 },
+      "topProduct": { "min": 14, "max": 22 },
+      "gcc": "8-16 LPA"
+    },
+    "differentiators": [
+      "Stunning portfolio website",
+      "Published apps with users",
+      "Open-source contributions",
+      "Technical blog",
+      "Design sensibility"
+    ]
+  }
+}

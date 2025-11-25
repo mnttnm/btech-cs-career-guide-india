@@ -1,0 +1,365 @@
+{
+  "roleId": "infrastructure-it-engineer",
+  "roleName": "Infrastructure / IT Engineer",
+  "description": "A foundational role managing an organization's IT infrastructure including servers, networks, storage, and cloud systems, ensuring availability and security.",
+  "jobTitles": {
+    "fresher": [
+      "Infrastructure Engineer",
+      "IT Support Engineer",
+      "Systems Engineer",
+      "Junior Infrastructure Engineer",
+      "Network Engineer"
+    ],
+    "experienced": [
+      "Senior Infrastructure Engineer",
+      "Lead Infrastructure Engineer",
+      "Infrastructure Architect",
+      "IT Manager",
+      "Principal Systems Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Bash/Shell",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "PowerShell",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Linux System Administration",
+      "Windows Server Administration",
+      "Networking (TCP/IP, DNS, DHCP)",
+      "Virtualization (VMware)",
+      "Storage & Backup Strategies",
+      "Security Fundamentals",
+      "IT Operations Management",
+      "Cloud Basics"
+    ],
+    "frameworks": [
+      {
+        "name": "VMware vSphere",
+        "popularity": "High"
+      },
+      {
+        "name": "Ansible",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Terraform",
+        "popularity": "Low"
+      }
+    ],
+    "tools": [
+      "Active Directory",
+      "Nagios/Zabbix",
+      "Wireshark",
+      "ServiceNow/JIRA",
+      "AWS (EC2, VPC)",
+      "Azure (VMs, AD)",
+      "Putty/SSH"
+    ]
+  },
+  "dailyWork": [
+    "Managing and troubleshooting physical/virtual servers",
+    "Provisioning new infrastructure resources",
+    "Responding to infrastructure incidents and tickets",
+    "Performing system updates and patch management",
+    "Managing user access and permissions (Active Directory)",
+    "Monitoring system performance and capacity",
+    "Automating routine tasks with scripts",
+    "Implementing backup and disaster recovery procedures"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Infrastructure Engineer",
+        "salary": {
+          "min": 3,
+          "max": 6,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Infrastructure Engineer",
+        "salary": {
+          "min": 6,
+          "max": 10,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Infrastructure Engineer",
+        "salary": {
+          "min": 10,
+          "max": 16,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Lead Infrastructure Engineer",
+        "IT Manager",
+        "Director of IT Infrastructure",
+        "VP of Engineering"
+      ],
+      "individualContributor": [
+        "Senior Infrastructure Engineer",
+        "Infrastructure Architect",
+        "Cloud Architect",
+        "Network Architect"
+      ]
+    },
+    "timelineToSenior": "5-8 years",
+    "alternativePaths": [
+      "Cloud Engineer",
+      "DevOps Engineer",
+      "Site Reliability Engineer",
+      "Network Engineer",
+      "Security Engineer"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3.5,
+        "max": 5
+      },
+      "productBased": {
+        "min": 6,
+        "max": 10
+      },
+      "topTech": {
+        "min": 8,
+        "max": 12
+      },
+      "average": {
+        "min": 3.5,
+        "max": 6
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 5,
+        "max": 8
+      },
+      "productBased": {
+        "min": 8,
+        "max": 14
+      },
+      "average": {
+        "min": 6,
+        "max": 10
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 10,
+        "max": 18
+      },
+      "senior": {
+        "min": 14,
+        "max": 22
+      },
+      "topCompanies": {
+        "min": 20,
+        "max": 35
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "TCS",
+        "range": {
+          "min": 3.5,
+          "max": 6
+        }
+      },
+      {
+        "name": "Infosys",
+        "range": {
+          "min": 3.5,
+          "max": 6
+        }
+      },
+      {
+        "name": "Goldman Sachs (GCC)",
+        "range": {
+          "min": 8,
+          "max": 12
+        }
+      },
+      {
+        "name": "Amazon (IT Support)",
+        "range": {
+          "min": 6,
+          "max": 10
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Easy",
+    "timeToJobReady": "3-6 months",
+    "description": "One of the most accessible entry points into tech. Fundamentals of Linux, Windows, and networking are easier to grasp initially than complex coding algorithms."
+  },
+  "stressLevel": {
+    "level": "Medium",
+    "factors": [
+      "On-call rotations and shift work",
+      "Urgency of infrastructure downtime",
+      "Routine maintenance during weekends",
+      "Handling user support tickets"
+    ],
+    "mitigatingFactors": [
+      "Predictable work and defined scope",
+      "High job security",
+      "Structured environment in large companies",
+      "Clear escalation paths"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You enjoy troubleshooting hardware/software",
+      "You are methodical and patient",
+      "You like helping people resolve issues",
+      "You prefer stability over rapid change",
+      "You are comfortable with systems administration"
+    ],
+    "avoidIf": [
+      "You strongly prefer writing code all day",
+      "You dislike on-call or shift work",
+      "You want to build consumer-facing features",
+      "You get bored with maintenance tasks"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Install Linux (Ubuntu) and learn basics",
+        "Learn networking concepts (TCP/IP, DNS)",
+        "Set up a home lab (VMs)",
+        "Learn Windows basics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Get Red Hat Certified System Administrator (RHCSA)",
+        "Advanced Linux administration",
+        "Learn Virtualization (VMware/VirtualBox)",
+        "Basic Python for automation"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Get AWS Solutions Architect Associate",
+        "Learn Docker basics",
+        "Infrastructure automation (Ansible basics)",
+        "Summer internship in IT/Infrastructure"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Advanced cloud certifications",
+        "Build portfolio of documented setups",
+        "Prepare for troubleshooting interviews",
+        "Apply for infrastructure/systems roles"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Linux Certification",
+        "goal": "RHCSA (Highly Valued)"
+      },
+      {
+        "skill": "Cloud Certification",
+        "goal": "AWS Solutions Architect Associate"
+      },
+      {
+        "skill": "Hands-on Skills",
+        "goal": "Manage VMs, Configure Networking, Basic Scripting"
+      },
+      {
+        "skill": "Home Lab",
+        "goal": "Set up multi-VM network projects"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Campus Placements",
+        "approach": "Apply to Service Companies (TCS, Infosys, Wipro)"
+      },
+      {
+        "channel": "Naukri.com",
+        "approach": "Search \"Infrastructure Engineer Fresher\""
+      },
+      {
+        "channel": "Company Careers",
+        "approach": "Direct applications to GCCs and banks"
+      },
+      {
+        "channel": "Certifications",
+        "approach": "Highlight RHCSA/AWS on resume"
+      },
+      {
+        "channel": "Referrals",
+        "approach": "Alumni in IT support/infra roles"
+      }
+    ],
+    "interviewPrep": [
+      "Linux Basics (Boot process, permissions, commands)",
+      "Networking (OSI model, Subnetting, DNS)",
+      "Troubleshooting Scenarios (Server down, Disk full)",
+      "Cloud Basics (VPC, EC2)",
+      "Behavioral (Shift work readiness)"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3.5,
+        "max": 4.5
+      },
+      "midTierProduct": {
+        "min": 4,
+        "max": 6
+      },
+      "topProduct": {
+        "min": 6,
+        "max": 10
+      },
+      "gcc": "6-10 LPA"
+    },
+    "differentiators": [
+      "RHCSA Certification",
+      "AWS Certification",
+      "Home Lab projects showcased on blog/GitHub",
+      "Python/Bash scripting skills",
+      "Troubleshooting mindset"
+    ]
+  }
+}

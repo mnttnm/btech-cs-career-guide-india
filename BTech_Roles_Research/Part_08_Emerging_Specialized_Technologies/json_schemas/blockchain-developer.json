@@ -1,0 +1,322 @@
+{
+  "roleId": "blockchain-developer",
+  "roleName": "Blockchain Developer",
+  "description": "Designs and implements decentralized applications (DApps) and smart contracts on blockchain platforms.",
+  "jobTitles": {
+    "fresher": [
+      "Junior Blockchain Developer",
+      "Smart Contract Developer Intern",
+      "Web3 Developer"
+    ],
+    "experienced": [
+      "Blockchain Developer",
+      "Senior Blockchain Developer",
+      "Blockchain Architect",
+      "Smart Contract Auditor",
+      "Protocol Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Solidity",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "JavaScript/TypeScript",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go/Rust",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Blockchain Fundamentals (Consensus, Nodes)",
+      "Smart Contracts",
+      "Decentralized Finance (DeFi)",
+      "Cryptography (Hashing, Public-Key)",
+      "Token Standards (ERC-20, ERC-721)",
+      "Gas Optimization",
+      "Security Auditing"
+    ],
+    "frameworks": [
+      {
+        "name": "Hardhat/Truffle",
+        "popularity": "High"
+      },
+      {
+        "name": "Web3.js/Ethers.js",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Metamask",
+      "Remix IDE",
+      "Ganache",
+      "IPFS",
+      "The Graph"
+    ]
+  },
+  "dailyWork": [
+    "Writing and testing smart contracts",
+    "Developing DApp frontends",
+    "Auditing code for security vulnerabilities",
+    "Integrating with blockchain networks",
+    "Optimizing gas usage",
+    "Researching new protocols and standards"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Blockchain Developer",
+        "salary": {
+          "min": 6,
+          "max": 9,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Blockchain Developer",
+        "salary": {
+          "min": 10,
+          "max": 16,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Blockchain Developer",
+        "salary": {
+          "min": 18,
+          "max": 30,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Blockchain Architect",
+        "CTO (Web3 Startup)"
+      ],
+      "individualContributor": [
+        "Principal Blockchain Engineer",
+        "Protocol Specialist"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Smart Contract Auditor",
+      "Web3 Product Manager",
+      "Blockchain Consultant"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 6,
+        "max": 9
+      },
+      "topTech": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 6,
+        "max": 9
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 12,
+        "max": 18
+      },
+      "average": {
+        "min": 12,
+        "max": 18
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 20,
+        "max": 35
+      },
+      "senior": {
+        "min": 30,
+        "max": 50
+      },
+      "topCompanies": {
+        "min": 50,
+        "max": 100
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Polygon",
+        "range": {
+          "min": 20,
+          "max": 40
+        }
+      },
+      {
+        "name": "ConsenSys",
+        "range": {
+          "min": 25,
+          "max": 50
+        }
+      },
+      {
+        "name": "CoinDCX",
+        "range": {
+          "min": 15,
+          "max": 30
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "9-15 months",
+    "description": "Moderate to steep. Requires understanding complex cryptographic concepts, distributed systems, and specific languages like Solidity. Market is volatile, so continuous learning is key."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "High financial stakes (smart contract bugs)",
+      "Rapidly evolving technology",
+      "Market volatility",
+      "Security pressure"
+    ],
+    "mitigatingFactors": [
+      "High compensation",
+      "Remote work flexibility",
+      "Passionate community",
+      "Exciting, cutting-edge work"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You are fascinated by decentralization",
+      "You have strong attention to detail",
+      "You enjoy continuous learning",
+      "You are comfortable with financial concepts"
+    ],
+    "avoidIf": [
+      "You want a stable, predictable career",
+      "You can't handle high-stakes work",
+      "You prefer established technologies"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master JavaScript",
+        "Understand Blockchain basics",
+        "Create a crypto wallet"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Learn Solidity",
+        "Use Web3.js",
+        "Build simple DApps"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Smart contract security",
+        "DeFi/NFT concepts",
+        "Contribute to open source",
+        "Internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Build production-quality DApps",
+        "Audit smart contracts",
+        "Apply to Web3 startups"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Solidity",
+        "goal": "Write secure smart contracts"
+      },
+      {
+        "skill": "DApp Dev",
+        "goal": "Full-stack DApp with React and Web3.js"
+      },
+      {
+        "skill": "Security",
+        "goal": "Understand common vulnerabilities"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Web3 Job Boards",
+        "approach": "Apply on CryptoJobsList, Web3.career"
+      },
+      {
+        "channel": "Community",
+        "approach": "Network on Discord/Twitter"
+      },
+      {
+        "channel": "Startups",
+        "approach": "Target Indian Web3 startups"
+      }
+    ],
+    "interviewPrep": [
+      "Solidity Coding",
+      "Blockchain Concepts",
+      "System Design (Web3)",
+      "Behavioral Questions"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 6,
+        "max": 8
+      },
+      "midTierProduct": {
+        "min": 7,
+        "max": 12
+      },
+      "topProduct": {
+        "min": 10,
+        "max": 15
+      },
+      "gcc": "0"
+    },
+    "differentiators": [
+      "Deployed mainnet projects",
+      "Audit reports for own code",
+      "Active GitHub profile",
+      "Participation in hackathons"
+    ]
+  }
+}

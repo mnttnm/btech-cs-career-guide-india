@@ -1,0 +1,363 @@
+{
+  "roleId": "data-scientist",
+  "roleName": "Data Scientist",
+  "description": "A Data Scientist analyzes complex data to uncover patterns, build predictive models, and provide actionable insights for business decision-making.",
+  "jobTitles": {
+    "fresher": [
+      "Data Scientist (Trainee)",
+      "Junior Data Scientist",
+      "Associate Data Scientist",
+      "Data Scientist I",
+      "Data Science Analyst"
+    ],
+    "experienced": [
+      "Data Scientist II / Senior Data Scientist",
+      "Lead Data Scientist",
+      "Principal Data Scientist",
+      "Staff Data Scientist",
+      "Data Science Manager"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "R",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Statistics (Probability, Hypothesis Testing)",
+      "Linear Algebra & Calculus",
+      "Supervised Learning (Regression, Classification)",
+      "Unsupervised Learning (Clustering, PCA)",
+      "Feature Engineering",
+      "Model Evaluation & Validation",
+      "Time Series Analysis",
+      "Deep Learning Basics"
+    ],
+    "frameworks": [
+      {
+        "name": "scikit-learn",
+        "popularity": "High"
+      },
+      {
+        "name": "TensorFlow",
+        "popularity": "High"
+      },
+      {
+        "name": "PyTorch",
+        "popularity": "High"
+      },
+      {
+        "name": "XGBoost/LightGBM",
+        "popularity": "High"
+      },
+      {
+        "name": "Pandas/NumPy",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Jupyter Notebooks",
+      "Git",
+      "Docker",
+      "Tableau/Power BI",
+      "SQL databases (MySQL, PostgreSQL)",
+      "Spark (PySpark)",
+      "AWS SageMaker/GCP Vertex AI",
+      "Excel"
+    ]
+  },
+  "dailyWork": [
+    "Data Exploration & Cleaning (30-40%)",
+    "Feature Engineering (15-20%)",
+    "Model Building & Experimentation (25-30%)",
+    "Analysis & Insights (15-20%)",
+    "Meetings & Communication (10-15%)",
+    "Documentation (5-10%)",
+    "Deployment Support (occasional)"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior/Associate Data Scientist",
+        "salary": {
+          "min": 6,
+          "max": 10,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-6",
+        "title": "Senior Data Scientist",
+        "salary": {
+          "min": 12,
+          "max": 18,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "7-10",
+        "title": "Lead/Principal Data Scientist",
+        "salary": {
+          "min": 20,
+          "max": 30,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Data Science Manager",
+        "Director of Data Science",
+        "VP of Analytics/AI",
+        "Chief Data Officer (CDO)"
+      ],
+      "individualContributor": [
+        "Principal Data Scientist",
+        "Distinguished Scientist",
+        "Research Scientist"
+      ]
+    },
+    "timelineToSenior": "5-7 years",
+    "alternativePaths": [
+      "Machine Learning Engineer",
+      "Product Manager (Data/AI)",
+      "Data Engineer",
+      "AI Research Scientist"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 5,
+        "max": 8
+      },
+      "productBased": {
+        "min": 8,
+        "max": 12
+      },
+      "topTech": {
+        "min": 18,
+        "max": 30
+      },
+      "average": {
+        "min": 6,
+        "max": 10
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 10,
+        "max": 15
+      },
+      "productBased": {
+        "min": 15,
+        "max": 22
+      },
+      "average": {
+        "min": 12,
+        "max": 18
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 18,
+        "max": 28
+      },
+      "senior": {
+        "min": 25,
+        "max": 45
+      },
+      "topCompanies": {
+        "min": 40,
+        "max": 80
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Top Tech (Google, Microsoft, Amazon)",
+        "range": {
+          "min": 18,
+          "max": 30
+        }
+      },
+      {
+        "name": "Top Product (Flipkart, Swiggy)",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "name": "Mid-tier Product",
+        "range": {
+          "min": 8,
+          "max": 12
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "Requires strong mathematical foundation (statistics, linear algebra) and coding skills. Steep learning curve for ML algorithms and theory, plus the need to understand business context."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "High expectations for quick insights",
+      "Ambiguous problems",
+      "Data quality issues",
+      "Model performance pressure",
+      "Deadline pressure"
+    ],
+    "mitigatingFactors": [
+      "Intellectually stimulating work",
+      "High impact on business",
+      "Flexible work environments",
+      "Strong compensation",
+      "Creative problem-solving"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Love working with numbers and statistics",
+      "Enjoy solving open-ended, ambiguous problems",
+      "Have intellectual curiosity and love experimenting",
+      "Comfortable with uncertainty",
+      "Like storytelling and communicating insights"
+    ],
+    "avoidIf": [
+      "Dislike mathematics and statistics",
+      "Prefer clearly defined problems with one right answer",
+      "Get frustrated with messy data",
+      "Don't enjoy communicating technical concepts",
+      "Prefer immediate results over experimentation"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master statistics and linear algebra",
+        "Learn Python deeply (Pandas, NumPy)",
+        "Practice problem-solving on HackerRank/LeetCode",
+        "Learn SQL basics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Take Andrew Ng's Machine Learning course",
+        "Learn scikit-learn for classical ML",
+        "Start working with real datasets (Kaggle)",
+        "Build basic projects (Regression, Classification)"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Learn Deep Learning (TensorFlow/PyTorch)",
+        "Participate in Kaggle competitions",
+        "Build domain-specific end-to-end projects",
+        "Apply for internships"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Build strong GitHub portfolio",
+        "Focus on advanced topics/tools (Big Data, Cloud)",
+        "Prepare for interviews (Mock interviews)",
+        "Network in data communities"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "SQL",
+        "goal": "Master complex queries and data manipulation"
+      },
+      {
+        "skill": "Python/ML",
+        "goal": "Solidify understanding of algorithms and libraries"
+      },
+      {
+        "skill": "Projects",
+        "goal": "Have 3-5 quality projects on GitHub"
+      },
+      {
+        "skill": "Statistics",
+        "goal": "Review probability and hypothesis testing"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Internshala/AngelList",
+        "approach": "Target internships and startups"
+      },
+      {
+        "channel": "LinkedIn",
+        "approach": "Network and apply to job posts"
+      },
+      {
+        "channel": "Company Pages",
+        "approach": "Apply directly to careers pages"
+      },
+      {
+        "channel": "Campus Placement",
+        "approach": "Leverage college placement cell"
+      }
+    ],
+    "interviewPrep": [
+      "Statistics and Probability questions",
+      "ML Algorithms theory and intuition",
+      "SQL coding problems",
+      "Python coding (Data Structures & Algo)",
+      "Case studies/Product sense"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 5,
+        "max": 8
+      },
+      "midTierProduct": {
+        "min": 8,
+        "max": 12
+      },
+      "topProduct": {
+        "min": 12,
+        "max": 18
+      },
+      "gcc": "Varies, typically 8-15 LPA"
+    },
+    "differentiators": [
+      "Strong GitHub portfolio",
+      "Kaggle competition medals",
+      "Blog posts explaining technical concepts",
+      "Internship experience",
+      "Open source contributions"
+    ]
+  }
+}

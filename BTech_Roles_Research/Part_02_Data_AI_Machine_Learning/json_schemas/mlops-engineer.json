@@ -1,0 +1,348 @@
+{
+  "roleId": "mlops-engineer",
+  "roleName": "MLOps Engineer",
+  "description": "Focuses on the productionization, deployment, monitoring, and automation of machine learning models and pipelines.",
+  "jobTitles": {
+    "fresher": [
+      "MLOps Engineer (Junior)",
+      "Associate MLOps Engineer",
+      "ML Infrastructure Engineer (Junior)",
+      "DevOps Engineer - ML",
+      "ML Platform Engineer (Associate)"
+    ],
+    "experienced": [
+      "Senior MLOps Engineer",
+      "Lead MLOps Engineer",
+      "Principal MLOps Engineer",
+      "MLOps Architect",
+      "Staff MLOps Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Bash/Shell",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Go",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "CI/CD for ML",
+      "Containerization (Docker/K8s)",
+      "Model Serving",
+      "Model Monitoring",
+      "Infrastructure as Code",
+      "Data Versioning"
+    ],
+    "frameworks": [
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      },
+      {
+        "name": "Terraform",
+        "popularity": "High"
+      },
+      {
+        "name": "MLflow",
+        "popularity": "High"
+      },
+      {
+        "name": "Kubeflow",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "AWS/GCP/Azure",
+      "Jenkins/GitHub Actions",
+      "Prometheus/Grafana",
+      "Seldon/KServe",
+      "DVC (Data Version Control)"
+    ]
+  },
+  "dailyWork": [
+    "ML Pipeline Development (30-35%)",
+    "Infrastructure Management (25-30%)",
+    "Model Deployment & Serving (20-25%)",
+    "Monitoring & Maintenance (15-20%)",
+    "Collaboration (10-15%)"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "1-3",
+        "title": "Junior MLOps Engineer",
+        "salary": {
+          "min": 8,
+          "max": 14,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "4-7",
+        "title": "Senior MLOps Engineer",
+        "salary": {
+          "min": 20,
+          "max": 30,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "8-10",
+        "title": "Principal MLOps Engineer",
+        "salary": {
+          "min": 40,
+          "max": 65,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "MLOps Engineering Manager",
+        "Director of MLOps",
+        "VP of Engineering"
+      ],
+      "individualContributor": [
+        "Principal MLOps Engineer",
+        "Distinguished Engineer",
+        "MLOps Architect"
+      ]
+    },
+    "timelineToSenior": "5-7 years",
+    "alternativePaths": [
+      "DevOps Engineer",
+      "ML Engineer",
+      "Platform Engineer",
+      "Cloud Architect"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 5,
+        "max": 8
+      },
+      "productBased": {
+        "min": 12,
+        "max": 18
+      },
+      "topTech": {
+        "min": 18,
+        "max": 28
+      },
+      "average": {
+        "min": 12,
+        "max": 18
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 10,
+        "max": 15
+      },
+      "productBased": {
+        "min": 20,
+        "max": 30
+      },
+      "average": {
+        "min": 25,
+        "max": 38
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 28,
+        "max": 45
+      },
+      "senior": {
+        "min": 40,
+        "max": 65
+      },
+      "topCompanies": {
+        "min": 60,
+        "max": 100
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "FAANG (Google/Amazon)",
+        "range": {
+          "min": 18,
+          "max": 28
+        }
+      },
+      {
+        "name": "Top Product (Flipkart)",
+        "range": {
+          "min": 18,
+          "max": 28
+        }
+      },
+      {
+        "name": "Unicorns",
+        "range": {
+          "min": 16,
+          "max": 24
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate to High",
+    "timeToJobReady": "6-12 months",
+    "description": "Requires dual expertise in DevOps (Kubernetes, Cloud) and Machine Learning. Steep learning curve for K8s and MLOps tools."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Production responsibility",
+      "On-call duties",
+      "Complex debugging",
+      "Cost pressure (GPU)",
+      "Tight deadlines"
+    ],
+    "mitigatingFactors": [
+      "High compensation",
+      "Cutting-edge tech",
+      "High demand",
+      "Remote friendly"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Love infrastructure and automation",
+      "Interested in ML but prefer ops",
+      "Enjoy optimizing systems",
+      "Comfortable with Kubernetes",
+      "Like enabling others"
+    ],
+    "avoidIf": [
+      "Want to build ML models",
+      "Prefer pure research",
+      "Dislike operational responsibilities",
+      "Frustrated by on-call duties",
+      "Want predictable 9-5"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Linux & Command Line Mastery",
+        "Python Programming",
+        "Git Version Control",
+        "Networking Basics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "DevOps Basics",
+      "goals": [
+        "Docker & Containerization",
+        "CI/CD Pipelines (GitHub Actions)",
+        "Cloud Platform Basics (AWS)",
+        "Infrastructure as Code (Terraform)"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Kubernetes & ML",
+      "goals": [
+        "Master Kubernetes (Critical)",
+        "ML Basics (Andrew Ng)",
+        "MLOps Tools (MLflow)",
+        "Monitoring (Prometheus/Grafana)"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Projects & Job",
+      "goals": [
+        "End-to-End ML Pipeline Project",
+        "Automated Model Retraining",
+        "Apply for DevOps/MLOps roles",
+        "Contribute to Open Source"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Kubernetes",
+        "goal": "Deep understanding of K8s"
+      },
+      {
+        "skill": "CI/CD",
+        "goal": "Build automated pipelines"
+      },
+      {
+        "skill": "Cloud",
+        "goal": "AWS/GCP Certification"
+      },
+      {
+        "skill": "Python",
+        "goal": "Automation scripting"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "LinkedIn",
+        "approach": "Connect with MLOps/Platform leads"
+      },
+      {
+        "channel": "AngelList",
+        "approach": "AI Startups"
+      },
+      {
+        "channel": "Careers Pages",
+        "approach": "Apply to Cloud/AI companies"
+      }
+    ],
+    "interviewPrep": [
+      "System Design (ML Systems)",
+      "Kubernetes/Docker troubleshooting",
+      "CI/CD concepts",
+      "Scripting/Coding"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 5,
+        "max": 8
+      },
+      "midTierProduct": {
+        "min": 12,
+        "max": 18
+      },
+      "topProduct": {
+        "min": 18,
+        "max": 28
+      },
+      "gcc": "12-20 LPA"
+    },
+    "differentiators": [
+      "Kubernetes expertise (CKA cert)",
+      "End-to-end MLOps projects",
+      "Contribution to MLOps tools",
+      "Production DevOps experience"
+    ]
+  }
+}

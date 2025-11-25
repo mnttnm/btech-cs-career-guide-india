@@ -1,0 +1,32 @@
+{
+  "original": "Role_01_Software_Engineer_General.md",
+  "convertedAt": "2025-11-23T14:16:59+05:30",
+  "extractor": "Warp Agent",
+  "warnings": [
+    {
+      "line": "138-150",
+      "issue": "5+ years salary range lacked explicit 'average' field in source",
+      "decision": "Set fivePlus.average min/max to null; service and product ranges clearly stated"
+    },
+    {
+      "line": "40-43",
+      "issue": "Programming requirement stated 'at least 2' from list of mandatory options",
+      "decision": "Included all 6 mandatory languages (Java, Python, C++, JavaScript, C#, Go) with level='mandatory' and priority='high'"
+    },
+    {
+      "line": "137",
+      "issue": "Fresher startups notation '₹4-8 LPA + equity'",
+      "decision": "Parsed numeric to extra.salaryNotes.fresherStartups with note field for equity mention"
+    },
+    {
+      "line": "604",
+      "issue": "Note states 'Top-tier IIT/NIT students may receive 50-100% higher'",
+      "decision": "Included as context in extra field; not added to salary ranges due to high variability"
+    },
+    {
+      "line": "527-545",
+      "issue": "Top companies listed with salary ranges (e.g., '₹18-25 LPA fresher')",
+      "decision": "Extracted topCompanies.range for fresher salaries; added extra.topCompaniesExperiencedRanges for 5+ years"
+    }
+  ]
+}

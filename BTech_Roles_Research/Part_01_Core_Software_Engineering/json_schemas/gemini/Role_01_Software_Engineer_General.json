@@ -1,0 +1,420 @@
+{
+  "roleId": "software-engineer-general",
+  "roleName": "Software Engineer (General)",
+  "difficulty": "Entry-Level Friendly",
+  "description": "The most accessible entry point into the tech industry, with the highest number of opportunities across all company types.",
+  "jobTitles": {
+    "fresher": [
+      "Software Engineer",
+      "Software Developer",
+      "Associate Software Engineer",
+      "Junior Software Engineer",
+      "Graduate Engineer Trainee (GET)",
+      "Software Engineer I/II",
+      "Engineer - Software Development",
+      "Technical Associate",
+      "Software Development Engineer (SDE)",
+      "Associate Software Developer",
+      "Trainee Software Engineer",
+      "Member of Technical Staff (MTS)"
+    ],
+    "experienced": [
+      "Senior Software Engineer",
+      "Software Engineer II/III",
+      "Lead Software Engineer",
+      "Tech Lead",
+      "Staff Software Engineer",
+      "Principal Software Engineer",
+      "Engineering Manager",
+      "Senior Member of Technical Staff (SMTS)",
+      "Software Development Engineer II/III",
+      "Solution Developer",
+      "Technical Lead"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      { "name": "Java", "level": "Mandatory", "priority": "High" },
+      { "name": "Python", "level": "Mandatory", "priority": "High" },
+      { "name": "C++", "level": "Mandatory", "priority": "High" },
+      { "name": "JavaScript", "level": "Mandatory", "priority": "High" },
+      { "name": "C#", "level": "Mandatory", "priority": "High" },
+      { "name": "Go", "level": "Mandatory", "priority": "High" },
+      { "name": "SQL", "level": "Proficiency", "priority": "High" },
+      { "name": "TypeScript", "level": "Good to have", "priority": "Medium" },
+      { "name": "Rust", "level": "Good to have", "priority": "Medium" },
+      { "name": "Scala", "level": "Good to have", "priority": "Medium" },
+      { "name": "Ruby", "level": "Good to have", "priority": "Medium" }
+    ],
+    "coreConcepts": [
+      "Data Structures and Algorithms (DSA) - arrays, linked lists, trees, graphs, sorting, searching",
+      "Object-Oriented Programming (OOP) - inheritance, polymorphism, encapsulation, abstraction",
+      "System Design fundamentals - scalability, load balancing, caching, database design",
+      "Design Patterns - singleton, factory, observer, strategy, etc.",
+      "SOLID principles and clean code practices",
+      "Time and space complexity analysis (Big O notation)",
+      "Recursion and dynamic programming",
+      "Bit manipulation and mathematical algorithms"
+    ],
+    "frameworks": [
+      { "name": "JUnit", "popularity": "Standard" },
+      { "name": "pytest", "popularity": "Standard" },
+      { "name": "Jest", "popularity": "Standard" },
+      { "name": "Mocha", "popularity": "Standard" },
+      { "name": "TestNG", "popularity": "Standard" },
+      { "name": "Spring Boot", "popularity": "High" },
+      { "name": "Django", "popularity": "High" },
+      { "name": "Flask", "popularity": "High" },
+      { "name": "Express.js", "popularity": "High" },
+      { "name": "React.js", "popularity": "High" }
+    ],
+    "tools": [
+      "VS Code", "IntelliJ IDEA", "Eclipse", "PyCharm", "Visual Studio",
+      "Git", "GitHub", "GitLab", "Bitbucket",
+      "Maven", "Gradle", "npm", "pip", "make",
+      "Jenkins", "GitHub Actions", "GitLab CI",
+      "Docker",
+      "JIRA", "Confluence", "Trello",
+      "Markdown", "Swagger/OpenAPI",
+      "SonarQube", "ESLint", "Pylint"
+    ]
+  },
+  "dailyWork": [
+    "Writing clean, maintainable, and efficient code for new features",
+    "Implementing business logic based on product requirements",
+    "Debugging and fixing bugs in existing codebase (20-30% of time)",
+    "Code reviews - reviewing peers' code for quality, bugs, and best practices",
+    "Being reviewed - receiving feedback on your own code and implementing changes",
+    "Participating in daily standup meetings (15 minutes, sharing progress and blockers)",
+    "Sprint planning sessions (estimating work, understanding requirements)",
+    "Collaborating with cross-functional teams - QA engineers, product managers, designers",
+    "Writing unit tests and integration tests for new code",
+    "Updating technical documentation and code comments",
+    "Refactoring legacy code to improve maintainability",
+    "Learning new technologies, frameworks, and tools",
+    "Attending knowledge-sharing sessions and tech talks",
+    "Participating in architecture discussions and design reviews",
+    "Deploying code to staging and production environments (with guidance initially)",
+    "Monitoring application logs and debugging production issues",
+    "Participating in on-call rotations (in some companies, usually after 1+ year)",
+    "Working on technical debt and code quality improvements",
+    "Pair programming sessions with team members",
+    "Attending team retrospectives and suggesting process improvements"
+  ],
+  "careerProgression": {
+    "timeline": [
+      { "level": "Entry Level", "years": "0-2", "title": "Junior Software Engineer / Software Engineer I", "salary": { "min": 4.5, "max": 8, "currency": "LPA" } },
+      { "level": "Mid Level", "years": "3-6", "title": "Software Engineer II / Senior Software Engineer", "salary": { "min": 8, "max": 18, "currency": "LPA" } },
+      { "level": "Senior Level", "years": "7-10", "title": "Staff Engineer / Tech Lead / Engineering Manager", "salary": { "min": 18, "max": 40, "currency": "LPA" } }
+    ],
+    "tracks": {
+      "leadership": [
+        "Software Engineer",
+        "Senior Engineer",
+        "Tech Lead",
+        "Engineering Manager",
+        "Senior EM",
+        "Director of Engineering",
+        "VP Engineering",
+        "CTO"
+      ],
+      "individualContributor": [
+        "Software Engineer",
+        "Senior Engineer",
+        "Staff Engineer",
+        "Senior Staff Engineer",
+        "Principal Engineer",
+        "Distinguished Engineer / Fellow"
+      ]
+    },
+    "timelineToSenior": "5-7 years with consistent performance, strong technical skills, and demonstrated impact on projects",
+    "alternativePaths": [
+      "Specialize in specific domains (backend, frontend, mobile, DevOps, data engineering)",
+      "Transition to Product Management (leveraging technical background)",
+      "Move to Solution/Enterprise Architecture roles",
+      "Switch to Data Science/Machine Learning engineering",
+      "Become Technical Program Manager (TPM)",
+      "Join early-stage startups as founding engineer",
+      "Consulting and freelancing",
+      "Technical writing and developer advocacy",
+      "Open source maintainer roles",
+      "Teaching/training/mentoring roles"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": { "min": 3.5, "max": 4.5 },
+      "productBased": { "min": 6, "max": 10 },
+      "topTech": { "min": 12, "max": 20 },
+      "average": { "min": 4.5, "max": 8 }
+    },
+    "threeYears": {
+      "serviceBased": { "min": 6, "max": 8 },
+      "productBased": { "min": 10, "max": 15 },
+      "topTech": { "min": 15, "max": 22 },
+      "average": { "min": 8, "max": 12 }
+    },
+    "fivePlus": {
+      "serviceBased": { "min": 10, "max": 15 },
+      "productBased": { "min": 15, "max": 25 },
+      "topTech": { "min": 25, "max": 40 },
+      "average": { "min": null, "max": null }
+    },
+    "topCompanies": [
+      { "name": "Google", "range": { "min": 18, "max": 25 } },
+      { "name": "Microsoft", "range": { "min": 15, "max": 22 } },
+      { "name": "Amazon", "range": { "min": 12, "max": 20 } },
+      { "name": "Flipkart", "range": { "min": 12, "max": 18 } },
+      { "name": "Adobe", "range": { "min": 15, "max": 20 } },
+      { "name": "Salesforce", "range": { "min": 14, "max": 18 } },
+      { "name": "Uber", "range": { "min": 15, "max": 20 } },
+      { "name": "Walmart Labs", "range": { "min": 12, "max": 16 } }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "Requires solid computer science fundamentals and consistent practice, but is the most well-documented and supported path. With 6-12 months of dedicated preparation, most B.Tech CS students can become job-ready."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Tight deadlines and sprint commitments create constant pressure",
+      "Production bugs and outages require immediate attention (sometimes at odd hours)",
+      "Code review pressure - feeling judged on your work quality",
+      "Imposter syndrome is common, especially in competitive environments",
+      "On-call rotations disrupt sleep and personal time",
+      "Constant need to learn new technologies to stay relevant",
+      "Context switching between multiple tasks and projects",
+      "Technical debt vs feature delivery trade-offs",
+      "Performance reviews and promotion cycles create anxiety",
+      "Interview preparation while working full-time",
+      "Dealing with legacy code and unclear documentation"
+    ],
+    "mitigatingFactors": [
+      "Strong team support and mentorship in most product companies",
+      "Flexible work arrangements (remote/hybrid) becoming standard",
+      "Good compensation helps offset stress",
+      "Structured learning and development programs in many companies",
+      "Active developer communities provide emotional support",
+      "WFH reduces commute stress significantly",
+      "Most companies have reasonable work-life balance policies",
+      "Tooling and automation reduce repetitive tasks",
+      "Clear career progression paths provide motivation",
+      "Opportunity to work on interesting, challenging problems",
+      "High job mobility - can switch companies for better culture"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You genuinely enjoy solving problems through code",
+      "You're curious and love continuous learning",
+      "You can work both independently (deep focus) and collaboratively (team projects)",
+      "You're detail-oriented and patient with debugging (can spend hours finding bugs)",
+      "You can handle constructive criticism during code reviews",
+      "You enjoy building things from scratch and seeing them come to life",
+      "You're comfortable with ambiguity and learning on the go",
+      "You're resilient and can bounce back from failures",
+      "You like logical thinking and systematic problem-solving",
+      "You're self-motivated and can manage your own learning",
+      "You enjoy technical discussions and knowledge sharing",
+      "You're comfortable spending long hours at a computer"
+    ],
+    "avoidIf": [
+      "You strongly dislike coding or find programming tedious",
+      "You prefer non-technical, people-facing work exclusively",
+      "You can't handle long hours of desk work",
+      "You need immediate, tangible results (software takes time)",
+      "You get easily frustrated with bugs and errors",
+      "You dislike continuous learning and staying updated",
+      "You prefer highly stable, unchanging work environments",
+      "You can't work under deadline pressure",
+      "You get stressed by peer review and feedback",
+      "You prefer creative/artistic work over logical problem-solving"
+    ],
+    "idealBackground": [
+      "Enjoys math, logic, and puzzles",
+      "Comfortable with computers and technology",
+      "Good analytical and reasoning skills",
+      "Patient and methodical approach to problems",
+      "Strong in competitive programming or olympiads (bonus)"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master one programming language deeply (Python for versatility OR Java for industry demand)",
+        "Learn basic data structures (arrays, strings, linked lists, stacks, queues)",
+        "Start solving DSA problems on HackerRank (30-50 easy problems)",
+        "Learn version control - create GitHub account and practice Git commands",
+        "Understand how the web works (HTTP, APIs, client-server architecture)",
+        "Build 2-3 small projects (Calculator, To-do list, Simple game)",
+        "Learn basic HTML, CSS, JavaScript (useful for any engineer)",
+        "Attend coding club sessions and workshops in college",
+        "Follow tech blogs and YouTube channels",
+        "Maintain consistent coding practice"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Solve 100+ DSA problems (focus on LeetCode Easy and Medium)",
+        "Learn advanced data structures (trees, graphs, heaps, hash maps)",
+        "Study time complexity analysis (Big O notation)",
+        "Master Object-Oriented Programming concepts with real projects",
+        "Build 3-4 substantial projects (CRUD app, REST API, e-commerce clone, Library system)",
+        "Learn one popular framework (Spring Boot, Django/Flask, Express.js, React.js)",
+        "Contribute to open-source projects (start with 'good first issue' labels)",
+        "Attend hackathons (college-level and external)",
+        "Start networking on LinkedIn",
+        "Join coding competition platforms (Codeforces, CodeChef)",
+        "Maintain all projects on GitHub with proper documentation"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Solve 200+ DSA problems total (include LeetCode Medium and some Hard)",
+        "Learn system design basics (Database design, Caching, Load balancing, Scalability)",
+        "Build advanced projects (Full-stack app, Real-time app, Deployed project, Open source contribution)",
+        "Summer internship crucial - target product companies (Salary expectation: ₹50k-80k/month)",
+        "Polish your resume (ATS-optimized, one-page)",
+        "Create strong GitHub profile (README, organized repos)",
+        "Build personal portfolio website",
+        "Start preparing for off-campus placements",
+        "Learn Docker and basic DevOps concepts",
+        "Attend tech conferences/meetups",
+        "Start a technical blog"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Complete 300+ DSA problems (70% Easy-Medium, 30% Medium-Hard)",
+        "Master system design for interviews (URL shortener, etc., CAP theorem, scaling)",
+        "Final year project should be production-ready and well-documented",
+        "Participate in all campus placement drives",
+        "Off-campus applications (apply to 50+ companies)",
+        "Mock interview practice (Pramp, Interviewing.io)",
+        "Revise core CS subjects (OS, DBMS, Networks, OOP)",
+        "Prepare behavioral interview answers (STAR method)",
+        "Update resume with metrics and impact",
+        "Network aggressively"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      { "skill": "DSA Mastery", "goal": "Target 300-400 LeetCode problems (40% Easy, 45% Medium, 15% Hard)" },
+      { "skill": "System Design Understanding", "goal": "Basics: Scalability, load balancing, caching, database sharding" },
+      { "skill": "Projects Portfolio", "goal": "4-5 solid projects (Full-stack, REST API, Real-time, Data-intensive, Open source)" },
+      { "skill": "Resume Optimization", "goal": "ATS-friendly, single page, impact-oriented, with metrics" },
+      { "skill": "Certifications", "goal": "AWS, Google IT Support, Meta/Google certs, GitHub Foundations (Optional but helpful)" }
+    ],
+    "applicationStrategy": [
+      { "channel": "Campus Placements", "approach": "Highest Priority: Apply to all companies, prepare specifically for them" },
+      { "channel": "Off-Campus Applications", "approach": "Apply to 50-100 companies via career pages, LinkedIn, AngelList, Naukri" },
+      { "channel": "Referrals", "approach": "Reach out to alumni and network; 3x better success rate" },
+      { "channel": "Startup Ecosystem", "approach": "AngelList, YCombinator; wear multiple hats, faster growth" },
+      { "channel": "Mass Hiring", "approach": "Backup Option: TCS, Infosys, etc. (₹3.5-4.5 LPA)" }
+    ],
+    "interviewPrep": [
+      "Technical Rounds: DSA coding (2-3 rounds), Edge cases, Time/space complexity",
+      "System Design: High-level understanding, common questions (URL shortener, etc.)",
+      "Computer Science Fundamentals: OS, DBMS, Networks, OOP",
+      "Project Discussion: Architecture, tech choices, challenges, metrics",
+      "Behavioral Interviews: STAR method, common questions (Tell me about yourself, etc.)",
+      "HR Round: Salary expectations, notice period, cultural fit"
+    ],
+    "salaryExpectations": {
+      "service": { "min": 3.5, "max": 4.5 },
+      "midTierProduct": { "min": 6, "max": 10 },
+      "topProduct": { "min": 12, "max": 20 },
+      "gcc": { "min": 8, "max": 14 }
+    },
+    "differentiators": [
+      "Strong problem-solving: Consistent competitive programming performance",
+      "Quality projects: Deployed, well-documented, demonstrable impact",
+      "Open source contributions: Meaningful contributions to known projects",
+      "Technical writing: Blog posts explaining complex concepts",
+      "Community involvement: Organizing meetups, mentoring juniors",
+      "Internship experience: Previous internship at good company",
+      "Hackathon wins: Recognition in reputed hackathons",
+      "Certifications: Relevant technical certifications",
+      "Communication: Ability to explain technical concepts clearly",
+      "GitHub activity: Consistent green squares, quality code"
+    ]
+  },
+  "extra": {
+    "salaryRanges_startups_fresher": { "min": 4, "max": 8, "currency": "LPA" },
+    "salaryRanges_topCompanies_experienced": [
+      { "name": "Google", "range": "₹30-60 LPA (5+ years)" },
+      { "name": "Microsoft", "range": "₹28-55 LPA (5+ years)" },
+      { "name": "Amazon", "range": "₹25-50 LPA (5+ years)" },
+      { "name": "Flipkart", "range": "₹22-40 LPA (5+ years)" },
+      { "name": "Adobe", "range": "₹28-50 LPA (5+ years)" },
+      { "name": "Salesforce", "range": "₹25-45 LPA (5+ years)" },
+      { "name": "Uber", "range": "₹28-50 LPA (5+ years)" },
+      { "name": "Walmart Labs", "range": "₹22-40 LPA (5+ years)" }
+    ],
+    "companiesHiring": {
+      "faangAndTopProduct": [
+        "Google", "Amazon", "Microsoft", "Meta/Facebook", "Apple", "Adobe", "Netflix", "Salesforce", "Uber", "Airbnb", "LinkedIn", "Twitter"
+      ],
+      "unicorns": [
+        "Flipkart", "Swiggy", "Zomato", "CRED", "PhonePe", "Razorpay", "Paytm", "Zepto", "Meesho", "Dunzo", "ShareChat, Moj", "Dream11", "Groww", "Zerodha", "Urban Company", "Ola", "Byju's", "Unacademy"
+      ],
+      "gccs": [
+        "Goldman Sachs", "Morgan Stanley", "JP Morgan Chase", "Walmart Labs", "Target", "Intuit", "PayPal", "Visa", "Mastercard", "Oracle", "SAP Labs", "VMware", "Atlassian", "Dell Technologies", "Cisco"
+      ],
+      "productBasedMidTier": [
+        "Zoho", "Freshworks", "Postman", "BrowserStack", "Chargebee", "Druva", "Fareye", "HighRadius", "Innovaccer", "Hashedin", "Nagarro", "Publicis Sapient"
+      ],
+      "serviceBased": [
+        "Tata Consultancy Services (TCS)", "Infosys", "Wipro", "HCL Technologies", "Tech Mahindra", "Accenture", "Capgemini", "Cognizant", "LTI (L&T Infotech)", "Mindtree", "Mphasis"
+      ],
+      "emergingStartups": [
+        "Byjus, Upgrad, Scaler, Physics Wallah (EdTech)",
+        "Lenskart, Nykaa, FirstCry (E-commerce)",
+        "Cars24, Spinny, CarDekho (Automotive)",
+        "PolicyBazaar, Acko (InsurTech)",
+        "NoBroker, MagicBricks (PropTech)",
+        "Khatabook, Jar, Fi Money (FinTech)"
+      ]
+    },
+    "locationBasedVariations": [
+      "Bangalore/Hyderabad: Highest salaries (10-15% above average)",
+      "Pune/NCR: Average to slightly above average",
+      "Tier-2 cities: 20-30% lower than metro salaries",
+      "Remote positions: Usually metro-level salaries regardless of location"
+    ],
+    "learningCurve_details": {
+      "whatMakesItModerate": [
+        "Abundant learning resources available online (free and paid)",
+        "Clear roadmaps and career paths well-established",
+        "Strong community support (forums, Discord, Reddit)",
+        "Campus placement opportunities provide structured entry",
+        "DSA has defined problem sets and patterns to master",
+        "Frameworks and tools have extensive documentation"
+      ],
+      "timelineBreakdown": [
+        "3-6 months: Basic programming proficiency (if starting from scratch)",
+        "6-9 months: DSA competency + portfolio projects",
+        "9-12 months: Interview-ready with strong problem-solving skills",
+        "12-18 months: Competitive for top product companies"
+      ],
+      "keyChallenges": [
+        "Requires consistent daily practice (2-3 hours minimum)",
+        "DSA can be mentally exhausting and requires persistence",
+        "Keeping up with rapidly changing technologies",
+        "Building confidence through repeated interview failures",
+        "Balancing breadth vs depth of knowledge"
+      ]
+    }
+  }
+}

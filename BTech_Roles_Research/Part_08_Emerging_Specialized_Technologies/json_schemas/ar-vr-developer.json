@@ -1,0 +1,329 @@
+{
+  "roleId": "ar-vr-developer",
+  "roleName": "AR/VR Developer",
+  "description": "Creates immersive Augmented Reality (AR) and Virtual Reality (VR) experiences for gaming, education, enterprise, and the metaverse using 3D engines.",
+  "jobTitles": {
+    "fresher": [
+      "Junior AR/VR Developer",
+      "Unity Developer (AR/VR)",
+      "XR Developer",
+      "Game Developer (AR/VR focus)"
+    ],
+    "experienced": [
+      "Senior AR/VR Developer",
+      "AR/VR Architect",
+      "Lead Unity Developer",
+      "XR Solutions Architect"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "C#",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C++",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "3D Mathematics (Vectors, Quaternions)",
+      "Game Physics & Collision",
+      "Rendering Pipeline & Shaders",
+      "AR Tracking (Plane Detection, Image Tracking)",
+      "VR Locomotion & Interaction",
+      "Performance Optimization (FPS, Draw Calls)",
+      "User Experience in 3D Space"
+    ],
+    "frameworks": [
+      {
+        "name": "Unity3D",
+        "popularity": "High"
+      },
+      {
+        "name": "Unreal Engine",
+        "popularity": "Medium"
+      },
+      {
+        "name": "ARCore/ARKit",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Blender (3D Modeling)",
+      "Meta Quest SDK",
+      "Vuforia",
+      "Git/GitHub",
+      "Photoshop"
+    ]
+  },
+  "dailyWork": [
+    "Developing AR/VR applications in Unity/Unreal",
+    "Implementing user interactions (hand tracking, gaze)",
+    "Creating and optimizing 3D environments",
+    "Integrating AR features (image tracking, plane detection)",
+    "Optimizing performance for mobile/VR headsets",
+    "Debugging platform-specific issues (Android/iOS/Quest)"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior AR/VR Developer",
+        "salary": {
+          "min": 5,
+          "max": 8,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "AR/VR Developer",
+        "salary": {
+          "min": 9,
+          "max": 15,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior AR/VR Developer",
+        "salary": {
+          "min": 15,
+          "max": 25,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "AR/VR Lead",
+        "Studio Head",
+        "Technical Director"
+      ],
+      "individualContributor": [
+        "AR/VR Architect",
+        "Principal Graphics Engineer",
+        "Metaverse Specialist"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Game Developer",
+      "3D Graphics Programmer",
+      "Technical Artist",
+      "Product Manager (XR)"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 5,
+        "max": 7
+      },
+      "productBased": {
+        "min": 7,
+        "max": 12
+      },
+      "topTech": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 5,
+        "max": 8
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 8,
+        "max": 12
+      },
+      "productBased": {
+        "min": 12,
+        "max": 18
+      },
+      "average": {
+        "min": 10,
+        "max": 15
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 15,
+        "max": 25
+      },
+      "senior": {
+        "min": 25,
+        "max": 35
+      },
+      "topCompanies": {
+        "min": 40,
+        "max": 60
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Flipkart (AR)",
+        "range": {
+          "min": 10,
+          "max": 18
+        }
+      },
+      {
+        "name": "Qualcomm (XR)",
+        "range": {
+          "min": 12,
+          "max": 20
+        }
+      },
+      {
+        "name": "Accenture XR",
+        "range": {
+          "min": 8,
+          "max": 14
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "10-14 months",
+    "description": "Moderate to steep. Requires learning a game engine (Unity), a new language (C#), and 3D math concepts. Portfolio building is critical and time-consuming."
+  },
+  "stressLevel": {
+    "level": "Medium",
+    "factors": [
+      "Performance optimization pressure",
+      "Platform fragmentation (different headsets)",
+      "Complex debugging of 3D issues",
+      "Rapidly changing SDKs"
+    ],
+    "mitigatingFactors": [
+      "Creative and visual work",
+      "Immediate visual feedback",
+      "Exciting, cutting-edge tech",
+      "Growing demand"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You enjoy both coding and visual design",
+      "You have good spatial reasoning",
+      "You love gaming or immersive tech",
+      "You are patient with trial-and-error"
+    ],
+    "avoidIf": [
+      "You prefer pure backend/data work",
+      "You have zero interest in 3D/gaming",
+      "You get motion sickness easily",
+      "You dislike learning complex creative tools"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn C# programming",
+        "Install Unity and build 2D games",
+        "Understand basic 3D math"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Move to 3D Unity development",
+        "Learn Blender basics",
+        "Start AR development (ARCore)"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Build complex AR apps (plane detection)",
+        "Learn VR basics (if headset available)",
+        "Internship at gaming/XR studio"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Publish apps to Play Store",
+        "Create demo reel/portfolio website",
+        "Apply to gaming and XR companies"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Unity & C#",
+        "goal": "Master scripting and editor"
+      },
+      {
+        "skill": "AR Development",
+        "goal": "Build mobile AR apps (accessible)"
+      },
+      {
+        "skill": "Optimization",
+        "goal": "Learn profiling and frame rate improvement"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Gaming Studios",
+        "approach": "Target Nazara, Moonfrog, etc."
+      },
+      {
+        "channel": "XR Startups",
+        "approach": "Apply via AngelList, direct email"
+      },
+      {
+        "channel": "Portfolio",
+        "approach": "Showcase video demos of projects"
+      }
+    ],
+    "interviewPrep": [
+      "Unity Lifecycle Questions",
+      "3D Math (Vectors, Dot Product)",
+      "Optimization Techniques",
+      "Live Coding (Unity script)"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 5,
+        "max": 7
+      },
+      "midTierProduct": {
+        "min": 7,
+        "max": 12
+      },
+      "topProduct": {
+        "min": 10,
+        "max": 15
+      },
+      "gcc": "0"
+    },
+    "differentiators": [
+      "Published AR/VR apps on stores",
+      "Knowledge of shaders and graphics pipeline",
+      "Strong 3D math understanding",
+      "Experience with multiplayer networking"
+    ]
+  }
+}

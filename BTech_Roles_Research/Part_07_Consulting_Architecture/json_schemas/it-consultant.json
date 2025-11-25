@@ -1,0 +1,337 @@
+{
+  "roleId": "it-consultant",
+  "roleName": "IT Consultant",
+  "description": "Provides expert technology advice to client organizations to solve business problems, improve processes, and implement technology solutions.",
+  "jobTitles": {
+    "fresher": [
+      "Analyst",
+      "Associate Consultant",
+      "Technology Analyst",
+      "Business Technology Analyst",
+      "Junior Consultant"
+    ],
+    "experienced": [
+      "Senior Consultant",
+      "Manager - Technology Consulting",
+      "Principal Consultant",
+      "Associate Director",
+      "Partner"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "SQL",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Business Process Analysis",
+      "Project Management (Agile/Waterfall)",
+      "Requirements Gathering",
+      "Digital Transformation",
+      "Cloud Fundamentals (AWS/Azure)",
+      "Data Analysis & Visualization",
+      "Change Management",
+      "Client Stakeholder Management"
+    ],
+    "frameworks": [
+      {
+        "name": "Scrum",
+        "popularity": "High"
+      },
+      {
+        "name": "ITIL",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Excel (Advanced)",
+      "PowerPoint",
+      "Tableau/Power BI",
+      "Jira",
+      "Salesforce (if specialized)",
+      "SAP (if specialized)"
+    ]
+  },
+  "dailyWork": [
+    "Analyzing client data and business processes",
+    "Conducting workshops and stakeholder interviews",
+    "Designing technology solutions and implementation plans",
+    "Creating presentations and reports for leadership",
+    "Managing project timelines and deliverables",
+    "Collaborating with technical teams and vendors",
+    "Supporting business development and proposals"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Analyst / Associate Consultant",
+        "salary": {
+          "min": 6,
+          "max": 12,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Consultant / Senior Analyst",
+        "salary": {
+          "min": 12,
+          "max": 20,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Consultant / Manager",
+        "salary": {
+          "min": 20,
+          "max": 35,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Partner",
+        "Principal",
+        "Managing Director"
+      ],
+      "individualContributor": [
+        "Subject Matter Expert (SME)",
+        "Principal Architect"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Product Management",
+      "Corporate Strategy",
+      "Business Operations",
+      "Solution Architect",
+      "Startup Founder"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 6,
+        "max": 9
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 12,
+        "max": 18
+      },
+      "average": {
+        "min": 7,
+        "max": 12
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 10,
+        "max": 15
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 12,
+        "max": 20
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 18,
+        "max": 30
+      },
+      "senior": {
+        "min": 30,
+        "max": 50
+      },
+      "topCompanies": {
+        "min": 60,
+        "max": 95
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "McKinsey Digital",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "name": "Deloitte",
+        "range": {
+          "min": 8,
+          "max": 14
+        }
+      },
+      {
+        "name": "Accenture",
+        "range": {
+          "min": 6,
+          "max": 12
+        }
+      },
+      {
+        "name": "TCS Consulting",
+        "range": {
+          "min": 6,
+          "max": 9
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "Steep learning curve initially due to the need to master both business and technology concepts, along with consulting frameworks. Requires rapid adaptation to new industries and clients."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "Long hours and tight deadlines",
+      "Frequent travel",
+      "High client expectations",
+      "Performance pressure (up-or-out culture)"
+    ],
+    "mitigatingFactors": [
+      "Rapid learning and career growth",
+      "High compensation",
+      "Strong exit opportunities",
+      "Networking with senior leaders"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You enjoy problem-solving and variety",
+      "You are a strong communicator",
+      "You adapt quickly to new environments",
+      "You are ambitious and career-focused",
+      "You enjoy working with people"
+    ],
+    "avoidIf": [
+      "You prioritize strict work-life balance",
+      "You prefer deep technical specialization",
+      "You dislike travel",
+      "You struggle with ambiguity"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn programming (Python/Java)",
+        "Master Excel",
+        "Read business news",
+        "Join debate/public speaking clubs"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Learn full-stack basics",
+        "Take business courses",
+        "Participate in case competitions",
+        "Target consulting internships"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Specialize in cloud/data/security",
+        "Get certifications (AWS/Salesforce)",
+        "Practice case interviews",
+        "Secure summer internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Master case interviews (30-50 cases)",
+        "Polish resume for impact",
+        "Network with consultants",
+        "Apply to consulting firms"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Case Interview",
+        "goal": "Master business and technical cases"
+      },
+      {
+        "skill": "Excel/PowerPoint",
+        "goal": "Advanced proficiency for analysis and presentation"
+      },
+      {
+        "skill": "Technical Basics",
+        "goal": "Broad understanding of cloud, data, and apps"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Campus Placements",
+        "approach": "Primary route for consulting firms"
+      },
+      {
+        "channel": "Referrals",
+        "approach": "Highly effective for off-campus"
+      },
+      {
+        "channel": "Firm Websites",
+        "approach": "Apply directly to career portals"
+      }
+    ],
+    "interviewPrep": [
+      "Case Interviews (Business/Tech)",
+      "Behavioral Questions (STAR)",
+      "Fit Interviews",
+      "Technical Concepts (High-level)"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 6,
+        "max": 9
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 12,
+        "max": 18
+      },
+      "gcc": "0"
+    },
+    "differentiators": [
+      "Strong problem-solving skills (Case interviews)",
+      "Excellent communication and presentation",
+      "Leadership experience in college",
+      "Internship at a consulting firm"
+    ]
+  }
+}

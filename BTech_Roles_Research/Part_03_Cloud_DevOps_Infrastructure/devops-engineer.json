@@ -1,0 +1,384 @@
+{
+  "roleId": "devops-engineer",
+  "roleName": "DevOps Engineer",
+  "description": "A critical role bridging software development and IT operations, focusing on automating and optimizing the software delivery process through CI/CD, infrastructure as code, and cloud management.",
+  "jobTitles": {
+    "fresher": [
+      "Junior DevOps Engineer",
+      "DevOps Intern",
+      "Build and Release Engineer",
+      "Cloud Support Engineer",
+      "Associate DevOps Engineer"
+    ],
+    "experienced": [
+      "Senior DevOps Engineer",
+      "Lead DevOps Engineer",
+      "DevOps Architect",
+      "Staff DevOps Engineer",
+      "Principal DevOps Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Bash/Shell",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Ruby",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "CI/CD Pipelines",
+      "Infrastructure as Code (IaC)",
+      "Containerization",
+      "Orchestration",
+      "Cloud Computing",
+      "Monitoring & Observability",
+      "Networking Fundamentals",
+      "Security Best Practices"
+    ],
+    "frameworks": [
+      {
+        "name": "Docker",
+        "popularity": "High"
+      },
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Terraform",
+        "popularity": "High"
+      },
+      {
+        "name": "Ansible",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Jenkins",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Git",
+      "GitHub Actions",
+      "GitLab CI",
+      "Prometheus",
+      "Grafana",
+      "ELK Stack",
+      "AWS",
+      "Azure",
+      "Helm",
+      "Datadog"
+    ]
+  },
+  "dailyWork": [
+    "Setting up and maintaining CI/CD pipelines for multiple projects",
+    "Automating deployment processes (staging, production)",
+    "Managing cloud infrastructure (provisioning, scaling, cost optimization)",
+    "Writing Infrastructure as Code (Terraform scripts, Ansible playbooks)",
+    "Containerizing applications using Docker",
+    "Managing Kubernetes clusters (deployments, services, ingress)",
+    "Monitoring system health and responding to alerts",
+    "Troubleshooting build failures and deployment issues"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior DevOps Engineer",
+        "salary": {
+          "min": 4,
+          "max": 7,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "DevOps Engineer",
+        "salary": {
+          "min": 8,
+          "max": 15,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior DevOps Engineer",
+        "salary": {
+          "min": 15,
+          "max": 25,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Lead DevOps Engineer",
+        "DevOps Manager",
+        "Director of Engineering",
+        "VP Engineering",
+        "CTO"
+      ],
+      "individualContributor": [
+        "Senior DevOps Engineer",
+        "Staff DevOps Engineer",
+        "DevOps Architect",
+        "Principal DevOps Engineer",
+        "Cloud Architect"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Site Reliability Engineer (SRE)",
+      "Platform Engineer",
+      "Cloud Architect",
+      "Security Engineer (DevSecOps)"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3.5,
+        "max": 5
+      },
+      "productBased": {
+        "min": 6,
+        "max": 10
+      },
+      "topTech": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 4,
+        "max": 7
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 6,
+        "max": 10
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 10,
+        "max": 15
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 15,
+        "max": 25
+      },
+      "senior": {
+        "min": 25,
+        "max": 40
+      },
+      "topCompanies": {
+        "min": 40,
+        "max": 60
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 15,
+          "max": 20
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 8,
+          "max": 15
+        }
+      },
+      {
+        "name": "Goldman Sachs",
+        "range": {
+          "min": 10,
+          "max": 18
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "8-12 months",
+    "description": "Requires understanding of development, operations, and cloud infrastructure. The breadth of technologies makes it challenging but rewarding. Expect a steep learning curve initially."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "Production incidents requiring immediate response",
+      "On-call rotations (24/7 availability)",
+      "Deployment failures impacting teams",
+      "Pressure to maintain high uptime",
+      "Tight deadlines for infrastructure changes"
+    ],
+    "mitigatingFactors": [
+      "High impact and visibility",
+      "Direct contribution to developer productivity",
+      "Opportunities to work with cutting-edge technologies",
+      "Good work-life balance in mature organizations"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You enjoy both coding and system administration",
+      "You love automation and efficiency improvements",
+      "You are a problem-solver who enjoys troubleshooting",
+      "You can handle pressure during incidents",
+      "You are detail-oriented"
+    ],
+    "avoidIf": [
+      "You prefer pure software development over operations",
+      "You can't handle being woken up for production issues",
+      "You need a predictable 9-to-5 schedule",
+      "You get stressed when things break unexpectedly"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn Linux fundamentals",
+        "Master basic Bash scripting",
+        "Get comfortable with command line",
+        "Learn Git and GitHub basics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Learn Python for automation",
+        "Start using Docker",
+        "Learn one cloud platform basics (AWS)",
+        "Build simple CI/CD pipeline"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Get AWS Solutions Architect Associate certification",
+        "Learn Kubernetes basics",
+        "Master Terraform for IaC",
+        "Build complete DevOps project"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Get Certified Kubernetes Administrator (CKA)",
+        "Advanced Kubernetes projects",
+        "Build portfolio with 3-4 end-to-end projects",
+        "Prepare for DevOps interviews"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Linux Administration",
+        "goal": "Master file systems, processes, and networking"
+      },
+      {
+        "skill": "Cloud Certification",
+        "goal": "Obtain AWS Solutions Architect Associate"
+      },
+      {
+        "skill": "Containerization",
+        "goal": "Build Docker images and manage containers"
+      },
+      {
+        "skill": "CI/CD",
+        "goal": "Create automated pipelines with Jenkins or GitHub Actions"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "LinkedIn",
+        "approach": "Search Junior DevOps Engineer India"
+      },
+      {
+        "channel": "AngelList",
+        "approach": "Apply to startups"
+      },
+      {
+        "channel": "Naukri.com",
+        "approach": "Filter by 0-1 year experience"
+      },
+      {
+        "channel": "Company career pages",
+        "approach": "Direct applications"
+      },
+      {
+        "channel": "Referrals",
+        "approach": "Connect with DevOps engineers"
+      }
+    ],
+    "interviewPrep": [
+      "Linux Administration (70% of interviews)",
+      "CI/CD Concepts",
+      "Docker Questions",
+      "Kubernetes Basics",
+      "Cloud Fundamentals",
+      "Scripting (Bash/Python)"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3.5,
+        "max": 5
+      },
+      "midTierProduct": {
+        "min": 6,
+        "max": 10
+      },
+      "topProduct": {
+        "min": 10,
+        "max": 15
+      },
+      "gcc": "10-18 LPA"
+    },
+    "differentiators": [
+      "AWS Certification",
+      "CKA Certification",
+      "Live portfolio projects",
+      "Open source contributions",
+      "Technical blog"
+    ]
+  }
+}

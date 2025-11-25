@@ -1,0 +1,345 @@
+{
+  "roleId": "ux-ui-designer",
+  "roleName": "UX/UI Designer",
+  "description": "Creates user-friendly, visually appealing digital interfaces for websites, mobile apps, and software products, balancing aesthetics with functionality.",
+  "jobTitles": {
+    "fresher": [
+      "Junior UX/UI Designer",
+      "Associate Product Designer",
+      "UI Designer Intern",
+      "Design Trainee"
+    ],
+    "experienced": [
+      "Product Designer",
+      "Senior UX/UI Designer",
+      "Lead Designer",
+      "Design Director",
+      "Principal Product Designer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "HTML/CSS",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "User Research & Personas",
+      "Wireframing & Prototyping",
+      "Information Architecture",
+      "Visual Design Principles (Typography, Color)",
+      "Interaction Design",
+      "Usability Testing",
+      "Design Systems",
+      "Accessibility (WCAG)"
+    ],
+    "frameworks": [
+      {
+        "name": "Figma",
+        "popularity": "High"
+      },
+      {
+        "name": "Adobe Creative Cloud",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Figma",
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+      "Framer",
+      "Miro",
+      "Notion"
+    ]
+  },
+  "dailyWork": [
+    "Creating wireframes and high-fidelity mockups",
+    "Building clickable prototypes in Figma",
+    "Conducting user research and usability testing",
+    "Collaborating with PMs and developers on feature specs",
+    "Updating and maintaining design systems",
+    "Participating in design critiques and reviews",
+    "Documenting design decisions for developer handoff"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior UX/UI Designer",
+        "salary": {
+          "min": 3.5,
+          "max": 6,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Product Designer",
+        "salary": {
+          "min": 9,
+          "max": 15,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Product Designer",
+        "salary": {
+          "min": 15,
+          "max": 25,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Design Manager",
+        "Head of Design",
+        "VP of Design",
+        "Chief Design Officer"
+      ],
+      "individualContributor": [
+        "Principal Designer",
+        "Staff Product Designer",
+        "Design Systems Lead"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "UX Researcher",
+      "Product Manager",
+      "Frontend Developer",
+      "Motion Designer",
+      "Design Systems Specialist"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3.5,
+        "max": 4.5
+      },
+      "productBased": {
+        "min": 6,
+        "max": 9
+      },
+      "topTech": {
+        "min": 7,
+        "max": 10
+      },
+      "average": {
+        "min": 4,
+        "max": 7
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 6,
+        "max": 9
+      },
+      "productBased": {
+        "min": 10,
+        "max": 16
+      },
+      "average": {
+        "min": 8,
+        "max": 14
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 15,
+        "max": 25
+      },
+      "senior": {
+        "min": 25,
+        "max": 40
+      },
+      "topCompanies": {
+        "min": 40,
+        "max": 60
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 18,
+          "max": 28
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 14,
+          "max": 22
+        }
+      },
+      {
+        "name": "Swiggy",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "name": "Fractal Ink",
+        "range": {
+          "min": 10,
+          "max": 16
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "Portfolio-driven role. Requires mastering tools like Figma and developing a strong 'design eye'. Fresher-friendly but competitive due to design school graduates."
+  },
+  "stressLevel": {
+    "level": "Low",
+    "factors": [
+      "Subjective feedback and revisions",
+      "Tight deadlines in startups",
+      "Balancing creativity with constraints"
+    ],
+    "mitigatingFactors": [
+      "No production bugs/on-call",
+      "Creative freedom",
+      "Good work-life balance (9-6)",
+      "Flexible/remote work options"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You have strong visual and aesthetic sensibility",
+      "You are empathetic and user-centric",
+      "You enjoy creative problem-solving",
+      "You are collaborative and open to feedback",
+      "You pay attention to pixel-perfect details"
+    ],
+    "avoidIf": [
+      "You prefer purely logical/objective work",
+      "You dislike ambiguity and iteration",
+      "You are impatient with revisions",
+      "You are not visually oriented"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn Figma basics",
+        "Study design principles (Typography, Color)",
+        "Analyze popular apps",
+        "Redesign simple interfaces"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Design a mobile app project",
+        "Learn basic HTML/CSS",
+        "Conduct simple user research",
+        "Apply for design internships"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Build complex app projects (e-commerce)",
+        "Learn motion design and accessibility",
+        "Build a portfolio website",
+        "Secure a summer internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Polish portfolio with detailed case studies",
+        "Practice design challenges and critiques",
+        "Apply to 100+ companies",
+        "Network with designers"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Figma Mastery",
+        "goal": "Components, Auto Layout, Prototyping"
+      },
+      {
+        "skill": "Portfolio",
+        "goal": "4-5 high-quality case studies with process"
+      },
+      {
+        "skill": "Design Fundamentals",
+        "goal": "Typography, Color, Grid Systems"
+      },
+      {
+        "skill": "Soft Skills",
+        "goal": "Presenting and defending design decisions"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Startups",
+        "approach": "Target Series A/B via AngelList/LinkedIn"
+      },
+      {
+        "channel": "Design Agencies",
+        "approach": "Apply to Fractal, Lollypop, etc. for learning"
+      },
+      {
+        "channel": "Cold Outreach",
+        "approach": "DM designers with portfolio link"
+      },
+      {
+        "channel": "Communities",
+        "approach": "Behance, Dribbble, Twitter"
+      }
+    ],
+    "interviewPrep": [
+      "Portfolio Presentation (Storytelling)",
+      "Whiteboard Design Challenges",
+      "App Critiques",
+      "Behavioral/Collaboration Questions"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3.5,
+        "max": 4.5
+      },
+      "midTierProduct": {
+        "min": 5,
+        "max": 8
+      },
+      "topProduct": {
+        "min": 6,
+        "max": 10
+      },
+      "gcc": "6-10 LPA"
+    },
+    "differentiators": [
+      "Exceptional portfolio with process documentation",
+      "Frontend coding knowledge (HTML/CSS)",
+      "Unique side projects (not just redesigns)",
+      "Understanding of business metrics"
+    ]
+  }
+}

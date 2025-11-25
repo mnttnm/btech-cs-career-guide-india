@@ -1,0 +1,223 @@
+{
+  "roleId": "backend-engineer-developer",
+  "roleName": "Backend Engineer/Developer",
+  "description": "Requires deeper understanding of databases, APIs, system architecture, and server-side programming compared to general software engineering.",
+  "jobTitles": {
+    "fresher": [
+      "Backend Engineer",
+      "Backend Developer",
+      "Server-Side Developer",
+      "API Developer",
+      "Junior Backend Engineer"
+    ],
+    "experienced": [
+      "Senior Backend Engineer",
+      "Backend Architect",
+      "Principal Backend Engineer",
+      "Lead Backend Engineer",
+      "Microservices Architect"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      { "name": "Java", "level": "Advanced", "priority": "Primary" },
+      { "name": "Python", "level": "Advanced", "priority": "Primary" },
+      { "name": "Node.js", "level": "Advanced", "priority": "Primary" },
+      { "name": "Go", "level": "Intermediate", "priority": "Secondary" }
+    ],
+    "coreConcepts": [
+      "RESTful API design",
+      "Database design and normalization",
+      "Authentication and Authorization",
+      "Caching strategies",
+      "Microservices architecture",
+      "Concurrency and multithreading"
+    ],
+    "frameworks": [
+      { "name": "Spring Boot", "popularity": "High" },
+      { "name": "Django", "popularity": "High" },
+      { "name": "Express.js", "popularity": "High" },
+      { "name": "FastAPI", "popularity": "Medium" }
+    ],
+    "tools": [
+      "Docker",
+      "Kubernetes",
+      "Postman",
+      "Redis",
+      "Kafka",
+      "AWS/Azure/GCP",
+      "Git"
+    ]
+  },
+  "dailyWork": [
+    "Designing and building RESTful or GraphQL APIs",
+    "Database schema design and query optimization",
+    "Implementing authentication and authorization",
+    "Developing microservices",
+    "Writing unit and integration tests",
+    "Debugging production issues",
+    "API documentation using Swagger"
+  ],
+  "careerProgression": {
+    "timeline": [
+      { "level": "Entry Level", "years": "0-2", "title": "Junior Backend Developer", "salary": { "min": 4.5, "max": 8, "currency": "LPA" } },
+      { "level": "Mid Level", "years": "3-6", "title": "Senior Backend Developer", "salary": { "min": 8, "max": 18, "currency": "LPA" } },
+      { "level": "Senior Level", "years": "7-10", "title": "Backend Architect / Tech Lead", "salary": { "min": 18, "max": 40, "currency": "LPA" } }
+    ],
+    "tracks": {
+      "leadership": [
+        "Backend Developer",
+        "Senior Backend Developer",
+        "Tech Lead",
+        "Engineering Manager",
+        "Director of Engineering",
+        "VP Engineering"
+      ],
+      "individualContributor": [
+        "Backend Developer",
+        "Senior Backend Developer",
+        "Staff Backend Engineer",
+        "Principal Engineer",
+        "Distinguished Engineer"
+      ]
+    },
+    "timelineToSenior": "5-7 years with strong system design knowledge",
+    "alternativePaths": [
+      "API Architect",
+      "Cloud Backend Specialist",
+      "Database Engineer/DBA",
+      "Platform Engineer",
+      "DevOps Engineer"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": { "min": 3.5, "max": 5 },
+      "productBased": { "min": 6, "max": 10 },
+      "topTech": { "min": 12, "max": 20 },
+      "average": { "min": 4.5, "max": 8 }
+    },
+    "threeYears": {
+      "serviceBased": { "min": 6, "max": 9 },
+      "productBased": { "min": 10, "max": 16 },
+      "average": { "min": 8, "max": 14 }
+    },
+    "fivePlus": {
+      "midLevel": { "min": 12, "max": 18 },
+      "senior": { "min": 18, "max": 28 },
+      "topCompanies": { "min": 28, "max": 45 }
+    },
+    "topCompanies": [
+      { "name": "Google", "range": { "min": 18, "max": 25 } },
+      { "name": "Amazon", "range": { "min": 15, "max": 22 } },
+      { "name": "Microsoft", "range": { "min": 16, "max": 24 } }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "9-15 months",
+    "description": "Requires understanding databases, API design, system architecture, and multiple technologies. More complex than general software engineering."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Backend bugs can bring down entire applications",
+      "On-call rotations for production issues",
+      "Database migrations risks",
+      "Security vulnerabilities consequences"
+    ],
+    "mitigatingFactors": [
+      "Strong monitoring tools",
+      "Comprehensive testing",
+      "DevOps practices",
+      "Good compensation"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You enjoy working with data and business logic",
+      "You're methodical and think deeply about edge cases",
+      "You like designing robust, scalable systems",
+      "You're security-conscious"
+    ],
+    "avoidIf": [
+      "You prefer visual, user-facing work",
+      "You dislike working extensively with databases",
+      "You can't handle production outages",
+      "You find server-side logic boring"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Choose one backend language to master",
+        "Master SQL deeply",
+        "Build simple REST APIs",
+        "Learn Git and HTTP protocol"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Build 3-4 complete backend APIs",
+        "Learn intermediate database concepts",
+        "Study API design patterns",
+        "Implement caching with Redis"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Study system design for backend systems",
+        "Learn message queues",
+        "Build production-ready backend systems",
+        "Secure summer internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Build complex backend projects (Microservices)",
+        "Master system design for interviews",
+        "DSA preparation (250-300 problems)",
+        "Build strong GitHub portfolio"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      { "skill": "Framework Expertise", "goal": "Master one stack completely" },
+      { "skill": "Database Mastery", "goal": "SQL proficiency and Database Design" },
+      { "skill": "Production-Quality APIs", "goal": "3-4 solid projects" },
+      { "skill": "System Design", "goal": "Understanding scalability and common designs" }
+    ],
+    "applicationStrategy": [
+      { "channel": "Target Backend-Heavy Companies", "approach": "Fintech, E-commerce, SaaS" },
+      { "channel": "Campus Placements", "approach": "Specify backend preference" },
+      { "channel": "Off-Campus", "approach": "Filter for Backend Engineer" }
+    ],
+    "interviewPrep": [
+      "Backend-Specific Technical Questions",
+      "DSA (Still Required)",
+      "Project Deep-Dive",
+      "Practical Coding"
+    ],
+    "salaryExpectations": {
+      "service": { "min": 3.5, "max": 5 },
+      "midTierProduct": { "min": 7, "max": 12 },
+      "topProduct": { "min": 15, "max": 25 },
+      "gcc": "10-18 LPA"
+    },
+    "differentiators": [
+      "Published, deployed APIs with documentation",
+      "System design portfolio",
+      "Performance optimization case studies",
+      "AWS/Azure certifications"
+    ]
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "roleId": "sales-engineer",
+  "roleName": "Sales Engineer / Solutions Engineer",
+  "description": "Technical expert who partners with sales teams to demonstrate product value, manage POCs, and solve customer technical challenges.",
+  "jobTitles": {
+    "fresher": [
+      "Associate Solutions Engineer",
+      "Junior Sales Engineer",
+      "Technical Sales Trainee",
+      "Presales Analyst"
+    ],
+    "experienced": [
+      "Senior Solutions Engineer",
+      "Principal Solutions Engineer",
+      "Solutions Architect",
+      "Technical Account Manager"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "SQL",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Sales Process",
+      "System Architecture",
+      "APIs & Integrations",
+      "Cloud Platforms",
+      "Security",
+      "Networking"
+    ],
+    "frameworks": [
+      {
+        "name": "MEDDIC",
+        "popularity": "High"
+      },
+      {
+        "name": "Challenger Sale",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Salesforce",
+      "AWS/Azure/GCP",
+      "Postman",
+      "Docker",
+      "HubSpot"
+    ]
+  },
+  "dailyWork": [
+    "Customer Demos",
+    "POCs",
+    "RFP Responses",
+    "Discovery Calls",
+    "Technical Troubleshooting",
+    "Internal Collaboration"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior SE",
+        "salary": {
+          "min": 6,
+          "max": 10,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Solutions Engineer",
+        "salary": {
+          "min": 10,
+          "max": 18,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior SE",
+        "salary": {
+          "min": 18,
+          "max": 30,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Manager SE",
+        "Director SE",
+        "VP Sales Engineering"
+      ],
+      "individualContributor": [
+        "Principal SE",
+        "Distinguished SE",
+        "Enterprise Architect"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Product Management",
+      "Sales",
+      "Customer Success",
+      "Solutions Architecture"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 4,
+        "max": 6
+      },
+      "productBased": {
+        "min": 8,
+        "max": 12
+      },
+      "topTech": {
+        "min": 12,
+        "max": 18
+      },
+      "average": {
+        "min": 6,
+        "max": 10
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 8,
+        "max": 12
+      },
+      "productBased": {
+        "min": 15,
+        "max": 25
+      },
+      "average": {
+        "min": 12,
+        "max": 18
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 18,
+        "max": 30
+      },
+      "senior": {
+        "min": 30,
+        "max": 50
+      },
+      "topCompanies": {
+        "min": 40,
+        "max": 60
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google Cloud",
+        "range": {
+          "min": 15,
+          "max": 20
+        }
+      },
+      {
+        "name": "Snowflake",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "name": "Salesforce",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "Requires technical depth plus strong soft skills; often requires 1-2 years dev experience first."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Quota Pressure",
+      "Demo Anxiety",
+      "Travel Fatigue",
+      "Deal Pressure"
+    ],
+    "mitigatingFactors": [
+      "No Production Support",
+      "No Coding Deadlines",
+      "Team Support",
+      "Variety"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Extroverted",
+      "Technical + Business Mindset",
+      "Competitive",
+      "Adaptable",
+      "Problem-Solver"
+    ],
+    "avoidIf": [
+      "Introverted",
+      "Hate Traveling",
+      "Need Stability",
+      "Prefer Heads-Down Work"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn Programming",
+        "CS Fundamentals",
+        "Communication Skills",
+        "Public Speaking"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Web Dev",
+        "APIs",
+        "Cloud Basics",
+        "Soft Skills",
+        "Sales Exposure"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Tech Specialization",
+        "Demo Skills",
+        "Internships",
+        "Domain Knowledge"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Get Dev Job First",
+        "Resume for SE",
+        "Interview Prep",
+        "Network"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Deep Product Knowledge",
+        "goal": "Become power user of target products"
+      },
+      {
+        "skill": "Build Demo Portfolio",
+        "goal": "Video demos of projects"
+      },
+      {
+        "skill": "Public Speaking",
+        "goal": "Present at events"
+      },
+      {
+        "skill": "Technical Depth",
+        "goal": "Understand architecture and APIs"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "LinkedIn",
+        "approach": "Connect with SEs"
+      },
+      {
+        "channel": "Company Career Pages",
+        "approach": "Apply to Junior SE roles"
+      },
+      {
+        "channel": "Referrals",
+        "approach": "Network with alumni"
+      },
+      {
+        "channel": "AngelList",
+        "approach": "Apply to startups"
+      },
+      {
+        "channel": "Events",
+        "approach": "Attend SaaS meetups"
+      }
+    ],
+    "interviewPrep": [
+      "Technical Assessment",
+      "Demo Round",
+      "Technical Discussion",
+      "Sales Acumen",
+      "Behavioral"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 4,
+        "max": 6
+      },
+      "midTierProduct": {
+        "min": 8,
+        "max": 12
+      },
+      "topProduct": {
+        "min": 12,
+        "max": 18
+      },
+      "gcc": "10-15 LPA"
+    },
+    "differentiators": [
+      "Demo Video Portfolio",
+      "Public Speaking Experience",
+      "Deep Tech + Soft Skills"
+    ]
+  }
+}

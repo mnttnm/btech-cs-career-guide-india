@@ -1,0 +1,336 @@
+{
+  "roleId": "technical-program-manager",
+  "roleName": "Technical Program Manager",
+  "description": "Responsible for planning, coordinating, and delivering complex technical programs that span multiple engineering teams, focusing on execution and delivery.",
+  "jobTitles": {
+    "fresher": [
+      "Associate Technical Program Manager",
+      "Technical Project Coordinator",
+      "Engineering Coordinator"
+    ],
+    "experienced": [
+      "Technical Program Manager (TPM)",
+      "Senior Technical Program Manager",
+      "Principal TPM",
+      "Director of TPM",
+      "Program Manager - Engineering"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Java",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Program Management Fundamentals",
+      "System Design & Architecture",
+      "Agile/Scrum/Kanban",
+      "Risk Management",
+      "Stakeholder Management",
+      "Dependency Mapping",
+      "Release Management",
+      "Software Development Lifecycle (SDLC)"
+    ],
+    "frameworks": [
+      {
+        "name": "Agile",
+        "popularity": "High"
+      },
+      {
+        "name": "Scrum",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Jira",
+      "Confluence",
+      "Excel/Google Sheets",
+      "Slack/Teams",
+      "Miro/Lucidchart",
+      "Datadog/New Relic"
+    ]
+  },
+  "dailyWork": [
+    "Facilitating cross-team syncs and standups",
+    "Tracking program status and updating dashboards",
+    "Managing dependencies and risks",
+    "Communicating progress to stakeholders and leadership",
+    "Unblocking engineering teams",
+    "Planning sprints and roadmaps",
+    "Coordinating releases and post-mortems"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "5-7 (Total Exp)",
+        "title": "Technical Program Manager",
+        "salary": {
+          "min": 18,
+          "max": 28,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "7-10 (Total Exp)",
+        "title": "Senior TPM",
+        "salary": {
+          "min": 28,
+          "max": 45,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "10-12 (Total Exp)",
+        "title": "Principal TPM",
+        "salary": {
+          "min": 45,
+          "max": 65,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Director of TPM",
+        "Head of Program Management",
+        "VP of Engineering Operations"
+      ],
+      "individualContributor": [
+        "Principal TPM",
+        "Distinguished TPM"
+      ]
+    },
+    "timelineToSenior": "7-10 years (Total Exp)",
+    "alternativePaths": [
+      "Product Manager",
+      "Engineering Manager",
+      "Chief of Staff (Engineering)",
+      "Strategy Consultant",
+      "Startup COO"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 18,
+        "max": 25
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 18,
+        "max": 28
+      },
+      "senior": {
+        "min": 28,
+        "max": 45
+      },
+      "topCompanies": {
+        "min": 45,
+        "max": 70
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 45,
+          "max": 70
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 38,
+          "max": 60
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 30,
+          "max": 50
+        }
+      },
+      {
+        "name": "Microsoft",
+        "range": {
+          "min": 40,
+          "max": 65
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "3-5 years (Engineering Experience Required)",
+    "description": "Requires extensive engineering experience to build technical credibility. Not a fresher role. Transition usually happens after 3-5 years as a software engineer."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "Accountability without authority",
+      "Tight deadlines and pressure",
+      "Coordination overload",
+      "Risk and incident management"
+    ],
+    "mitigatingFactors": [
+      "No coding pressure",
+      "No people management",
+      "High impact visibility",
+      "Intellectual variety"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You are execution-oriented and love delivery",
+      "You are a strong communicator",
+      "You are an organizational wizard",
+      "You can lead without authority",
+      "You are comfortable with ambiguity"
+    ],
+    "avoidIf": [
+      "You love pure coding",
+      "You avoid conflict",
+      "You dislike meetings",
+      "You need clear answers",
+      "You are impatient with process"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Focus on Engineering Foundations (DSA, OOP)",
+        "Learn programming languages",
+        "Target software engineering internships"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Build full-stack applications",
+        "Understand production operations",
+        "Continue targeting engineering internships"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Advanced system design",
+        "Internship at product company",
+        "Lead college project teams (practice coordination)"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Target Software Engineering roles",
+        "Do NOT target TPM roles (require experience)",
+        "Prepare for engineering interviews"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Software Engineering",
+        "goal": "Become a competent engineer first"
+      },
+      {
+        "skill": "System Design",
+        "goal": "Understand architecture and trade-offs"
+      },
+      {
+        "skill": "Program Management",
+        "goal": "Learn Agile/Scrum methodologies"
+      },
+      {
+        "skill": "Communication",
+        "goal": "Practice executive summaries and status updates"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Internal Transition",
+        "approach": "Transition from Engineer to TPM within the same company (recommended)"
+      },
+      {
+        "channel": "External Application",
+        "approach": "Apply after 3-5 years of engineering experience"
+      },
+      {
+        "channel": "Networking",
+        "approach": "Connect with TPMs"
+      }
+    ],
+    "interviewPrep": [
+      "Behavioral Questions (STAR Method)",
+      "Program Design Questions",
+      "Technical Depth (System Design)",
+      "Conflict Resolution Scenarios"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": "0"
+    },
+    "differentiators": [
+      "Strong engineering background",
+      "Proven track record of cross-team coordination",
+      "Certifications like PMP or CSM (optional)",
+      "Experience with cloud platforms"
+    ]
+  }
+}

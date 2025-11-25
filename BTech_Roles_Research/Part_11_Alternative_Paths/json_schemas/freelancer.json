@@ -1,0 +1,283 @@
+{
+  "roleId": "freelancer",
+  "roleName": "Freelancer / Independent Consultant",
+  "description": "Works independently on contract basis for multiple clients, managing their own business and projects.",
+  "jobTitles": {
+    "fresher": [
+      "Freelance Developer",
+      "Web Developer",
+      "Contractor"
+    ],
+    "experienced": [
+      "Technical Consultant",
+      "Solutions Architect",
+      "Fractional CTO"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Full Stack",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Mobile",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Business Management",
+      "Sales",
+      "Client Communication",
+      "Project Management"
+    ],
+    "frameworks": [
+      {
+        "name": "React/Node",
+        "popularity": "High"
+      },
+      {
+        "name": "WordPress",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Upwork/Fiverr",
+      "Invoicing Tools",
+      "Project Management Tools"
+    ]
+  },
+  "dailyWork": [
+    "Coding",
+    "Client Calls",
+    "Proposals",
+    "Admin/Finance",
+    "Learning"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Freelancer",
+        "salary": {
+          "min": 3,
+          "max": 8,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-5",
+        "title": "Established Freelancer",
+        "salary": {
+          "min": 8,
+          "max": 20,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "5+",
+        "title": "Consultant",
+        "salary": {
+          "min": 20,
+          "max": 40,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Agency Owner"
+      ],
+      "individualContributor": [
+        "Premium Consultant"
+      ]
+    },
+    "timelineToSenior": "3-5 years",
+    "alternativePaths": [
+      "Agency Agency",
+      "Employment",
+      "Product Founder"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 3,
+        "max": 6
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 10,
+        "max": 20
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 20,
+        "max": 40
+      },
+      "senior": {
+        "min": 40,
+        "max": 80
+      },
+      "topCompanies": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "topCompanies": []
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "Technical skills + Business skills; easier with prior experience."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Income Instability",
+      "Client Hunting",
+      "No Benefits",
+      "Isolation"
+    ],
+    "mitigatingFactors": [
+      "Freedom",
+      "Flexibility",
+      "Location Independence",
+      "Variety"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Self-Disciplined",
+      "Autonomous",
+      "Good Communicator",
+      "Adaptable"
+    ],
+    "avoidIf": [
+      "Need Structure",
+      "Risk Averse",
+      "Bad at Sales",
+      "Need Teams"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Skills",
+      "goals": [
+        "Learn coding",
+        "Build portfolio"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Practice",
+      "goals": [
+        "Small gigs",
+        "Friends/Family projects"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Expand",
+      "goals": [
+        "Upwork profiles",
+        "Internships",
+        "Networking"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Launch",
+      "goals": [
+        "Full-time freelance or Job + Side hustle"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Portfolio",
+        "goal": "Showcase work"
+      },
+      {
+        "skill": "Tech Stack Mastery",
+        "goal": "Build full apps"
+      },
+      {
+        "skill": "Communication",
+        "goal": "Client interaction"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Upwork",
+        "approach": "Bidding on projects"
+      },
+      {
+        "channel": "LinkedIn",
+        "approach": "Networking"
+      },
+      {
+        "channel": "Referrals",
+        "approach": "Word of mouth"
+      },
+      {
+        "channel": "Cold Outreach",
+        "approach": "Emailing potential clients"
+      }
+    ],
+    "interviewPrep": [
+      "Client Discovery Calls",
+      "Proposals",
+      "Negotiation"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": "N/A"
+    },
+    "differentiators": [
+      "Niche Expertise",
+      "Strong Portfolio",
+      "Client Testimonials"
+    ]
+  }
+}

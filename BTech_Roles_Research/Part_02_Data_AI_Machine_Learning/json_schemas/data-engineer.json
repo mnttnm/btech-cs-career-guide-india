@@ -1,0 +1,346 @@
+{
+  "roleId": "data-engineer",
+  "roleName": "Data Engineer",
+  "description": "Builds and maintains the infrastructure, pipelines, and systems that collect, store, and process data at scale.",
+  "jobTitles": {
+    "fresher": [
+      "Data Engineer (Trainee)",
+      "Junior Data Engineer",
+      "Associate Data Engineer",
+      "ETL Developer",
+      "Big Data Engineer (Trainee)"
+    ],
+    "experienced": [
+      "Senior Data Engineer",
+      "Lead Data Engineer",
+      "Principal Data Engineer",
+      "Big Data Architect",
+      "Data Platform Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Scala/Java",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "ETL/ELT Workflows",
+      "Data Warehousing (Star/Snowflake Schema)",
+      "Distributed Computing",
+      "Data Modeling",
+      "Data Quality & Governance",
+      "Data Lakes"
+    ],
+    "frameworks": [
+      {
+        "name": "Apache Spark",
+        "popularity": "High"
+      },
+      {
+        "name": "Apache Airflow",
+        "popularity": "High"
+      },
+      {
+        "name": "Kafka",
+        "popularity": "High"
+      },
+      {
+        "name": "dbt",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "AWS/GCP/Azure (Cloud Data Services)",
+      "Snowflake/BigQuery/Redshift",
+      "Docker/Kubernetes",
+      "Git",
+      "Terraform"
+    ]
+  },
+  "dailyWork": [
+    "Building Data Pipelines (35-40%)",
+    "Data Modeling & Optimization (20-25%)",
+    "Infrastructure & Maintenance (15-20%)",
+    "Collaboration (10-15%)",
+    "Code Reviews & Documentation (5-10%)"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Data Engineer",
+        "salary": {
+          "min": 8,
+          "max": 12,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-6",
+        "title": "Senior Data Engineer",
+        "salary": {
+          "min": 15,
+          "max": 22,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "7-10",
+        "title": "Principal/Staff Data Engineer",
+        "salary": {
+          "min": 25,
+          "max": 38,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Data Engineering Manager",
+        "Director of Data Engineering",
+        "VP of Data",
+        "Chief Data Officer"
+      ],
+      "individualContributor": [
+        "Principal Data Engineer",
+        "Distinguished Engineer",
+        "Data Architect"
+      ]
+    },
+    "timelineToSenior": "5-7 years",
+    "alternativePaths": [
+      "Data Architect",
+      "ML Engineer",
+      "Backend Engineer",
+      "Cloud Architect"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 4,
+        "max": 7
+      },
+      "productBased": {
+        "min": 8,
+        "max": 14
+      },
+      "topTech": {
+        "min": 18,
+        "max": 30
+      },
+      "average": {
+        "min": 8,
+        "max": 12
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 8,
+        "max": 12
+      },
+      "productBased": {
+        "min": 18,
+        "max": 28
+      },
+      "average": {
+        "min": 15,
+        "max": 22
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 22,
+        "max": 35
+      },
+      "senior": {
+        "min": 30,
+        "max": 50
+      },
+      "topCompanies": {
+        "min": 45,
+        "max": 75
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google/Amazon",
+        "range": {
+          "min": 18,
+          "max": 30
+        }
+      },
+      {
+        "name": "Flipkart/Swiggy",
+        "range": {
+          "min": 12,
+          "max": 20
+        }
+      },
+      {
+        "name": "Mid-tier Product",
+        "range": {
+          "min": 8,
+          "max": 14
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "Requires learning multiple technologies (Spark, Airflow, Cloud) and mastering SQL. Less math-heavy than DS/ML but high engineering complexity."
+  },
+  "stressLevel": {
+    "level": "Medium",
+    "factors": [
+      "Pipeline failures",
+      "Data quality issues",
+      "On-call duties",
+      "Tight deadlines",
+      "Scaling challenges"
+    ],
+    "mitigatingFactors": [
+      "Predictable work compared to AI",
+      "Clear success criteria",
+      "Strong job market",
+      "Remote friendly",
+      "Good work-life balance generally"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Enjoy building infrastructure and systems",
+      "Like working with data at scale",
+      "Detail-oriented and care about data quality",
+      "Comfortable with SQL and databases",
+      "Like optimization and problem solving"
+    ],
+    "avoidIf": [
+      "Only interested in analysis and insights",
+      "Want to build ML models",
+      "Dislike working with messy data",
+      "Frustrated by operational responsibilities",
+      "Prefer visual/frontend work"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master SQL deeply (Joins, Windows functions)",
+        "Learn Python (Pandas, Scripting)",
+        "Database Concepts (RDBMS)",
+        "Linux Command Line"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Big Data Basics",
+      "goals": [
+        "Learn Apache Spark (PySpark)",
+        "Hadoop Ecosystem basics",
+        "Cloud Platform basics (AWS/GCP)",
+        "Build ETL projects"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Advanced Engineering",
+      "goals": [
+        "Master Airflow for orchestration",
+        "Streaming (Kafka)",
+        "Data Warehousing (Snowflake/BigQuery)",
+        "Infrastructure as Code (Terraform)"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Professional Prep",
+      "goals": [
+        "End-to-End Data Platform Project",
+        "Contribute to Open Source",
+        "Mock Interviews (SQL & System Design)",
+        "Apply to product companies"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "SQL",
+        "goal": "Master complex SQL problems"
+      },
+      {
+        "skill": "Python/Spark",
+        "goal": "ETL proficiency"
+      },
+      {
+        "skill": "Projects",
+        "goal": "Build robust data pipelines"
+      },
+      {
+        "skill": "Cloud",
+        "goal": "AWS/GCP certification/knowledge"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "LinkedIn",
+        "approach": "Connect with Data Engineering leads"
+      },
+      {
+        "channel": "AngelList",
+        "approach": "Startups needing data infra"
+      },
+      {
+        "channel": "Careers Pages",
+        "approach": "Apply to data teams"
+      }
+    ],
+    "interviewPrep": [
+      "Advanced SQL",
+      "Python/DSA (Easy/Medium)",
+      "Data Modeling (Schema Design)",
+      "System Design (ETL pipelines)"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 4,
+        "max": 7
+      },
+      "midTierProduct": {
+        "min": 8,
+        "max": 14
+      },
+      "topProduct": {
+        "min": 12,
+        "max": 20
+      },
+      "gcc": "10-18 LPA"
+    },
+    "differentiators": [
+      "End-to-end pipeline projects",
+      "Cloud certifications (AWS/GCP)",
+      "Strong SQL skills",
+      "Knowledge of modern stack (dbt, Airflow)"
+    ]
+  }
+}

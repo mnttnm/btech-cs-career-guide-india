@@ -1,0 +1,307 @@
+{
+  "roleId": "academic-researcher",
+  "roleName": "Academic Researcher / Faculty",
+  "description": "Teaches students and conducts independent research at universities, contributing to knowledge and mentoring the next generation.",
+  "jobTitles": {
+    "fresher": [
+      "Assistant Professor",
+      "Postdoctoral Researcher",
+      "Lecturer",
+      "Visiting Faculty"
+    ],
+    "experienced": [
+      "Associate Professor",
+      "Professor",
+      "Head of Department",
+      "Dean"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "C++",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Research",
+      "Teaching",
+      "Grant Writing",
+      "Mentoring",
+      "Curriculum Design"
+    ],
+    "frameworks": [],
+    "tools": [
+      "LaTeX",
+      "MATLAB",
+      "LMS",
+      "Grant Portals"
+    ]
+  },
+  "dailyWork": [
+    "Research",
+    "Teaching",
+    "Grant Writing",
+    "Mentoring Students",
+    "Administration"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-5",
+        "title": "Assistant Professor",
+        "salary": {
+          "min": 8,
+          "max": 12,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "6-12",
+        "title": "Associate Professor",
+        "salary": {
+          "min": 12,
+          "max": 18,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "13+",
+        "title": "Professor",
+        "salary": {
+          "min": 18,
+          "max": 25,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Head of Department",
+        "Dean",
+        "Director"
+      ],
+      "individualContributor": [
+        "Distinguished Professor"
+      ]
+    },
+    "timelineToSenior": "10-15 years",
+    "alternativePaths": [
+      "Industry Research",
+      "Startup",
+      "Consulting",
+      "Policy"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 4,
+        "max": 7
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 8,
+        "max": 12
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 6,
+        "max": 10
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 10,
+        "max": 15
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 12,
+        "max": 18
+      },
+      "senior": {
+        "min": 18,
+        "max": 25
+      },
+      "topCompanies": {
+        "min": 25,
+        "max": 40
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "IISc",
+        "range": {
+          "min": 9,
+          "max": 11
+        }
+      },
+      {
+        "name": "IITs",
+        "range": {
+          "min": 8,
+          "max": 10
+        }
+      },
+      {
+        "name": "BITS Pilani",
+        "range": {
+          "min": 10,
+          "max": 15
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "5-7 years (PhD + Postdoc)",
+    "description": "Requires PhD and often Postdoc; long path to stability."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Tenure Pressure",
+      "Grant Writing",
+      "Teaching Load",
+      "politics"
+    ],
+    "mitigatingFactors": [
+      "Job Security (Tenure)",
+      "Freedom",
+      "Prestige",
+      "Flexible Schedule"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Love Teaching",
+      "Patient",
+      "Intellectual",
+      "Autonomous",
+      "Long-term thinker"
+    ],
+    "avoidIf": [
+      "Want Money Fast",
+      "Dislike Teaching",
+      "Hate Writing",
+      "Need Structure"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "High GPA",
+        "Math/CS basics",
+        "Explore interests"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Research",
+      "goals": [
+        "Projects with profs",
+        "TA experience"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Deepening",
+      "goals": [
+        "Publications",
+        "Research Internship",
+        "Teaching"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "PhD Prep",
+      "goals": [
+        "Apply to PhD",
+        "Publish",
+        "Rec Letters"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "PhD",
+        "goal": "Complete doctorate"
+      },
+      {
+        "skill": "Publications",
+        "goal": "High impact papers"
+      },
+      {
+        "skill": "Teaching Demo",
+        "goal": "Prepare lecture"
+      },
+      {
+        "skill": "Research Statement",
+        "goal": "Define research agenda"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Academic Job Boards",
+        "approach": "Monitor listings"
+      },
+      {
+        "channel": "Networking",
+        "approach": "Conferences"
+      },
+      {
+        "channel": "Conferences",
+        "approach": "Present work"
+      }
+    ],
+    "interviewPrep": [
+      "Job Talk",
+      "Chalk Talk",
+      "Faculty Interviews"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 4,
+        "max": 7
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": "N/A"
+    },
+    "differentiators": [
+      "Top Publications",
+      "Grant Experience",
+      "Teaching Awards"
+    ]
+  }
+}

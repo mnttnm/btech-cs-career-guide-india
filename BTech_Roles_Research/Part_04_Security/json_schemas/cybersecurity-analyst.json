@@ -1,0 +1,365 @@
+{
+  "roleId": "cybersecurity-analyst",
+  "roleName": "Cybersecurity Analyst",
+  "description": "Monitors security alerts, investigates incidents, and protects organizations from cyber threats by analyzing and responding to security events.",
+  "jobTitles": {
+    "fresher": [
+      "Cybersecurity Analyst",
+      "SOC Analyst",
+      "Junior Cybersecurity Analyst",
+      "Associate Security Analyst",
+      "Information Security Analyst"
+    ],
+    "experienced": [
+      "Senior Security Analyst",
+      "L3 SOC Analyst",
+      "Threat Hunter",
+      "Security Team Lead",
+      "SOC Manager"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Bash",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "PowerShell",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Network Security",
+      "Threat Intelligence",
+      "Incident Response",
+      "SIEM Tools",
+      "Security Frameworks",
+      "Vulnerability Management",
+      "Risk Assessment",
+      "Log Analysis"
+    ],
+    "frameworks": [
+      {
+        "name": "NIST Cybersecurity Framework",
+        "popularity": "High"
+      },
+      {
+        "name": "ISO 27001",
+        "popularity": "High"
+      },
+      {
+        "name": "CIS Controls",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Splunk",
+      "Wireshark",
+      "Nessus",
+      "Qualys",
+      "CrowdStrike",
+      "ELK Stack",
+      "QRadar",
+      "Nmap",
+      "Microsoft Sentinel"
+    ]
+  },
+  "dailyWork": [
+    "Monitoring Security Alerts (SIEM)",
+    "Incident Investigation and Triage",
+    "Threat Hunting",
+    "Documentation and Reporting",
+    "Tool Management and Configuration",
+    "Collaboration with SOC team"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "L1 SOC Analyst",
+        "salary": {
+          "min": 3.5,
+          "max": 6,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "L2 SOC Analyst / Security Analyst",
+        "salary": {
+          "min": 6,
+          "max": 12,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-6",
+        "title": "L3 SOC Analyst / Senior Security Analyst",
+        "salary": {
+          "min": 12,
+          "max": 20,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "SOC Manager",
+        "Security Manager",
+        "CISO"
+      ],
+      "individualContributor": [
+        "Senior Security Analyst",
+        "Threat Hunter",
+        "Security Architect",
+        "Penetration Tester"
+      ]
+    },
+    "timelineToSenior": "4-6 years with continuous learning and certifications",
+    "alternativePaths": [
+      "Penetration Testing",
+      "Threat Intelligence",
+      "Forensics",
+      "Cloud Security"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3.5,
+        "max": 4.5
+      },
+      "productBased": {
+        "min": 5,
+        "max": 7
+      },
+      "topTech": {
+        "min": 6,
+        "max": 8
+      },
+      "average": {
+        "min": 4,
+        "max": 6
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 8,
+        "max": 12
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 8,
+        "max": 14
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 15,
+        "max": 22
+      },
+      "senior": {
+        "min": 22,
+        "max": 30
+      },
+      "topCompanies": {
+        "min": 25,
+        "max": 40
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Amazon Security",
+        "range": {
+          "min": 18,
+          "max": 35
+        }
+      },
+      {
+        "name": "Google Security",
+        "range": {
+          "min": 20,
+          "max": 40
+        }
+      },
+      {
+        "name": "Microsoft Security",
+        "range": {
+          "min": 20,
+          "max": 38
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 18,
+          "max": 30
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "9-15 months",
+    "description": "Requires strong networking and Linux foundations, plus familiarity with security tools and concepts. Continuous learning is essential due to evolving threats."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "24/7 Operations",
+      "Alert Fatigue",
+      "Incident Pressure",
+      "Evolving Threats",
+      "High Stakes"
+    ],
+    "mitigatingFactors": [
+      "Shift rotations",
+      "Team support",
+      "Impactful work",
+      "Clear procedures"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You love puzzles and detective work",
+      "You're detail-oriented",
+      "You're curious about how things break",
+      "You can handle pressure",
+      "You enjoy continuous learning"
+    ],
+    "avoidIf": [
+      "You need strict 9-5 hours",
+      "You dislike repetitive work",
+      "You're not detail-oriented",
+      "You hate being on-call",
+      "You dislike constant learning"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn Networking (CCNA level)",
+        "Master Linux Command Line",
+        "Start Python Scripting",
+        "Join Security Communities (Null)"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Learn Security Tools (Wireshark, Nmap)",
+        "SIEM Basics (ELK Stack)",
+        "Participate in CTF Platforms",
+        "Build Home Lab Projects"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Get Certified (Security+ or CEH)",
+        "Learn Advanced Tools (Splunk)",
+        "Secure an Internship",
+        "Compete in CTF Competitions"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Advanced Certification (Optional)",
+        "Choose Specialization (Threat Intel, Cloud)",
+        "Build and Polish Portfolio",
+        "Prepare Resume and Apply"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Networking",
+        "goal": "Deep understanding of TCP/IP, protocols, ports"
+      },
+      {
+        "skill": "SIEM",
+        "goal": "Hands-on experience with Splunk or ELK Stack"
+      },
+      {
+        "skill": "Incident Response",
+        "goal": "Understand SANS handbook and response lifecycle"
+      },
+      {
+        "skill": "Python",
+        "goal": "Automate log analysis and basic tasks"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "MSSPs",
+        "approach": "Apply for SOC Analyst roles (high volume hiring)"
+      },
+      {
+        "channel": "Product Companies",
+        "approach": "Target security teams with project portfolio"
+      },
+      {
+        "channel": "GCCs",
+        "approach": "Apply to global capability centers for better pay"
+      },
+      {
+        "channel": "Consulting Firms",
+        "approach": "Target Big 4 cyber practices"
+      },
+      {
+        "channel": "Referrals",
+        "approach": "Leverage LinkedIn connections"
+      }
+    ],
+    "interviewPrep": [
+      "Networking fundamentals (OSI, TCP/IP)",
+      "Security concepts (CIA, OWASP Top 10)",
+      "Tool usage (Wireshark, Nmap scenarios)",
+      "Scenario-based incident response questions",
+      "Log analysis exercises"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3.5,
+        "max": 4.5
+      },
+      "midTierProduct": {
+        "min": 5,
+        "max": 7
+      },
+      "topProduct": {
+        "min": 6,
+        "max": 10
+      },
+      "gcc": "6-8 LPA"
+    },
+    "differentiators": [
+      "Certifications (Security+, CEH)",
+      "Active CTF participation",
+      "Documented Home Lab projects",
+      "GitHub security scripts",
+      "Bug bounty interest"
+    ]
+  }
+}

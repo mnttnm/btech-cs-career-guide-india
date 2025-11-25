@@ -1,0 +1,372 @@
+{
+  "roleId": "site-reliability-engineer",
+  "roleName": "Site Reliability Engineer",
+  "description": "A discipline that applies software engineering principles to infrastructure and operations problems, focusing on building highly reliable and scalable systems.",
+  "jobTitles": {
+    "fresher": [
+      "Junior SRE",
+      "Production Engineer",
+      "Reliability Engineer",
+      "Systems Engineer",
+      "Cloud Support Engineer"
+    ],
+    "experienced": [
+      "Senior Site Reliability Engineer",
+      "Staff SRE",
+      "Principal SRE",
+      "SRE Manager",
+      "SRE Team Lead"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Java",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "SLIs/SLOs/SLAs",
+      "Error Budgets",
+      "Incident Management",
+      "Distributed Systems",
+      "Monitoring & Observability",
+      "Infrastructure as Code",
+      "Performance Tuning",
+      "Chaos Engineering"
+    ],
+    "frameworks": [
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      },
+      {
+        "name": "Terraform",
+        "popularity": "High"
+      },
+      {
+        "name": "Ansible",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Prometheus",
+      "Grafana",
+      "Datadog",
+      "ELK Stack",
+      "PagerDuty",
+      "New Relic",
+      "AWS",
+      "GCP",
+      "Azure"
+    ]
+  },
+  "dailyWork": [
+    "Writing code to automate operational tasks and reduce toil",
+    "Building tools for monitoring and observability",
+    "Responding to production incidents and outages (On-call)",
+    "Conducting post-incident reviews and root cause analysis",
+    "Capacity planning and infrastructure scaling",
+    "Performance optimization and tuning",
+    "Conducting chaos engineering experiments",
+    "Defining and monitoring SLIs and SLOs"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior SRE / SRE I",
+        "salary": {
+          "min": 6,
+          "max": 10,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "SRE / SRE II",
+        "salary": {
+          "min": 12,
+          "max": 20,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior SRE",
+        "salary": {
+          "min": 20,
+          "max": 35,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "SRE Team Lead",
+        "SRE Manager",
+        "Director of Reliability Engineering",
+        "VP Engineering"
+      ],
+      "individualContributor": [
+        "Senior SRE",
+        "Staff SRE",
+        "Principal SRE",
+        "Distinguished Engineer"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Cloud Architect",
+      "Platform Engineering Lead",
+      "Engineering Manager",
+      "Systems Architect",
+      "CTO"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 4,
+        "max": 6
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "topTech": {
+        "min": 18,
+        "max": 25
+      },
+      "average": {
+        "min": 6,
+        "max": 12
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 8,
+        "max": 12
+      },
+      "productBased": {
+        "min": 15,
+        "max": 22
+      },
+      "average": {
+        "min": 15,
+        "max": 22
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 25,
+        "max": 40
+      },
+      "senior": {
+        "min": 35,
+        "max": 50
+      },
+      "topCompanies": {
+        "min": 50,
+        "max": 80
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 20,
+          "max": 60
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 18,
+          "max": 50
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 15,
+          "max": 25
+        }
+      },
+      {
+        "name": "Goldman Sachs",
+        "range": {
+          "min": 15,
+          "max": 30
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "18-24 months",
+    "description": "One of the most challenging roles requiring both strong software engineering skills and deep operations expertise. Typically requires prior development or DevOps experience."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "On-call responsibility (24/7 availability)",
+      "High-stakes incidents affecting revenue",
+      "Time pressure to resolve outages",
+      "Complexity of distributed systems",
+      "Constant firefighting"
+    ],
+    "mitigatingFactors": [
+      "High impact and visibility",
+      "Excellent compensation (premium over other roles)",
+      "Intellectual challenge",
+      "Strong community support"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You love both coding and operations",
+      "You stay calm under extreme pressure",
+      "You are obsessed with reliability and performance",
+      "You enjoy debugging complex distributed systems",
+      "You are proactive about preventing issues"
+    ],
+    "avoidIf": [
+      "You can't handle being woken up at night",
+      "You prefer building new features over maintaining systems",
+      "You get too stressed under pressure",
+      "You need strict work-life boundaries"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master programming (Python/Go)",
+        "Focus on Data Structures & Algorithms",
+        "Learn Linux deeply",
+        "Understand basic networking"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Solve 150+ DSA problems",
+        "Learn System Design fundamentals",
+        "Understand distributed systems concepts",
+        "Learn Docker and containerization"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Target Software Engineering internship",
+        "Learn Kubernetes",
+        "Get AWS Solutions Architect certification",
+        "Build projects with monitoring/logging"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Target Software Engineer or DevOps roles first",
+        "Master Kubernetes and Terraform",
+        "Build portfolio with production-ready projects",
+        "Practice incident response scenarios"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Programming Skills",
+        "goal": "Strong Python or Go, 300+ LeetCode problems"
+      },
+      {
+        "skill": "System Design",
+        "goal": "Understand distributed systems, scalability, reliability"
+      },
+      {
+        "skill": "Cloud & Kubernetes",
+        "goal": "Deep knowledge of one cloud (AWS/GCP) and K8s admin"
+      },
+      {
+        "skill": "Monitoring",
+        "goal": "Set up Prometheus + Grafana, understand metrics/logs"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Campus Placements",
+        "approach": "Target top product companies/GCCs"
+      },
+      {
+        "channel": "LinkedIn",
+        "approach": "Connect with SREs and Engineering Managers"
+      },
+      {
+        "channel": "Company Careers",
+        "approach": "Apply to \"Software Engineer - Infrastructure\" roles"
+      },
+      {
+        "channel": "Referrals",
+        "approach": "Crucial for top tier companies"
+      },
+      {
+        "channel": "Internships",
+        "approach": "Convert internship to PPO"
+      }
+    ],
+    "interviewPrep": [
+      "Coding (DSA Medium-Hard)",
+      "System Design (Reliability & Scale)",
+      "Linux & Troubleshooting",
+      "SRE Concepts (SLIs, SLOs, Error Budgets)",
+      "Behavioral (Incident Management)"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 6,
+        "max": 10
+      },
+      "midTierProduct": {
+        "min": 10,
+        "max": 15
+      },
+      "topProduct": {
+        "min": 12,
+        "max": 18
+      },
+      "gcc": "12-20 LPA"
+    },
+    "differentiators": [
+      "Strong coding skills (DSA)",
+      "Deep Linux internals knowledge",
+      "CKA Certification",
+      "Understanding of distributed systems",
+      "Previous internship experience"
+    ]
+  }
+}

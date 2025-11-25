@@ -1,0 +1,221 @@
+{
+  "roleId": "mobile-developer",
+  "roleName": "Mobile Developer",
+  "description": "Entry-Level to Mid-Level - Entry is accessible with focused learning, but standing out requires strong portfolio and platform-specific expertise.",
+  "jobTitles": {
+    "fresher": [
+      "Mobile Application Developer",
+      "Android Developer",
+      "iOS Developer",
+      "Junior Mobile Developer",
+      "React Native Developer"
+    ],
+    "experienced": [
+      "Senior Mobile Developer",
+      "Senior Android Engineer",
+      "Senior iOS Engineer",
+      "Lead Mobile Developer",
+      "Mobile Architect"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      { "name": "Kotlin", "level": "Advanced", "priority": "Primary" },
+      { "name": "Swift", "level": "Advanced", "priority": "Primary" },
+      { "name": "JavaScript/TypeScript", "level": "Intermediate", "priority": "Secondary" },
+      { "name": "Dart", "level": "Intermediate", "priority": "Secondary" }
+    ],
+    "coreConcepts": [
+      "Mobile UI/UX design principles",
+      "RESTful APIs and GraphQL integration",
+      "Mobile database management (SQLite, Realm)",
+      "App lifecycle and memory management",
+      "Push notifications",
+      "Offline-first architecture"
+    ],
+    "frameworks": [
+      { "name": "Android SDK", "popularity": "High" },
+      { "name": "iOS SDK (UIKit/SwiftUI)", "popularity": "High" },
+      { "name": "React Native", "popularity": "High" },
+      { "name": "Flutter", "popularity": "High" }
+    ],
+    "tools": [
+      "Android Studio",
+      "Xcode",
+      "Git",
+      "Firebase",
+      "Google Analytics",
+      "Fastlane"
+    ]
+  },
+  "dailyWork": [
+    "Developing new features for mobile applications",
+    "Writing clean, maintainable code",
+    "Implementing responsive UI designs",
+    "Integrating third-party libraries and APIs",
+    "Optimizing app performance",
+    "Debugging crashes and fixing bugs",
+    "Publishing app updates to Stores"
+  ],
+  "careerProgression": {
+    "timeline": [
+      { "level": "Entry Level", "years": "0-2", "title": "Junior Mobile Developer", "salary": { "min": 4, "max": 8, "currency": "LPA" } },
+      { "level": "Mid Level", "years": "3-6", "title": "Senior Mobile Developer", "salary": { "min": 8, "max": 18, "currency": "LPA" } },
+      { "level": "Senior Level", "years": "7-10", "title": "Mobile Architect / Lead", "salary": { "min": 18, "max": 35, "currency": "LPA" } }
+    ],
+    "tracks": {
+      "leadership": [
+        "Mobile Developer",
+        "Senior Mobile Developer",
+        "Tech Lead",
+        "Engineering Manager",
+        "Director of Mobile Engineering",
+        "VP Engineering"
+      ],
+      "individualContributor": [
+        "Senior Mobile Developer",
+        "Staff Mobile Engineer",
+        "Principal Mobile Engineer",
+        "Distinguished Engineer"
+      ]
+    },
+    "timelineToSenior": "5-7 years with consistent skill development",
+    "alternativePaths": [
+      "Platform Specialist (iOS/Android)",
+      "Cross-platform Specialist",
+      "Mobile DevOps Specialist",
+      "Technical Product Manager",
+      "Mobile UX/UI Specialization"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": { "min": 3.5, "max": 5 },
+      "productBased": { "min": 6, "max": 10 },
+      "topTech": { "min": 12, "max": 18 },
+      "average": { "min": 4, "max": 8 }
+    },
+    "threeYears": {
+      "serviceBased": { "min": 6, "max": 9 },
+      "productBased": { "min": 10, "max": 15 },
+      "average": { "min": 8, "max": 14 }
+    },
+    "fivePlus": {
+      "midLevel": { "min": 12, "max": 18 },
+      "senior": { "min": 18, "max": 28 },
+      "topCompanies": { "min": 28, "max": 45 }
+    },
+    "topCompanies": [
+      { "name": "Google", "range": { "min": 18, "max": 25 } },
+      { "name": "Amazon", "range": { "min": 15, "max": 20 } },
+      { "name": "Microsoft", "range": { "min": 16, "max": 22 } }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-9 months",
+    "description": "Can become job-ready with focused learning. Native development requires platform-specific knowledge, while cross-platform can be easier if you know web dev."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "App store review and rejection stress",
+      "Device fragmentation testing",
+      "Tight deadlines for launches",
+      "Platform updates breaking functionality"
+    ],
+    "mitigatingFactors": [
+      "Strong community support",
+      "Emulators and testing tools",
+      "Beta testing programs",
+      "Direct user impact"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You love creating apps people use daily",
+      "You're detail-oriented about UI/UX",
+      "You enjoy visual/interactive work",
+      "You're patient with platform quirks"
+    ],
+    "avoidIf": [
+      "You dislike dealing with UI/design",
+      "You get frustrated with platform limitations",
+      "You prefer backend/systems programming",
+      "You get stressed by app store rejections"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn programming fundamentals",
+        "Understand OOP concepts",
+        "Build basic Android/iOS apps",
+        "Learn Git"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Master Kotlin or Swift",
+        "Learn modern UI frameworks",
+        "Build 3-4 feature-rich apps",
+        "Publish at least 2 apps to Stores"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Master advanced mobile concepts",
+        "Build complex apps with backend",
+        "Secure summer internship",
+        "Learn CI/CD for apps"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Polish portfolio with published apps",
+        "Complete 200+ DSA problems",
+        "Build one showcase app",
+        "Apply to mobile roles"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      { "skill": "Platform Mastery", "goal": "3 quality published apps" },
+      { "skill": "DSA Preparation", "goal": "200-300 LeetCode problems" },
+      { "skill": "Projects", "goal": "5-6 apps demonstrating variety" },
+      { "skill": "Resume", "goal": "Highlight published apps and downloads" }
+    ],
+    "applicationStrategy": [
+      { "channel": "Campus Placements", "approach": "Active participation" },
+      { "channel": "Off-Campus", "approach": "Company career pages" },
+      { "channel": "Startups", "approach": "Great learning opportunities" }
+    ],
+    "interviewPrep": [
+      "DSA (2-3 months)",
+      "Mobile-Specific Questions (Lifecycle, Memory)",
+      "System Design (Mobile Architecture)",
+      "Portfolio Review"
+    ],
+    "salaryExpectations": {
+      "service": { "min": 3.5, "max": 5 },
+      "midTierProduct": { "min": 6, "max": 10 },
+      "topProduct": { "min": 12, "max": 18 },
+      "gcc": "8-14 LPA"
+    },
+    "differentiators": [
+      "Published apps with real users",
+      "Open-source contributions",
+      "Strong GitHub portfolio",
+      "Knowledge of both native and cross-platform"
+    ]
+  }
+}

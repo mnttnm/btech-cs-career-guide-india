@@ -1,0 +1,369 @@
+{
+  "roleId": "platform-engineer",
+  "roleName": "Platform Engineer",
+  "description": "Focuses on building internal developer platforms (IDPs) and tools to improve developer productivity and experience, treating infrastructure as a product.",
+  "jobTitles": {
+    "fresher": [
+      "Software Engineer (Infrastructure Team)",
+      "Junior DevOps Engineer (Tooling Focus)",
+      "Internal Tools Engineer",
+      "Associate Platform Engineer (Rare)",
+      "Backend Engineer (Platform Team)"
+    ],
+    "experienced": [
+      "Senior Platform Engineer",
+      "Staff Platform Engineer",
+      "Platform Architect",
+      "Developer Experience Engineer",
+      "Principal Platform Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Go",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "TypeScript",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Internal Developer Platforms (IDP)",
+      "Developer Experience (DevEx)",
+      "Self-Service Infrastructure",
+      "API Design",
+      "Platform-as-a-Service (PaaS)",
+      "GitOps",
+      "Microservices Patterns",
+      "Product Thinking"
+    ],
+    "frameworks": [
+      {
+        "name": "Kubernetes",
+        "popularity": "High"
+      },
+      {
+        "name": "Backstage",
+        "popularity": "High"
+      },
+      {
+        "name": "Terraform",
+        "popularity": "High"
+      },
+      {
+        "name": "Crossplane",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "ArgoCD",
+      "FluxCD",
+      "Prometheus",
+      "Grafana",
+      "AWS/GCP/Azure",
+      "Github Actions",
+      "GitLab CI"
+    ]
+  },
+  "dailyWork": [
+    "Developing internal developer portals (using Backstage or custom)",
+    "Building self-service tools for infrastructure provisioning",
+    "Creating CLI tools for common developer tasks",
+    "Designing and implementing platform APIs",
+    "Managing Kubernetes clusters and platform infrastructure",
+    "Implementing GitOps workflows",
+    "Onboarding teams to the platform and creating documentation",
+    "Gathering feedback from developers to improve the platform"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-3",
+        "title": "Software/DevOps/SRE",
+        "salary": {
+          "min": 4,
+          "max": 12,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-5",
+        "title": "Platform Engineer",
+        "salary": {
+          "min": 15,
+          "max": 25,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "5-8",
+        "title": "Senior Platform Engineer",
+        "salary": {
+          "min": 25,
+          "max": 40,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Head of Platform",
+        "Platform Engineering Manager",
+        "Director of Developer Experience",
+        "CTO"
+      ],
+      "individualContributor": [
+        "Senior Platform Engineer",
+        "Staff Platform Engineer",
+        "Principal Platform Engineer",
+        "Platform Architect"
+      ]
+    },
+    "timelineToSenior": "5-8 years",
+    "alternativePaths": [
+      "Engineering Manager",
+      "Product Manager (Technical)",
+      "Developer Relations",
+      "Site Reliability Engineer"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 4,
+        "max": 6
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "topTech": {
+        "min": 15,
+        "max": 25
+      },
+      "average": {
+        "min": 6,
+        "max": 12
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 10,
+        "max": 15
+      },
+      "productBased": {
+        "min": 15,
+        "max": 22
+      },
+      "average": {
+        "min": 12,
+        "max": 20
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 20,
+        "max": 30
+      },
+      "senior": {
+        "min": 30,
+        "max": 50
+      },
+      "topCompanies": {
+        "min": 50,
+        "max": 80
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 25,
+          "max": 40
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 18,
+          "max": 30
+        }
+      },
+      {
+        "name": "Uber",
+        "range": {
+          "min": 25,
+          "max": 40
+        }
+      },
+      {
+        "name": "Walmart Labs",
+        "range": {
+          "min": 20,
+          "max": 35
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "2-3 years experience + 6-12 months study",
+    "description": "Requires a unique blend of software engineering, infrastructure knowledge, and product thinking. Typically not an entry-level role."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Developer expectations and demands",
+      "Broad impact of platform issues",
+      "Complexity of shared infrastructure",
+      "Shifting priorities",
+      "Stakeholder management"
+    ],
+    "mitigatingFactors": [
+      "High impact on organization",
+      "Creative product-building work",
+      "Autonomy in solutions",
+      "Better work-life balance than SRE"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You love building tools and products",
+      "You have empathy for developers",
+      "You enjoy both coding and infrastructure",
+      "You like enabling others",
+      "You think in terms of abstractions"
+    ],
+    "avoidIf": [
+      "You prefer pure application development",
+      "You dislike infrastructure and operations",
+      "You need a well-defined career path",
+      "You prefer working alone"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Focus on Software Engineering fundamentals",
+        "Master Python or Go",
+        "Learn data structures and algorithms",
+        "Learn Git and Linux basics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Build full-stack applications",
+        "Learn Docker and containerization",
+        "Basic Kubernetes (Minikube)",
+        "Understand API design"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Deep dive into infrastructure (Terraform)",
+        "Advanced Kubernetes (CKA)",
+        "Build internal tools project",
+        "Summer internship as Software Engineer/DevOps"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Target Software Engineer or DevOps roles",
+        "Contribute to platform open-source (Backstage)",
+        "Build internal developer portal project",
+        "Prepare for SWE interviews"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Software Engineering",
+        "goal": "Strong coding (DSA + API design)"
+      },
+      {
+        "skill": "Kubernetes",
+        "goal": "CKA Certification & Operators understanding"
+      },
+      {
+        "skill": "Infrastructure as Code",
+        "goal": "Terraform proficiency"
+      },
+      {
+        "skill": "Platform Tools",
+        "goal": "Backstage.io basics"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Target Roles",
+        "approach": "Apply for Software Engineer / DevOps (not Platform Engineer directly)"
+      },
+      {
+        "channel": "Companies",
+        "approach": "Target large product companies with platform teams"
+      },
+      {
+        "channel": "Networking",
+        "approach": "Connect with platform engineers"
+      },
+      {
+        "channel": "Campus",
+        "approach": "Focus on strong coding + infra knowledge"
+      },
+      {
+        "channel": "Projects",
+        "approach": "Showcase internal tools/portals"
+      }
+    ],
+    "interviewPrep": [
+      "Coding (DSA Medium)",
+      "System Design (Platform focus)",
+      "Kubernetes Architecture",
+      "Infrastructure as Code concepts",
+      "Product Thinking (Developer Experience)"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 4,
+        "max": 6
+      },
+      "midTierProduct": {
+        "min": 10,
+        "max": 15
+      },
+      "topProduct": {
+        "min": 15,
+        "max": 25
+      },
+      "gcc": "12-20 LPA"
+    },
+    "differentiators": [
+      "Experience with Backstage.io",
+      "Building a Kubernetes Operator",
+      "Strong product mindset for infrastructure",
+      "Open source contributions to platform tools",
+      "Understanding of Developer Experience (DevEx)"
+    ]
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "roleId": "game-developer",
+  "roleName": "Game Developer",
+  "description": "Competitive entry due to passion-driven field, requires strong portfolio and specialized skills.",
+  "jobTitles": {
+    "fresher": [
+      "Game Developer",
+      "Unity Developer",
+      "Junior Game Programmer",
+      "Mobile Game Developer",
+      "Unreal Engine Developer"
+    ],
+    "experienced": [
+      "Senior Game Developer",
+      "Lead Game Programmer",
+      "Technical Game Designer",
+      "Game Architect",
+      "Principal Game Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      { "name": "C#", "level": "Advanced", "priority": "Primary" },
+      { "name": "C++", "level": "Advanced", "priority": "Primary" },
+      { "name": "Python", "level": "Intermediate", "priority": "Secondary" },
+      { "name": "GLSL/HLSL", "level": "Intermediate", "priority": "Secondary" }
+    ],
+    "coreConcepts": [
+      "Game loops and frame timing",
+      "Physics simulation and collision detection",
+      "Game mathematics (vectors, quaternions)",
+      "AI and pathfinding",
+      "Multiplayer/networking",
+      "Performance optimization"
+    ],
+    "frameworks": [
+      { "name": "Unity 3D", "popularity": "High" },
+      { "name": "Unreal Engine", "popularity": "High" },
+      { "name": "Godot", "popularity": "Low" },
+      { "name": "Cocos2d-x", "popularity": "Low" }
+    ],
+    "tools": [
+      "Blender/Maya",
+      "Git/Perforce",
+      "Unity Profiler",
+      "Photon",
+      "Firebase",
+      "Jenkins"
+    ]
+  },
+  "dailyWork": [
+    "Implementing gameplay mechanics",
+    "Writing scripts for game logic",
+    "Integrating art assets",
+    "Optimizing game performance",
+    "Debugging gameplay issues",
+    "Implementing game physics",
+    "Developing AI behaviors"
+  ],
+  "careerProgression": {
+    "timeline": [
+      { "level": "Entry Level", "years": "0-2", "title": "Junior Game Developer", "salary": { "min": 3, "max": 6, "currency": "LPA" } },
+      { "level": "Mid Level", "years": "3-6", "title": "Senior Game Programmer", "salary": { "min": 6, "max": 15, "currency": "LPA" } },
+      { "level": "Senior Level", "years": "7-10", "title": "Lead Game Developer", "salary": { "min": 15, "max": 27, "currency": "LPA" } }
+    ],
+    "tracks": {
+      "leadership": [
+        "Game Developer",
+        "Senior Game Developer",
+        "Lead Programmer",
+        "Technical Director",
+        "Studio Head",
+        "VP of Engineering"
+      ],
+      "individualContributor": [
+        "Senior Developer",
+        "Principal Engineer",
+        "Lead Graphics Programmer",
+        "Technical Fellow"
+      ]
+    },
+    "timelineToSenior": "5-8 years with strong portfolio and shipped titles",
+    "alternativePaths": [
+      "Game Designer",
+      "Technical Artist",
+      "Graphics Programmer",
+      "Engine Programmer",
+      "VR/AR Developer"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": { "min": 2.5, "max": 4 },
+      "productBased": { "min": 3.5, "max": 7 },
+      "topTech": { "min": 6, "max": 12 },
+      "average": { "min": 3.3, "max": 6 }
+    },
+    "threeYears": {
+      "serviceBased": { "min": 5, "max": 8 },
+      "productBased": { "min": 8, "max": 12 },
+      "average": { "min": 6, "max": 10 }
+    },
+    "fivePlus": {
+      "midLevel": { "min": 10, "max": 15 },
+      "senior": { "min": 15, "max": 22 },
+      "topCompanies": { "min": 22, "max": 35 }
+    },
+    "topCompanies": [
+      { "name": "Zynga", "range": { "min": 8, "max": 15 } },
+      { "name": "Ubisoft", "range": { "min": 6, "max": 10 } },
+      { "name": "Electronic Arts (EA)", "range": { "min": 7, "max": 12 } }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "12-18 months",
+    "description": "Combines programming, mathematics, physics, and design. Requires mastering a game engine and building a portfolio of playable games."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "Crunch time culture",
+      "Highly competitive job market",
+      "Project cancellations",
+      "Constant innovation pressure"
+    ],
+    "mitigatingFactors": [
+      "Passionate collaborative community",
+      "Creative freedom",
+      "Visible impact",
+      "Rapid skill growth"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You're genuinely passionate about games",
+      "You enjoy creative problem-solving",
+      "You can handle criticism and iterate",
+      "You enjoy mathematics and physics"
+    ],
+    "avoidIf": [
+      "You're primarily motivated by high salaries",
+      "You need stable, predictable work hours",
+      "You dislike highly competitive environments",
+      "You prefer purely technical work"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn programming (C#/C++)",
+        "Download Unity and complete tutorials",
+        "Build 3-4 simple games",
+        "Learn basic game mathematics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Master Unity or Unreal Engine",
+        "Build 4-5 games with increasing complexity",
+        "Participate in game jams",
+        "Publish 2-3 games"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Build polished portfolio games",
+        "Learn multiplayer game development",
+        "Secure internship at game studio",
+        "Specialize in one area"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Create polished portfolio website",
+        "Upload games to stores",
+        "Build one showcase project",
+        "Apply to game studios"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      { "skill": "Engine Mastery", "goal": "Deep expertise in Unity or Unreal" },
+      { "skill": "Portfolio Games", "goal": "5-7 playable games, 2 published" },
+      { "skill": "Mathematics", "goal": "Strong foundation in game math" },
+      { "skill": "Specialized Skill", "goal": "Expertise in one area (e.g., Multiplayer)" }
+    ],
+    "applicationStrategy": [
+      { "channel": "Direct Applications", "approach": "Career pages of studios" },
+      { "channel": "Networking", "approach": "Game dev meetups and LinkedIn" },
+      { "channel": "Game Jams", "approach": "Participate in sponsored jams" }
+    ],
+    "interviewPrep": [
+      "Portfolio Deep Dive",
+      "Technical Questions (Engine specific)",
+      "Live Coding (Game mechanic)",
+      "Game Design discussion"
+    ],
+    "salaryExpectations": {
+      "service": { "min": 2.5, "max": 4 },
+      "midTierProduct": { "min": 3.5, "max": 7 },
+      "topProduct": { "min": 6, "max": 12 },
+      "gcc": "6-12 LPA (Remote)"
+    },
+    "differentiators": [
+      "Published games with real players",
+      "Game Jam awards",
+      "Open-source contributions",
+      "Technical blog/YouTube channel"
+    ]
+  }
+}

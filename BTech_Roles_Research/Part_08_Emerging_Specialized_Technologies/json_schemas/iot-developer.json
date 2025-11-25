@@ -1,0 +1,326 @@
+{
+  "roleId": "iot-developer",
+  "roleName": "IoT Developer",
+  "description": "Builds and maintains Internet of Things (IoT) solutions, integrating hardware sensors with cloud platforms and software applications.",
+  "jobTitles": {
+    "fresher": [
+      "IoT Engineer",
+      "Junior IoT Developer",
+      "Embedded Systems Engineer",
+      "IoT Application Developer"
+    ],
+    "experienced": [
+      "Senior IoT Developer",
+      "IoT Architect",
+      "IoT Solutions Architect",
+      "Embedded IoT Lead"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "C/C++",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "JavaScript/Node.js",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Embedded Systems Programming",
+      "Sensor Integration",
+      "Communication Protocols (MQTT, HTTP, CoAP)",
+      "Edge Computing",
+      "Cloud IoT Platforms",
+      "Hardware-Software Integration",
+      "Data Processing & Analytics"
+    ],
+    "frameworks": [
+      {
+        "name": "Arduino",
+        "popularity": "High"
+      },
+      {
+        "name": "Raspberry Pi (Linux)",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "AWS IoT Core",
+      "Azure IoT Hub",
+      "PlatformIO",
+      "Wireshark",
+      "Git",
+      "Docker"
+    ]
+  },
+  "dailyWork": [
+    "Programming microcontrollers and embedded devices",
+    "Designing and implementing IoT communication protocols",
+    "Developing cloud-based IoT applications and dashboards",
+    "Debugging hardware and software integration issues",
+    "Optimizing device power consumption and performance",
+    "Ensuring security of IoT devices and data"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior IoT Developer",
+        "salary": {
+          "min": 4,
+          "max": 7,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "IoT Developer",
+        "salary": {
+          "min": 8,
+          "max": 14,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior IoT Developer",
+        "salary": {
+          "min": 15,
+          "max": 25,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "IoT Engineering Manager",
+        "Director of IoT",
+        "CTO (IoT Startup)"
+      ],
+      "individualContributor": [
+        "IoT Architect",
+        "Principal IoT Engineer",
+        "Embedded Systems Expert"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Embedded Systems Engineer",
+      "Cloud Engineer",
+      "Robotics Engineer",
+      "Hardware Engineer"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3.5,
+        "max": 5
+      },
+      "productBased": {
+        "min": 6,
+        "max": 10
+      },
+      "topTech": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 4,
+        "max": 8
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 6,
+        "max": 10
+      },
+      "productBased": {
+        "min": 10,
+        "max": 16
+      },
+      "average": {
+        "min": 8,
+        "max": 14
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 14,
+        "max": 22
+      },
+      "senior": {
+        "min": 22,
+        "max": 35
+      },
+      "topCompanies": {
+        "min": 35,
+        "max": 60
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Bosch",
+        "range": {
+          "min": 6,
+          "max": 12
+        }
+      },
+      {
+        "name": "Siemens",
+        "range": {
+          "min": 6,
+          "max": 10
+        }
+      },
+      {
+        "name": "Qualcomm",
+        "range": {
+          "min": 12,
+          "max": 20
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "8-12 months",
+    "description": "Moderate complexity. Requires bridging the gap between hardware (electronics) and software (cloud/app). Hands-on experience with kits like Arduino/Raspberry Pi is essential."
+  },
+  "stressLevel": {
+    "level": "Medium",
+    "factors": [
+      "Hardware debugging challenges",
+      "Integration complexities",
+      "Real-world deployment issues",
+      "Rapidly evolving standards"
+    ],
+    "mitigatingFactors": [
+      "Tangible, physical results",
+      "Growing industry demand",
+      "Creative problem solving",
+      "Variety of work"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You enjoy tinkering with electronics",
+      "You like seeing physical results of code",
+      "You are patient with debugging",
+      "You are curious about how things work"
+    ],
+    "avoidIf": [
+      "You prefer pure software/screen-only work",
+      "You dislike dealing with hardware limitations",
+      "You want instant feedback loops",
+      "You are not interested in electronics"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn C/C++ basics",
+        "Understand basic electronics",
+        "Get an Arduino starter kit"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Build projects with Arduino/ESP8266",
+        "Learn Python",
+        "Explore sensors and actuators"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Learn MQTT and Cloud IoT platforms",
+        "Work with Raspberry Pi",
+        "Build a connected IoT system"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Build complex IoT portfolio projects",
+        "Learn PCB design basics (optional)",
+        "Apply to IoT startups and companies"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Embedded C",
+        "goal": "Master microcontroller programming"
+      },
+      {
+        "skill": "IoT Cloud",
+        "goal": "Learn AWS IoT Core or Azure IoT Hub"
+      },
+      {
+        "skill": "Protocols",
+        "goal": "Understand MQTT, HTTP, CoAP deeply"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "IoT Startups",
+        "approach": "Apply via AngelList, company pages"
+      },
+      {
+        "channel": "Manufacturing/Industrial",
+        "approach": "Target companies like Bosch, Siemens"
+      },
+      {
+        "channel": "Hackathons",
+        "approach": "Participate in hardware/IoT hackathons"
+      }
+    ],
+    "interviewPrep": [
+      "Embedded C questions",
+      "Hardware interface questions (I2C, SPI)",
+      "System Design (IoT architecture)",
+      "Basic Electronics concepts"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3.5,
+        "max": 5
+      },
+      "midTierProduct": {
+        "min": 6,
+        "max": 10
+      },
+      "topProduct": {
+        "min": 10,
+        "max": 15
+      },
+      "gcc": "7-12 LPA"
+    },
+    "differentiators": [
+      "Deployed real-world IoT projects",
+      "Experience with custom PCBs",
+      "Full-stack IoT knowledge (Device to Cloud)",
+      "Knowledge of Edge AI"
+    ]
+  }
+}

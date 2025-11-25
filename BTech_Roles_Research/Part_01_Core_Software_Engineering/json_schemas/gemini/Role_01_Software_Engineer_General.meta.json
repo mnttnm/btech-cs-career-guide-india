@@ -1,0 +1,32 @@
+{
+  "original": "Role_01_Software_Engineer_General.md",
+  "convertedAt": "2025-11-23T17:38:00Z",
+  "extractor": "agent-mode",
+  "warnings": [
+    {
+      "line": "Salary Ranges in India (5+ Years Experience)",
+      "issue": "Average salary range for 5+ years not provided",
+      "decision": "Set min and max to null"
+    },
+    {
+      "line": "Top Companies by Salary",
+      "issue": "Multiple salary ranges (fresher, experienced) provided for top companies",
+      "decision": "Used fresher range in main schema; moved experienced range to extra.salaryRanges_topCompanies_experienced"
+    },
+    {
+      "line": "Required Skills -> Frameworks & Tools",
+      "issue": "Frameworks listed as categories or in strategy sections rather than a single list",
+      "decision": "Extracted specific frameworks from 'Testing Frameworks' and Year 2 strategy section"
+    },
+    {
+      "line": "Top Companies Hiring in India",
+      "issue": "Large list of companies by category not fitting schema",
+      "decision": "Moved to extra.companiesHiring"
+    },
+    {
+      "line": "Salary Ranges -> Startups",
+      "issue": "Startup salary range provided for fresher but no specific schema key",
+      "decision": "Moved to extra.salaryRanges_startups_fresher"
+    }
+  ]
+}

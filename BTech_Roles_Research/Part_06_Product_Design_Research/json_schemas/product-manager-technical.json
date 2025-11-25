@@ -1,0 +1,352 @@
+{
+  "roleId": "product-manager-technical",
+  "roleName": "Product Manager (Technical)",
+  "description": "Bridges engineering and business to define, build, and launch technical products (APIs, platforms, infrastructure) requiring deep technical expertise.",
+  "jobTitles": {
+    "fresher": [
+      "Associate Product Manager (APM)",
+      "Product Analyst",
+      "Technical Product Coordinator",
+      "Junior Product Manager"
+    ],
+    "experienced": [
+      "Product Manager (Technical)",
+      "Senior Product Manager",
+      "Group Product Manager",
+      "Director of Product",
+      "Platform Product Manager"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "System Design Fundamentals",
+      "API Design & RESTful Services",
+      "Database Schemas (SQL/NoSQL)",
+      "Agile/Scrum Methodologies",
+      "Product Lifecycle Management",
+      "User Research & Analytics",
+      "Go-to-Market Strategy",
+      "A/B Testing"
+    ],
+    "frameworks": [
+      {
+        "name": "React",
+        "popularity": "Low"
+      },
+      {
+        "name": "Django/Flask",
+        "popularity": "Low"
+      }
+    ],
+    "tools": [
+      "Jira",
+      "Figma",
+      "Google Analytics",
+      "Mixpanel",
+      "Postman",
+      "Tableau/Looker",
+      "Confluence"
+    ]
+  },
+  "dailyWork": [
+    "Writing and refining Product Requirements Documents (PRDs)",
+    "Analyzing data metrics (DAU, MAU, conversion rates)",
+    "Conducting user research and competitor analysis",
+    "Prioritizing feature backlog with engineering leads",
+    "Coordinating with design, engineering, and business teams",
+    "Defining product roadmap and strategy",
+    "Presenting product updates to leadership"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Associate Product Manager (APM)",
+        "salary": {
+          "min": 10,
+          "max": 15,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Product Manager",
+        "salary": {
+          "min": 15,
+          "max": 25,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Product Manager",
+        "salary": {
+          "min": 25,
+          "max": 40,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Group Product Manager",
+        "Director of Product",
+        "VP of Product",
+        "Chief Product Officer (CPO)"
+      ],
+      "individualContributor": [
+        "Principal Product Manager",
+        "Staff Product Manager"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Product Marketing Manager",
+      "Startup Founder",
+      "Venture Capital Investor",
+      "Strategy Consultant",
+      "General Manager"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 6,
+        "max": 10
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "topTech": {
+        "min": 18,
+        "max": 25
+      },
+      "average": {
+        "min": 8,
+        "max": 14
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 10,
+        "max": 15
+      },
+      "productBased": {
+        "min": 15,
+        "max": 25
+      },
+      "average": {
+        "min": 14,
+        "max": 22
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 20,
+        "max": 35
+      },
+      "senior": {
+        "min": 30,
+        "max": 50
+      },
+      "topCompanies": {
+        "min": 50,
+        "max": 80
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 18,
+          "max": 25
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "name": "CRED",
+        "range": {
+          "min": 15,
+          "max": 22
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 25,
+          "max": 40
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "6-12 months (Freshers) / 3-6 months (Engineers)",
+    "description": "Very high difficulty for freshers due to intense competition for APM roles. Transitioning from engineering is easier but requires building strong product sense and communication skills."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "Accountability without direct authority",
+      "Constant context switching",
+      "Tight deadlines and launch pressure",
+      "Ambiguity in decision making"
+    ],
+    "mitigatingFactors": [
+      "High impact and ownership",
+      "No coding/production debugging pressure",
+      "Strategic and intellectually rewarding work",
+      "High visibility to leadership"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You are obsessed with user needs",
+      "You can communicate with both engineers and business leaders",
+      "You love data-driven decision making",
+      "You are comfortable with ambiguity",
+      "You can influence without authority"
+    ],
+    "avoidIf": [
+      "You want to code full-time",
+      "You dislike meetings and coordination",
+      "You need clear, structured tasks",
+      "You avoid conflict and difficult conversations"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn Python and SQL basics",
+        "Build simple apps with analytics",
+        "Read 'The Lean Startup'",
+        "Start a product journal"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Master SQL and analytics tools",
+        "Build projects with measurable outcomes",
+        "Read 'Cracking the PM Interview'",
+        "Understand A/B testing"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Target APM internships at startups",
+        "Build product case studies",
+        "Network with PMs on LinkedIn",
+        "Practice product teardowns"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Apply to APM programs (Google, Flipkart)",
+        "Solve 100+ product case studies",
+        "Build a portfolio website",
+        "Mock interviews"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "SQL",
+        "goal": "Master complex queries for data analysis"
+      },
+      {
+        "skill": "Product Sense",
+        "goal": "Practice daily product teardowns"
+      },
+      {
+        "skill": "Analytics",
+        "goal": "Learn Google Analytics/Mixpanel"
+      },
+      {
+        "skill": "System Design",
+        "goal": "Understand APIs and database scaling"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "APM Programs",
+        "approach": "Target Google, Flipkart, CRED (highly competitive)"
+      },
+      {
+        "channel": "Startups",
+        "approach": "Target Series A/B startups via AngelList/LinkedIn"
+      },
+      {
+        "channel": "Engineering Transition",
+        "approach": "Join as engineer, transition internally to PM"
+      },
+      {
+        "channel": "Networking",
+        "approach": "Connect with alumni in PM roles"
+      }
+    ],
+    "interviewPrep": [
+      "Product Design Cases ('Design X for Y')",
+      "Metric/Analytics Cases",
+      "Strategy Questions",
+      "Technical Feasibility Questions",
+      "Behavioral/Leadership Stories"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 6,
+        "max": 10
+      },
+      "midTierProduct": {
+        "min": 12,
+        "max": 20
+      },
+      "topProduct": {
+        "min": 18,
+        "max": 25
+      },
+      "gcc": "15-22 LPA"
+    },
+    "differentiators": [
+      "Shipped side projects with user metrics",
+      "Detailed product portfolio/case studies",
+      "Strong technical/engineering background",
+      "Data analytics proficiency"
+    ]
+  }
+}

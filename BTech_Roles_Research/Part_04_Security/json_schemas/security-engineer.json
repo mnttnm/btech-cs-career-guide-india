@@ -1,0 +1,374 @@
+{
+  "roleId": "security-engineer",
+  "roleName": "Security Engineer",
+  "description": "Designs and implements security controls, automates security checks, and ensures software and infrastructure are secure throughout the development lifecycle.",
+  "jobTitles": {
+    "fresher": [
+      "Junior Security Engineer",
+      "Associate Security Engineer",
+      "AppSec Engineer (Entry)",
+      "DevSecOps Engineer (Entry)",
+      "Security Software Engineer (Junior)"
+    ],
+    "experienced": [
+      "Senior Security Engineer",
+      "Staff Security Engineer",
+      "Principal Security Engineer",
+      "Security Architect",
+      "Engineering Manager - Security"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "JavaScript/TypeScript",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Java",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Secure Software Development",
+      "Application Security",
+      "Cryptography",
+      "Security Architecture",
+      "Vulnerability Management",
+      "Identity & Access Management (IAM)",
+      "DevSecOps",
+      "Threat Modeling"
+    ],
+    "frameworks": [
+      {
+        "name": "OWASP Top 10",
+        "popularity": "High"
+      },
+      {
+        "name": "NIST CSF",
+        "popularity": "Medium"
+      },
+      {
+        "name": "CIS Controls",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Burp Suite",
+      "SonarQube",
+      "Snyk",
+      "Checkmarx",
+      "Splunk",
+      "HashiCorp Vault",
+      "Docker",
+      "Kubernetes",
+      "Terraform"
+    ]
+  },
+  "dailyWork": [
+    "Security Architecture Design",
+    "Code Review and Security Scanning",
+    "Tooling and Automation Development",
+    "Collaboration with Development Teams",
+    "Incident Response Support",
+    "Threat Modeling Sessions"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Security Engineer / Associate",
+        "salary": {
+          "min": 6,
+          "max": 10,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Security Engineer",
+        "salary": {
+          "min": 10,
+          "max": 18,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Security Engineer",
+        "salary": {
+          "min": 18,
+          "max": 30,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Security Architect",
+        "CISO",
+        "Engineering Director"
+      ],
+      "individualContributor": [
+        "Staff Security Engineer",
+        "Principal Security Engineer",
+        "Security Researcher"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Security Researcher",
+      "Cloud Architect",
+      "Security Product Manager"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 6,
+        "max": 8
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "topTech": {
+        "min": 12,
+        "max": 20
+      },
+      "average": {
+        "min": 8,
+        "max": 12
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 12,
+        "max": 15
+      },
+      "productBased": {
+        "min": 18,
+        "max": 25
+      },
+      "average": {
+        "min": 15,
+        "max": 22
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 22,
+        "max": 30
+      },
+      "senior": {
+        "min": 30,
+        "max": 45
+      },
+      "topCompanies": {
+        "min": 40,
+        "max": 60
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 20,
+          "max": 40
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 18,
+          "max": 35
+        }
+      },
+      {
+        "name": "Microsoft",
+        "range": {
+          "min": 20,
+          "max": 38
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 18,
+          "max": 30
+        }
+      },
+      {
+        "name": "CRED",
+        "range": {
+          "min": 18,
+          "max": 32
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "12-24 months",
+    "description": "Requires development experience or strong coding skills alongside security knowledge. Harder for pure freshers without coding background."
+  },
+  "stressLevel": {
+    "level": "Medium",
+    "factors": [
+      "Balancing security vs speed",
+      "Vulnerability overload",
+      "Responsibility",
+      "On-call for incidents",
+      "Compliance pressure"
+    ],
+    "mitigatingFactors": [
+      "Better hours than SOC",
+      "Creative work",
+      "High respect",
+      "Collaborative environment"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You love coding AND security",
+      "You're a problem solver",
+      "You enjoy collaboration",
+      "You can communicate well",
+      "You're pragmatic"
+    ],
+    "avoidIf": [
+      "You hate coding",
+      "You're inflexible",
+      "You prefer solo work",
+      "You dislike communication",
+      "You want 100% reactive work"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master Python or JavaScript",
+        "Learn Web Development basics",
+        "Learn Git and Version Control",
+        "Build simple web applications"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Build Full-stack CRUD applications",
+        "Learn Security Fundamentals (OWASP Top 10)",
+        "Learn Tools (Burp Suite)",
+        "Build and fix a vulnerable application"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Learn Threat Modeling and Cloud Security",
+        "Understand Container Security (Docker/K8s)",
+        "Get Certified (CEH or Security+)",
+        "Secure an Internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Advanced Certifications (OSCP or AWS Security)",
+        "Specialize in AppSec or Cloud Security",
+        "Build Security Tool Projects",
+        "Create Portfolio and Apply"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Programming",
+        "goal": "Proficiency in Python and/or JavaScript/Java"
+      },
+      {
+        "skill": "Web Security",
+        "goal": "Mastery of OWASP Top 10 and remediation"
+      },
+      {
+        "skill": "Cloud Basics",
+        "goal": "Fundamentals of AWS or Azure security services"
+      },
+      {
+        "skill": "Security Tools",
+        "goal": "Proficiency with Burp Suite and SAST/DAST tools"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Product Companies",
+        "approach": "Target AppSec teams in tech companies"
+      },
+      {
+        "channel": "Cloud-Native Companies",
+        "approach": "Target Cloud Security roles"
+      },
+      {
+        "channel": "GCCs",
+        "approach": "Apply to security engineering teams in banks/tech GCCs"
+      },
+      {
+        "channel": "Startups",
+        "approach": "Look for early security hires in well-funded startups"
+      },
+      {
+        "channel": "Referrals",
+        "approach": "Network with security engineers for referrals"
+      }
+    ],
+    "interviewPrep": [
+      "Secure coding questions (spotting and fixing bugs)",
+      "Cryptography basics (encryption, hashing)",
+      "Cloud security architecture scenarios",
+      "Threat modeling exercises",
+      "Tool integration in CI/CD"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 6,
+        "max": 8
+      },
+      "midTierProduct": {
+        "min": 8,
+        "max": 14
+      },
+      "topProduct": {
+        "min": 15,
+        "max": 25
+      },
+      "gcc": "12-28 LPA"
+    },
+    "differentiators": [
+      "Strong coding skills (dev background)",
+      "Security tool development portfolio",
+      "Bug bounty experience",
+      "Cloud certifications (AWS Security Specialty)"
+    ]
+  }
+}

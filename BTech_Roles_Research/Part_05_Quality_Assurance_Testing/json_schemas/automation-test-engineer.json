@@ -1,0 +1,351 @@
+{
+  "roleId": "automation-test-engineer",
+  "roleName": "Automation Test Engineer",
+  "description": "Focuses on automating the testing process of software applications using various tools and frameworks, improving efficiency and coverage.",
+  "jobTitles": {
+    "fresher": [
+      "Automation Test Engineer",
+      "Test Automation Engineer",
+      "QA Automation Engineer",
+      "Junior Automation Engineer",
+      "Automation Test Analyst"
+    ],
+    "experienced": [
+      "Senior Automation Test Engineer",
+      "Lead Automation Engineer",
+      "Automation Architect",
+      "Test Automation Specialist",
+      "Principal Automation Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Java",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "JavaScript/TypeScript",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Test Automation Frameworks",
+      "Page Object Model (POM)",
+      "CI/CD Integration",
+      "Web Automation",
+      "API Automation",
+      "Mobile Automation",
+      "Data-Driven Testing",
+      "Version Control"
+    ],
+    "frameworks": [
+      {
+        "name": "Selenium WebDriver",
+        "popularity": "High"
+      },
+      {
+        "name": "Cypress",
+        "popularity": "High"
+      },
+      {
+        "name": "Playwright",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Appium",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Postman",
+      "Rest Assured",
+      "Jenkins",
+      "Git/GitHub",
+      "TestNG/JUnit",
+      "Maven/Gradle",
+      "Jira"
+    ]
+  },
+  "dailyWork": [
+    "Writing and maintaining automated test scripts",
+    "Converting manual test cases to automation scripts",
+    "Executing automated test suites and analyzing results",
+    "Integrating tests into CI/CD pipelines",
+    "Debugging and fixing flaky tests",
+    "Collaborating with QA and Dev teams",
+    "Reviewing and refactoring automation code",
+    "Maintaining test data and environments"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Automation Test Engineer",
+        "salary": {
+          "min": 4,
+          "max": 7,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Automation Test Engineer",
+        "salary": {
+          "min": 7,
+          "max": 12,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Automation Test Engineer",
+        "salary": {
+          "min": 12,
+          "max": 18,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Lead Automation Engineer",
+        "QA Manager",
+        "Automation Manager"
+      ],
+      "individualContributor": [
+        "Automation Architect",
+        "Principal Automation Engineer",
+        "SDET"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "SDET",
+      "DevOps Engineer",
+      "Software Developer",
+      "Performance Engineer",
+      "Security Tester"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3.5,
+        "max": 5
+      },
+      "productBased": {
+        "min": 6,
+        "max": 8
+      },
+      "topTech": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 4,
+        "max": 7
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 7,
+        "max": 9
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 7,
+        "max": 11
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 11,
+        "max": 16
+      },
+      "senior": {
+        "min": 16,
+        "max": 25
+      },
+      "topCompanies": {
+        "min": 35,
+        "max": 60
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 8,
+          "max": 15
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 7,
+          "max": 12
+        }
+      },
+      {
+        "name": "Microsoft",
+        "range": {
+          "min": 10,
+          "max": 20
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-10 months",
+    "description": "Requires learning programming fundamentals, web automation tools (Selenium), and test frameworks. Easier than full software development but harder than manual QA."
+  },
+  "stressLevel": {
+    "level": "Medium",
+    "factors": [
+      "Test maintenance burden",
+      "Release deadlines",
+      "Flaky tests",
+      "Blame for missed bugs"
+    ],
+    "mitigatingFactors": [
+      "Better work-life balance than devs",
+      "Predictable work hours",
+      "Creativity in automation"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You enjoy coding but prefer testing focus",
+      "You love automating repetitive tasks",
+      "You are detail-oriented",
+      "You enjoy problem-solving and debugging"
+    ],
+    "avoidIf": [
+      "You find repetitive work boring",
+      "You prefer creative/innovative product building",
+      "You dislike debugging and troubleshooting",
+      "You want rapid salary growth equal to devs"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn Python or Java",
+        "Understand software testing basics",
+        "Learn Git/GitHub basics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Learn Selenium WebDriver basics",
+        "Practice automating simple websites",
+        "Learn Postman for API testing"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Master a test framework (TestNG/pytest)",
+        "Learn advanced Selenium and API automation",
+        "Understand CI/CD (Jenkins)",
+        "Target automation internships"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Build end-to-end automation framework projects",
+        "Master a second tool (Cypress/Playwright)",
+        "Prepare for automation interviews",
+        "Apply to service and product companies"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Programming",
+        "goal": "Master Java or Python basics"
+      },
+      {
+        "skill": "Web Automation",
+        "goal": "Proficiency in Selenium WebDriver"
+      },
+      {
+        "skill": "API Testing",
+        "goal": "Learn Postman and REST Assured"
+      },
+      {
+        "skill": "CI/CD",
+        "goal": "Basics of Jenkins integration"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "LinkedIn",
+        "approach": "Connect with automation engineers"
+      },
+      {
+        "channel": "Campus",
+        "approach": "Target companies with automation roles"
+      },
+      {
+        "channel": "Portals",
+        "approach": "Apply for 'Automation Test Engineer' roles"
+      },
+      {
+        "channel": "Networking",
+        "approach": "Join testing communities"
+      }
+    ],
+    "interviewPrep": [
+      "Selenium Coding Challenges",
+      "Framework Design Questions",
+      "Programming Fundamentals (Strings/Arrays)",
+      "API Testing Concepts",
+      "Scenario-based Questions"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3.5,
+        "max": 5
+      },
+      "midTierProduct": {
+        "min": 4,
+        "max": 6
+      },
+      "topProduct": {
+        "min": 6,
+        "max": 10
+      },
+      "gcc": "5-8 LPA"
+    },
+    "differentiators": [
+      "Comprehensive GitHub portfolio",
+      "Knowledge of modern tools (Cypress/Playwright)",
+      "CI/CD pipeline experience",
+      "ISTQB Foundation Certification"
+    ]
+  }
+}
