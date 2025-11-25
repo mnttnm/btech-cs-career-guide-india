@@ -2,17 +2,18 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Home, Search, GitCompare, Compass, Menu, X } from 'lucide-react'
+import { Home, Search, GitCompare, Target, Menu, X, Compass } from 'lucide-react'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { useComparisonStore } from '@/stores/useComparisonStore'
+import { ThemeToggle, ThemeToggleCompact } from './ThemeToggle'
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
-  { href: '/browse', label: 'Browse', icon: Search },
+  { href: '/browse', label: 'Explore', icon: Search },
   { href: '/compare', label: 'Compare', icon: GitCompare },
-  { href: '/quiz', label: 'Quiz', icon: Compass },
+  { href: '/quiz', label: 'Find Fit', icon: Target },
 ]
 
 export function Navigation() {
@@ -26,8 +27,10 @@ export function Navigation() {
       <header className="hidden md:flex fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b">
         <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-2xl">🎯</span>
-            <span className="font-bold text-xl bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+            <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary">
+              <Compass className="w-5 h-5 text-primary-foreground" />
+            </div>
+            <span className="font-bold text-xl">
               CareerGuide
             </span>
           </Link>
@@ -52,13 +55,16 @@ export function Navigation() {
                   <Icon className="w-4 h-4" />
                   {item.label}
                   {showBadge && (
-                    <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                    <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs w-5 h-5 rounded-full flex items-center justify-center">
                       {selectedRoles.length}
                     </span>
                   )}
                 </Link>
               )
             })}
+            <div className="ml-2 pl-2 border-l">
+              <ThemeToggle />
+            </div>
           </div>
         </nav>
       </header>
@@ -83,7 +89,7 @@ export function Navigation() {
                 <Icon className="w-5 h-5" />
                 <span className="text-xs font-medium">{item.label}</span>
                 {showBadge && (
-                  <span className="absolute top-0 right-2 bg-blue-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                  <span className="absolute top-0 right-2 bg-primary text-primary-foreground text-xs w-5 h-5 rounded-full flex items-center justify-center">
                     {selectedRoles.length}
                   </span>
                 )}
@@ -97,15 +103,20 @@ export function Navigation() {
       <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b">
         <div className="flex items-center justify-between px-4 h-14">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl">🎯</span>
+            <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-primary">
+              <Compass className="w-4 h-4 text-primary-foreground" />
+            </div>
             <span className="font-bold text-lg">CareerGuide</span>
           </Link>
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg hover:bg-muted"
-          >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          <div className="flex items-center gap-1">
+            <ThemeToggleCompact />
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-lg hover:bg-muted"
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
       </header>
 

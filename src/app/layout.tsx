@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,12 +28,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
-        <Navigation />
-        <main className="min-h-screen pt-14 pb-20 md:pt-16 md:pb-0">
-          {children}
-        </main>
+        <ThemeProvider>
+          <Navigation />
+          <main className="min-h-screen pt-14 pb-20 md:pt-16 md:pb-0">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
