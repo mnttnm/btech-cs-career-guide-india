@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { useComparisonStore } from '@/stores/useComparisonStore'
 import { ThemeToggle, ThemeToggleCompact } from './ThemeToggle'
+import { ColorSchemeSelector } from './ColorSchemeSelector'
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
@@ -62,7 +63,8 @@ export function Navigation() {
                 </Link>
               )
             })}
-            <div className="ml-2 pl-2 border-l">
+            <div className="ml-2 pl-2 border-l flex items-center gap-1">
+              <ColorSchemeSelector />
               <ThemeToggle />
             </div>
           </div>
@@ -109,6 +111,7 @@ export function Navigation() {
             <span className="font-bold text-lg">CareerGuide</span>
           </Link>
           <div className="flex items-center gap-1">
+            <ColorSchemeSelector />
             <ThemeToggleCompact />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

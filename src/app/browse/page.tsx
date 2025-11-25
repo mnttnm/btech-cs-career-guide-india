@@ -83,9 +83,9 @@ function BrowseContent() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <div className="container mx-auto px-4 py-8">
       {/* Header */}
-      <div className="mb-6">
+      <div className="mb-8">
         <h1 className="text-2xl md:text-3xl font-bold mb-2">Explore careers</h1>
         <p className="text-muted-foreground">
           {getRoleSummaries().length} career paths across {categories.length} domains
@@ -95,36 +95,41 @@ function BrowseContent() {
       {/* Category Pills (Horizontal Scroll) */}
       <div className="mb-6 -mx-4 px-4 overflow-x-auto scrollbar-hide">
         <div className="flex gap-2 pb-2">
-          <button
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             onClick={() => setFilters({ ...filters, category: undefined })}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
               !filters.category
-                ? 'bg-primary text-primary-foreground'
+                ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
                 : 'bg-muted hover:bg-muted/80'
             }`}
           >
             All
-          </button>
+          </motion.button>
           {categories.map((cat) => {
             const Icon = getCategoryIcon(cat.category)
+            const isActive = filters.category === cat.category
             return (
-              <button
+              <motion.button
                 key={cat.category}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={() =>
                   setFilters({
                     ...filters,
-                    category: filters.category === cat.category ? undefined : cat.category,
+                    category: isActive ? undefined : cat.category,
                   })
                 }
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
-                  filters.category === cat.category
-                    ? 'bg-primary text-primary-foreground'
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
+                  isActive
+                    ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
                     : 'bg-muted hover:bg-muted/80'
                 }`}
               >
                 <Icon className="w-4 h-4" />
                 {cat.label}
-              </button>
+              </motion.button>
             )
           })}
         </div>
@@ -132,37 +137,48 @@ function BrowseContent() {
 
       {/* Search and Filter Bar */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
-        <div className="relative flex-1">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+        <div className="relative flex-1 group">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground transition-colors group-focus-within:text-primary" />
           <input
             type="text"
             placeholder="Search frontend, ML, DevOps..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+            className="w-full pl-11 pr-4 py-3 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all placeholder:text-muted-foreground/60"
           />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-md hover:bg-muted transition-colors"
+            >
+              <X className="w-4 h-4 text-muted-foreground" />
+            </button>
+          )}
         </div>
         <div className="flex gap-2">
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as SortOption)}
-            className="px-3 py-2.5 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-          >
-            {sortOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
+          <div className="relative">
+            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as SortOption)}
+              className="pl-10 pr-8 py-3 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer"
+            >
+              {sortOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
           <Button
-            variant="outline"
-            className="gap-2"
+            variant={showFilters ? 'default' : 'outline'}
+            className="gap-2 h-[46px]"
             onClick={() => setShowFilters(!showFilters)}
           >
             <Filter className="w-4 h-4" />
             <span className="hidden sm:inline">Filters</span>
             {activeFilterCount > 0 && (
-              <Badge variant="secondary" className="ml-1">
+              <Badge variant={showFilters ? 'secondary' : 'default'} className="ml-1 h-5 px-1.5 min-w-[20px]">
                 {activeFilterCount}
               </Badge>
             )}
@@ -220,88 +236,100 @@ function BrowseContent() {
       {/* Filter Panel */}
       {showFilters && (
         <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          className="mb-6 p-4 rounded-xl border bg-card"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-6 p-5 rounded-2xl border bg-card shadow-sm"
         >
           <div className="grid gap-6 md:grid-cols-3">
             {/* Category Filter */}
             <div>
-              <h3 className="font-medium mb-3">Category</h3>
+              <h3 className="font-medium mb-3 text-sm text-muted-foreground uppercase tracking-wide">Category</h3>
               <div className="flex flex-wrap gap-2">
-                {categories.map((cat) => (
-                  <button
-                    key={cat.category}
-                    onClick={() =>
-                      setFilters({
-                        ...filters,
-                        category:
-                          filters.category === cat.category
-                            ? undefined
-                            : cat.category,
-                      })
-                    }
-                    className={`px-3 py-1.5 rounded-lg text-sm transition-colors ${
-                      filters.category === cat.category
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted hover:bg-muted/80'
-                    }`}
-                  >
-                    {cat.label} ({cat.count})
-                  </button>
-                ))}
+                {categories.map((cat) => {
+                  const isActive = filters.category === cat.category
+                  return (
+                    <motion.button
+                      key={cat.category}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() =>
+                        setFilters({
+                          ...filters,
+                          category: isActive ? undefined : cat.category,
+                        })
+                      }
+                      className={`px-3 py-1.5 rounded-lg text-sm transition-all ${
+                        isActive
+                          ? 'bg-primary text-primary-foreground shadow-sm'
+                          : 'bg-muted hover:bg-muted/80'
+                      }`}
+                    >
+                      {cat.label} ({cat.count})
+                    </motion.button>
+                  )
+                })}
               </div>
             </div>
 
             {/* Difficulty Filter */}
             <div>
-              <h3 className="font-medium mb-3">Difficulty</h3>
+              <h3 className="font-medium mb-3 text-sm text-muted-foreground uppercase tracking-wide">Difficulty</h3>
               <div className="flex flex-wrap gap-2">
-                {difficulties.map((diff) => (
-                  <button
-                    key={diff}
-                    onClick={() =>
-                      setFilters({
-                        ...filters,
-                        difficulty: filters.difficulty === diff ? undefined : diff,
-                      })
-                    }
-                    className={`px-3 py-1.5 rounded-lg text-sm transition-colors ${
-                      filters.difficulty === diff
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted hover:bg-muted/80'
-                    }`}
-                  >
-                    {diff}
-                  </button>
-                ))}
+                {difficulties.map((diff) => {
+                  const isActive = filters.difficulty === diff
+                  return (
+                    <motion.button
+                      key={diff}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() =>
+                        setFilters({
+                          ...filters,
+                          difficulty: isActive ? undefined : diff,
+                        })
+                      }
+                      className={`px-3 py-1.5 rounded-lg text-sm transition-all ${
+                        isActive
+                          ? 'bg-primary text-primary-foreground shadow-sm'
+                          : 'bg-muted hover:bg-muted/80'
+                      }`}
+                    >
+                      {diff}
+                    </motion.button>
+                  )
+                })}
               </div>
             </div>
 
             {/* Stress Level Filter */}
             <div>
-              <h3 className="font-medium mb-3">Stress Level</h3>
+              <h3 className="font-medium mb-3 text-sm text-muted-foreground uppercase tracking-wide">Stress Level</h3>
               <div className="flex flex-wrap gap-2">
-                {stressLevels.map((stress) => (
-                  <button
-                    key={stress}
-                    onClick={() =>
-                      setFilters({
-                        ...filters,
-                        stressLevel:
-                          filters.stressLevel === stress ? undefined : stress,
-                      })
-                    }
-                    className={`px-3 py-1.5 rounded-lg text-sm transition-colors ${
-                      filters.stressLevel === stress
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-muted hover:bg-muted/80'
-                    }`}
-                  >
-                    {stress}
-                  </button>
-                ))}
+                {stressLevels.map((stress) => {
+                  const isActive = filters.stressLevel === stress
+                  return (
+                    <motion.button
+                      key={stress}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() =>
+                        setFilters({
+                          ...filters,
+                          stressLevel: isActive ? undefined : stress,
+                        })
+                      }
+                      className={`px-3 py-1.5 rounded-lg text-sm transition-all ${
+                        isActive
+                          ? 'bg-primary text-primary-foreground shadow-sm'
+                          : 'bg-muted hover:bg-muted/80'
+                      }`}
+                    >
+                      {stress}
+                    </motion.button>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -309,42 +337,39 @@ function BrowseContent() {
       )}
 
       {/* Results Count */}
-      <div className="mb-4 text-sm text-muted-foreground">
-        Showing {filteredRoles.length} roles
+      <div className="mb-6 text-sm text-muted-foreground">
+        Showing <span className="font-medium text-foreground">{filteredRoles.length}</span> roles
+        {(searchQuery || activeFilterCount > 0) && ' matching your criteria'}
       </div>
 
       {/* Role Grid */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
-      >
-        {filteredRoles.map((role, index) => (
-          <motion.div
-            key={role.roleId}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.03 }}
-          >
-            <RoleCard role={role} />
-          </motion.div>
-        ))}
-      </motion.div>
+      {filteredRoles.length > 0 && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+          {filteredRoles.map((role, index) => (
+            <RoleCard key={role.roleId} role={role} index={index} />
+          ))}
+        </div>
+      )}
 
       {/* Empty State */}
       {filteredRoles.length === 0 && (
-        <div className="text-center py-16">
-          <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-2xl bg-muted">
-            <SearchX className="w-8 h-8 text-muted-foreground" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center py-20"
+        >
+          <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 rounded-2xl bg-muted/50">
+            <SearchX className="w-10 h-10 text-muted-foreground" />
           </div>
-          <h3 className="text-lg font-medium mb-2">No roles found</h3>
-          <p className="text-muted-foreground mb-4">
-            Try adjusting your filters or search query
+          <h3 className="text-xl font-semibold mb-2">No roles found</h3>
+          <p className="text-muted-foreground mb-6 max-w-sm mx-auto">
+            We couldn't find any careers matching your criteria. Try adjusting your filters or search query.
           </p>
-          <Button variant="outline" onClick={clearFilters}>
-            Clear filters
+          <Button variant="outline" onClick={clearFilters} className="gap-2">
+            <X className="w-4 h-4" />
+            Clear all filters
           </Button>
-        </div>
+        </motion.div>
       )}
     </div>
   )

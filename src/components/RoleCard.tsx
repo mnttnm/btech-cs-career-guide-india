@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Heart, GitCompare, ArrowRight, Clock, TrendingUp } from 'lucide-react'
+import { Heart, GitCompare, ArrowRight, Clock, TrendingUp, Check } from 'lucide-react'
 import { RoleSummary } from '@/types/role'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -14,9 +14,24 @@ import { getRoleIcon, difficultyColors, stressColors } from '@/lib/icons'
 interface RoleCardProps {
   role: RoleSummary
   variant?: 'default' | 'compact'
+  index?: number
 }
 
-export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
+// Animation variants for staggered entrance
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.05,
+      duration: 0.3,
+      ease: [0.16, 1, 0.3, 1] as const
+    }
+  })
+}
+
+export function RoleCard({ role, variant = 'default', index = 0 }: RoleCardProps) {
   const { toggleFavorite, isFavorite } = useFavoritesStore()
   const { addRole, removeRole, isSelected, selectedRoles } = useComparisonStore()
 
@@ -47,20 +62,37 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
     return (
       <Link href={`/role/${role.roleId}`}>
         <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          animate="visible"
+          custom={index}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="flex items-center gap-3 p-3 rounded-xl bg-card border hover:border-primary/50 hover:shadow-md transition-all"
+          className={cn(
+            'relative flex items-center gap-3 p-3 rounded-xl bg-card border transition-all overflow-hidden',
+            'hover:shadow-[var(--shadow-card-hover)]',
+            // Gradient border effect container
+            'before:absolute before:inset-0 before:rounded-xl before:p-[1px]',
+            'before:bg-[var(--gradient-border)] before:opacity-0 before:transition-opacity before:duration-200',
+            'before:-z-10 before:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]',
+            'before:[mask-composite:exclude]',
+            'hover:before:opacity-100 hover:border-transparent'
+          )}
         >
-          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
+          <motion.div
+            className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+          >
             <RoleIcon className="w-5 h-5 text-primary" />
-          </div>
+          </motion.div>
           <div className="flex-1 min-w-0">
             <h3 className="font-medium text-sm truncate">{role.roleName}</h3>
             <p className="text-xs text-muted-foreground">
               ₹{role.averageSalary.min}-{role.averageSalary.max} LPA
             </p>
           </div>
-          <ArrowRight className="w-4 h-4 text-muted-foreground" />
+          <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
         </motion.div>
       </Link>
     )
@@ -69,30 +101,65 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
   return (
     <Link href={`/role/${role.roleId}`}>
       <motion.div
-        whileHover={{ y: -4 }}
+        variants={cardVariants}
+        initial="hidden"
+        animate="visible"
+        custom={index}
+        whileHover={{ y: -6 }}
         whileTap={{ scale: 0.98 }}
+        transition={{ type: 'spring', stiffness: 400, damping: 25 }}
         className={cn(
-          'group relative flex flex-col h-full p-4 rounded-2xl bg-card border transition-all duration-200',
-          'hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5',
-          isRoleSelected && 'border-blue-500 bg-blue-50/50 dark:bg-blue-950/20'
+          'group relative flex flex-col h-full p-5 rounded-2xl bg-card border overflow-hidden',
+          'shadow-[var(--shadow-card)] transition-all duration-300',
+          'hover:shadow-[var(--shadow-card-hover)]',
+          // Gradient border effect
+          'before:absolute before:inset-0 before:rounded-2xl before:p-[1.5px]',
+          'before:bg-[var(--gradient-border)] before:opacity-0 before:transition-opacity before:duration-300',
+          'before:-z-10 before:[mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)]',
+          'before:[mask-composite:exclude]',
+          'hover:before:opacity-100 hover:border-transparent',
+          // Glassmorphic hover glow
+          'after:absolute after:inset-0 after:rounded-2xl after:opacity-0 after:transition-opacity after:duration-300',
+          'after:bg-[radial-gradient(circle_at_50%_0%,var(--brand-subtle),transparent_70%)]',
+          'hover:after:opacity-100',
+          // Selected state
+          isRoleSelected && 'border-primary ring-2 ring-primary/20 before:opacity-100 before:border-transparent'
         )}
       >
+        {/* Selection indicator */}
+        {isRoleSelected && (
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="absolute top-3 left-3 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10"
+          >
+            <Check className="w-3.5 h-3.5 text-primary-foreground" />
+          </motion.div>
+        )}
+
         {/* Icon and Actions */}
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
+        <div className="relative z-10 flex items-start justify-between mb-4">
+          <motion.div
+            className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 group-hover:bg-primary/15 transition-colors"
+            whileHover={{ scale: 1.1, rotate: 3 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+          >
             <RoleIcon className="w-6 h-6 text-primary" />
-          </div>
-          <div className="flex gap-1">
+          </motion.div>
+          <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             <Button
               variant="ghost"
               size="icon"
-              className="h-8 w-8 rounded-full"
+              className={cn(
+                'h-8 w-8 rounded-full backdrop-blur-sm',
+                isRoleFavorite ? 'bg-red-50 dark:bg-red-950/50' : 'bg-background/80'
+              )}
               onClick={handleToggleFavorite}
             >
               <Heart
                 className={cn(
-                  'w-4 h-4 transition-colors',
-                  isRoleFavorite ? 'fill-red-500 text-red-500' : 'text-muted-foreground'
+                  'w-4 h-4 transition-all',
+                  isRoleFavorite ? 'fill-red-500 text-red-500 scale-110' : 'text-muted-foreground hover:text-red-400'
                 )}
               />
             </Button>
@@ -100,16 +167,16 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
               variant="ghost"
               size="icon"
               className={cn(
-                'h-8 w-8 rounded-full',
-                isRoleSelected && 'bg-blue-100 dark:bg-blue-900'
+                'h-8 w-8 rounded-full backdrop-blur-sm',
+                isRoleSelected ? 'bg-primary/10' : 'bg-background/80'
               )}
               onClick={handleToggleCompare}
               disabled={!canAddToCompare && !isRoleSelected}
             >
               <GitCompare
                 className={cn(
-                  'w-4 h-4 transition-colors',
-                  isRoleSelected ? 'text-blue-600' : 'text-muted-foreground'
+                  'w-4 h-4 transition-all',
+                  isRoleSelected ? 'text-primary scale-110' : 'text-muted-foreground hover:text-primary'
                 )}
               />
             </Button>
@@ -117,20 +184,22 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
         </div>
 
         {/* Role Name */}
-        <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-colors">
+        <h3 className="relative z-10 font-semibold text-lg mb-1.5 group-hover:text-primary transition-colors duration-200">
           {role.roleName}
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-muted-foreground mb-4 line-clamp-2 flex-1">
+        <p className="relative z-10 text-sm text-muted-foreground mb-4 line-clamp-2 flex-1">
           {role.description}
         </p>
 
         {/* Stats */}
-        <div className="space-y-3">
+        <div className="relative z-10 space-y-3">
           {/* Salary */}
           <div className="flex items-center gap-2">
-            <TrendingUp className="w-4 h-4 text-success" />
+            <div className="flex items-center justify-center w-6 h-6 rounded-md bg-success/10">
+              <TrendingUp className="w-3.5 h-3.5 text-success" />
+            </div>
             <span className="text-sm font-medium">
               ₹{role.averageSalary.min}-{role.averageSalary.max} LPA
             </span>
@@ -139,18 +208,20 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
 
           {/* Time to Job Ready */}
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-primary" />
+            <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10">
+              <Clock className="w-3.5 h-3.5 text-primary" />
+            </div>
             <span className="text-sm text-muted-foreground">
               {role.timeToJobReady} to job-ready
             </span>
           </div>
 
           {/* Badges */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 pt-1">
             <Badge
               variant="secondary"
               className={cn(
-                'text-xs',
+                'text-xs font-medium transition-transform hover:scale-105',
                 difficultyColors[role.difficulty]?.bg,
                 difficultyColors[role.difficulty]?.text
               )}
@@ -160,7 +231,7 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
             <Badge
               variant="secondary"
               className={cn(
-                'text-xs',
+                'text-xs font-medium transition-transform hover:scale-105',
                 stressColors[role.stressLevel]?.bg,
                 stressColors[role.stressLevel]?.text
               )}
@@ -171,9 +242,16 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
         </div>
 
         {/* Arrow indicator */}
-        <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-          <ArrowRight className="w-5 h-5 text-primary" />
-        </div>
+        <motion.div
+          className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          initial={false}
+          animate={{ x: 0 }}
+          whileHover={{ x: 4 }}
+        >
+          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10">
+            <ArrowRight className="w-4 h-4 text-primary" />
+          </div>
+        </motion.div>
       </motion.div>
     </Link>
   )
