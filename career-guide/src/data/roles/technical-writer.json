@@ -1,0 +1,328 @@
+{
+  "roleId": "technical-writer",
+  "roleName": "Technical Writer",
+  "description": "Creates clear, comprehensive documentation for technical products, bridging the gap between complex concepts and users.",
+  "jobTitles": {
+    "fresher": [
+      "Junior Technical Writer",
+      "Associate Technical Writer",
+      "Documentation Intern",
+      "Technical Content Writer"
+    ],
+    "experienced": [
+      "Senior Technical Writer",
+      "Documentation Lead",
+      "Information Architect",
+      "Documentation Manager",
+      "Principal Technical Writer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "HTML/CSS",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Information Architecture",
+      "SDLC",
+      "API Documentation",
+      "Docs-as-Code",
+      "User Experience (Docs)"
+    ],
+    "frameworks": [
+      {
+        "name": "Markdown",
+        "popularity": "High"
+      },
+      {
+        "name": "DITA",
+        "popularity": "Low"
+      }
+    ],
+    "tools": [
+      "Git/GitHub",
+      "VS Code",
+      "Swagger/OpenAPI",
+      "Postman",
+      "Docusaurus/GitBook",
+      "Jira/Confluence"
+    ]
+  },
+  "dailyWork": [
+    "Writing documentation",
+    "Testing APIs",
+    "Collaborating with engineers",
+    "Reviewing PRs",
+    "Updating guides"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Technical Writer",
+        "salary": {
+          "min": 3,
+          "max": 6,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Technical Writer",
+        "salary": {
+          "min": 6,
+          "max": 10,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Technical Writer",
+        "salary": {
+          "min": 10,
+          "max": 18,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Documentation Manager",
+        "Director of Documentation"
+      ],
+      "individualContributor": [
+        "Principal Writer",
+        "Information Architect"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Developer Advocate",
+      "UX Writer",
+      "Product Manager",
+      "Content Strategist"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3,
+        "max": 4.5
+      },
+      "productBased": {
+        "min": 5,
+        "max": 8
+      },
+      "topTech": {
+        "min": 7,
+        "max": 10
+      },
+      "average": {
+        "min": 4,
+        "max": 6
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 5,
+        "max": 8
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 8,
+        "max": 12
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 12,
+        "max": 20
+      },
+      "senior": {
+        "min": 18,
+        "max": 28
+      },
+      "topCompanies": {
+        "min": 25,
+        "max": 35
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "name": "GitLab",
+        "range": {
+          "min": 15,
+          "max": 20
+        }
+      },
+      {
+        "name": "Stripe",
+        "range": {
+          "min": 15,
+          "max": 25
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Easy",
+    "timeToJobReady": "3-6 months",
+    "description": "Easier than software engineering; focuses on writing and explanation skills."
+  },
+  "stressLevel": {
+    "level": "Low",
+    "factors": [
+      "Deadlines",
+      "Accuracy",
+      "Information Retrieval"
+    ],
+    "mitigatingFactors": [
+      "No On-Call",
+      "Predictable Hours",
+      "Flexible Work"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Enjoy Writing",
+      "Detail-Oriented",
+      "Curious",
+      "Empathetic",
+      "Organized"
+    ],
+    "avoidIf": [
+      "Hate Writing",
+      "Need Adrenaline",
+      "Dislike Tech Concepts"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Writing skills",
+        "Basic Python",
+        "Git basics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "API concepts",
+        "Markdown",
+        "Static Site Generators",
+        "Portfolio"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Open Source Contributions",
+        "Docs-as-Code",
+        "Internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Portfolio Polish",
+        "Google Tech Writing Course",
+        "Apply"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "API Documentation",
+        "goal": "Document a REST API"
+      },
+      {
+        "skill": "Markdown/Git",
+        "goal": "Proficiency in docs-as-code"
+      },
+      {
+        "skill": "Portfolio Website",
+        "goal": "Showcase writing samples"
+      },
+      {
+        "skill": "Writing Samples",
+        "goal": "Tutorials, guides, references"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Company Career Pages",
+        "approach": "Direct application"
+      },
+      {
+        "channel": "LinkedIn",
+        "approach": "Networking with writers"
+      },
+      {
+        "channel": "Write the Docs",
+        "approach": "Community job board"
+      },
+      {
+        "channel": "Remote Boards",
+        "approach": "Global opportunities"
+      }
+    ],
+    "interviewPrep": [
+      "Portfolio Review",
+      "Writing Assignment",
+      "Technical Concepts",
+      "Collaboration"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3,
+        "max": 4.5
+      },
+      "midTierProduct": {
+        "min": 5,
+        "max": 8
+      },
+      "topProduct": {
+        "min": 8,
+        "max": 12
+      },
+      "gcc": "6-9 LPA"
+    },
+    "differentiators": [
+      "Strong Portfolio",
+      "Open Source Docs",
+      "Technical Background"
+    ]
+  }
+}

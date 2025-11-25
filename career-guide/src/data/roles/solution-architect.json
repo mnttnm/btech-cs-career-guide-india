@@ -1,0 +1,327 @@
+{
+  "roleId": "solution-architect",
+  "roleName": "Solution Architect",
+  "description": "Designs comprehensive technology solutions to solve specific business problems, creating blueprints for systems ensuring scalability and technical requirements are met.",
+  "jobTitles": {
+    "fresher": [
+      "Software Engineer",
+      "Junior Developer"
+    ],
+    "experienced": [
+      "Solution Architect",
+      "Technical Architect",
+      "Application Architect",
+      "Senior Solutions Architect",
+      "Cloud Solution Architect"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Java",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C#/.NET",
+        "level": "Advanced",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Distributed Systems Design",
+      "Microservices Architecture",
+      "API Design Patterns",
+      "Database Architecture (SQL/NoSQL)",
+      "Caching Strategies",
+      "Event-Driven Architecture",
+      "Security & Compliance",
+      "Performance Optimization"
+    ],
+    "frameworks": [
+      {
+        "name": "Spring Boot",
+        "popularity": "High"
+      },
+      {
+        "name": "React/Angular",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "AWS",
+      "Azure",
+      "Docker",
+      "Kubernetes",
+      "Kafka",
+      "Terraform",
+      "Draw.io/Lucidchart"
+    ]
+  },
+  "dailyWork": [
+    "Designing detailed architecture diagrams and documenting decisions",
+    "Reviewing code and architecture for compliance",
+    "Mentoring senior developers and tech leads",
+    "Evaluating vendors and new technologies",
+    "Conducting architecture review board meetings",
+    "Translating business requirements into technical solutions"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "5-7 (Total Exp)",
+        "title": "Junior Solution Architect",
+        "salary": {
+          "min": 18,
+          "max": 30,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "7-10 (Total Exp)",
+        "title": "Solution Architect",
+        "salary": {
+          "min": 30,
+          "max": 50,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "10-12 (Total Exp)",
+        "title": "Senior Solution Architect",
+        "salary": {
+          "min": 50,
+          "max": 70,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Principal Architect",
+        "Chief Architect",
+        "CTO"
+      ],
+      "individualContributor": [
+        "Senior Solution Architect",
+        "Enterprise Architect"
+      ]
+    },
+    "timelineToSenior": "10-12 years (Total Exp)",
+    "alternativePaths": [
+      "Enterprise Architect",
+      "Engineering Manager",
+      "Product Manager",
+      "CTO"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 30,
+        "max": 50
+      },
+      "senior": {
+        "min": 50,
+        "max": 70
+      },
+      "topCompanies": {
+        "min": 80,
+        "max": 150
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 50,
+          "max": 90
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 45,
+          "max": 80
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 40,
+          "max": 65
+        }
+      },
+      {
+        "name": "Microsoft",
+        "range": {
+          "min": 50,
+          "max": 85
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "5-8 years (Experience Required)",
+    "description": "Requires deep technical expertise across multiple domains, which can only be gained through years of hands-on development and design experience. Not an entry-level role."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "Responsibility for critical architectural decisions",
+      "Managing multiple stakeholders",
+      "Keeping up with rapid technology changes",
+      "Impact of mistakes on entire projects"
+    ],
+    "mitigatingFactors": [
+      "High autonomy and influence",
+      "Intellectual satisfaction",
+      "High compensation"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You love learning new technologies",
+      "You enjoy complex problem solving",
+      "You are a strong communicator",
+      "You can think strategically",
+      "You enjoy mentoring others"
+    ],
+    "avoidIf": [
+      "You prefer coding all day",
+      "You dislike meetings and documentation",
+      "You struggle with ambiguity",
+      "You are risk-averse"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master a programming language",
+        "Learn CS fundamentals (OS, DBMS, Networks)",
+        "Ask 'Why' about design choices"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Learn full-stack development",
+        "Understand API design and databases",
+        "Read architecture blogs"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Learn cloud basics (AWS/Azure)",
+        "Understand distributed systems concepts",
+        "Internship at product company"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Master System Design interviews",
+        "Build production-grade projects",
+        "Target companies with strong engineering culture"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Software Engineering",
+        "goal": "Become an excellent developer first"
+      },
+      {
+        "skill": "System Design",
+        "goal": "Understand scalability and trade-offs"
+      },
+      {
+        "skill": "Cloud",
+        "goal": "Gain hands-on experience with AWS/Azure"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Software Engineer Roles",
+        "approach": "Target roles that offer growth into architecture"
+      },
+      {
+        "channel": "Internal Growth",
+        "approach": "Move from Dev -> Tech Lead -> Architect"
+      }
+    ],
+    "interviewPrep": [
+      "System Design Interviews",
+      "Coding (DSA)",
+      "Behavioral Questions"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": "0"
+    },
+    "differentiators": [
+      "Deep understanding of distributed systems",
+      "Cloud certifications (AWS Solutions Architect)",
+      "Experience with high-scale systems"
+    ]
+  }
+}

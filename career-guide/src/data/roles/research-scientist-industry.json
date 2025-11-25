@@ -1,0 +1,322 @@
+{
+  "roleId": "research-scientist-industry",
+  "roleName": "Research Scientist (Industry)",
+  "description": "Conducts advanced research to solve complex problems, advancing the state-of-the-art in AI, systems, or other fields within a corporate setting.",
+  "jobTitles": {
+    "fresher": [
+      "Research Scientist",
+      "Research Engineer",
+      "Applied Scientist",
+      "Research Associate"
+    ],
+    "experienced": [
+      "Senior Research Scientist",
+      "Principal Research Scientist",
+      "Staff Research Scientist",
+      "Distinguished Scientist"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C++/CUDA",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Machine Learning/AI",
+      "Mathematical Foundations",
+      "Research Methodology",
+      "Experimental Design",
+      "Scientific Writing"
+    ],
+    "frameworks": [
+      {
+        "name": "PyTorch",
+        "popularity": "High"
+      },
+      {
+        "name": "TensorFlow",
+        "popularity": "Medium"
+      },
+      {
+        "name": "JAX",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Jupyter",
+      "arXiv",
+      "LaTeX",
+      "Cloud Computing (AWS/GCP)",
+      "Git"
+    ]
+  },
+  "dailyWork": [
+    "Reading papers",
+    "Designing experiments",
+    "Writing code",
+    "Analyzing results",
+    "Writing papers"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Research Scientist",
+        "salary": {
+          "min": 15,
+          "max": 30,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-6",
+        "title": "Senior Research Scientist",
+        "salary": {
+          "min": 30,
+          "max": 50,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "7-10",
+        "title": "Principal Research Scientist",
+        "salary": {
+          "min": 50,
+          "max": 80,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Research Manager",
+        "Director of Research"
+      ],
+      "individualContributor": [
+        "Distinguished Scientist",
+        "Research Fellow"
+      ]
+    },
+    "timelineToSenior": "5-8 years",
+    "alternativePaths": [
+      "Academia",
+      "Applied ML Engineer",
+      "Startup Founder",
+      "Technical Leadership"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 15,
+        "max": 25
+      },
+      "productBased": {
+        "min": 20,
+        "max": 35
+      },
+      "topTech": {
+        "min": 25,
+        "max": 40
+      },
+      "average": {
+        "min": 18,
+        "max": 30
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 25,
+        "max": 35
+      },
+      "productBased": {
+        "min": 35,
+        "max": 55
+      },
+      "average": {
+        "min": 30,
+        "max": 50
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 40,
+        "max": 60
+      },
+      "senior": {
+        "min": 50,
+        "max": 80
+      },
+      "topCompanies": {
+        "min": 70,
+        "max": 100
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google Research",
+        "range": {
+          "min": 20,
+          "max": 35
+        }
+      },
+      {
+        "name": "Microsoft Research",
+        "range": {
+          "min": 18,
+          "max": 30
+        }
+      },
+      {
+        "name": "Adobe Research",
+        "range": {
+          "min": 18,
+          "max": 28
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "4-6 years (PhD)",
+    "description": "Requires PhD; very high entry barrier; deep specialization needed."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Publication Pressure",
+      "Experiment Failures",
+      "Staying Current",
+      "Competition"
+    ],
+    "mitigatingFactors": [
+      "Autonomy",
+      "Intellectual Freedom",
+      "Flexible Hours",
+      "High Pay"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Curious",
+      "Patient",
+      "Mathematical",
+      "Self-Motivated",
+      "Resilient"
+    ],
+    "avoidIf": [
+      "Need Immediate Results",
+      "Dislike Reading",
+      "Want Quick Money",
+      "Dislike Theory"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Math excellence",
+        "Core CS",
+        "Explore research areas"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Research Exposure",
+      "goals": [
+        "Research electives",
+        "Mini-projects",
+        "Reading papers"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Research internship",
+        "First paper",
+        "GRE/TOEFL"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "PhD Prep",
+      "goals": [
+        "Apply for PhD",
+        "Publish papers",
+        "Senior thesis"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "PhD",
+        "goal": "Complete doctoral research"
+      },
+      {
+        "skill": "Publications",
+        "goal": "Publish in top-tier conferences"
+      },
+      {
+        "skill": "Research Talk",
+        "goal": "Prepare compelling presentation"
+      },
+      {
+        "skill": "Coding Interview",
+        "goal": "Practice algorithm problems"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Referrals",
+        "approach": "Leverage advisor network"
+      },
+      {
+        "channel": "Lab Websites",
+        "approach": "Direct application"
+      },
+      {
+        "channel": "Conferences",
+        "approach": "Networking"
+      }
+    ],
+    "interviewPrep": [
+      "Research Presentation",
+      "Technical Deep Dive",
+      "Vision Discussion"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 15,
+        "max": 25
+      },
+      "midTierProduct": {
+        "min": 20,
+        "max": 35
+      },
+      "topProduct": {
+        "min": 25,
+        "max": 40
+      },
+      "gcc": "18-30 LPA"
+    },
+    "differentiators": [
+      "Top-tier Publications",
+      "Strong Recommendations",
+      "Niche Expertise"
+    ]
+  }
+}

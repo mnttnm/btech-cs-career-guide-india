@@ -1,0 +1,352 @@
+{
+  "roleId": "business-analyst-technical",
+  "roleName": "Business Analyst (Technical)",
+  "description": "Bridges the gap between business needs and technical solutions by gathering requirements, analyzing processes, and facilitating communication.",
+  "jobTitles": {
+    "fresher": [
+      "Junior Business Analyst",
+      "Associate Business Analyst",
+      "Technical Business Analyst",
+      "Business Systems Analyst",
+      "Data Analyst"
+    ],
+    "experienced": [
+      "Senior Business Analyst",
+      "Lead Business Analyst",
+      "Product Manager",
+      "Business Architect",
+      "Functional Consultant"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "SQL",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "R",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Requirements Engineering",
+      "SDLC",
+      "Agile/Scrum",
+      "Business Process Modeling",
+      "Data Analysis",
+      "UAT",
+      "Stakeholder Management"
+    ],
+    "frameworks": [
+      {
+        "name": "Scrum",
+        "popularity": "High"
+      },
+      {
+        "name": "Kanban",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Waterfall",
+        "popularity": "Low"
+      }
+    ],
+    "tools": [
+      "Jira",
+      "Confluence",
+      "Excel",
+      "Power BI",
+      "Tableau",
+      "Visio",
+      "Lucidchart",
+      "Draw.io",
+      "SQL Server"
+    ]
+  },
+  "dailyWork": [
+    "Requirements gathering",
+    "Documentation (BRD/FRD)",
+    "Stakeholder meetings",
+    "Data analysis",
+    "UAT coordination",
+    "Backlog grooming",
+    "Process mapping"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Business Analyst",
+        "salary": {
+          "min": 3.5,
+          "max": 6,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Business Analyst",
+        "salary": {
+          "min": 6,
+          "max": 10,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Business Analyst",
+        "salary": {
+          "min": 10,
+          "max": 16,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Lead Business Analyst",
+        "Business Analyst Manager",
+        "Director of Business Analysis"
+      ],
+      "individualContributor": [
+        "Senior Business Analyst",
+        "Principal Business Analyst",
+        "Domain Expert"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Product Management",
+      "Project Management",
+      "Data Analytics",
+      "Management Consulting"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3.5,
+        "max": 5
+      },
+      "productBased": {
+        "min": 6,
+        "max": 10
+      },
+      "topTech": {
+        "min": 8,
+        "max": 12
+      },
+      "average": {
+        "min": 4,
+        "max": 7
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 6,
+        "max": 9
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 8,
+        "max": 12
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 12,
+        "max": 18
+      },
+      "senior": {
+        "min": 18,
+        "max": 25
+      },
+      "topCompanies": {
+        "min": 25,
+        "max": 40
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 8,
+          "max": 12
+        }
+      },
+      {
+        "name": "McKinsey",
+        "range": {
+          "min": 10,
+          "max": 15
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 8,
+          "max": 12
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "3-6 months",
+    "description": "Accessible for CS grads; focuses on SQL, Excel, and soft skills rather than deep coding."
+  },
+  "stressLevel": {
+    "level": "Low",
+    "factors": [
+      "Stakeholder Management",
+      "Scope Creep",
+      "Documentation Pressure",
+      "Communication Burden"
+    ],
+    "mitigatingFactors": [
+      "No on-call",
+      "No coding deadlines",
+      "Flexible work-life balance"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Communication-Oriented",
+      "Analytical Mindset",
+      "Mediator Personality",
+      "Structured",
+      "Curious"
+    ],
+    "avoidIf": [
+      "Introvert",
+      "Want Pure Technical Work",
+      "Can't Handle Politics",
+      "Need Immediate Results"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn SQL thoroughly",
+        "Master Excel",
+        "Learn basic Python",
+        "Develop communication skills"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Advanced SQL",
+        "Learn Power BI or Tableau",
+        "Understand Agile methodology",
+        "Read business books/news"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Focus on a domain (BFSI/Healthcare)",
+        "ECBA Certification (Optional)",
+        "Internships",
+        "Practice soft skills"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Polish SQL skills",
+        "Create BA portfolio",
+        "Mock interviews",
+        "Apply to jobs"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "SQL Mastery",
+        "goal": "Practice joins, subqueries, aggregations"
+      },
+      {
+        "skill": "Excel Advanced",
+        "goal": "Pivot tables, VLOOKUP, charts"
+      },
+      {
+        "skill": "Power BI/Tableau",
+        "goal": "Create portfolio dashboards"
+      },
+      {
+        "skill": "Documentation",
+        "goal": "Create sample BRD/FRD"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Campus Placements",
+        "approach": "Apply for Analyst roles"
+      },
+      {
+        "channel": "LinkedIn",
+        "approach": "Connect with recruiters/seniors"
+      },
+      {
+        "channel": "Job Portals",
+        "approach": "Search for Junior BA roles"
+      },
+      {
+        "channel": "Referrals",
+        "approach": "Leverage alumni network"
+      },
+      {
+        "channel": "Off-Campus Drives",
+        "approach": "Register on company career pages"
+      }
+    ],
+    "interviewPrep": [
+      "Aptitude & SQL Test",
+      "Technical Interview (SQL, SDLC)",
+      "Case Study / Problem Solving",
+      "HR / Managerial"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3.5,
+        "max": 5
+      },
+      "midTierProduct": {
+        "min": 6,
+        "max": 9
+      },
+      "topProduct": {
+        "min": 8,
+        "max": 12
+      },
+      "gcc": "5-8 LPA"
+    },
+    "differentiators": [
+      "Domain Certifications",
+      "Strong Portfolio",
+      "Communication Skills",
+      "Data Analysis Projects"
+    ]
+  }
+}

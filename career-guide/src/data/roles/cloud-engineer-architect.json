@@ -1,0 +1,372 @@
+{
+  "roleId": "cloud-engineer-architect",
+  "roleName": "Cloud Engineer / Architect",
+  "description": "A dual-path role: Cloud Engineers implement and manage infrastructure, while Cloud Architects design high-level solutions and strategy for cloud adoption.",
+  "jobTitles": {
+    "fresher": [
+      "Cloud Engineer",
+      "Junior Cloud Engineer",
+      "Cloud Infrastructure Engineer",
+      "Cloud Support Engineer",
+      "Associate Cloud Consultant"
+    ],
+    "experienced": [
+      "Senior Cloud Engineer",
+      "Cloud Architect",
+      "Solutions Architect",
+      "Principal Cloud Architect",
+      "Enterprise Cloud Architect"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Bash/Shell",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "PowerShell",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Cloud Computing Models (IaaS, PaaS, SaaS)",
+      "Virtual Private Cloud (VPC) Networking",
+      "Identity and Access Management (IAM)",
+      "High Availability & Disaster Recovery",
+      "Storage Services (Object, Block, File)",
+      "Serverless Computing",
+      "Cost Optimization (FinOps)",
+      "Security Best Practices"
+    ],
+    "frameworks": [
+      {
+        "name": "Terraform",
+        "popularity": "High"
+      },
+      {
+        "name": "Docker",
+        "popularity": "High"
+      },
+      {
+        "name": "Kubernetes",
+        "popularity": "Medium"
+      },
+      {
+        "name": "CloudFormation",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "AWS (EC2, S3, RDS, Lambda)",
+      "Azure (VMs, AKS, Active Directory)",
+      "GCP (Compute Engine, GKE)",
+      "Git",
+      "Ansible",
+      "CloudWatch/Azure Monitor",
+      "Datadog"
+    ]
+  },
+  "dailyWork": [
+    "Provisioning cloud resources using Infrastructure as Code",
+    "Designing secure and scalable cloud architectures",
+    "Implementing security policies and IAM roles",
+    "Migrating on-premise applications to the cloud",
+    "Optimizing cloud costs and resource usage",
+    "Troubleshooting infrastructure connectivity issues",
+    "Creating architecture diagrams and documentation",
+    "Collaborating with development teams on requirements"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Cloud Engineer",
+        "salary": {
+          "min": 4,
+          "max": 8,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Cloud Engineer",
+        "salary": {
+          "min": 8,
+          "max": 15,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "5-7",
+        "title": "Solutions Architect",
+        "salary": {
+          "min": 20,
+          "max": 30,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Lead Cloud Engineer",
+        "Cloud Practice Head",
+        "Director of Cloud Strategy",
+        "CTO"
+      ],
+      "individualContributor": [
+        "Senior Cloud Engineer",
+        "Cloud Architect",
+        "Principal Cloud Architect",
+        "Enterprise Architect",
+        "Cloud Security Specialist"
+      ]
+    },
+    "timelineToSenior": "5-8 years",
+    "alternativePaths": [
+      "DevOps Engineer",
+      "Site Reliability Engineer",
+      "Cloud Security Engineer",
+      "FinOps Engineer",
+      "Platform Engineer"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 4,
+        "max": 6
+      },
+      "productBased": {
+        "min": 8,
+        "max": 12
+      },
+      "topTech": {
+        "min": 12,
+        "max": 18
+      },
+      "average": {
+        "min": 5,
+        "max": 9
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 8,
+        "max": 12
+      },
+      "productBased": {
+        "min": 12,
+        "max": 18
+      },
+      "average": {
+        "min": 10,
+        "max": 16
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 18,
+        "max": 30
+      },
+      "senior": {
+        "min": 30,
+        "max": 50
+      },
+      "topCompanies": {
+        "min": 50,
+        "max": 80
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Amazon Web Services (AWS)",
+        "range": {
+          "min": 15,
+          "max": 25
+        }
+      },
+      {
+        "name": "Google Cloud",
+        "range": {
+          "min": 18,
+          "max": 28
+        }
+      },
+      {
+        "name": "Microsoft",
+        "range": {
+          "min": 16,
+          "max": 24
+        }
+      },
+      {
+        "name": "Goldman Sachs",
+        "range": {
+          "min": 10,
+          "max": 18
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-9 months",
+    "description": "Accessible with structured learning and certifications. The vast number of services can be overwhelming, but focusing on one provider (AWS/Azure) initially helps."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Cloud outages and downtime",
+      "Security misconfigurations",
+      "Unexpected cost overruns",
+      "Migration deadlines",
+      "Constant need to learn new services"
+    ],
+    "mitigatingFactors": [
+      "Predictable work schedule (usually)",
+      "Remote work flexibility",
+      "High job security",
+      "Certifications boost confidence",
+      "Creative architectural problem solving"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You love learning new technologies constantly",
+      "You enjoy designing systems and architecture",
+      "You are detail-oriented regarding security/cost",
+      "You are comfortable with abstraction",
+      "You like explaining technical concepts"
+    ],
+    "avoidIf": [
+      "You prefer pure coding over infrastructure",
+      "You are intimidated by vast service catalogs",
+      "You dislike vendor-specific tools",
+      "You can't handle production responsibility"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn Linux fundamentals",
+        "Understand networking basics (TCP/IP, DNS)",
+        "Create AWS Free Tier account",
+        "Explore basic AWS services (EC2, S3)"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Deep dive into AWS",
+        "Learn Python (boto3)",
+        "Start Docker basics",
+        "Target AWS Cloud Practitioner certification"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Get AWS Solutions Architect Associate certification",
+        "Learn Terraform",
+        "Build 2-3 end-to-end cloud projects",
+        "Secure summer internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Get second cloud certification (Azure/GCP) or Pro level",
+        "Multi-cloud projects",
+        "Build architecture portfolio",
+        "Apply for cloud engineer roles"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Cloud Certification",
+        "goal": "AWS Solutions Architect Associate (Must Have)"
+      },
+      {
+        "skill": "Hands-on Skills",
+        "goal": "VPC, EC2, RDS, IAM, Auto-scaling setup"
+      },
+      {
+        "skill": "Infrastructure as Code",
+        "goal": "Terraform basics"
+      },
+      {
+        "skill": "Projects",
+        "goal": "3-Tier Web App, Serverless App, Migration Case Study"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "LinkedIn",
+        "approach": "Search Junior Cloud Engineer / Associate Consultant"
+      },
+      {
+        "channel": "Naukri.com",
+        "approach": "Filter by 0-1 year + AWS keywords"
+      },
+      {
+        "channel": "Cloud Providers",
+        "approach": "Apply to Support/Associate roles at AWS/Azure"
+      },
+      {
+        "channel": "Consulting Firms",
+        "approach": "Apply to Deloitte, Accenture, etc."
+      },
+      {
+        "channel": "Campus",
+        "approach": "Highlight certifications prominently"
+      }
+    ],
+    "interviewPrep": [
+      "Cloud Fundamentals (EC2, S3, VPC)",
+      "Scenario-based Architecture Design",
+      "Networking & Security Questions",
+      "Cost Optimization Scenarios",
+      "Behavioral (Project experience)"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 4,
+        "max": 6
+      },
+      "midTierProduct": {
+        "min": 8,
+        "max": 12
+      },
+      "topProduct": {
+        "min": 12,
+        "max": 18
+      },
+      "gcc": "10-18 LPA"
+    },
+    "differentiators": [
+      "AWS Solutions Architect Associate Certification",
+      "Terraform knowledge",
+      "Architecture diagrams in portfolio",
+      "Hands-on deployment experience",
+      "Multi-cloud familiarity"
+    ]
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "roleId": "ux-researcher",
+  "roleName": "UX Researcher",
+  "description": "Studies user behavior, needs, and pain points through qualitative and quantitative methods to inform product design and strategy.",
+  "jobTitles": {
+    "fresher": [
+      "Junior UX Researcher",
+      "UX Research Intern",
+      "Research Analyst",
+      "User Research Associate"
+    ],
+    "experienced": [
+      "UX Researcher",
+      "Senior UX Researcher",
+      "Lead UX Researcher",
+      "Research Manager",
+      "Principal Researcher"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "SQL",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Python",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Qualitative Research (Interviews, Ethnography)",
+      "Quantitative Research (Surveys, A/B Testing)",
+      "Usability Testing (Moderated/Unmoderated)",
+      "Data Analysis & Synthesis",
+      "Persona Creation",
+      "Journey Mapping",
+      "Information Architecture",
+      "Research Ethics"
+    ],
+    "frameworks": [
+      {
+        "name": "Design Thinking",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "UserTesting",
+      "Dovetail",
+      "Google Analytics",
+      "Mixpanel",
+      "Figma/Miro",
+      "SurveyMonkey/Typeform",
+      "Hotjar"
+    ]
+  },
+  "dailyWork": [
+    " conducting user interviews and usability tests",
+    "Analyzing qualitative data (transcripts, observations)",
+    "Analyzing quantitative data (survey responses, analytics)",
+    "Synthesizing findings into reports and presentations",
+    "Creating personas, journey maps, and empathy maps",
+    "Collaborating with designers and PMs on product strategy",
+    "Recruiting participants for studies"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior UX Researcher",
+        "salary": {
+          "min": 4,
+          "max": 7,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "UX Researcher",
+        "salary": {
+          "min": 10,
+          "max": 16,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior UX Researcher",
+        "salary": {
+          "min": 16,
+          "max": 25,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Research Manager",
+        "Head of Research",
+        "Research Director",
+        "VP of Research"
+      ],
+      "individualContributor": [
+        "Lead UX Researcher",
+        "Principal Researcher",
+        "UX Research Scientist"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Product Manager",
+      "Data Scientist",
+      "UX Designer",
+      "Design Strategist",
+      "Research Operations"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 4,
+        "max": 6
+      },
+      "productBased": {
+        "min": 6,
+        "max": 10
+      },
+      "topTech": {
+        "min": 8,
+        "max": 12
+      },
+      "average": {
+        "min": 5,
+        "max": 8
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 8,
+        "max": 12
+      },
+      "productBased": {
+        "min": 12,
+        "max": 18
+      },
+      "average": {
+        "min": 10,
+        "max": 15
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 12,
+        "max": 18
+      },
+      "senior": {
+        "min": 18,
+        "max": 28
+      },
+      "topCompanies": {
+        "min": 28,
+        "max": 45
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 18,
+          "max": 30
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 14,
+          "max": 22
+        }
+      },
+      {
+        "name": "CRED",
+        "range": {
+          "min": 16,
+          "max": 24
+        }
+      },
+      {
+        "name": "Microsoft",
+        "range": {
+          "min": 16,
+          "max": 26
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "Requires developing empathy, interview skills, and analytical thinking. Less fresher-friendly than design, often requires a stepping stone role or specialized degree (HCI/Psychology)."
+  },
+  "stressLevel": {
+    "level": "Low",
+    "factors": [
+      "Participant recruitment challenges",
+      "Stakeholder skepticism",
+      "Analysis overload"
+    ],
+    "mitigatingFactors": [
+      "No production pressure",
+      "Flexible schedule/remote work",
+      "Intellectual fulfillment",
+      "Empathy-focused work"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You are deeply curious about human behavior",
+      "You are empathetic and non-judgmental",
+      "You are analytical and detail-oriented",
+      "You are a strong communicator and storyteller",
+      "You are comfortable with ambiguity"
+    ],
+    "avoidIf": [
+      "You prefer solo, heads-down work",
+      "You dislike talking to strangers",
+      "You need clear, definitive answers",
+      "You are impatient with long processes"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Read 'The Mom Test' & 'Just Enough Research'",
+        "Watch NNGroup videos",
+        "Observe app usage patterns"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Conduct practice interviews",
+        "Learn survey design",
+        "Learn quantitative skills (Stats, SQL, Python)",
+        "Start using tools like UserTesting & Dovetail"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Conduct usability studies",
+        "Learn analytics (Google Analytics)",
+        "Secure a research or design internship",
+        "Build a research portfolio"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Polish portfolio with detailed case studies",
+        "Network with researchers",
+        "Apply to 50+ companies (Analyst/Researcher roles)",
+        "Consider MS in HCI (optional)"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Qualitative Research",
+        "goal": "Master interviews and usability testing"
+      },
+      {
+        "skill": "Quantitative Research",
+        "goal": "Learn Survey design, Statistics, SQL"
+      },
+      {
+        "skill": "Tools",
+        "goal": "Proficiency in UserTesting, Dovetail, Analytics"
+      },
+      {
+        "skill": "Portfolio",
+        "goal": "4-5 strong research case studies"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Startups",
+        "approach": "Target Series A/B for first research hire roles"
+      },
+      {
+        "channel": "Stepping Stone",
+        "approach": "Apply for Research Analyst or UX Designer roles first"
+      },
+      {
+        "channel": "Cold Outreach",
+        "approach": "DM Heads of Design/Research with portfolio"
+      },
+      {
+        "channel": "Networking",
+        "approach": "Engage in UX research communities"
+      }
+    ],
+    "interviewPrep": [
+      "Portfolio Presentation (Research Process)",
+      "Research Design Challenges",
+      "Methodology Selection Questions",
+      "Behavioral Questions"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 4,
+        "max": 6
+      },
+      "midTierProduct": {
+        "min": 6,
+        "max": 10
+      },
+      "topProduct": {
+        "min": 8,
+        "max": 12
+      },
+      "gcc": "7-10 LPA"
+    },
+    "differentiators": [
+      "Strong quantitative skills (SQL, Stats)",
+      "Mixed-methods portfolio",
+      "Experience with remote research tools",
+      "Understanding of business impact of research"
+    ]
+  }
+}

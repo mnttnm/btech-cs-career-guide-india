@@ -1,0 +1,273 @@
+{
+  "roleId": "startup-founder",
+  "roleName": "Startup Founder / Technical Co-founder",
+  "description": "Builds a business from scratch, handling everything from product development to sales and fundraising.",
+  "jobTitles": {
+    "fresher": [
+      "Founder",
+      "Co-founder",
+      "CTO"
+    ],
+    "experienced": [
+      "CEO",
+      "CTO",
+      "Chief Product Officer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Full Stack",
+        "level": "Advanced",
+        "priority": "Primary"
+      }
+    ],
+    "coreConcepts": [
+      "Product Management",
+      "Sales",
+      "Marketing",
+      "Finance",
+      "Leadership"
+    ],
+    "frameworks": [
+      {
+        "name": "Whatever works",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Everything"
+    ]
+  },
+  "dailyWork": [
+    "Coding",
+    "Selling",
+    "Hiring",
+    "Fundraising",
+    "Firefighting"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Founder",
+        "salary": {
+          "min": 0,
+          "max": 10,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-5",
+        "title": "Growth Stage Founder",
+        "salary": {
+          "min": 10,
+          "max": 30,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "5+",
+        "title": "Scale-up Founder",
+        "salary": {
+          "min": 30,
+          "max": 100,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "CEO",
+        "CTO"
+      ],
+      "individualContributor": []
+    },
+    "timelineToSenior": "Variable",
+    "alternativePaths": [
+      "Product Management",
+      "Engineering Leadership",
+      "VC/Angel Investing"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 6
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 10,
+        "max": 25
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 25,
+        "max": 50
+      },
+      "senior": {
+        "min": 50,
+        "max": 100
+      },
+      "topCompanies": {
+        "min": 100,
+        "max": 1000
+      }
+    },
+    "topCompanies": []
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "Continuous",
+    "description": "Learn everything on the fly; trial by fire."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "Uncertainty",
+      "Financial Risk",
+      "Responsibility",
+      "Long Hours"
+    ],
+    "mitigatingFactors": [
+      "Autonomy",
+      "Potential Upside",
+      "Passion",
+      "Impact"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Risk Taker",
+      "Resilient",
+      "Generalist",
+      "Leader",
+      "Hustler"
+    ],
+    "avoidIf": [
+      "Need Security",
+      "Dislike Sales",
+      "Want Work-Life Balance",
+      "Fear Failure"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Explore",
+      "goals": [
+        "Build projects",
+        "Join E-Cell",
+        "Learn basics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Experiment",
+      "goals": [
+        "Hackathons",
+        "Side projects",
+        "Intern at startup"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Build",
+      "goals": [
+        "Launch MVP",
+        "Network",
+        "Learn business basics"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Launch",
+      "goals": [
+        "Incubators",
+        "Funding",
+        "Go full-time or job+side hustle"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Full Stack Dev",
+        "goal": "Build MVPs"
+      },
+      {
+        "skill": "MVP Building",
+        "goal": "Rapid prototyping"
+      },
+      {
+        "skill": "Product Sense",
+        "goal": "Identify user needs"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Incubators",
+        "approach": "Apply for support"
+      },
+      {
+        "channel": "Accelerators",
+        "approach": "Apply for funding/mentorship"
+      },
+      {
+        "channel": "Angel Investors",
+        "approach": "Pitch for funding"
+      }
+    ],
+    "interviewPrep": [
+      "Pitch Deck",
+      "Business Model",
+      "Tech Demo"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": "N/A"
+    },
+    "differentiators": [
+      "Traction",
+      "Revenue",
+      "Strong Team"
+    ]
+  }
+}

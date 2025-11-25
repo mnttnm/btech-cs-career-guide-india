@@ -1,0 +1,303 @@
+{
+  "roleId": "open-source-maintainer",
+  "roleName": "Open Source Developer / Maintainer",
+  "description": "Develops and maintains open-source software, either independently (via sponsorship) or employed by companies to work on OSS.",
+  "jobTitles": {
+    "fresher": [
+      "OSS Contributor",
+      "Junior OSS Engineer"
+    ],
+    "experienced": [
+      "OSS Maintainer",
+      "Staff OSS Engineer",
+      "OSS Program Manager"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Go/Rust/C++",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python/JS",
+        "level": "Advanced",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Community Management",
+      "CI/CD",
+      "Documentation",
+      "Governance",
+      "Release Engineering"
+    ],
+    "frameworks": [
+      {
+        "name": "Depends on Project",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Git/GitHub",
+      "Issue Trackers",
+      "Communication Tools"
+    ]
+  },
+  "dailyWork": [
+    "Code Review",
+    "Coding",
+    "Community Support",
+    "Documentation",
+    "Release Management"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Contributor",
+        "salary": {
+          "min": 0,
+          "max": 10,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-6",
+        "title": "Maintainer",
+        "salary": {
+          "min": 10,
+          "max": 30,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "7+",
+        "title": "Lead Maintainer",
+        "salary": {
+          "min": 30,
+          "max": 80,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Project Lead",
+        "Foundation Board"
+      ],
+      "individualContributor": [
+        "Core Maintainer"
+      ]
+    },
+    "timelineToSenior": "5-10 years",
+    "alternativePaths": [
+      "DevRel",
+      "Product Engineering",
+      "Consulting"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 8,
+        "max": 15
+      },
+      "topTech": {
+        "min": 18,
+        "max": 25
+      },
+      "average": {
+        "min": 0,
+        "max": 10
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 15,
+        "max": 30
+      },
+      "average": {
+        "min": 10,
+        "max": 25
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 25,
+        "max": 45
+      },
+      "senior": {
+        "min": 40,
+        "max": 80
+      },
+      "topCompanies": {
+        "min": 50,
+        "max": 100
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Red Hat",
+        "range": {
+          "min": 8,
+          "max": 14
+        }
+      },
+      {
+        "name": "GitLab",
+        "range": {
+          "min": 40,
+          "max": 65
+        }
+      },
+      {
+        "name": "Google",
+        "range": {
+          "min": 18,
+          "max": 60
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "Years",
+    "description": "Requires high technical skill and long-term community building."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "Burnout",
+      "Entitled Users",
+      "Financial Instability",
+      "Public Scrutiny"
+    ],
+    "mitigatingFactors": [
+      "Passion",
+      "Impact",
+      "Reputation",
+      "Flexibility"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Altruistic",
+      "Patient",
+      "Thick Skinned",
+      "Self-Motivated",
+      "Community-Minded"
+    ],
+    "avoidIf": [
+      "Need Money First",
+      "Thin Skinned",
+      "Dislike People",
+      "Impatient"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Learn",
+      "goals": [
+        "Git",
+        "Basics",
+        "Find projects"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Contribute",
+      "goals": [
+        "Good first issues",
+        "Docs",
+        "Small fixes"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Deepen",
+      "goals": [
+        "Regular contributions",
+        "Feature work",
+        "GSoC"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Lead",
+      "goals": [
+        "Maintainership",
+        "Own projects",
+        "Job hunting based on OSS"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Contribution History",
+        "goal": "Show active participation"
+      },
+      {
+        "skill": "Code Quality",
+        "goal": "Write clean, maintainable code"
+      },
+      {
+        "skill": "Communication",
+        "goal": "Clear PR descriptions/comments"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "OSS Companies",
+        "approach": "Direct application"
+      },
+      {
+        "channel": "GitHub Jobs",
+        "approach": "Find roles"
+      },
+      {
+        "channel": "Twitter",
+        "approach": "Follow maintainers"
+      }
+    ],
+    "interviewPrep": [
+      "Code Walkthrough",
+      "OSS Experience",
+      "Culture Fit"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 10,
+        "max": 15
+      },
+      "topProduct": {
+        "min": 15,
+        "max": 20
+      },
+      "gcc": "12-18 LPA"
+    },
+    "differentiators": [
+      "Maintainer Status",
+      "High Impact Contributions",
+      "GSoC"
+    ]
+  }
+}

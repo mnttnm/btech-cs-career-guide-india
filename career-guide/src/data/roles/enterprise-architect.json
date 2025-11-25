@@ -1,0 +1,319 @@
+{
+  "roleId": "enterprise-architect",
+  "roleName": "Enterprise Architect",
+  "description": "A C-level adjacent role responsible for defining and maintaining the technology vision, standards, and roadmap for an entire organization.",
+  "jobTitles": {
+    "fresher": [],
+    "experienced": [
+      "Enterprise Architect",
+      "Chief Architect",
+      "Principal Enterprise Architect",
+      "Lead Enterprise Architect",
+      "Head of Architecture"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Java",
+        "level": "Advanced",
+        "priority": "Secondary"
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Enterprise Architecture Frameworks (TOGAF, Zachman)",
+      "Cloud & Infrastructure Strategy",
+      "Enterprise Integration (ESB, API Management)",
+      "Data Architecture & Governance",
+      "Security & Compliance (Zero-Trust, ISO 27001)",
+      "Strategic Planning & Roadmapping",
+      "Cost Optimization (FinOps)",
+      "Risk Management"
+    ],
+    "frameworks": [
+      {
+        "name": "TOGAF",
+        "popularity": "High"
+      },
+      {
+        "name": "SAFe",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Sparx Systems Enterprise Architect",
+      "ArchiMate",
+      "AWS/Azure/GCP",
+      "ServiceNow",
+      "Jira Align"
+    ]
+  },
+  "dailyWork": [
+    "Defining 3-5 year technology vision and roadmap",
+    "Reviewing and approving major architectural decisions",
+    "Aligning technology initiatives with business strategy",
+    "Conducting cost-benefit analysis and vendor negotiation",
+    "Presenting to C-suite executives and stakeholders",
+    "Mentoring solution architects and engineering leaders"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "8-10 (Total Exp)",
+        "title": "Enterprise Architect",
+        "salary": {
+          "min": 35,
+          "max": 55,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "10-12 (Total Exp)",
+        "title": "Senior Enterprise Architect",
+        "salary": {
+          "min": 50,
+          "max": 75,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "12-15 (Total Exp)",
+        "title": "Principal Enterprise Architect",
+        "salary": {
+          "min": 70,
+          "max": 95,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Chief Architect",
+        "VP of Architecture",
+        "CTO"
+      ],
+      "individualContributor": [
+        "Principal Enterprise Architect",
+        "Distinguished Architect"
+      ]
+    },
+    "timelineToSenior": "12-15 years (Total Exp)",
+    "alternativePaths": [
+      "CTO",
+      "VP of Engineering",
+      "Chief Information Officer (CIO)",
+      "Management Consultant"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 35,
+        "max": 55
+      },
+      "senior": {
+        "min": 50,
+        "max": 75
+      },
+      "topCompanies": {
+        "min": 80,
+        "max": 150
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 70,
+          "max": 150
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 65,
+          "max": 130
+        }
+      },
+      {
+        "name": "Microsoft",
+        "range": {
+          "min": 70,
+          "max": 140
+        }
+      },
+      {
+        "name": "Flipkart",
+        "range": {
+          "min": 55,
+          "max": 90
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "8-12 years (Experience Required)",
+    "description": "Extremely steep. Requires mastery across multiple domains (cloud, security, data, apps), strategic thinking, and executive communication. Cannot be fast-tracked."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "High-stakes decision making",
+      "Organizational politics and resistance to change",
+      "Need to keep up with rapid technology shifts",
+      "Responsibility for large-scale failures"
+    ],
+    "mitigatingFactors": [
+      "High compensation",
+      "Autonomy and influence",
+      "Intellectual challenge",
+      "Recognition and prestige"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You are a strategic thinker",
+      "You are business-oriented",
+      "You are an excellent communicator",
+      "You have broad technical knowledge",
+      "You are comfortable with ambiguity"
+    ],
+    "avoidIf": [
+      "You prefer coding over strategy",
+      "You want to be a deep specialist in one area",
+      "You struggle with public speaking",
+      "You are risk-averse",
+      "You dislike politics"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master programming fundamentals",
+        "Build strong DSA foundation",
+        "Think about system scalability early"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Learn full-stack development",
+        "Understand databases and APIs",
+        "Read about enterprise architecture concepts"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Learn cloud basics",
+        "Understand distributed systems",
+        "Internship at a large enterprise or product company"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Target Software Engineering roles at mature companies",
+        "Do NOT target Architect roles",
+        "Build a strong technical foundation"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Software Engineering",
+        "goal": "Become an expert coder first"
+      },
+      {
+        "skill": "System Design",
+        "goal": "Learn architectural patterns"
+      },
+      {
+        "skill": "Cloud",
+        "goal": "Gain experience with AWS/Azure/GCP"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Software Engineer Roles",
+        "approach": "Join companies with strong architecture practices"
+      },
+      {
+        "channel": "Career Growth",
+        "approach": "Plan a long-term path: Dev -> Tech Lead -> Architect"
+      }
+    ],
+    "interviewPrep": [
+      "Coding & DSA",
+      "System Design",
+      "Behavioral Questions"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "gcc": "0"
+    },
+    "differentiators": [
+      "Long-term strategic thinking",
+      "Understanding of business-technology alignment",
+      "Breadth of knowledge across domains"
+    ]
+  }
+}

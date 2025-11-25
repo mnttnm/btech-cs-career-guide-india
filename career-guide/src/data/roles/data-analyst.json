@@ -1,0 +1,329 @@
+{
+  "roleId": "data-analyst",
+  "roleName": "Data Analyst",
+  "description": "Interprets data, analyzes results using statistical techniques, and provides ongoing reports and dashboards.",
+  "jobTitles": {
+    "fresher": [
+      "Data Analyst (Trainee)",
+      "Junior Data Analyst",
+      "Associate Data Analyst",
+      "Analyst I",
+      "Business Analyst - Data"
+    ],
+    "experienced": [
+      "Senior Data Analyst",
+      "Lead Data Analyst",
+      "Principal Data Analyst",
+      "Analytics Manager",
+      "Head of Analytics"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "SQL",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Data Visualization",
+      "Descriptive Statistics",
+      "Business Metrics (KPIs)",
+      "Exploratory Data Analysis (EDA)",
+      "Data Cleaning",
+      "Reporting & Dashboarding"
+    ],
+    "frameworks": [
+      {
+        "name": "Pandas",
+        "popularity": "High"
+      },
+      {
+        "name": "Excel (Advanced)",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Tableau",
+      "Power BI",
+      "SQL databases (PostgreSQL/MySQL)",
+      "Google Analytics",
+      "Jupyter Notebooks"
+    ]
+  },
+  "dailyWork": [
+    "SQL Queries & Data Extraction (40-50%)",
+    "Data Analysis & Exploration (20-30%)",
+    "Visualization & Dashboarding (15-20%)",
+    "Data Cleaning (10-15%)",
+    "Meetings & Communication (10-15%)"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Data Analyst",
+        "salary": {
+          "min": 5,
+          "max": 8,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-6",
+        "title": "Senior Data Analyst",
+        "salary": {
+          "min": 10,
+          "max": 15,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "7-10",
+        "title": "Analytics Manager",
+        "salary": {
+          "min": 18,
+          "max": 30,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Analytics Manager",
+        "Director of Analytics",
+        "VP of Analytics/Insights"
+      ],
+      "individualContributor": [
+        "Principal Analyst",
+        "Distinguished Analyst"
+      ]
+    },
+    "timelineToSenior": "4-6 years",
+    "alternativePaths": [
+      "Data Scientist",
+      "Business Analyst",
+      "Data Engineer",
+      "Product Manager"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3,
+        "max": 6
+      },
+      "productBased": {
+        "min": 5,
+        "max": 10
+      },
+      "topTech": {
+        "min": 12,
+        "max": 20
+      },
+      "average": {
+        "min": 5,
+        "max": 8
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 8,
+        "max": 12
+      },
+      "productBased": {
+        "min": 12,
+        "max": 18
+      },
+      "average": {
+        "min": 10,
+        "max": 15
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 15,
+        "max": 22
+      },
+      "senior": {
+        "min": 20,
+        "max": 35
+      },
+      "topCompanies": {
+        "min": 30,
+        "max": 50
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Top Tech (Google, Microsoft)",
+        "range": {
+          "min": 12,
+          "max": 20
+        }
+      },
+      {
+        "name": "Top Product (Flipkart, CRED)",
+        "range": {
+          "min": 8,
+          "max": 15
+        }
+      },
+      {
+        "name": "Analytics Firms (Mu Sigma)",
+        "range": {
+          "min": 4,
+          "max": 7
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Easy",
+    "timeToJobReady": "3-6 months",
+    "description": "Most accessible data role. SQL and Excel are logical and learnable. No advanced math required, making it easier than DS/ML roles."
+  },
+  "stressLevel": {
+    "level": "Low",
+    "factors": [
+      "Ad-hoc urgent requests",
+      "Data quality issues",
+      "Stakeholder management",
+      "Repetitive work",
+      "Tight deadlines during reporting cycles"
+    ],
+    "mitigatingFactors": [
+      "Reasonable deadlines",
+      "Clear deliverables",
+      "Good work-life balance",
+      "Predictable workload",
+      "Collaborative environment"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Love working with numbers",
+      "Enjoy solving business problems",
+      "Have strong attention to detail",
+      "Like storytelling with data",
+      "Appreciate structured work"
+    ],
+    "avoidIf": [
+      "Want to build complex ML models",
+      "Prefer engineering and infrastructure",
+      "Only want to code",
+      "Find repetitive tasks tedious",
+      "Dislike messy data"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master SQL (SQLBolt, LeetCode)",
+        "Advanced Excel (Pivot tables, VLOOKUP)",
+        "Statistics Basics (Khan Academy)"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Visualization",
+      "goals": [
+        "Learn Tableau or Power BI",
+        "Create dashboards on Tableau Public",
+        "Google Analytics Certification",
+        "Participate in case competitions"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Advanced Skills",
+      "goals": [
+        "Learn Python for Analysis (Pandas)",
+        "Build domain knowledge (Finance/E-commerce)",
+        "SQL Projects on GitHub"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Build Portfolio (GitHub + Tableau Public)",
+        "Apply to Analytics firms",
+        "Mock Interviews",
+        "Network on LinkedIn"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "SQL",
+        "goal": "Master joins, aggregations, window functions"
+      },
+      {
+        "skill": "Tableau/Power BI",
+        "goal": "Build impressive dashboard portfolio"
+      },
+      {
+        "skill": "Excel",
+        "goal": "Advanced proficiency"
+      },
+      {
+        "skill": "Python",
+        "goal": "Basic data manipulation"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Analytics Firms",
+        "approach": "Direct Application (High volume hiring)"
+      },
+      {
+        "channel": "Internshala",
+        "approach": "Startups needing analysis"
+      },
+      {
+        "channel": "LinkedIn",
+        "approach": "Networking"
+      }
+    ],
+    "interviewPrep": [
+      "SQL Coding (Medium)",
+      "Guesstimates/Case Studies",
+      "Dashboard Walkthrough",
+      "Behavioral Questions"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3,
+        "max": 6
+      },
+      "midTierProduct": {
+        "min": 5,
+        "max": 10
+      },
+      "topProduct": {
+        "min": 8,
+        "max": 15
+      },
+      "gcc": "6-12 LPA"
+    },
+    "differentiators": [
+      "Tableau Public portfolio",
+      "Strong SQL skills (HackerRank score)",
+      "Business acumen",
+      "Communication skills"
+    ]
+  }
+}

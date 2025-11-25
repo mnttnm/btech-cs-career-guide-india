@@ -1,0 +1,346 @@
+{
+  "roleId": "growth-hacker",
+  "roleName": "Growth Hacker / Marketing Technologist",
+  "description": "Combines marketing, data analysis, and engineering to drive user acquisition and retention through experimentation.",
+  "jobTitles": {
+    "fresher": [
+      "Growth Analyst",
+      "Junior Growth Hacker",
+      "Marketing Analyst",
+      "Performance Marketing Analyst"
+    ],
+    "experienced": [
+      "Growth Manager",
+      "Head of Growth",
+      "Marketing Technologist",
+      "Product Growth Manager"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "SQL",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "HTML/CSS",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "A/B Testing",
+      "Funnel Analysis",
+      "SEO/SEM",
+      "Cohort Analysis",
+      "Data-Driven Marketing",
+      "User Psychology"
+    ],
+    "frameworks": [
+      {
+        "name": "AARRR",
+        "popularity": "High"
+      },
+      {
+        "name": "ICE",
+        "popularity": "High"
+      }
+    ],
+    "tools": [
+      "Google Analytics",
+      "Mixpanel/Amplitude",
+      "Excel/Sheets",
+      "Google Ads",
+      "Facebook Ads",
+      "Tag Manager",
+      "Optimizely"
+    ]
+  },
+  "dailyWork": [
+    "Data Analysis",
+    "Experimentation",
+    "Campaign Execution",
+    "Growth Strategy",
+    "Technical Implementation"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Growth Analyst",
+        "salary": {
+          "min": 4,
+          "max": 7,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Growth Marketer",
+        "salary": {
+          "min": 7,
+          "max": 15,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Growth Manager",
+        "salary": {
+          "min": 15,
+          "max": 25,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "VP Growth",
+        "CMO",
+        "Head of Growth"
+      ],
+      "individualContributor": [
+        "Principal Growth Engineer",
+        "Growth Consultant"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Product Management",
+      "Data Science",
+      "Marketing Leadership",
+      "Entrepreneurship"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3.5,
+        "max": 6
+      },
+      "productBased": {
+        "min": 6,
+        "max": 10
+      },
+      "topTech": {
+        "min": 8,
+        "max": 14
+      },
+      "average": {
+        "min": 5,
+        "max": 8
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 6,
+        "max": 10
+      },
+      "productBased": {
+        "min": 12,
+        "max": 20
+      },
+      "average": {
+        "min": 10,
+        "max": 15
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 15,
+        "max": 25
+      },
+      "senior": {
+        "min": 25,
+        "max": 40
+      },
+      "topCompanies": {
+        "min": 30,
+        "max": 50
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "CRED",
+        "range": {
+          "min": 12,
+          "max": 18
+        }
+      },
+      {
+        "name": "PhonePe",
+        "range": {
+          "min": 10,
+          "max": 15
+        }
+      },
+      {
+        "name": "Meesho",
+        "range": {
+          "min": 8,
+          "max": 14
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-9 months",
+    "description": "Multidisciplinary role requiring marketing, tech, and analytics; requires hands-on projects."
+  },
+  "stressLevel": {
+    "level": "Medium",
+    "factors": [
+      "Metric Pressure",
+      "Attribution Challenges",
+      "Fast-Paced",
+      "Always-On Campaigns"
+    ],
+    "mitigatingFactors": [
+      "No Production Outages",
+      "Creative Outlet",
+      "Visible Impact",
+      "Variety"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Analytical + Creative",
+      "Curious",
+      "Hustler Mentality",
+      "Impact-Driven",
+      "Collaborative"
+    ],
+    "avoidIf": [
+      "Pure Technical Focus",
+      "Need Certainty",
+      "Dislike Marketing",
+      "Impatient"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Python",
+        "SQL",
+        "Web Basics",
+        "Marketing Exposure"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Advanced Python/SQL",
+        "SEO",
+        "Content Marketing",
+        "Analytics Tools"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Deep Dive Channels",
+        "A/B Testing",
+        "Certifications",
+        "Internships"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Polish SQL",
+        "Advanced Skills",
+        "Networking",
+        "Interviews"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "SQL",
+        "goal": "Cohort analysis, funnels"
+      },
+      {
+        "skill": "Google Analytics",
+        "goal": "GA4 certification"
+      },
+      {
+        "skill": "Python",
+        "goal": "Pandas, visualization"
+      },
+      {
+        "skill": "Analytics Platform",
+        "goal": "Mixpanel/Amplitude"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "LinkedIn",
+        "approach": "Connect with growth pros"
+      },
+      {
+        "channel": "AngelList",
+        "approach": "Startup roles"
+      },
+      {
+        "channel": "Job Portals",
+        "approach": "Growth/Marketing Analyst"
+      },
+      {
+        "channel": "Referrals",
+        "approach": "Network with alumni"
+      },
+      {
+        "channel": "Direct Outreach",
+        "approach": "Cold email with portfolio"
+      }
+    ],
+    "interviewPrep": [
+      "Assignment",
+      "Analytics Round",
+      "Growth Strategy",
+      "Product Round",
+      "Behavioral"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3.5,
+        "max": 6
+      },
+      "midTierProduct": {
+        "min": 6,
+        "max": 10
+      },
+      "topProduct": {
+        "min": 12,
+        "max": 18
+      },
+      "gcc": "8-12 LPA"
+    },
+    "differentiators": [
+      "Personal Blog/Project Growth",
+      "Portfolio Website",
+      "Data-Driven Case Studies"
+    ]
+  }
+}

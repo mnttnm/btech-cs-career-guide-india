@@ -1,0 +1,314 @@
+{
+  "roleId": "quantum-computing-engineer",
+  "roleName": "Quantum Computing Engineer",
+  "description": "Develops quantum algorithms and software, bridging theoretical quantum physics with practical computational applications.",
+  "jobTitles": {
+    "fresher": [
+      "Quantum Research Intern",
+      "Quantum Software Engineer (Entry)",
+      "Research Fellow"
+    ],
+    "experienced": [
+      "Quantum Computing Researcher",
+      "Quantum Software Engineer",
+      "Quantum Algorithm Developer",
+      "Quantum Research Scientist",
+      "Quantum Solutions Architect"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "C++",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Quantum Mechanics Fundamentals",
+      "Linear Algebra & Complex Numbers",
+      "Quantum Algorithms (Shor's, Grover's)",
+      "Quantum Error Correction",
+      "Quantum Information Theory",
+      "Quantum Circuit Design",
+      "Hybrid Classical-Quantum Algorithms"
+    ],
+    "frameworks": [
+      {
+        "name": "Qiskit (IBM)",
+        "popularity": "High"
+      },
+      {
+        "name": "Cirq (Google)",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Q# (Microsoft)",
+        "popularity": "Low"
+      }
+    ],
+    "tools": [
+      "Jupyter Notebooks",
+      "IBM Quantum Experience",
+      "Amazon Braket",
+      "LaTeX"
+    ]
+  },
+  "dailyWork": [
+    "Reading research papers and implementing algorithms",
+    "Running simulations on quantum simulators",
+    "Developing and optimizing quantum circuits",
+    "Analyzing experimental results from quantum hardware",
+    "Collaborating with physicists and mathematicians",
+    "Writing research papers and documentation"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2 (Post-PhD)",
+        "title": "Quantum Software Engineer",
+        "salary": {
+          "min": 15,
+          "max": 25,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-5 (Post-PhD)",
+        "title": "Senior Quantum Scientist",
+        "salary": {
+          "min": 25,
+          "max": 40,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "7-10 (Post-PhD)",
+        "title": "Principal Quantum Scientist",
+        "salary": {
+          "min": 40,
+          "max": 80,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Quantum Research Director",
+        "Head of Quantum Lab"
+      ],
+      "individualContributor": [
+        "Principal Scientist",
+        "Distinguished Researcher"
+      ]
+    },
+    "timelineToSenior": "7-10 years (Post-PhD)",
+    "alternativePaths": [
+      "Academic Professor",
+      "Quantitative Researcher (Finance)",
+      "Data Scientist",
+      "Software Engineer (Classical)"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "topTech": {
+        "min": 15,
+        "max": 25
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 0,
+        "max": 0
+      },
+      "average": {
+        "min": 0,
+        "max": 0
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 25,
+        "max": 40
+      },
+      "senior": {
+        "min": 40,
+        "max": 60
+      },
+      "topCompanies": {
+        "min": 80,
+        "max": 150
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "IBM Research",
+        "range": {
+          "min": 15,
+          "max": 25
+        }
+      },
+      {
+        "name": "Google Quantum AI (US)",
+        "range": {
+          "min": 80,
+          "max": 120
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "5-10 years (B.Tech -> PhD)",
+    "description": "Extremely steep. Requires deep physics and math background, usually a PhD. Not accessible for B.Tech freshers without advanced degrees."
+  },
+  "stressLevel": {
+    "level": "High",
+    "factors": [
+      "Publication pressure (publish or perish)",
+      "Funding uncertainty",
+      "Slow research progress",
+      "Limited job opportunities in India"
+    ],
+    "mitigatingFactors": [
+      "Intellectual satisfaction",
+      "Cutting-edge work",
+      "Academic freedom",
+      "Potential for breakthroughs"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You have genuine passion for physics and math",
+      "You are patient and persistent",
+      "You value intellectual work over quick money",
+      "You are comfortable with uncertainty"
+    ],
+    "avoidIf": [
+      "You want quick entry to the job market",
+      "You dislike heavy mathematics",
+      "You need stable, predictable income early on",
+      "You prefer practical/applied work over theory"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master Linear Algebra & Calculus",
+        "Learn Python programming",
+        "Start self-studying Quantum Mechanics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Take Quantum Mechanics courses",
+        "Learn Qiskit basics",
+        "Implement simple quantum algorithms"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Deep dive into Quantum Algorithms",
+        "Attempt a research project",
+        "Apply for research internships (IISc, TIFR)"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Apply for MS/PhD programs (Mandatory)",
+        "Publish a research paper",
+        "Secure strong recommendation letters"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Quantum Algorithms",
+        "goal": "Implement Shor's, Grover's, VQE in Qiskit"
+      },
+      {
+        "skill": "Research",
+        "goal": "Read and summarize top quantum papers"
+      },
+      {
+        "skill": "Math/Physics",
+        "goal": "Deep understanding of Linear Algebra & QM"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "PhD Programs",
+        "approach": "Apply to top universities globally"
+      },
+      {
+        "channel": "Research Labs",
+        "approach": "Target IBM Research, IISc, TIFR"
+      },
+      {
+        "channel": "Networking",
+        "approach": "Connect with professors and researchers"
+      }
+    ],
+    "interviewPrep": [
+      "Explain Research Projects",
+      "Quantum Algorithm Derivations",
+      "Whiteboard Quantum Circuits",
+      "Classical CS Fundamentals"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 0,
+        "max": 0
+      },
+      "topProduct": {
+        "min": 15,
+        "max": 25
+      },
+      "gcc": "0"
+    },
+    "differentiators": [
+      "Published research papers",
+      "PhD from a top-tier university",
+      "Contribution to quantum open-source (Qiskit)",
+      "Deep understanding of error correction"
+    ]
+  }
+}

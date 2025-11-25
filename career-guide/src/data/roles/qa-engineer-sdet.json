@@ -1,0 +1,351 @@
+{
+  "roleId": "qa-engineer-sdet",
+  "roleName": "QA Engineer / SDET (Software Development Engineer in Test)",
+  "description": "A dual role covering Quality Assurance (ensuring software meets quality standards via manual/automated testing) and SDET (building automated test frameworks and tools).",
+  "jobTitles": {
+    "fresher": [
+      "QA Engineer",
+      "Quality Assurance Engineer",
+      "Software Test Engineer",
+      "Junior QA Engineer",
+      "SDET I"
+    ],
+    "experienced": [
+      "Senior QA Engineer",
+      "QA Lead",
+      "Test Architect",
+      "Senior SDET",
+      "Principal SDET"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Java",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Manual Testing Methodologies",
+      "Test Case Design",
+      "Bug Life Cycle",
+      "Regression Testing",
+      "Test Automation Frameworks",
+      "CI/CD Integration",
+      "API Testing",
+      "Agile/Scrum"
+    ],
+    "frameworks": [
+      {
+        "name": "Selenium",
+        "popularity": "High"
+      },
+      {
+        "name": "TestNG/JUnit",
+        "popularity": "High"
+      },
+      {
+        "name": "Cucumber (BDD)",
+        "popularity": "Medium"
+      },
+      {
+        "name": "Appium",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Jira",
+      "Postman",
+      "Git/GitHub",
+      "Jenkins",
+      "Rest Assured",
+      "Docker",
+      "SQL"
+    ]
+  },
+  "dailyWork": [
+    "Executing manual test cases and reporting bugs",
+    "Writing and maintaining automated test scripts",
+    "Designing test frameworks and strategies",
+    "Collaborating with developers to resolve issues",
+    "Participating in sprint planning and standups",
+    "Performing API and database testing",
+    "Maintaining CI/CD test pipelines",
+    "Documenting test results and metrics"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior QA / SDET I",
+        "salary": {
+          "min": 3,
+          "max": 8,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "QA Engineer / SDET II",
+        "salary": {
+          "min": 6,
+          "max": 14,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior QA / Senior SDET",
+        "salary": {
+          "min": 10,
+          "max": 25,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "QA Lead",
+        "QA Manager",
+        "Head of QA"
+      ],
+      "individualContributor": [
+        "Senior SDET",
+        "Test Architect",
+        "Principal SDET"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "DevOps Engineer",
+      "Product Manager",
+      "Software Developer",
+      "Performance Engineer"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 3,
+        "max": 4.5
+      },
+      "productBased": {
+        "min": 5,
+        "max": 8
+      },
+      "topTech": {
+        "min": 15,
+        "max": 20
+      },
+      "average": {
+        "min": 4,
+        "max": 7
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 6,
+        "max": 9
+      },
+      "productBased": {
+        "min": 8,
+        "max": 14
+      },
+      "average": {
+        "min": 7,
+        "max": 12
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 12,
+        "max": 20
+      },
+      "senior": {
+        "min": 18,
+        "max": 30
+      },
+      "topCompanies": {
+        "min": 30,
+        "max": 50
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 18,
+          "max": 25
+        }
+      },
+      {
+        "name": "Amazon",
+        "range": {
+          "min": 15,
+          "max": 20
+        }
+      },
+      {
+        "name": "Microsoft",
+        "range": {
+          "min": 15,
+          "max": 22
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "3-6 months (QA) / 6-12 months (SDET)",
+    "description": "QA is beginner-friendly, requiring less coding initially. SDET is moderate to high, requiring strong programming skills equivalent to developers."
+  },
+  "stressLevel": {
+    "level": "Medium",
+    "factors": [
+      "Release deadline pressure",
+      "Blame culture for escaped bugs",
+      "Repetitive testing tasks",
+      "Maintaining flaky tests (SDET)"
+    ],
+    "mitigatingFactors": [
+      "Good work-life balance",
+      "Automation reduces manual burden",
+      "Supportive team environments"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You enjoy breaking things and finding bugs",
+      "You are detail-oriented and methodical",
+      "You like coding and building tools (SDET)",
+      "You can think like an end-user"
+    ],
+    "avoidIf": [
+      "You find testing boring or repetitive",
+      "You have no patience for debugging",
+      "You can't handle criticism",
+      "You prefer solo work over collaboration"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn Python or Java",
+        "Practice basic DSA",
+        "Understand SDLC and testing basics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Learn manual testing and SQL",
+        "Start basic Selenium automation",
+        "Build simple CRUD apps",
+        "Apply for QA internships"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Master Selenium with TestNG/JUnit",
+        "Learn API testing (Postman/Rest Assured)",
+        "Understand CI/CD (Jenkins)",
+        "Build test automation framework"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Complete 300+ DSA problems (SDET)",
+        "Master automation frameworks",
+        "Build portfolio with automation projects",
+        "Apply to 50+ companies"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Manual Testing",
+        "goal": "Master test case design and bug reporting"
+      },
+      {
+        "skill": "Automation Basics",
+        "goal": "Learn Selenium and Java/Python"
+      },
+      {
+        "skill": "API Testing",
+        "goal": "Proficiency with Postman and Rest Assured"
+      },
+      {
+        "skill": "SQL",
+        "goal": "Basic database queries for verification"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Campus Placements",
+        "approach": "Target service and product companies"
+      },
+      {
+        "channel": "LinkedIn",
+        "approach": "Connect with QA leads and managers"
+      },
+      {
+        "channel": "Naukri/Instahyre",
+        "approach": "Apply for QA/SDET fresher roles"
+      },
+      {
+        "channel": "Referrals",
+        "approach": "Ask alumni in testing roles"
+      }
+    ],
+    "interviewPrep": [
+      "Manual Testing Concepts",
+      "Basic Programming & DSA",
+      "Selenium & Automation Scenarios",
+      "SQL Queries",
+      "Scenario-based Testing Questions"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 3,
+        "max": 4.5
+      },
+      "midTierProduct": {
+        "min": 5,
+        "max": 8
+      },
+      "topProduct": {
+        "min": 8,
+        "max": 15
+      },
+      "gcc": "6-10 LPA"
+    },
+    "differentiators": [
+      "Strong automation framework projects",
+      "Knowledge of CI/CD tools",
+      "ISTQB Foundation Certification",
+      "Contributions to open-source testing tools"
+    ]
+  }
+}

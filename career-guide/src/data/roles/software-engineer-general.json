@@ -1,0 +1,225 @@
+{
+  "roleId": "software-engineer-general",
+  "roleName": "Software Engineer (General)",
+  "description": "The most accessible entry point into the tech industry, with the highest number of opportunities across all company types.",
+  "jobTitles": {
+    "fresher": [
+      "Software Engineer",
+      "Software Developer",
+      "Associate Software Engineer",
+      "Junior Software Engineer",
+      "Graduate Engineer Trainee (GET)"
+    ],
+    "experienced": [
+      "Senior Software Engineer",
+      "Lead Software Engineer",
+      "Tech Lead",
+      "Staff Software Engineer",
+      "Principal Software Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      { "name": "Java", "level": "Intermediate", "priority": "Primary" },
+      { "name": "Python", "level": "Intermediate", "priority": "Primary" },
+      { "name": "C++", "level": "Intermediate", "priority": "Primary" },
+      { "name": "JavaScript", "level": "Intermediate", "priority": "Secondary" }
+    ],
+    "coreConcepts": [
+      "Data Structures and Algorithms (DSA)",
+      "Object-Oriented Programming (OOP)",
+      "System Design fundamentals",
+      "Design Patterns",
+      "SOLID principles",
+      "Time and space complexity analysis"
+    ],
+    "frameworks": [
+      { "name": "Spring Boot", "popularity": "High" },
+      { "name": "Django", "popularity": "High" },
+      { "name": "React", "popularity": "High" }
+    ],
+    "tools": [
+      "Git",
+      "VS Code",
+      "Maven",
+      "JUnit",
+      "Jenkins",
+      "Docker",
+      "JIRA"
+    ]
+  },
+  "dailyWork": [
+    "Writing clean, maintainable, and efficient code",
+    "Debugging and fixing bugs in existing codebase",
+    "Code reviews - reviewing peers' code",
+    "Participating in daily standup meetings",
+    "Collaborating with cross-functional teams",
+    "Writing unit tests and integration tests",
+    "Updating technical documentation"
+  ],
+  "careerProgression": {
+    "timeline": [
+      { "level": "Entry Level", "years": "0-2", "title": "Junior Software Engineer", "salary": { "min": 4.5, "max": 8, "currency": "LPA" } },
+      { "level": "Mid Level", "years": "3-6", "title": "Senior Software Engineer", "salary": { "min": 8, "max": 18, "currency": "LPA" } },
+      { "level": "Senior Level", "years": "7-10", "title": "Staff Engineer / Tech Lead", "salary": { "min": 18, "max": 40, "currency": "LPA" } }
+    ],
+    "tracks": {
+      "leadership": [
+        "Software Engineer",
+        "Senior Engineer",
+        "Tech Lead",
+        "Engineering Manager",
+        "Senior EM",
+        "Director of Engineering",
+        "CTO"
+      ],
+      "individualContributor": [
+        "Software Engineer",
+        "Senior Engineer",
+        "Staff Engineer",
+        "Senior Staff Engineer",
+        "Principal Engineer",
+        "Fellow"
+      ]
+    },
+    "timelineToSenior": "5-7 years with consistent performance",
+    "alternativePaths": [
+      "Product Management",
+      "Solution Architecture",
+      "Data Science",
+      "Technical Program Manager"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": { "min": 3.5, "max": 4.5 },
+      "productBased": { "min": 6, "max": 10 },
+      "topTech": { "min": 12, "max": 20 },
+      "average": { "min": 4.5, "max": 8 }
+    },
+    "threeYears": {
+      "serviceBased": { "min": 6, "max": 8 },
+      "productBased": { "min": 10, "max": 15 },
+      "average": { "min": 8, "max": 12 }
+    },
+    "fivePlus": {
+      "midLevel": { "min": 10, "max": 15 },
+      "senior": { "min": 15, "max": 25 },
+      "topCompanies": { "min": 25, "max": 40 }
+    },
+    "topCompanies": [
+      { "name": "Google", "range": { "min": 18, "max": 25 } },
+      { "name": "Microsoft", "range": { "min": 15, "max": 22 } },
+      { "name": "Amazon", "range": { "min": 12, "max": 20 } }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "Requires solid computer science fundamentals and consistent practice, but is the most well-documented and supported path."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Tight deadlines and sprint commitments",
+      "Production bugs and outages",
+      "Code review pressure",
+      "Imposter syndrome",
+      "On-call rotations"
+    ],
+    "mitigatingFactors": [
+      "Strong team support",
+      "Flexible work arrangements",
+      "Good compensation",
+      "Structured learning programs"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You enjoy solving problems through code",
+      "You're curious and love continuous learning",
+      "You can work both independently and collaboratively",
+      "You're detail-oriented"
+    ],
+    "avoidIf": [
+      "You dislike coding",
+      "You prefer non-technical work",
+      "You can't handle desk work",
+      "You get frustrated with bugs"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master one programming language",
+        "Learn basic data structures",
+        "Start solving DSA problems",
+        "Build 2-3 small projects"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Solve 100+ DSA problems",
+        "Master OOP concepts",
+        "Build 3-4 substantial projects",
+        "Learn one popular framework"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Solve 200+ DSA problems",
+        "Learn system design basics",
+        "Build advanced projects",
+        "Secure summer internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Complete 300+ DSA problems",
+        "Master system design for interviews",
+        "Final year project production-ready",
+        "Campus and off-campus applications"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      { "skill": "DSA Mastery", "goal": "300-400 LeetCode problems" },
+      { "skill": "System Design", "goal": "Basics of scalability and common designs" },
+      { "skill": "Projects Portfolio", "goal": "4-5 solid projects" },
+      { "skill": "Resume Optimization", "goal": "ATS-friendly, impact-oriented" }
+    ],
+    "applicationStrategy": [
+      { "channel": "Campus Placements", "approach": "Highest Priority" },
+      { "channel": "Off-Campus", "approach": "Apply to 50-100 companies" },
+      { "channel": "Referrals", "approach": "Reach out to alumni" }
+    ],
+    "interviewPrep": [
+      "DSA coding rounds",
+      "System Design basics",
+      "CS Fundamentals",
+      "Behavioral questions"
+    ],
+    "salaryExpectations": {
+      "service": { "min": 3.5, "max": 4.5 },
+      "midTierProduct": { "min": 6, "max": 10 },
+      "topProduct": { "min": 12, "max": 20 },
+      "gcc": "8-14 LPA"
+    },
+    "differentiators": [
+      "Strong problem-solving",
+      "Quality projects",
+      "Open source contributions",
+      "Technical writing",
+      "Hackathon wins"
+    ]
+  }
+}

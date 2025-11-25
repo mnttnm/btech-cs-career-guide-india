@@ -1,0 +1,320 @@
+{
+  "roleId": "developer-advocate",
+  "roleName": "Developer Advocate / DevRel",
+  "description": "Bridges the gap between a company's products and the developer community through code, content, and community engagement.",
+  "jobTitles": {
+    "fresher": [
+      "Associate Developer Advocate",
+      "Junior Developer Evangelist",
+      "Community Engineer"
+    ],
+    "experienced": [
+      "Senior Developer Advocate",
+      "Head of DevRel",
+      "Principal Developer Advocate",
+      "Technical Community Manager"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Go/Java",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Community Building",
+      "Public Speaking",
+      "Content Creation",
+      "Developer Experience",
+      "Social Media"
+    ],
+    "frameworks": [],
+    "tools": [
+      "Git/GitHub",
+      "Discord/Slack",
+      "OBS/Video Tools",
+      "Blogging Platforms",
+      "Social Media"
+    ]
+  },
+  "dailyWork": [
+    "Content Creation",
+    "Community Engagement",
+    "Coding Demos",
+    "Public Speaking",
+    "Internal Feedback"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Associate DevRel",
+        "salary": {
+          "min": 8,
+          "max": 15,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Developer Advocate",
+        "salary": {
+          "min": 15,
+          "max": 25,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Developer Advocate",
+        "salary": {
+          "min": 25,
+          "max": 40,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Director of DevRel",
+        "VP of Community"
+      ],
+      "individualContributor": [
+        "Principal Advocate",
+        "Distinguished Advocate"
+      ]
+    },
+    "timelineToSenior": "5-8 years",
+    "alternativePaths": [
+      "Product Management",
+      "Marketing",
+      "Engineering Management",
+      "Startup Founder"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 0,
+        "max": 0
+      },
+      "productBased": {
+        "min": 10,
+        "max": 15
+      },
+      "topTech": {
+        "min": 15,
+        "max": 20
+      },
+      "average": {
+        "min": 12,
+        "max": 18
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 12,
+        "max": 18
+      },
+      "productBased": {
+        "min": 20,
+        "max": 30
+      },
+      "average": {
+        "min": 18,
+        "max": 25
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 25,
+        "max": 35
+      },
+      "senior": {
+        "min": 35,
+        "max": 50
+      },
+      "topCompanies": {
+        "min": 50,
+        "max": 80
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Google",
+        "range": {
+          "min": 20,
+          "max": 30
+        }
+      },
+      {
+        "name": "AWS",
+        "range": {
+          "min": 18,
+          "max": 25
+        }
+      },
+      {
+        "name": "Postman",
+        "range": {
+          "min": 15,
+          "max": 22
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "6-12 months",
+    "description": "Requires a mix of coding, communication, and empathy. Hard to enter as a fresh grad."
+  },
+  "stressLevel": {
+    "level": "Medium",
+    "factors": [
+      "Public Scrutiny",
+      "Travel Fatigue",
+      "Always On",
+      "Imposter Syndrome"
+    ],
+    "mitigatingFactors": [
+      "Creative Freedom",
+      "Flexible Schedule",
+      "No On-Call",
+      "Variety"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Extroverted/Ambivert",
+      "Love Teaching",
+      "Empathetic",
+      "Creative",
+      "Self-Motivated"
+    ],
+    "avoidIf": [
+      "Hate Public Speaking",
+      "Private Person",
+      "Prefer Pure Coding",
+      "Thin Skinned"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Code skills",
+        "Blog start",
+        "Social presence"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Building",
+      "goals": [
+        "Projects",
+        "Public speaking",
+        "Open source",
+        "Networking"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Visibility",
+      "goals": [
+        "Internship (SWE)",
+        "Talk at meetups",
+        "Video content",
+        "Community leadership"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Positioning",
+      "goals": [
+        "Get SWE job",
+        "Build DevRel portfolio on side",
+        "Network"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Solid Coding",
+        "goal": "Strong foundation in one stack"
+      },
+      {
+        "skill": "Public Speaking",
+        "goal": "Recorded talks"
+      },
+      {
+        "skill": "Content Portfolio",
+        "goal": "Blogs, videos, tutorials"
+      },
+      {
+        "skill": "Community Track Record",
+        "goal": "Active contribution"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Networking",
+        "approach": "Conferences/Meetups"
+      },
+      {
+        "channel": "Twitter/LinkedIn",
+        "approach": "Personal Brand"
+      },
+      {
+        "channel": "Conferences",
+        "approach": "Speaking engagements"
+      },
+      {
+        "channel": "Internal Transfer",
+        "approach": "Move from Engineering"
+      }
+    ],
+    "interviewPrep": [
+      "Portfolio Review",
+      "Technical Demo",
+      "Content Creation Task",
+      "Behavioral"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 0,
+        "max": 0
+      },
+      "midTierProduct": {
+        "min": 10,
+        "max": 15
+      },
+      "topProduct": {
+        "min": 15,
+        "max": 20
+      },
+      "gcc": "12-18 LPA"
+    },
+    "differentiators": [
+      "Active Blog/Channel",
+      "Speaking Experience",
+      "Open Source Maintainer"
+    ]
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "roleId": "embedded-systems-engineer",
+  "roleName": "Embedded Systems Engineer",
+  "description": "Requires hardware knowledge alongside software skills, more specialized than general software roles.",
+  "jobTitles": {
+    "fresher": [
+      "Embedded Software Engineer",
+      "Firmware Engineer",
+      "Embedded Developer",
+      "Junior Embedded Systems Engineer",
+      "IoT Developer"
+    ],
+    "experienced": [
+      "Senior Embedded Systems Engineer",
+      "Senior Firmware Engineer",
+      "Embedded Software Architect",
+      "Lead Embedded Engineer",
+      "RTOS Developer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      { "name": "C", "level": "Advanced", "priority": "Primary" },
+      { "name": "C++", "level": "Intermediate", "priority": "Primary" },
+      { "name": "Assembly", "level": "Intermediate", "priority": "Secondary" },
+      { "name": "Python", "level": "Intermediate", "priority": "Secondary" }
+    ],
+    "coreConcepts": [
+      "Microcontroller architecture (ARM, AVR)",
+      "Real-Time Operating Systems (RTOS)",
+      "Memory management (stack, heap, flash)",
+      "Interrupt handling",
+      "Communication protocols (UART, SPI, I2C)",
+      "Digital and analog electronics"
+    ],
+    "frameworks": [
+      { "name": "FreeRTOS", "popularity": "High" },
+      { "name": "Embedded Linux", "popularity": "High" },
+      { "name": "Arduino", "popularity": "High" },
+      { "name": "Yocto", "popularity": "Medium" }
+    ],
+    "tools": [
+      "Keil MDK",
+      "JTAG/SWD debuggers",
+      "Oscilloscopes",
+      "Git",
+      "Make/CMake",
+      "QEMU"
+    ]
+  },
+  "dailyWork": [
+    "Writing low-level C/C++ code for microcontrollers",
+    "Developing and debugging firmware",
+    "Implementing communication protocols",
+    "Working with hardware schematics",
+    "Optimizing code for memory and power",
+    "Porting RTOS to hardware",
+    "Testing on actual hardware prototypes"
+  ],
+  "careerProgression": {
+    "timeline": [
+      { "level": "Entry Level", "years": "0-2", "title": "Junior Embedded Engineer", "salary": { "min": 3.5, "max": 6, "currency": "LPA" } },
+      { "level": "Mid Level", "years": "3-6", "title": "Senior Firmware Engineer", "salary": { "min": 7, "max": 15, "currency": "LPA" } },
+      { "level": "Senior Level", "years": "7-10", "title": "Embedded Architect", "salary": { "min": 15, "max": 25, "currency": "LPA" } }
+    ],
+    "tracks": {
+      "leadership": [
+        "Embedded Engineer",
+        "Senior Embedded Engineer",
+        "Technical Lead",
+        "Engineering Manager",
+        "Director of Embedded Engineering",
+        "VP Hardware/Firmware"
+      ],
+      "individualContributor": [
+        "Senior Embedded Engineer",
+        "Staff Engineer",
+        "Principal Engineer",
+        "Distinguished Engineer"
+      ]
+    },
+    "timelineToSenior": "6-8 years with strong hardware and software skills",
+    "alternativePaths": [
+      "IoT Solutions Architect",
+      "Automotive Systems Engineer",
+      "Robotics Engineer",
+      "FPGA/ASIC Design Engineer",
+      "Embedded Security Specialist"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": { "min": 3, "max": 4.5 },
+      "productBased": { "min": 4.5, "max": 7 },
+      "topTech": { "min": 7, "max": 12 },
+      "average": { "min": 3.5, "max": 6 }
+    },
+    "threeYears": {
+      "serviceBased": { "min": 5, "max": 8 },
+      "productBased": { "min": 8, "max": 12 },
+      "average": { "min": 7, "max": 11 }
+    },
+    "fivePlus": {
+      "midLevel": { "min": 10, "max": 15 },
+      "senior": { "min": 15, "max": 22 },
+      "topCompanies": { "min": 22, "max": 35 }
+    },
+    "topCompanies": [
+      { "name": "Qualcomm", "range": { "min": 10, "max": 15 } },
+      { "name": "Intel", "range": { "min": 9, "max": 14 } },
+      { "name": "NVIDIA", "range": { "min": 12, "max": 18 } }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "12-18 months",
+    "description": "Requires understanding both hardware and software. Need to learn C/C++ thoroughly, understand electronics, and work with actual hardware."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Debugging complex hardware-software issues",
+      "Limited visibility (no console.log)",
+      "Production bugs can require hardware recalls",
+      "Tight resource constraints"
+    ],
+    "mitigatingFactors": [
+      "Systematic debugging tools",
+      "Job security due to specialized skill set",
+      "Interesting tangible work",
+      "Better work-life balance than pure software"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You love working at intersection of hardware and software",
+      "You enjoy understanding low-level details",
+      "You're patient with complex debugging",
+      "You like working with physical devices"
+    ],
+    "avoidIf": [
+      "You prefer rapid iteration and quick feedback",
+      "You dislike hardware concepts",
+      "You get frustrated easily with debugging",
+      "You need constant visible progress"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master C programming",
+        "Learn basic digital electronics",
+        "Understand microcontroller architecture",
+        "Build simple embedded projects (Arduino)"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Learn ARM Cortex-M architecture",
+        "Study communication protocols",
+        "Build projects with STM32/ESP32",
+        "Learn RTOS basics"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Master advanced concepts (DMA, low-power)",
+        "Learn embedded Linux basics",
+        "Choose specialization (Automotive/IoT)",
+        "Secure internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Build advanced portfolio projects",
+        "Complete online certifications",
+        "Prepare embedded interview topics",
+        "Target automotive/semiconductor companies"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      { "skill": "C Proficiency", "goal": "Master embedded patterns and pointers" },
+      { "skill": "Hardware Projects", "goal": "4-5 projects with different microcontrollers" },
+      { "skill": "Protocols", "goal": "Implement UART, SPI, I2C from scratch" },
+      { "skill": "RTOS", "goal": "Build projects using FreeRTOS" }
+    ],
+    "applicationStrategy": [
+      { "channel": "Campus Placements", "approach": "Core electronics companies" },
+      { "channel": "Off-Campus", "approach": "Semiconductor and Automotive firms" },
+      { "channel": "Referrals", "approach": "Alumni in Bosch, Intel, Qualcomm" }
+    ],
+    "interviewPrep": [
+      "C Programming (Pointers, Bitwise)",
+      "Embedded Concepts (Interrupts, RTOS)",
+      "Hardware Knowledge (Circuit diagrams)",
+      "Protocols (Timing diagrams)"
+    ],
+    "salaryExpectations": {
+      "service": { "min": 3, "max": 4.5 },
+      "midTierProduct": { "min": 4.5, "max": 7 },
+      "topProduct": { "min": 9, "max": 15 },
+      "gcc": "6-10 LPA"
+    },
+    "differentiators": [
+      "Portfolio of working hardware projects",
+      "Experience with industry-standard tools",
+      "Knowledge of automotive standards",
+      "Open-source contributions"
+    ]
+  }
+}

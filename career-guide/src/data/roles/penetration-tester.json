@@ -1,0 +1,367 @@
+{
+  "roleId": "penetration-tester",
+  "roleName": "Penetration Tester / Ethical Hacker",
+  "description": "Simulates cyberattacks to identify and exploit vulnerabilities in systems, networks, and applications to improve organizational security.",
+  "jobTitles": {
+    "fresher": [
+      "Junior Penetration Tester",
+      "Vulnerability Assessment Analyst",
+      "Ethical Hacker (Entry)",
+      "Security Researcher (Junior)",
+      "Associate Security Consultant"
+    ],
+    "experienced": [
+      "Senior Penetration Tester",
+      "Red Team Specialist",
+      "Principal Security Researcher",
+      "Offensive Security Engineer",
+      "Director of Offensive Security"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "Bash",
+        "level": "Intermediate",
+        "priority": "Primary"
+      },
+      {
+        "name": "PowerShell",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Beginner",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Penetration Testing Methodology",
+      "Reconnaissance",
+      "Scanning & Enumeration",
+      "Exploitation",
+      "Post-Exploitation",
+      "Web Application Security",
+      "Network Security",
+      "Privilege Escalation"
+    ],
+    "frameworks": [
+      {
+        "name": "OWASP Testing Guide",
+        "popularity": "High"
+      },
+      {
+        "name": "PTES (Penetration Testing Execution Standard)",
+        "popularity": "High"
+      },
+      {
+        "name": "OSSTMM",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Kali Linux",
+      "Nmap",
+      "Burp Suite Professional",
+      "Metasploit",
+      "Wireshark",
+      "SQLmap",
+      "John the Ripper",
+      "Mimikatz",
+      "Gobuster"
+    ]
+  },
+  "dailyWork": [
+    "Reconnaissance and OSINT gathering",
+    "Vulnerability Scanning and Analysis",
+    "Exploitation of vulnerabilities",
+    "Post-Exploitation activities",
+    "Report Writing and Documentation",
+    "Client Communication and Debriefing"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior Penetration Tester",
+        "salary": {
+          "min": 5,
+          "max": 10,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "2-4",
+        "title": "Penetration Tester",
+        "salary": {
+          "min": 10,
+          "max": 18,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "4-7",
+        "title": "Senior Penetration Tester",
+        "salary": {
+          "min": 18,
+          "max": 30,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "Security Architect",
+        "CISO",
+        "Director of Offensive Security"
+      ],
+      "individualContributor": [
+        "Principal Pentester",
+        "Security Researcher",
+        "Red Team Lead"
+      ]
+    },
+    "timelineToSenior": "4-7 years",
+    "alternativePaths": [
+      "Bug Bounty Hunter",
+      "Security Trainer",
+      "Security Consultant"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 5,
+        "max": 8
+      },
+      "productBased": {
+        "min": 7,
+        "max": 12
+      },
+      "topTech": {
+        "min": 10,
+        "max": 15
+      },
+      "average": {
+        "min": 5,
+        "max": 10
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 10,
+        "max": 15
+      },
+      "productBased": {
+        "min": 15,
+        "max": 22
+      },
+      "average": {
+        "min": 12,
+        "max": 22
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 22,
+        "max": 35
+      },
+      "senior": {
+        "min": 30,
+        "max": 50
+      },
+      "topCompanies": {
+        "min": 30,
+        "max": 80
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "Deloitte Cyber",
+        "range": {
+          "min": 7,
+          "max": 14
+        }
+      },
+      {
+        "name": "EY Security",
+        "range": {
+          "min": 7,
+          "max": 13
+        }
+      },
+      {
+        "name": "PwC Cyber",
+        "range": {
+          "min": 7,
+          "max": 14
+        }
+      },
+      {
+        "name": "Redteam Hacker Academy",
+        "range": {
+          "min": 8,
+          "max": 12
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Steep",
+    "timeToJobReady": "12-24 months",
+    "description": "Requires deep technical knowledge, persistence, and practical skills. Certification (OSCP) is highly valued and difficult."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Engagement Deadlines",
+      "Performance Pressure",
+      "Complexity",
+      "Responsibility",
+      "Report Writing"
+    ],
+    "mitigatingFactors": [
+      "Intellectual challenge",
+      "High impact",
+      "Recognition",
+      "Community support"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You love hacking and breaking things",
+      "You're insatiably curious",
+      "You're persistent and patient",
+      "You enjoy puzzles",
+      "You're ethical"
+    ],
+    "avoidIf": [
+      "You need hand-holding",
+      "You're impatient",
+      "You dislike writing",
+      "You can't handle ambiguity",
+      "You dislike independent work"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Learn Networking (TCP/IP)",
+        "Master Linux (Kali)",
+        "Python Basics",
+        "Start with Beginner CTFs"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Understand OWASP Top 10",
+        "Practice Labs (DVWA, WebGoat)",
+        "Master Tools (Burp, Metasploit)",
+        "Use TryHackMe Paths"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Get Certified (eJPT or CEH)",
+        "Advanced Practice (HackTheBox)",
+        "Start Bug Bounty Hunting",
+        "Secure Internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "OSCP Certification (Gold Standard)",
+        "Build Portfolio/Blog",
+        "Prepare Resume",
+        "Apply to Jobs"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "Web App Pentesting",
+        "goal": "Exploit OWASP Top 10 manually without scanners"
+      },
+      {
+        "skill": "Network Pentesting",
+        "goal": "Nmap, service exploitation, privilege escalation"
+      },
+      {
+        "skill": "Tools Mastery",
+        "goal": "Expertise in Burp Suite and Metasploit"
+      },
+      {
+        "skill": "Report Writing",
+        "goal": "Create professional, actionable reports"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "Consulting Firms",
+        "approach": "Target Big 4 and boutique security firms"
+      },
+      {
+        "channel": "Security Service Companies",
+        "approach": "Apply to MSSPs with pentesting divisions"
+      },
+      {
+        "channel": "Internal Red Teams",
+        "approach": "Target large enterprises with internal security"
+      },
+      {
+        "channel": "Bug Bounty",
+        "approach": "Use findings as portfolio and income"
+      },
+      {
+        "channel": "Networking",
+        "approach": "Attend conferences (Bsides, Null meets)"
+      }
+    ],
+    "interviewPrep": [
+      "Web/Network vulnerabilities deep dive",
+      "Manual exploitation techniques",
+      "Scenario-based attack questions",
+      "Tools usage demonstration",
+      "Walkthrough of past findings/reports"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 5,
+        "max": 8
+      },
+      "midTierProduct": {
+        "min": 7,
+        "max": 12
+      },
+      "topProduct": {
+        "min": 10,
+        "max": 15
+      },
+      "gcc": "7-14 LPA"
+    },
+    "differentiators": [
+      "OSCP Certification",
+      "Bug Bounty track record (Hall of Fame)",
+      "CVE discoveries",
+      "High quality public reports/write-ups"
+    ]
+  }
+}

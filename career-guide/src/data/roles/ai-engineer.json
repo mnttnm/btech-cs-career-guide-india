@@ -1,0 +1,352 @@
+{
+  "roleId": "ai-engineer",
+  "roleName": "AI Engineer",
+  "description": "Specializes in building applications using advanced AI models (LLMs, Generative AI) and integrating them into products.",
+  "jobTitles": {
+    "fresher": [
+      "AI Engineer (Trainee)",
+      "Junior AI Engineer",
+      "Generative AI Engineer",
+      "Associate AI Engineer",
+      "AI Application Engineer"
+    ],
+    "experienced": [
+      "Senior AI Engineer",
+      "Lead AI Engineer",
+      "Principal AI Engineer",
+      "AI Architect",
+      "Staff AI Engineer"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "priority": "Primary"
+      },
+      {
+        "name": "JavaScript/TypeScript",
+        "level": "Beginner",
+        "priority": "Secondary"
+      },
+      {
+        "name": "SQL",
+        "level": "Intermediate",
+        "priority": "Secondary"
+      }
+    ],
+    "coreConcepts": [
+      "Generative AI & LLMs",
+      "RAG (Retrieval-Augmented Generation)",
+      "Prompt Engineering",
+      "Fine-tuning (LoRA/QLoRA)",
+      "Embeddings & Vector Search",
+      "Transformers Architecture",
+      "AI Safety & Ethics"
+    ],
+    "frameworks": [
+      {
+        "name": "LangChain/LlamaIndex",
+        "popularity": "High"
+      },
+      {
+        "name": "Hugging Face Transformers",
+        "popularity": "High"
+      },
+      {
+        "name": "PyTorch",
+        "popularity": "High"
+      },
+      {
+        "name": "OpenAI API",
+        "popularity": "High"
+      },
+      {
+        "name": "FastAPI",
+        "popularity": "Medium"
+      }
+    ],
+    "tools": [
+      "Vector Databases (Pinecone, Weaviate, Chroma)",
+      "Docker",
+      "Git",
+      "Streamlit/Gradio",
+      "AWS Bedrock/Azure OpenAI/GCP Vertex AI",
+      "Weights & Biases"
+    ]
+  },
+  "dailyWork": [
+    "Model Integration & Development (35-40%)",
+    "Prompt Engineering & Optimization (15-20%)",
+    "API Integration & Backend (20-25%)",
+    "Testing & Quality Assurance (10-15%)",
+    "Learning & Research (5-10%)"
+  ],
+  "careerProgression": {
+    "timeline": [
+      {
+        "level": "Entry Level",
+        "years": "0-2",
+        "title": "Junior AI Engineer",
+        "salary": {
+          "min": 12,
+          "max": 20,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Mid Level",
+        "years": "3-6",
+        "title": "Senior AI Engineer",
+        "salary": {
+          "min": 25,
+          "max": 35,
+          "currency": "LPA"
+        }
+      },
+      {
+        "level": "Senior Level",
+        "years": "7-10",
+        "title": "Principal/Staff AI Engineer",
+        "salary": {
+          "min": 40,
+          "max": 60,
+          "currency": "LPA"
+        }
+      }
+    ],
+    "tracks": {
+      "leadership": [
+        "AI Engineering Manager",
+        "Director of AI",
+        "VP of AI",
+        "Chief AI Officer"
+      ],
+      "individualContributor": [
+        "Principal AI Engineer",
+        "Distinguished AI Engineer",
+        "AI Architect"
+      ]
+    },
+    "timelineToSenior": "4-6 years",
+    "alternativePaths": [
+      "Machine Learning Engineer",
+      "AI Research Scientist",
+      "Product Manager (AI)",
+      "AI Consultant"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": {
+        "min": 8,
+        "max": 15
+      },
+      "productBased": {
+        "min": 15,
+        "max": 25
+      },
+      "topTech": {
+        "min": 25,
+        "max": 45
+      },
+      "average": {
+        "min": 12,
+        "max": 20
+      }
+    },
+    "threeYears": {
+      "serviceBased": {
+        "min": 15,
+        "max": 20
+      },
+      "productBased": {
+        "min": 28,
+        "max": 45
+      },
+      "average": {
+        "min": 25,
+        "max": 35
+      }
+    },
+    "fivePlus": {
+      "midLevel": {
+        "min": 35,
+        "max": 55
+      },
+      "senior": {
+        "min": 50,
+        "max": 85
+      },
+      "topCompanies": {
+        "min": 70,
+        "max": 120
+      }
+    },
+    "topCompanies": [
+      {
+        "name": "OpenAI Competitor Startups",
+        "range": {
+          "min": 25,
+          "max": 45
+        }
+      },
+      {
+        "name": "Google/Microsoft/Meta",
+        "range": {
+          "min": 25,
+          "max": 45
+        }
+      },
+      {
+        "name": "Unicorns (PhonePe, CRED)",
+        "range": {
+          "min": 20,
+          "max": 35
+        }
+      }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate to High",
+    "timeToJobReady": "6-12 months",
+    "description": "Rapidly evolving field with new models and techniques weekly. Requires understanding both deep learning theory and practical implementation of LLMs/GenAI."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Rapid field evolution (FOMO)",
+      "High expectations (AI as magic)",
+      "Unpredictability of models",
+      "Cost management (API costs)",
+      "Ethical pressure"
+    ],
+    "mitigatingFactors": [
+      "Exciting, cutting-edge work",
+      "High compensation",
+      "Strong demand",
+      "Creative problem solving",
+      "Remote friendly"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "Fascinated by AI and Generative models",
+      "Enjoy rapid learning and staying updated",
+      "Comfortable with ambiguity and experimentation",
+      "Creative problem solver",
+      "Like building user-facing applications"
+    ],
+    "avoidIf": [
+      "Prefer stable, well-established technologies",
+      "Dislike constant learning and change",
+      "Frustrated by non-deterministic systems",
+      "Want clearly defined problems",
+      "Overwhelmed by rapid technological shifts"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Master Python",
+        "Linear Algebra & Calculus",
+        "ML Basics (Andrew Ng)",
+        "Git & Web Basics"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deep Learning",
+      "goals": [
+        "Deep Learning (Fast.ai)",
+        "Transformers (Hugging Face Course)",
+        "PyTorch proficiency",
+        "Build simple classifiers/chatbots"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Generative AI Focus",
+      "goals": [
+        "Master LLMs & Prompt Engineering",
+        "LangChain & Vector DBs",
+        "Build RAG applications",
+        "Deploy apps (Streamlit/Docker)"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Portfolio & Job",
+      "goals": [
+        "Build advanced GenAI projects",
+        "Contribute to Hugging Face/Open Source",
+        "Active on Twitter/LinkedIn",
+        "Apply to AI startups and tech giants"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      {
+        "skill": "LLM Engineering",
+        "goal": "Master OpenAI API, LangChain, RAG"
+      },
+      {
+        "skill": "Projects",
+        "goal": "5-7 AI projects (Chatbots, RAG, Agents)"
+      },
+      {
+        "skill": "Python",
+        "goal": "Advanced scripting & API building"
+      },
+      {
+        "skill": "Deployment",
+        "goal": "Deploy demos on Streamlit/Hugging Face Spaces"
+      }
+    ],
+    "applicationStrategy": [
+      {
+        "channel": "AngelList/Wellfound",
+        "approach": "Target AI Startups"
+      },
+      {
+        "channel": "Twitter/LinkedIn",
+        "approach": "Engage with AI community and founders"
+      },
+      {
+        "channel": "Careers Pages",
+        "approach": "Apply to tech companies with AI teams"
+      }
+    ],
+    "interviewPrep": [
+      "GenAI Concepts (Transformers, Attention, RAG)",
+      "System Design for AI Apps",
+      "Python Coding",
+      "Portfolio Review (Critical)"
+    ],
+    "salaryExpectations": {
+      "service": {
+        "min": 8,
+        "max": 15
+      },
+      "midTierProduct": {
+        "min": 15,
+        "max": 25
+      },
+      "topProduct": {
+        "min": 20,
+        "max": 35
+      },
+      "gcc": "15-25 LPA"
+    },
+    "differentiators": [
+      "LLM/RAG projects",
+      "Hugging Face profile and models",
+      "Active social media presence sharing AI learnings",
+      "Open source contributions"
+    ]
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "roleId": "full-stack-engineer-developer",
+  "roleName": "Full-Stack Engineer/Developer",
+  "description": "Need proficiency in both frontend and backend technologies, highly versatile and in-demand especially for startups.",
+  "jobTitles": {
+    "fresher": [
+      "Full-Stack Developer",
+      "Full-Stack Engineer",
+      "MERN Stack Developer",
+      "Web Developer (Full-Stack)",
+      "Associate Full-Stack Engineer"
+    ],
+    "experienced": [
+      "Senior Full-Stack Developer",
+      "Lead Full-Stack Developer",
+      "Full-Stack Architect",
+      "Principal Full-Stack Engineer",
+      "Full-Stack Tech Lead"
+    ]
+  },
+  "skills": {
+    "programmingLanguages": [
+      { "name": "JavaScript", "level": "Advanced", "priority": "Primary" },
+      { "name": "TypeScript", "level": "Intermediate", "priority": "Primary" },
+      { "name": "Python", "level": "Intermediate", "priority": "Secondary" },
+      { "name": "Java", "level": "Intermediate", "priority": "Secondary" }
+    ],
+    "coreConcepts": [
+      "Frontend & Backend Integration",
+      "RESTful APIs & GraphQL",
+      "Database Design (SQL & NoSQL)",
+      "Authentication (JWT, OAuth)",
+      "State Management",
+      "Deployment & CI/CD"
+    ],
+    "frameworks": [
+      { "name": "React.js", "popularity": "High" },
+      { "name": "Node.js (Express)", "popularity": "High" },
+      { "name": "Next.js", "popularity": "High" },
+      { "name": "Spring Boot", "popularity": "Medium" }
+    ],
+    "tools": [
+      "Git",
+      "Docker",
+      "MongoDB",
+      "PostgreSQL",
+      "AWS",
+      "Postman",
+      "VS Code"
+    ]
+  },
+  "dailyWork": [
+    "Building features end-to-end from database to UI",
+    "Designing and implementing APIs",
+    "Creating database schemas",
+    "Integrating frontend with backend",
+    "Writing tests for full stack",
+    "Deploying applications to cloud",
+    "Debugging across the entire stack"
+  ],
+  "careerProgression": {
+    "timeline": [
+      { "level": "Entry Level", "years": "0-2", "title": "Junior Full-Stack Developer", "salary": { "min": 5, "max": 9, "currency": "LPA" } },
+      { "level": "Mid Level", "years": "3-6", "title": "Senior Full-Stack Developer", "salary": { "min": 9, "max": 20, "currency": "LPA" } },
+      { "level": "Senior Level", "years": "7-10", "title": "Staff Engineer / Architect", "salary": { "min": 20, "max": 45, "currency": "LPA" } }
+    ],
+    "tracks": {
+      "leadership": [
+        "Full-Stack Developer",
+        "Senior Developer",
+        "Tech Lead",
+        "Engineering Manager",
+        "Director of Engineering",
+        "CTO"
+      ],
+      "individualContributor": [
+        "Full-Stack Developer",
+        "Senior Developer",
+        "Staff Engineer",
+        "Principal Engineer",
+        "Distinguished Engineer"
+      ]
+    },
+    "timelineToSenior": "5-7 years with demonstrated ability to build scalable apps independently",
+    "alternativePaths": [
+      "Frontend Specialist",
+      "Backend Specialist",
+      "DevOps Engineer",
+      "Solution Architect",
+      "Startup Founder/CTO"
+    ]
+  },
+  "salaryRanges": {
+    "fresher": {
+      "serviceBased": { "min": 4, "max": 5.5 },
+      "productBased": { "min": 7, "max": 11 },
+      "topTech": { "min": 14, "max": 20 },
+      "average": { "min": 5, "max": 9 }
+    },
+    "threeYears": {
+      "serviceBased": { "min": 7, "max": 10 },
+      "productBased": { "min": 12, "max": 18 },
+      "average": { "min": 10, "max": 16 }
+    },
+    "fivePlus": {
+      "midLevel": { "min": 14, "max": 20 },
+      "senior": { "min": 20, "max": 30 },
+      "topCompanies": { "min": 30, "max": 50 }
+    },
+    "topCompanies": [
+      { "name": "Google", "range": { "min": 18, "max": 25 } },
+      { "name": "Microsoft", "range": { "min": 16, "max": 24 } },
+      { "name": "Amazon", "range": { "min": 15, "max": 22 } }
+    ]
+  },
+  "learningCurve": {
+    "difficulty": "Moderate",
+    "timeToJobReady": "12-18 months",
+    "description": "More breadth than depth required initially. Need to learn both frontend and backend, but modern frameworks simplify the process."
+  },
+  "stressLevel": {
+    "level": "Medium-High",
+    "factors": [
+      "Responsible for entire application",
+      "Context switching between frontend and backend",
+      "Broader responsibility for bugs",
+      "Need to stay updated on two ecosystems"
+    ],
+    "mitigatingFactors": [
+      "High satisfaction of building complete features",
+      "Versatility and job mobility",
+      "Better compensation (premium)",
+      "Independence"
+    ]
+  },
+  "personalityFit": {
+    "thriveIf": [
+      "You enjoy variety and handling the complete flow",
+      "You're comfortable switching contexts",
+      "You enjoy being self-sufficient",
+      "You have an entrepreneurial mindset"
+    ],
+    "avoidIf": [
+      "You prefer deep specialization",
+      "You find context switching stressful",
+      "You dislike managing infrastructure",
+      "You want to focus only on one side"
+    ]
+  },
+  "collegeStrategy": [
+    {
+      "year": 1,
+      "title": "Foundation",
+      "goals": [
+        "Choose full-stack path (MERN recommended)",
+        "Master JavaScript deeply",
+        "Learn HTML & CSS",
+        "Build simple full-stack apps"
+      ]
+    },
+    {
+      "year": 2,
+      "title": "Deepening",
+      "goals": [
+        "Master React.js",
+        "Master Express.js + MongoDB",
+        "Build 3-4 complete MERN apps",
+        "Learn deployment"
+      ]
+    },
+    {
+      "year": 3,
+      "title": "Specialization",
+      "goals": [
+        "Learn Next.js (Critical)",
+        "Add TypeScript",
+        "Learn PostgreSQL",
+        "Secure full-stack internship"
+      ]
+    },
+    {
+      "year": 4,
+      "title": "Job Hunt",
+      "goals": [
+        "Polish portfolio with exceptional projects",
+        "Master system design (full-stack)",
+        "DSA preparation",
+        "Learn CI/CD and DevOps basics"
+      ]
+    }
+  ],
+  "firstJobStrategy": {
+    "technicalPrep": [
+      { "skill": "Full-Stack Project", "goal": "Build one complex showcase project" },
+      { "skill": "Next.js Mastery", "goal": "SSR/SSG and API routes" },
+      { "skill": "Database Skills", "goal": "SQL and NoSQL competence" },
+      { "skill": "System Design", "goal": "Full architecture understanding" }
+    ],
+    "applicationStrategy": [
+      { "channel": "Startups", "approach": "High demand, higher premium" },
+      { "channel": "Campus Placements", "approach": "Apply for SDE roles" },
+      { "channel": "Off-Campus", "approach": "Look for Full-Stack specific roles" }
+    ],
+    "interviewPrep": [
+      "Frontend & Backend Questions",
+      "System Design (Full-Stack)",
+      "DSA",
+      "Project Deep-Dives"
+    ],
+    "salaryExpectations": {
+      "service": { "min": 4, "max": 5.5 },
+      "midTierProduct": { "min": 7, "max": 11 },
+      "topProduct": { "min": 14, "max": 20 },
+      "gcc": "Startups pay 15-25% premium"
+    },
+    "differentiators": [
+      "Deployed, production-ready apps",
+      "Knowledge of Next.js and TypeScript",
+      "Understanding of DevOps/Deployment",
+      "Entrepreneurial projects"
+    ]
+  }
+}
