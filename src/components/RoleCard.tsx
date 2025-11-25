@@ -9,25 +9,11 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { useFavoritesStore } from '@/stores/useFavoritesStore'
 import { useComparisonStore } from '@/stores/useComparisonStore'
+import { getRoleIcon, difficultyColors, stressColors } from '@/lib/icons'
 
 interface RoleCardProps {
   role: RoleSummary
   variant?: 'default' | 'compact'
-}
-
-const difficultyColors = {
-  Easy: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
-  Moderate: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300',
-  Hard: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300',
-  Steep: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300',
-}
-
-const stressColors = {
-  Low: 'bg-green-100 text-green-800',
-  'Low-Medium': 'bg-green-100 text-green-800',
-  Medium: 'bg-yellow-100 text-yellow-800',
-  'Medium-High': 'bg-orange-100 text-orange-800',
-  High: 'bg-red-100 text-red-800',
 }
 
 export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
@@ -54,6 +40,9 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
     }
   }
 
+  // Get the appropriate Lucide icon for this role
+  const RoleIcon = getRoleIcon(role.roleId, role.category)
+
   if (variant === 'compact') {
     return (
       <Link href={`/role/${role.roleId}`}>
@@ -62,7 +51,9 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
           whileTap={{ scale: 0.98 }}
           className="flex items-center gap-3 p-3 rounded-xl bg-card border hover:border-primary/50 hover:shadow-md transition-all"
         >
-          <span className="text-2xl">{role.icon}</span>
+          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
+            <RoleIcon className="w-5 h-5 text-primary" />
+          </div>
           <div className="flex-1 min-w-0">
             <h3 className="font-medium text-sm truncate">{role.roleName}</h3>
             <p className="text-xs text-muted-foreground">
@@ -88,7 +79,9 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
       >
         {/* Icon and Actions */}
         <div className="flex items-start justify-between mb-3">
-          <span className="text-4xl">{role.icon}</span>
+          <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
+            <RoleIcon className="w-6 h-6 text-primary" />
+          </div>
           <div className="flex gap-1">
             <Button
               variant="ghost"
@@ -137,7 +130,7 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
         <div className="space-y-3">
           {/* Salary */}
           <div className="flex items-center gap-2">
-            <TrendingUp className="w-4 h-4 text-green-600" />
+            <TrendingUp className="w-4 h-4 text-success" />
             <span className="text-sm font-medium">
               ₹{role.averageSalary.min}-{role.averageSalary.max} LPA
             </span>
@@ -146,7 +139,7 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
 
           {/* Time to Job Ready */}
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-blue-600" />
+            <Clock className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">
               {role.timeToJobReady} to job-ready
             </span>
@@ -156,13 +149,21 @@ export function RoleCard({ role, variant = 'default' }: RoleCardProps) {
           <div className="flex flex-wrap gap-2">
             <Badge
               variant="secondary"
-              className={cn('text-xs', difficultyColors[role.difficulty])}
+              className={cn(
+                'text-xs',
+                difficultyColors[role.difficulty]?.bg,
+                difficultyColors[role.difficulty]?.text
+              )}
             >
               {role.difficulty}
             </Badge>
             <Badge
               variant="secondary"
-              className={cn('text-xs', stressColors[role.stressLevel])}
+              className={cn(
+                'text-xs',
+                stressColors[role.stressLevel]?.bg,
+                stressColors[role.stressLevel]?.text
+              )}
             >
               {role.stressLevel} Stress
             </Badge>

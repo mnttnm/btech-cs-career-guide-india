@@ -2,11 +2,11 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, Target, TrendingUp, Users } from 'lucide-react'
+import { ArrowRight, Target, BarChart3, Compass, Scale, Map, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { RoleCard } from '@/components/RoleCard'
 import { getPopularRoles, getCategoriesWithCounts } from '@/data/roles'
-import { Badge } from '@/components/ui/badge'
+import { getCategoryIcon } from '@/lib/icons'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -28,77 +28,55 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20" />
-
-        <div className="relative container mx-auto px-4 py-16 md:py-24">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="max-w-3xl mx-auto text-center"
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="max-w-3xl mx-auto text-center"
+        >
+          <motion.h1
+            variants={itemVariants}
+            className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-balance"
           >
-            <motion.div variants={itemVariants} className="mb-4">
-              <Badge variant="secondary" className="gap-1.5 px-3 py-1">
-                <Sparkles className="w-3.5 h-3.5" />
-                45+ Career Paths
-              </Badge>
-            </motion.div>
+            Find the tech career that fits{' '}
+            <span className="text-primary">who you are</span>
+          </motion.h1>
 
-            <motion.h1
-              variants={itemVariants}
-              className="text-4xl md:text-6xl font-bold tracking-tight mb-6"
-            >
-              Find Your Perfect{' '}
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Tech Career
-              </span>{' '}
-              in 5 Minutes
-            </motion.h1>
+          <motion.p
+            variants={itemVariants}
+            className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto"
+          >
+            Explore 45 career paths with real salary data, compare your options,
+            and get a personalized roadmap based on your personality.
+          </motion.p>
 
-            <motion.p
-              variants={itemVariants}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
-            >
-              Compare career paths with real salary data, take a personality quiz,
-              and get a personalized roadmap. Built for Indian B.Tech students.
-            </motion.p>
-
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Button asChild size="lg" className="gap-2 text-base">
-                <Link href="/quiz">
-                  <Target className="w-5 h-5" />
-                  Take the Quiz
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="gap-2 text-base">
-                <Link href="/browse">
-                  Browse All Roles
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-            </motion.div>
-
-            {/* Social Proof */}
-            <motion.div
-              variants={itemVariants}
-              className="mt-8 flex items-center justify-center gap-6 text-sm text-muted-foreground"
-            >
-              <div className="flex items-center gap-2">
-                <Users className="w-4 h-4" />
-                <span>15,000+ students</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4" />
-                <span>Real salary data</span>
-              </div>
-            </motion.div>
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <Button asChild size="lg" className="gap-2">
+              <Link href="/quiz">
+                <Target className="w-5 h-5" />
+                Take the 2-minute quiz
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="gap-2">
+              <Link href="/browse">
+                Explore all paths
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
           </motion.div>
-        </div>
+
+          {/* Credibility */}
+          <motion.p
+            variants={itemVariants}
+            className="mt-8 text-sm text-muted-foreground"
+          >
+            Based on 2024 salary data from 50+ companies in India
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* Popular Roles Section */}
@@ -138,11 +116,11 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-2">
-              Explore by Category
+              Explore by domain
             </h2>
             <p className="text-muted-foreground">
               {categories.reduce((acc, c) => acc + c.count, 0)} roles across{' '}
-              {categories.length} categories
+              {categories.length} domains
             </p>
           </div>
 
@@ -153,20 +131,28 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"
           >
-            {categories.map((cat) => (
-              <motion.div key={cat.category} variants={itemVariants}>
-                <Link href={`/browse?category=${cat.category}`}>
-                  <div className="group p-4 md:p-6 rounded-2xl bg-card border hover:border-primary/50 hover:shadow-md transition-all">
-                    <div className="font-semibold mb-1 group-hover:text-primary transition-colors">
-                      {cat.label}
+            {categories.map((cat) => {
+              const CategoryIcon = getCategoryIcon(cat.category)
+              return (
+                <motion.div key={cat.category} variants={itemVariants}>
+                  <Link href={`/browse?category=${cat.category}`}>
+                    <div className="group p-4 md:p-6 rounded-2xl bg-card border hover:border-primary/50 hover:shadow-md transition-all">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                          <CategoryIcon className="w-5 h-5 text-primary" />
+                        </div>
+                      </div>
+                      <div className="font-semibold mb-1 group-hover:text-primary transition-colors">
+                        {cat.label}
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        {cat.count} roles
+                      </div>
                     </div>
-                    <div className="text-sm text-muted-foreground">
-                      {cat.count} roles
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
+                  </Link>
+                </motion.div>
+              )
+            })}
           </motion.div>
         </div>
       </section>
@@ -174,9 +160,9 @@ export default function HomePage() {
       {/* How It Works Section */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">How It Works</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">How it works</h2>
           <p className="text-muted-foreground">
-            Three simple steps to find your perfect career
+            Three steps to find your fit
           </p>
         </div>
 
@@ -184,63 +170,67 @@ export default function HomePage() {
           {[
             {
               step: '01',
-              title: 'Take the Quiz',
+              title: 'Take the quiz',
               description:
                 'Answer 12 quick questions about your interests, work style, and values.',
-              icon: '🎯',
+              icon: Target,
             },
             {
               step: '02',
-              title: 'Compare Roles',
+              title: 'Compare paths',
               description:
                 'See side-by-side comparisons of salary, skills, stress, and growth.',
-              icon: '⚖️',
+              icon: Scale,
             },
             {
               step: '03',
-              title: 'Get Your Roadmap',
+              title: 'Get your roadmap',
               description:
                 'Follow a year-by-year action plan tailored to your current year.',
-              icon: '🗺️',
+              icon: Map,
             },
-          ].map((item, index) => (
-            <motion.div
-              key={item.step}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="text-5xl mb-4">{item.icon}</div>
-              <div className="text-sm font-medium text-primary mb-2">
-                Step {item.step}
-              </div>
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-sm text-muted-foreground">{item.description}</p>
-            </motion.div>
-          ))}
+          ].map((item, index) => {
+            const Icon = item.icon
+            return (
+              <motion.div
+                key={item.step}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-2xl bg-primary/10">
+                  <Icon className="w-8 h-8 text-primary" />
+                </div>
+                <div className="text-sm font-medium text-primary mb-2">
+                  Step {item.step}
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
+              </motion.div>
+            )
+          })}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
+      <section className="bg-primary py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Ready to Find Your Path?
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary-foreground">
+            Ready to find your path?
           </h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-            Join thousands of students who&apos;ve already discovered their ideal tech
-            career. It only takes 5 minutes.
+          <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
+            It only takes 2 minutes to discover which tech careers match your personality.
           </p>
           <Button
             asChild
             size="lg"
             variant="secondary"
-            className="gap-2 text-base"
+            className="gap-2"
           >
             <Link href="/quiz">
-              Start the Quiz
+              Start the quiz
               <ArrowRight className="w-4 h-4" />
             </Link>
           </Button>
@@ -252,21 +242,23 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <span className="text-xl">🎯</span>
+              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10">
+                <Compass className="w-4 h-4 text-primary" />
+              </div>
               <span className="font-semibold">CareerGuide</span>
             </div>
             <p className="text-sm text-muted-foreground text-center">
               Built for Indian B.Tech students
             </p>
             <div className="flex gap-4 text-sm text-muted-foreground">
-              <Link href="/browse" className="hover:text-foreground">
-                Browse Roles
+              <Link href="/browse" className="hover:text-foreground transition-colors">
+                Explore Careers
               </Link>
-              <Link href="/quiz" className="hover:text-foreground">
-                Take Quiz
+              <Link href="/quiz" className="hover:text-foreground transition-colors">
+                Find Your Fit
               </Link>
-              <Link href="/compare" className="hover:text-foreground">
-                Compare
+              <Link href="/compare" className="hover:text-foreground transition-colors">
+                Compare Paths
               </Link>
             </div>
           </div>

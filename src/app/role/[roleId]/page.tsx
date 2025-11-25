@@ -31,24 +31,10 @@ import { getRoleById, categoryLabels } from '@/data/roles'
 import { useFavoritesStore } from '@/stores/useFavoritesStore'
 import { useComparisonStore } from '@/stores/useComparisonStore'
 import { cn } from '@/lib/utils'
+import { getRoleIcon, difficultyColors, stressColors } from '@/lib/icons'
 
 interface PageProps {
   params: Promise<{ roleId: string }>
-}
-
-const difficultyColors = {
-  Easy: 'text-green-600 bg-green-100',
-  Moderate: 'text-yellow-600 bg-yellow-100',
-  Hard: 'text-orange-600 bg-orange-100',
-  Steep: 'text-red-600 bg-red-100',
-}
-
-const stressColors = {
-  Low: 'text-green-600',
-  'Low-Medium': 'text-green-600',
-  Medium: 'text-yellow-600',
-  'Medium-High': 'text-orange-600',
-  High: 'text-red-600',
 }
 
 export default function RoleDetailPage({ params }: PageProps) {
@@ -119,15 +105,22 @@ export default function RoleDetailPage({ params }: PageProps) {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <div className="flex items-start gap-4 mb-4">
-            <span className="text-5xl">{role.icon}</span>
-            <div>
-              <Badge variant="secondary" className="mb-2">
-                {categoryLabels[role.category]}
-              </Badge>
-              <h1 className="text-2xl md:text-3xl font-bold">{role.roleName}</h1>
-            </div>
-          </div>
+          {(() => {
+            const RoleIcon = getRoleIcon(role.roleId, role.category)
+            return (
+              <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10">
+                  <RoleIcon className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <Badge variant="secondary" className="mb-2">
+                    {categoryLabels[role.category]}
+                  </Badge>
+                  <h1 className="text-2xl md:text-3xl font-bold">{role.roleName}</h1>
+                </div>
+              </div>
+            )
+          })()}
           <p className="text-muted-foreground text-lg">{role.description}</p>
         </motion.div>
 
@@ -165,7 +158,8 @@ export default function RoleDetailPage({ params }: PageProps) {
             <Badge
               className={cn(
                 'text-sm',
-                difficultyColors[role.learningCurve?.difficulty || 'Moderate']
+                difficultyColors[role.learningCurve?.difficulty || 'Moderate']?.bg,
+                difficultyColors[role.learningCurve?.difficulty || 'Moderate']?.text
               )}
             >
               {role.learningCurve?.difficulty || 'Moderate'}
@@ -179,7 +173,7 @@ export default function RoleDetailPage({ params }: PageProps) {
             <div
               className={cn(
                 'font-semibold',
-                stressColors[role.stressLevel?.level || 'Medium']
+                stressColors[role.stressLevel?.level || 'Medium']?.text
               )}
             >
               {role.stressLevel?.level || 'Medium'}

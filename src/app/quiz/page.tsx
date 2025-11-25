@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ArrowRight, RotateCcw, Sparkles } from 'lucide-react'
+import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import { quizQuestions, calculateQuizResults } from '@/data/quiz'
@@ -12,6 +12,7 @@ import { useQuizStore } from '@/stores/useQuizStore'
 import { getRoleById, categoryLabels } from '@/data/roles'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
+import { getRoleIcon } from '@/lib/icons'
 
 export default function QuizPage() {
   const router = useRouter()
@@ -70,9 +71,11 @@ export default function QuizPage() {
           animate={{ opacity: 1, y: 0 }}
           className="max-w-xl mx-auto text-center"
         >
-          <div className="text-6xl mb-6">🎯</div>
+          <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 rounded-2xl bg-primary/10">
+            <Target className="w-10 h-10 text-primary" />
+          </div>
           <h1 className="text-2xl md:text-3xl font-bold mb-4">
-            Find Your Perfect Tech Role
+            Find the career that fits you
           </h1>
           <p className="text-muted-foreground mb-6">
             Answer 12 quick questions about your interests, work style, and values.
@@ -81,11 +84,11 @@ export default function QuizPage() {
 
           <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mb-8">
             <div className="flex items-center gap-2">
-              <span>⏱️</span>
+              <Clock className="w-4 h-4" />
               <span>2-3 minutes</span>
             </div>
             <div className="flex items-center gap-2">
-              <span>🔒</span>
+              <Lock className="w-4 h-4" />
               <span>100% private</span>
             </div>
           </div>
@@ -98,10 +101,6 @@ export default function QuizPage() {
             <Sparkles className="w-5 h-5" />
             Start Quiz
           </Button>
-
-          <p className="mt-6 text-sm text-muted-foreground">
-            15,000+ students found their path
-          </p>
         </motion.div>
       </div>
     )
@@ -115,9 +114,9 @@ export default function QuizPage() {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-            className="text-6xl mb-6"
+            className="flex items-center justify-center w-20 h-20 mx-auto mb-6 rounded-2xl bg-primary/10"
           >
-            ⚡
+            <Zap className="w-10 h-10 text-primary" />
           </motion.div>
           <h2 className="text-xl font-semibold mb-2">
             Analyzing your responses...
@@ -132,6 +131,9 @@ export default function QuizPage() {
 
   // Results screen
   if (isCompleted && results) {
+    const medalIcons = [Trophy, Medal, Award]
+    const medalColors = ['text-yellow-500', 'text-gray-400', 'text-amber-600']
+
     return (
       <div className="container mx-auto px-4 py-8">
         <motion.div
@@ -139,15 +141,15 @@ export default function QuizPage() {
           animate={{ opacity: 1, scale: 1 }}
           className="max-w-2xl mx-auto"
         >
-          {/* Confetti effect */}
+          {/* Header */}
           <div className="text-center mb-8">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: 'spring', duration: 0.5 }}
-              className="text-6xl mb-4"
+              className="flex items-center justify-center w-20 h-20 mx-auto mb-4 rounded-2xl bg-success/10"
             >
-              🎉
+              <PartyPopper className="w-10 h-10 text-success" />
             </motion.div>
             <h1 className="text-2xl md:text-3xl font-bold mb-2">
               Your Top Role Matches
@@ -163,7 +165,8 @@ export default function QuizPage() {
               const role = getRoleById(result.roleId)
               if (!role) return null
 
-              const medals = ['🥇', '🥈', '🥉']
+              const MedalIcon = medalIcons[index]
+              const RoleIcon = getRoleIcon(role.roleId, role.category)
 
               return (
                 <motion.div
@@ -177,10 +180,14 @@ export default function QuizPage() {
                   )}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl">{medals[index]}</div>
+                    <div className={cn('flex items-center justify-center w-12 h-12 rounded-xl', index === 0 ? 'bg-yellow-100 dark:bg-yellow-900/30' : 'bg-muted')}>
+                      <MedalIcon className={cn('w-6 h-6', medalColors[index])} />
+                    </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-2xl">{role.icon}</span>
+                        <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10">
+                          <RoleIcon className="w-4 h-4 text-primary" />
+                        </div>
                         <h2 className="text-xl font-semibold">{role.roleName}</h2>
                       </div>
                       <Badge variant="secondary" className="mb-3">
