@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award, Check, PlayCircle } from 'lucide-react'
+import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award, Check, PlayCircle, TrendingUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { quizQuestions, calculateQuizResults } from '@/data/quiz'
 import { useQuizStore } from '@/stores/useQuizStore'
@@ -80,6 +80,21 @@ export default function QuizPage() {
 
   // Count actual question answers (excluding 'start')
   const answeredQuestions = answers.filter(a => a.questionId !== 'start').length
+
+  // Calculate live preview after 6 questions
+  const livePreview = useMemo(() => {
+    const actualAnswers = answers.filter(a => a.questionId !== 'start')
+    if (actualAnswers.length < 6) return null
+
+    const previewResults = calculateQuizResults(actualAnswers)
+    if (previewResults.length === 0) return null
+
+    const topMatch = previewResults[0]
+    const role = getRoleById(topMatch.roleId)
+    if (!role) return null
+
+    return { role, score: topMatch.matchScore }
+  }, [answers])
 
   const handleSelectOption = (value: string) => {
     if (!question) return
@@ -393,7 +408,7 @@ export default function QuizPage() {
                       </div>
 
                       <Button asChild className="mt-4" variant="outline">
-                        <Link href={`/role/${result.roleId}`}>
+                        <Link href={`/role/${result.roleId}?from=quiz`}>
                           Explore {role.roleName}
                           <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
                         </Link>
@@ -458,6 +473,29 @@ export default function QuizPage() {
             </span>
           </div>
           <QuizProgress current={currentQuestion} total={quizQuestions.length} />
+
+          {/* Live Preview (after 6 questions) */}
+          <AnimatePresence>
+            {livePreview && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="mt-4 overflow-hidden"
+              >
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/20">
+                  <TrendingUp className="w-4 h-4 text-primary shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <span className="text-xs text-muted-foreground">Current top match: </span>
+                    <span className="text-sm font-medium">{livePreview.role.roleName}</span>
+                  </div>
+                  <Badge variant="secondary" className="shrink-0">
+                    {livePreview.score}%
+                  </Badge>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Question */}

@@ -2,11 +2,12 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowRight, Target, Compass, Scale, Map, Sparkles } from 'lucide-react'
+import { ArrowRight, Target, Compass, Scale, Map, Sparkles, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { RoleCard } from '@/components/RoleCard'
-import { getPopularRoles, getCategoriesWithCounts } from '@/data/roles'
+import { getPopularRoles, getCategoriesWithCounts, getRoleSummaries } from '@/data/roles'
 import { getCategoryIcon } from '@/lib/icons'
+import { useRecentlyViewedStore } from '@/stores/useRecentlyViewedStore'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -28,6 +29,14 @@ const itemVariants = {
 export default function HomePage() {
   const popularRoles = getPopularRoles()
   const categories = getCategoriesWithCounts()
+  const { recentRoleIds } = useRecentlyViewedStore()
+
+  // Get recently viewed roles (only valid ones) as RoleSummary
+  const allRoleSummaries = getRoleSummaries()
+  const recentlyViewedRoles = recentRoleIds
+    .map((id) => allRoleSummaries.find((r) => r.roleId === id))
+    .filter(Boolean)
+    .slice(0, 4)
 
   return (
     <div className="flex flex-col">
@@ -99,6 +108,21 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Recently Viewed Section */}
+      {recentlyViewedRoles.length > 0 && (
+        <section className="container mx-auto px-4 pt-12 pb-8">
+          <div className="flex items-center gap-2 mb-6">
+            <Clock className="w-5 h-5 text-muted-foreground" />
+            <h2 className="text-lg font-semibold">Recently Viewed</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {recentlyViewedRoles.map((role, index) => (
+              <RoleCard key={role!.roleId} role={role!} variant="compact" index={index} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Popular Roles Section */}
       <section className="container mx-auto px-4 py-20">

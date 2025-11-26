@@ -1,7 +1,7 @@
 'use client'
 
 import { use, useState, useEffect } from 'react'
-import { notFound } from 'next/navigation'
+import { notFound, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
@@ -28,6 +28,7 @@ import {
 import { getRoleById, getRoleSummaries, categoryLabels } from '@/data/roles'
 import { useFavoritesStore } from '@/stores/useFavoritesStore'
 import { useComparisonStore } from '@/stores/useComparisonStore'
+import { useRecentlyViewedStore } from '@/stores/useRecentlyViewedStore'
 import { cn } from '@/lib/utils'
 import { getRoleIcon, difficultyColors, stressColors } from '@/lib/icons'
 import { RoleCard } from '@/components/RoleCard'
@@ -62,11 +63,21 @@ interface PageProps {
 
 export default function RoleDetailPage({ params }: PageProps) {
   const { roleId } = use(params)
+  const searchParams = useSearchParams()
+  const fromQuiz = searchParams.get('from') === 'quiz'
   const role = getRoleById(roleId)
   const { progress, hasScrolled } = useScrollProgress()
 
   const { isFavorite } = useFavoritesStore()
   const { isSelected, selectedRoles } = useComparisonStore()
+  const { addRecentRole } = useRecentlyViewedStore()
+
+  // Track this role as recently viewed
+  useEffect(() => {
+    if (roleId) {
+      addRecentRole(roleId)
+    }
+  }, [roleId, addRecentRole])
 
   // Get related roles (same category, excluding current)
   const relatedRoles = getRoleSummaries()
@@ -105,18 +116,31 @@ export default function RoleDetailPage({ params }: PageProps) {
       {/* Header */}
       <div
         className={cn(
-          'sticky top-14 md:top-16 z-40 bg-background/95 backdrop-blur-lg border-b transition-shadow duration-200',
+          'sticky top-14 md:top-16 z-40 bg-background/95 backdrop-blur-lg border-b transition-all duration-200',
           hasScrolled && 'shadow-md'
         )}
       >
-        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          <Button asChild variant="ghost" size="sm" className="gap-2">
-            <Link href="/browse">
-              <ArrowLeft className="w-4 h-4" />
-              <span className="hidden sm:inline">Back</span>
-            </Link>
-          </Button>
-          <div className="flex items-center gap-2">
+        <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3 min-w-0">
+            <Button asChild variant="ghost" size="sm" className="gap-2 shrink-0">
+              <Link href={fromQuiz ? "/quiz" : "/browse"}>
+                <ArrowLeft className="w-4 h-4" />
+                <span className="hidden sm:inline">{fromQuiz ? "Back to Results" : "Back"}</span>
+              </Link>
+            </Button>
+            {/* Show role info when scrolled */}
+            {hasScrolled && (
+              <div className="hidden sm:flex items-center gap-3 min-w-0">
+                <span className="text-sm font-medium truncate">{role.roleName}</span>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <span>₹{role.salaryRanges?.fresher?.productBased?.min || 4}-{role.salaryRanges?.fresher?.productBased?.max || 8}L</span>
+                  <span>•</span>
+                  <span>{role.learningCurve?.timeToJobReady}</span>
+                </div>
+              </div>
+            )}
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
             <Button
               variant="ghost"
               size="icon"
@@ -242,6 +266,28 @@ export default function RoleDetailPage({ params }: PageProps) {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Key Insight Box */}
+        {role.personalityFit?.thriveIf?.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/20"
+          >
+            <div className="flex items-start gap-3">
+              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 shrink-0">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-medium text-sm text-primary mb-1">Best for you if...</h3>
+                <p className="text-sm text-muted-foreground">
+                  {role.personalityFit.thriveIf.slice(0, 2).join(' and ')}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
 
         {/* Tabbed Sections */}
         <Tabs defaultValue="overview" className="mt-8">

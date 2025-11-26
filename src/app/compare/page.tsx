@@ -1,10 +1,10 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Plus, ArrowRight, Lightbulb, Trophy, GitCompare } from 'lucide-react'
+import { X, Plus, ArrowRight, Lightbulb, Trophy, GitCompare, Share2, Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { EmptyState } from '@/components/EmptyState'
@@ -49,10 +49,42 @@ type CompareRole = Role | undefined
 export default function ComparePage() {
   const router = useRouter()
   const { selectedRoles } = useComparisonStore()
+  const [copied, setCopied] = useState(false)
 
   const roles = useMemo((): CompareRole[] => {
     return selectedRoles.map((id) => getRoleById(id)).filter(Boolean) as CompareRole[]
   }, [selectedRoles])
+
+  // Share comparison by copying link to clipboard
+  const handleShare = async () => {
+    const roleNames = roles.map(r => r?.roleName).filter(Boolean).join(' vs ')
+    const text = `Compare: ${roleNames}\n\nCheck out this career comparison on CareerGuide!`
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `Career Comparison: ${roleNames}`,
+          text: text,
+          url: window.location.href,
+        })
+      } catch {
+        // User cancelled or share failed, fall back to clipboard
+        await copyToClipboard()
+      }
+    } else {
+      await copyToClipboard()
+    }
+  }
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // Clipboard API not available
+    }
+  }
 
   const allRoles = getRoleSummaries()
 
@@ -285,6 +317,28 @@ export default function ComparePage() {
             </Button>
           </motion.div>
         )}
+        {selectedRoles.length >= 2 && (
+          <motion.div layout>
+            <Button
+              variant="outline"
+              onClick={handleShare}
+              className="gap-2"
+              size="sm"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-4 h-4" />
+                  Copied!
+                </>
+              ) : (
+                <>
+                  <Share2 className="w-4 h-4" />
+                  Share
+                </>
+              )}
+            </Button>
+          </motion.div>
+        )}
         {selectedRoles.length > 0 && (
           <motion.div layout>
             <Button
@@ -328,24 +382,30 @@ export default function ComparePage() {
           )}
 
           {/* Comparison Table */}
-          <div className="overflow-x-auto -mx-4 px-4">
-            <table className="w-full min-w-[600px]">
-              <thead>
-                <tr>
-                  <th className="text-left p-4 bg-muted rounded-tl-xl">Metric</th>
-                  {roles.map((role) => (
-                    <th
-                      key={role?.roleId}
-                      className="text-left p-4 bg-muted last:rounded-tr-xl"
-                    >
-                      <div className="flex items-center gap-2">
-                        <span>{role?.icon}</span>
-                        <span className="font-semibold">{role?.roleName}</span>
-                      </div>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
+          <div className="relative">
+            {/* Scroll hint for mobile */}
+            <div className="sm:hidden absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent pointer-events-none z-10" />
+            <div className="overflow-x-auto -mx-4 px-4 pb-2">
+              <table className="w-full min-w-[600px]">
+                <thead>
+                  <tr>
+                    <th className="text-left p-4 bg-muted rounded-tl-xl sticky left-0 z-10 bg-muted">Metric</th>
+                    {roles.map((role, i) => (
+                      <th
+                        key={role?.roleId}
+                        className={cn(
+                          "text-left p-4 bg-muted",
+                          i === roles.length - 1 && "rounded-tr-xl"
+                        )}
+                      >
+                        <div className="flex items-center gap-2">
+                          <span>{role?.icon}</span>
+                          <span className="font-semibold">{role?.roleName}</span>
+                        </div>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
               <tbody>
                 {metrics.map((metric, index) => {
                   const bestRoleId = metric.getBest(roles)
@@ -370,7 +430,7 @@ export default function ComparePage() {
                         index % 2 === 0 && 'bg-muted/30'
                       )}
                     >
-                      <td className="p-4 font-medium">{metric.label}</td>
+                      <td className="p-4 font-medium sticky left-0 bg-background z-10">{metric.label}</td>
                       {roles.map((role, roleIndex) => {
                         const isBest = bestRoleId === role?.roleId
                         const value = metric.getValue(role)
@@ -451,6 +511,7 @@ export default function ComparePage() {
               </tbody>
             </table>
           </div>
+          </div>
 
           {/* Skills Comparison */}
           <div className="mt-8">
@@ -497,6 +558,39 @@ export default function ComparePage() {
               ))}
             </div>
           </div>
+
+          {/* Winner Summary */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mt-8 p-6 rounded-xl bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-950/30 dark:to-amber-950/30 border border-yellow-200 dark:border-yellow-800"
+          >
+            <div className="flex items-center gap-2 mb-4">
+              <Trophy className="w-5 h-5 text-yellow-600" />
+              <h2 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100">Winner Summary</h2>
+            </div>
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { label: 'Highest Salary', winner: metrics.find(m => m.label === 'Fresher Salary')?.getBest(roles), metric: 'Fresher Salary' },
+                { label: 'Easiest to Learn', winner: metrics.find(m => m.label === 'Difficulty')?.getBest(roles), metric: 'Difficulty' },
+                { label: 'Quickest Start', winner: metrics.find(m => m.label === 'Time to Job')?.getBest(roles), metric: 'Time to Job' },
+                { label: 'Best Work-Life', winner: metrics.find(m => m.label === 'Stress Level')?.getBest(roles), metric: 'Stress Level' },
+              ].map((item) => {
+                const winnerRole = roles.find(r => r?.roleId === item.winner)
+                if (!winnerRole) return null
+                return (
+                  <div key={item.label} className="text-center">
+                    <div className="text-xs text-muted-foreground mb-1">{item.label}</div>
+                    <div className="flex items-center justify-center gap-1">
+                      <span className="text-lg">{winnerRole.icon}</span>
+                      <span className="text-sm font-medium truncate">{winnerRole.roleName}</span>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </motion.div>
 
           {/* Bottom Line */}
           <div className="mt-8 p-6 rounded-xl bg-muted/50">

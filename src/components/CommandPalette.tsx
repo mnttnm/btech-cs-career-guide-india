@@ -19,7 +19,7 @@ import { getRoleSummaries, categoryLabels } from '@/data/roles'
 import { getRoleIcon } from '@/lib/icons'
 import { useComparisonStore } from '@/stores/useComparisonStore'
 import { clearComparisonWithToast } from '@/lib/toast-actions'
-import { useTheme } from 'next-themes'
+import { useTheme } from '@/components/ThemeProvider'
 import { cn } from '@/lib/utils'
 
 interface CommandItem {
@@ -37,8 +37,8 @@ export function CommandPalette() {
   const [search, setSearch] = useState('')
   const [selectedIndex, setSelectedIndex] = useState(0)
   const router = useRouter()
-  const { selectedRoles, clearRoles } = useComparisonStore()
-  const { theme, setTheme } = useTheme()
+  const { selectedRoles } = useComparisonStore()
+  const { theme, setTheme, resolvedTheme } = useTheme()
 
   // Get all roles for search
   const roles = getRoleSummaries()
@@ -87,10 +87,10 @@ export function CommandPalette() {
     const actionCommands: CommandItem[] = [
       {
         id: 'toggle-theme',
-        label: theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode',
+        label: resolvedTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode',
         description: 'Toggle between light and dark theme',
-        icon: theme === 'dark' ? Sun : Moon,
-        action: () => setTheme(theme === 'dark' ? 'light' : 'dark'),
+        icon: resolvedTheme === 'dark' ? Sun : Moon,
+        action: () => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark'),
         keywords: ['theme', 'dark', 'light', 'mode', 'toggle'],
         category: 'actions',
       },
@@ -127,7 +127,7 @@ export function CommandPalette() {
     }))
 
     return [...navCommands, ...actionCommands, ...roleCommands]
-  }, [router, selectedRoles.length, theme, setTheme, roles])
+  }, [router, selectedRoles.length, resolvedTheme, setTheme, roles])
 
   // Filter commands based on search
   const filteredCommands = useMemo(() => {
@@ -208,7 +208,7 @@ export function CommandPalette() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="p-0 gap-0 max-w-lg overflow-hidden">
+      <DialogContent className="p-0 gap-0 max-w-lg overflow-hidden" showCloseButton={false}>
         <DialogTitle className="sr-only">Command Palette</DialogTitle>
 
         {/* Search Input */}
