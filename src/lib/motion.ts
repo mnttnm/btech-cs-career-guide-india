@@ -3,6 +3,72 @@
  * Centralized animation constants for consistent, physics-based motion
  */
 
+import { useState, useEffect } from 'react'
+
+// ========================================
+// REDUCED MOTION HOOK
+// ========================================
+
+/**
+ * Hook to detect user's reduced motion preference
+ * @returns boolean - true if user prefers reduced motion
+ */
+export const useReducedMotion = () => {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+
+  useEffect(() => {
+    // Check initial preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    setPrefersReducedMotion(mediaQuery.matches)
+
+    // Listen for changes
+    const handleChange = (event: MediaQueryListEvent) => {
+      setPrefersReducedMotion(event.matches)
+    }
+
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
+
+  return prefersReducedMotion
+}
+
+/**
+ * Get motion-safe transition based on user preference
+ * @param prefersReducedMotion - whether user prefers reduced motion
+ * @param defaultTransition - transition to use when motion is allowed
+ * @returns transition config or instant transition
+ */
+export const getMotionSafeTransition = (
+  prefersReducedMotion: boolean,
+  defaultTransition: object = springs.snappy
+) => {
+  return prefersReducedMotion ? { duration: 0 } : defaultTransition
+}
+
+/**
+ * Get motion-safe variants based on user preference
+ * @param prefersReducedMotion - whether user prefers reduced motion
+ * @param variants - animation variants to use when motion is allowed
+ * @returns variants with instant transitions if reduced motion is preferred
+ */
+export const getMotionSafeVariants = (
+  prefersReducedMotion: boolean,
+  variants: { hidden: object; visible: object }
+) => {
+  if (prefersReducedMotion) {
+    return {
+      hidden: { opacity: 0 },
+      visible: { opacity: 1, transition: { duration: 0 } },
+    }
+  }
+  return variants
+}
+
+// ========================================
+// SPRING CONFIGURATIONS
+// ========================================
+
 // Spring configurations for Framer Motion
 export const springs = {
   // Snappy, minimal overshoot - buttons, small elements
