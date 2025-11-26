@@ -14,6 +14,7 @@ import { cn } from '@/lib/utils'
 import { Role } from '@/types/role'
 import { springs } from '@/lib/motion'
 import { difficultyColors, stressColors } from '@/lib/icons'
+import { removeFromComparisonWithToast, clearComparisonWithToast } from '@/lib/toast-actions'
 
 // Metric bar component for salary visualization
 function MetricBar({
@@ -47,7 +48,7 @@ type CompareRole = Role | undefined
 
 export default function ComparePage() {
   const router = useRouter()
-  const { selectedRoles, removeRole, clearRoles } = useComparisonStore()
+  const { selectedRoles } = useComparisonStore()
 
   const roles = useMemo((): CompareRole[] => {
     return selectedRoles.map((id) => getRoleById(id)).filter(Boolean) as CompareRole[]
@@ -266,7 +267,7 @@ export default function ComparePage() {
               <span>{role?.icon}</span>
               <span className="font-medium">{role?.roleName}</span>
               <button
-                onClick={() => removeRole(role?.roleId || '')}
+                onClick={() => removeFromComparisonWithToast(role?.roleId || '', role?.roleName || '')}
                 className="p-1 hover:bg-background rounded-full transition-colors"
               >
                 <X className="w-4 h-4" />
@@ -288,7 +289,7 @@ export default function ComparePage() {
           <motion.div layout>
             <Button
               variant="ghost"
-              onClick={clearRoles}
+              onClick={clearComparisonWithToast}
               className="text-muted-foreground"
             >
               Clear All

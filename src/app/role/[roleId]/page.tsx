@@ -20,18 +20,20 @@ import {
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components/ui/accordion'
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@/components/ui/tabs'
 import { getRoleById, getRoleSummaries, categoryLabels } from '@/data/roles'
 import { useFavoritesStore } from '@/stores/useFavoritesStore'
 import { useComparisonStore } from '@/stores/useComparisonStore'
 import { cn } from '@/lib/utils'
 import { getRoleIcon, difficultyColors, stressColors } from '@/lib/icons'
 import { RoleCard } from '@/components/RoleCard'
+import { Breadcrumb } from '@/components/Breadcrumb'
 import { springs } from '@/lib/motion'
+import { toggleFavoriteWithToast, addToComparisonWithToast, removeFromComparisonWithToast } from '@/lib/toast-actions'
 
 // Hook to track scroll progress
 function useScrollProgress() {
@@ -63,8 +65,8 @@ export default function RoleDetailPage({ params }: PageProps) {
   const role = getRoleById(roleId)
   const { progress, hasScrolled } = useScrollProgress()
 
-  const { toggleFavorite, isFavorite } = useFavoritesStore()
-  const { addRole, removeRole, isSelected, selectedRoles } = useComparisonStore()
+  const { isFavorite } = useFavoritesStore()
+  const { isSelected, selectedRoles } = useComparisonStore()
 
   // Get related roles (same category, excluding current)
   const relatedRoles = getRoleSummaries()
@@ -81,10 +83,14 @@ export default function RoleDetailPage({ params }: PageProps) {
 
   const handleToggleCompare = () => {
     if (isRoleSelected) {
-      removeRole(role.roleId)
-    } else if (canAddToCompare) {
-      addRole(role.roleId)
+      removeFromComparisonWithToast(role.roleId, role.roleName)
+    } else {
+      addToComparisonWithToast(role.roleId, role.roleName)
     }
+  }
+
+  const handleToggleFavorite = () => {
+    toggleFavoriteWithToast(role.roleId, role.roleName)
   }
 
   return (
@@ -114,7 +120,7 @@ export default function RoleDetailPage({ params }: PageProps) {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => toggleFavorite(role.roleId)}
+              onClick={handleToggleFavorite}
             >
               <Heart
                 className={cn(
@@ -138,6 +144,16 @@ export default function RoleDetailPage({ params }: PageProps) {
       </div>
 
       <div className="container mx-auto px-4 py-6">
+        {/* Breadcrumb Navigation */}
+        <Breadcrumb
+          items={[
+            { label: 'Browse', href: '/browse' },
+            { label: categoryLabels[role.category], href: `/browse?category=${role.category}` },
+            { label: role.roleName },
+          ]}
+          className="mb-4"
+        />
+
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -152,9 +168,6 @@ export default function RoleDetailPage({ params }: PageProps) {
                   <RoleIcon className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <Badge variant="secondary" className="mb-2">
-                    {categoryLabels[role.category]}
-                  </Badge>
                   <h1 className="text-2xl md:text-3xl font-bold">{role.roleName}</h1>
                 </div>
               </div>
@@ -230,14 +243,20 @@ export default function RoleDetailPage({ params }: PageProps) {
           ))}
         </motion.div>
 
-        {/* Accordion Sections */}
-        <Accordion type="multiple" defaultValue={['daily-work', 'personality']} className="space-y-4">
-          {/* Daily Work */}
-          <AccordionItem value="daily-work" className="border rounded-xl px-4">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              What You&apos;ll Do Daily
-            </AccordionTrigger>
-            <AccordionContent>
+        {/* Tabbed Sections */}
+        <Tabs defaultValue="overview" className="mt-8">
+          <TabsList className="grid w-full grid-cols-4 h-auto p-1">
+            <TabsTrigger value="overview" className="text-xs sm:text-sm py-2">Overview</TabsTrigger>
+            <TabsTrigger value="skills" className="text-xs sm:text-sm py-2">Skills</TabsTrigger>
+            <TabsTrigger value="career" className="text-xs sm:text-sm py-2">Career</TabsTrigger>
+            <TabsTrigger value="strategy" className="text-xs sm:text-sm py-2">Strategy</TabsTrigger>
+          </TabsList>
+
+          {/* Overview Tab: What You'll Do + Is This For You */}
+          <TabsContent value="overview" className="mt-6 space-y-8">
+            {/* Daily Work */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">What You&apos;ll Do Daily</h3>
               <ul className="space-y-2">
                 {role.dailyWork?.map((task, index) => (
                   <li key={index} className="flex items-start gap-2">
@@ -246,89 +265,14 @@ export default function RoleDetailPage({ params }: PageProps) {
                   </li>
                 ))}
               </ul>
-            </AccordionContent>
-          </AccordionItem>
+            </div>
 
-          {/* Skills Required */}
-          <AccordionItem value="skills" className="border rounded-xl px-4">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Skills Required
-            </AccordionTrigger>
-            <AccordionContent className="space-y-6">
-              {/* Programming Languages */}
-              {role.skills?.programmingLanguages?.length > 0 && (
-                <div>
-                  <h4 className="font-medium mb-3">Programming Languages</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {role.skills.programmingLanguages.map((skill) => (
-                      <Badge
-                        key={skill.name}
-                        variant={skill.priority === 'Primary' ? 'default' : 'secondary'}
-                        className="px-3 py-1"
-                      >
-                        {skill.name}
-                        <span className="ml-1 opacity-70">({skill.level})</span>
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Frameworks */}
-              {role.skills?.frameworks?.length > 0 && (
-                <div>
-                  <h4 className="font-medium mb-3">Frameworks & Libraries</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {role.skills.frameworks.map((fw) => (
-                      <Badge key={fw.name} variant="outline" className="px-3 py-1">
-                        {fw.name}
-                        <span className="ml-1 opacity-70">({fw.popularity})</span>
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Core Concepts */}
-              {role.skills?.coreConcepts?.length > 0 && (
-                <div>
-                  <h4 className="font-medium mb-3">Core Concepts</h4>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {role.skills.coreConcepts.map((concept, index) => (
-                      <li key={index} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0" />
-                        {concept}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Tools */}
-              {role.skills?.tools?.length > 0 && (
-                <div>
-                  <h4 className="font-medium mb-3">Tools & Technologies</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {role.skills.tools.map((tool) => (
-                      <Badge key={tool} variant="secondary" className="px-3 py-1">
-                        {tool}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </AccordionContent>
-          </AccordionItem>
-
-          {/* Personality Fit */}
-          <AccordionItem value="personality" className="border rounded-xl px-4">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Is This For You?
-            </AccordionTrigger>
-            <AccordionContent>
+            {/* Personality Fit */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Is This For You?</h3>
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-medium text-green-600 mb-3 flex items-center gap-2">
+                <div className="p-4 rounded-xl bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900">
+                  <h4 className="font-medium text-green-700 dark:text-green-400 mb-3 flex items-center gap-2">
                     <CheckCircle2 className="w-5 h-5" />
                     You&apos;ll Thrive If...
                   </h4>
@@ -341,8 +285,8 @@ export default function RoleDetailPage({ params }: PageProps) {
                     ))}
                   </ul>
                 </div>
-                <div>
-                  <h4 className="font-medium text-red-600 mb-3 flex items-center gap-2">
+                <div className="p-4 rounded-xl bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900">
+                  <h4 className="font-medium text-red-700 dark:text-red-400 mb-3 flex items-center gap-2">
                     <XCircle className="w-5 h-5" />
                     Avoid If...
                   </h4>
@@ -356,44 +300,105 @@ export default function RoleDetailPage({ params }: PageProps) {
                   </ul>
                 </div>
               </div>
-            </AccordionContent>
-          </AccordionItem>
+            </div>
+          </TabsContent>
 
-          {/* Career Progression */}
-          <AccordionItem value="career" className="border rounded-xl px-4">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Career Progression
-            </AccordionTrigger>
-            <AccordionContent className="space-y-6">
-              {/* Timeline */}
+          {/* Skills Tab: Programming + Frameworks + Concepts + Tools */}
+          <TabsContent value="skills" className="mt-6 space-y-6">
+            {/* Programming Languages */}
+            {role.skills?.programmingLanguages?.length > 0 && (
               <div>
-                <h4 className="font-medium mb-4">Growth Timeline</h4>
-                <div className="space-y-4">
-                  {role.careerProgression?.timeline?.map((level, index) => (
-                    <div key={index} className="flex items-start gap-4">
-                      <div className="flex flex-col items-center">
-                        <div className="w-3 h-3 rounded-full bg-primary" />
-                        {index < (role.careerProgression?.timeline?.length || 0) - 1 && (
-                          <div className="w-0.5 h-full bg-border flex-1 mt-1" />
-                        )}
-                      </div>
-                      <div className="flex-1 pb-4">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="font-medium">{level.title}</span>
-                          <Badge variant="outline">{level.years} years</Badge>
-                        </div>
-                        <div className="text-sm text-muted-foreground">
-                          ₹{level.salary?.min}-{level.salary?.max} LPA
-                        </div>
-                      </div>
-                    </div>
+                <h4 className="font-medium mb-3">Programming Languages</h4>
+                <div className="flex flex-wrap gap-2">
+                  {role.skills.programmingLanguages.map((skill) => (
+                    <Badge
+                      key={skill.name}
+                      variant={skill.priority === 'Primary' ? 'default' : 'secondary'}
+                      className="px-3 py-1"
+                    >
+                      {skill.name}
+                      <span className="ml-1 opacity-70">({skill.level})</span>
+                    </Badge>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {/* Frameworks */}
+            {role.skills?.frameworks?.length > 0 && (
+              <div>
+                <h4 className="font-medium mb-3">Frameworks & Libraries</h4>
+                <div className="flex flex-wrap gap-2">
+                  {role.skills.frameworks.map((fw) => (
+                    <Badge key={fw.name} variant="outline" className="px-3 py-1">
+                      {fw.name}
+                      <span className="ml-1 opacity-70">({fw.popularity})</span>
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Core Concepts */}
+            {role.skills?.coreConcepts?.length > 0 && (
+              <div>
+                <h4 className="font-medium mb-3">Core Concepts</h4>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {role.skills.coreConcepts.map((concept, index) => (
+                    <li key={index} className="flex items-center gap-2 text-sm">
+                      <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0" />
+                      {concept}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Tools */}
+            {role.skills?.tools?.length > 0 && (
+              <div>
+                <h4 className="font-medium mb-3">Tools & Technologies</h4>
+                <div className="flex flex-wrap gap-2">
+                  {role.skills.tools.map((tool) => (
+                    <Badge key={tool} variant="secondary" className="px-3 py-1">
+                      {tool}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
+          </TabsContent>
+
+          {/* Career Tab: Progression + Salary */}
+          <TabsContent value="career" className="mt-6 space-y-8">
+            {/* Career Progression */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Growth Timeline</h3>
+              <div className="space-y-4">
+                {role.careerProgression?.timeline?.map((level, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className="w-3 h-3 rounded-full bg-primary" />
+                      {index < (role.careerProgression?.timeline?.length || 0) - 1 && (
+                        <div className="w-0.5 h-full bg-border flex-1 mt-1" />
+                      )}
+                    </div>
+                    <div className="flex-1 pb-4">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="font-medium">{level.title}</span>
+                        <Badge variant="outline">{level.years} years</Badge>
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        ₹{level.salary?.min}-{level.salary?.max} LPA
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
 
               {/* Alternative Paths */}
               {role.careerProgression?.alternativePaths?.length > 0 && (
-                <div>
+                <div className="mt-6">
                   <h4 className="font-medium mb-3">Alternative Paths</h4>
                   <div className="flex flex-wrap gap-2">
                     {role.careerProgression.alternativePaths.map((path, index) => (
@@ -404,15 +409,74 @@ export default function RoleDetailPage({ params }: PageProps) {
                   </div>
                 </div>
               )}
-            </AccordionContent>
-          </AccordionItem>
+            </div>
 
-          {/* College Strategy */}
-          <AccordionItem value="college" className="border rounded-xl px-4">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              College Roadmap
-            </AccordionTrigger>
-            <AccordionContent>
+            {/* Salary Breakdown */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Salary Breakdown</h3>
+              <div className="space-y-6">
+                {/* Fresher Salary */}
+                <div className="p-4 rounded-xl bg-muted/50">
+                  <h4 className="font-medium mb-4">Fresher Salary (0-2 years)</h4>
+                  <div className="space-y-3">
+                    {role.salaryRanges?.fresher?.serviceBased && (
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-muted-foreground">Service-Based</span>
+                        <span className="font-medium">
+                          ₹{role.salaryRanges.fresher.serviceBased.min}-
+                          {role.salaryRanges.fresher.serviceBased.max} LPA
+                        </span>
+                      </div>
+                    )}
+                    {role.salaryRanges?.fresher?.productBased && (
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-muted-foreground">Product-Based</span>
+                        <span className="font-medium">
+                          ₹{role.salaryRanges.fresher.productBased.min}-
+                          {role.salaryRanges.fresher.productBased.max} LPA
+                        </span>
+                      </div>
+                    )}
+                    {role.salaryRanges?.fresher?.topTech && (
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-muted-foreground">Top Tech (FAANG)</span>
+                        <span className="font-medium text-green-600">
+                          ₹{role.salaryRanges.fresher.topTech.min}-
+                          {role.salaryRanges.fresher.topTech.max} LPA
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Top Companies */}
+                {role.salaryRanges?.topCompanies?.length > 0 && (
+                  <div>
+                    <h4 className="font-medium mb-4">Top Companies (Fresher)</h4>
+                    <div className="grid grid-cols-2 gap-3">
+                      {role.salaryRanges.topCompanies.map((company) => (
+                        <div
+                          key={company.name}
+                          className="p-3 rounded-lg bg-muted/50 flex items-center justify-between"
+                        >
+                          <span className="font-medium text-sm">{company.name}</span>
+                          <span className="text-sm text-muted-foreground">
+                            ₹{company.range?.min}-{company.range?.max}L
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </TabsContent>
+
+          {/* Strategy Tab: College Roadmap + First Job */}
+          <TabsContent value="strategy" className="mt-6 space-y-8">
+            {/* College Strategy */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">College Roadmap</h3>
               <div className="space-y-6">
                 {role.collegeStrategy?.map((year) => (
                   <div key={year.year} className="border-l-2 border-primary pl-4">
@@ -431,124 +495,60 @@ export default function RoleDetailPage({ params }: PageProps) {
                   </div>
                 ))}
               </div>
-            </AccordionContent>
-          </AccordionItem>
+            </div>
 
-          {/* Salary Breakdown */}
-          <AccordionItem value="salary" className="border rounded-xl px-4">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              Salary Breakdown
-            </AccordionTrigger>
-            <AccordionContent className="space-y-6">
-              {/* Fresher Salary */}
-              <div>
-                <h4 className="font-medium mb-4">Fresher Salary (0-2 years)</h4>
-                <div className="space-y-3">
-                  {role.salaryRanges?.fresher?.serviceBased && (
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Service-Based</span>
-                      <span className="font-medium">
-                        ₹{role.salaryRanges.fresher.serviceBased.min}-
-                        {role.salaryRanges.fresher.serviceBased.max} LPA
-                      </span>
+            {/* First Job Strategy */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">First Job Strategy</h3>
+              <div className="space-y-6">
+                {/* Technical Prep */}
+                {role.firstJobStrategy?.technicalPrep?.length > 0 && (
+                  <div>
+                    <h4 className="font-medium mb-3">Technical Preparation</h4>
+                    <div className="space-y-3">
+                      {role.firstJobStrategy.technicalPrep.map((prep, index) => (
+                        <div key={index} className="p-3 rounded-lg bg-muted/50">
+                          <div className="font-medium text-sm mb-1">{prep.skill}</div>
+                          <div className="text-sm text-muted-foreground">{prep.goal}</div>
+                        </div>
+                      ))}
                     </div>
-                  )}
-                  {role.salaryRanges?.fresher?.productBased && (
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Product-Based</span>
-                      <span className="font-medium">
-                        ₹{role.salaryRanges.fresher.productBased.min}-
-                        {role.salaryRanges.fresher.productBased.max} LPA
-                      </span>
-                    </div>
-                  )}
-                  {role.salaryRanges?.fresher?.topTech && (
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-muted-foreground">Top Tech (FAANG)</span>
-                      <span className="font-medium text-green-600">
-                        ₹{role.salaryRanges.fresher.topTech.min}-
-                        {role.salaryRanges.fresher.topTech.max} LPA
-                      </span>
-                    </div>
-                  )}
-                </div>
+                  </div>
+                )}
+
+                {/* Interview Prep */}
+                {role.firstJobStrategy?.interviewPrep?.length > 0 && (
+                  <div>
+                    <h4 className="font-medium mb-3">Interview Topics</h4>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {role.firstJobStrategy.interviewPrep.map((topic, index) => (
+                        <li key={index} className="flex items-center gap-2 text-sm">
+                          <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                          {topic}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Differentiators */}
+                {role.firstJobStrategy?.differentiators?.length > 0 && (
+                  <div>
+                    <h4 className="font-medium mb-3">How to Stand Out</h4>
+                    <ul className="space-y-2">
+                      {role.firstJobStrategy.differentiators.map((diff, index) => (
+                        <li key={index} className="flex items-start gap-2 text-sm">
+                          <span className="text-primary">★</span>
+                          {diff}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
-
-              {/* Top Companies */}
-              {role.salaryRanges?.topCompanies?.length > 0 && (
-                <div>
-                  <h4 className="font-medium mb-4">Top Companies (Fresher)</h4>
-                  <div className="grid grid-cols-2 gap-3">
-                    {role.salaryRanges.topCompanies.map((company) => (
-                      <div
-                        key={company.name}
-                        className="p-3 rounded-lg bg-muted/50 flex items-center justify-between"
-                      >
-                        <span className="font-medium text-sm">{company.name}</span>
-                        <span className="text-sm text-muted-foreground">
-                          ₹{company.range?.min}-{company.range?.max}L
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </AccordionContent>
-          </AccordionItem>
-
-          {/* First Job Strategy */}
-          <AccordionItem value="first-job" className="border rounded-xl px-4">
-            <AccordionTrigger className="text-lg font-semibold hover:no-underline">
-              First Job Strategy
-            </AccordionTrigger>
-            <AccordionContent className="space-y-6">
-              {/* Technical Prep */}
-              {role.firstJobStrategy?.technicalPrep?.length > 0 && (
-                <div>
-                  <h4 className="font-medium mb-3">Technical Preparation</h4>
-                  <div className="space-y-3">
-                    {role.firstJobStrategy.technicalPrep.map((prep, index) => (
-                      <div key={index} className="p-3 rounded-lg bg-muted/50">
-                        <div className="font-medium text-sm mb-1">{prep.skill}</div>
-                        <div className="text-sm text-muted-foreground">{prep.goal}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Interview Prep */}
-              {role.firstJobStrategy?.interviewPrep?.length > 0 && (
-                <div>
-                  <h4 className="font-medium mb-3">Interview Topics</h4>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {role.firstJobStrategy.interviewPrep.map((topic, index) => (
-                      <li key={index} className="flex items-center gap-2 text-sm">
-                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
-                        {topic}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Differentiators */}
-              {role.firstJobStrategy?.differentiators?.length > 0 && (
-                <div>
-                  <h4 className="font-medium mb-3">How to Stand Out</h4>
-                  <ul className="space-y-2">
-                    {role.firstJobStrategy.differentiators.map((diff, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm">
-                        <span className="text-primary">★</span>
-                        {diff}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+            </div>
+          </TabsContent>
+        </Tabs>
 
         {/* Related Roles Carousel */}
         {relatedRoles.length > 0 && (

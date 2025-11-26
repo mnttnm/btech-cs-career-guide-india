@@ -122,12 +122,13 @@ function BrowseContent() {
       </div>
 
       {/* Category Pills (Horizontal Scroll) */}
-      <div className="mb-6 -mx-4 px-4 overflow-x-auto scrollbar-hide">
-        <div className="flex gap-2 pb-2">
+      <nav aria-label="Filter by category" className="mb-6 -mx-4 px-4 overflow-x-auto scrollbar-hide">
+        <div className="flex gap-2 pb-2" role="group" aria-label="Category filters">
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => setFilters({ ...filters, category: undefined })}
+            aria-pressed={!filters.category}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
               !filters.category
                 ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
@@ -150,19 +151,21 @@ function BrowseContent() {
                     category: isActive ? undefined : cat.category,
                   })
                 }
+                aria-pressed={isActive}
+                aria-label={`Filter by ${cat.label} (${cat.count} roles)`}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
                   isActive
                     ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
                     : 'bg-muted hover:bg-muted/80'
                 }`}
               >
-                <Icon className="w-4 h-4" />
+                <Icon className="w-4 h-4" aria-hidden="true" />
                 {cat.label}
               </motion.button>
             )
           })}
         </div>
-      </div>
+      </nav>
 
       {/* Search and Filter Bar */}
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -196,10 +199,11 @@ function BrowseContent() {
         </div>
         <div className="flex gap-2">
           <div className="relative">
-            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" aria-hidden="true" />
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
+              aria-label="Sort roles by"
               className="pl-10 pr-8 py-3 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer"
             >
               {sortOptions.map((option) => (

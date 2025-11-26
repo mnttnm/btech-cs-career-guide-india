@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award, Check } from 'lucide-react'
+import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award, Check, PlayCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { quizQuestions, calculateQuizResults } from '@/data/quiz'
 import { useQuizStore } from '@/stores/useQuizStore'
@@ -16,7 +16,14 @@ import { springs, stagger, easings } from '@/lib/motion'
 // Progress dots component
 function QuizProgress({ current, total }: { current: number; total: number }) {
   return (
-    <div className="flex items-center justify-center gap-1.5">
+    <div
+      className="flex items-center justify-center gap-1.5"
+      role="progressbar"
+      aria-valuenow={current + 1}
+      aria-valuemin={1}
+      aria-valuemax={total}
+      aria-label={`Question ${current + 1} of ${total}`}
+    >
       {Array.from({ length: total }).map((_, i) => (
         <motion.div
           key={i}
@@ -26,6 +33,7 @@ function QuizProgress({ current, total }: { current: number; total: number }) {
             backgroundColor: i < current ? 'var(--primary)' : i === current ? 'var(--primary)' : 'var(--muted)',
           }}
           transition={springs.snappy}
+          aria-hidden="true"
           className={cn(
             'w-2 h-2 rounded-full',
             i <= current ? 'bg-primary' : 'bg-muted'
@@ -45,6 +53,7 @@ export default function QuizPage() {
     setAnswer,
     nextQuestion,
     prevQuestion,
+    goToQuestion,
     setResults,
     resetQuiz,
     getAnswer,
@@ -52,10 +61,25 @@ export default function QuizPage() {
 
   const [isCalculating, setIsCalculating] = useState(false)
   const [direction, setDirection] = useState<'forward' | 'backward'>('forward')
+  const [showResumePrompt, setShowResumePrompt] = useState(false)
+  const [hasMounted, setHasMounted] = useState(false)
+
+  // Check if there's saved progress on mount
+  useEffect(() => {
+    setHasMounted(true)
+    // Check for in-progress quiz (has answers but not completed)
+    const hasProgress = answers.length > 0 && !isCompleted
+    if (hasProgress) {
+      setShowResumePrompt(true)
+    }
+  }, [])
 
   const question = quizQuestions[currentQuestion]
   const progress = ((currentQuestion + 1) / quizQuestions.length) * 100
   const currentAnswer = question ? getAnswer(question.id) : undefined
+
+  // Count actual question answers (excluding 'start')
+  const answeredQuestions = answers.filter(a => a.questionId !== 'start').length
 
   const handleSelectOption = (value: string) => {
     if (!question) return
@@ -95,6 +119,78 @@ export default function QuizPage() {
     resetQuiz()
   }
 
+  // Handle resume or start over
+  const handleContinue = () => {
+    setShowResumePrompt(false)
+    // Go to the next unanswered question
+    goToQuestion(answeredQuestions)
+  }
+
+  const handleStartOver = () => {
+    resetQuiz()
+    setShowResumePrompt(false)
+  }
+
+  // Resume prompt for returning users with in-progress quiz
+  if (showResumePrompt && hasMounted) {
+    return (
+      <div className="container mx-auto px-4 py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-xl mx-auto text-center"
+        >
+          <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 rounded-2xl bg-primary/10">
+            <PlayCircle className="w-10 h-10 text-primary" />
+          </div>
+          <h1 className="text-2xl md:text-3xl font-bold mb-4">
+            Continue your quiz?
+          </h1>
+          <p className="text-muted-foreground mb-2">
+            You completed {answeredQuestions} of {quizQuestions.length} questions.
+          </p>
+          <p className="text-sm text-muted-foreground mb-8">
+            Your progress was saved automatically.
+          </p>
+
+          {/* Progress indicator */}
+          <div className="w-full max-w-xs mx-auto mb-8">
+            <div className="h-2 rounded-full bg-muted overflow-hidden">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${(answeredQuestions / quizQuestions.length) * 100}%` }}
+                transition={{ duration: 0.5 }}
+                className="h-full rounded-full bg-primary"
+              />
+            </div>
+            <p className="text-xs text-muted-foreground mt-2">
+              {Math.round((answeredQuestions / quizQuestions.length) * 100)}% complete
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button
+              variant="outline"
+              onClick={handleStartOver}
+              className="gap-2"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Start over
+            </Button>
+            <Button
+              size="lg"
+              onClick={handleContinue}
+              className="gap-2"
+            >
+              <ArrowRight className="w-4 h-4" />
+              Continue where I left off
+            </Button>
+          </div>
+        </motion.div>
+      </div>
+    )
+  }
+
   // Quiz intro screen
   if (currentQuestion === 0 && !currentAnswer && answers.length === 0) {
     return (
@@ -131,8 +227,8 @@ export default function QuizPage() {
             onClick={() => setAnswer('start', 'true')}
             className="gap-2"
           >
-            <Sparkles className="w-5 h-5" />
-            Start Quiz
+            <Sparkles className="w-5 h-5" aria-hidden="true" />
+            Find your career match
           </Button>
         </motion.div>
       </div>
@@ -298,8 +394,8 @@ export default function QuizPage() {
 
                       <Button asChild className="mt-4" variant="outline">
                         <Link href={`/role/${result.roleId}`}>
-                          View Details
-                          <ArrowRight className="w-4 h-4 ml-2" />
+                          Explore {role.roleName}
+                          <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
                         </Link>
                       </Button>
                     </div>
