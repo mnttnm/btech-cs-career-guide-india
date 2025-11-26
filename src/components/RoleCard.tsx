@@ -146,15 +146,20 @@ export function RoleCard({ role, variant = 'default', index = 0 }: RoleCardProps
           >
             <RoleIcon className="w-6 h-6 text-primary" />
           </motion.div>
-          <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          <div className="flex gap-1">
+            {/* Favorite button - shows on hover or when favorited */}
             <Button
               variant="ghost"
               size="icon"
               className={cn(
-                'h-8 w-8 rounded-full backdrop-blur-sm',
-                isRoleFavorite ? 'bg-red-50 dark:bg-red-950/50' : 'bg-background/80'
+                'h-8 w-8 rounded-full backdrop-blur-sm transition-all duration-200',
+                isRoleFavorite
+                  ? 'bg-red-50 dark:bg-red-950/50 opacity-100'
+                  : 'bg-background/80 opacity-0 group-hover:opacity-100'
               )}
               onClick={handleToggleFavorite}
+              aria-label={isRoleFavorite ? `Remove ${role.roleName} from favorites` : `Add ${role.roleName} to favorites`}
+              aria-pressed={isRoleFavorite}
             >
               <Heart
                 className={cn(
@@ -163,15 +168,28 @@ export function RoleCard({ role, variant = 'default', index = 0 }: RoleCardProps
                 )}
               />
             </Button>
+            {/* Compare button - always visible when selected or comparison slot available */}
             <Button
               variant="ghost"
               size="icon"
               className={cn(
-                'h-8 w-8 rounded-full backdrop-blur-sm',
-                isRoleSelected ? 'bg-primary/10' : 'bg-background/80'
+                'h-8 w-8 rounded-full backdrop-blur-sm transition-all duration-200',
+                isRoleSelected
+                  ? 'bg-primary/10 opacity-100'
+                  : canAddToCompare
+                    ? 'bg-background/80 opacity-0 group-hover:opacity-100'
+                    : 'opacity-0 group-hover:opacity-50'
               )}
               onClick={handleToggleCompare}
               disabled={!canAddToCompare && !isRoleSelected}
+              aria-label={
+                isRoleSelected
+                  ? `Remove ${role.roleName} from comparison`
+                  : canAddToCompare
+                    ? `Add ${role.roleName} to comparison (${selectedRoles.length}/3 selected)`
+                    : 'Comparison full (3/3)'
+              }
+              aria-pressed={isRoleSelected}
             >
               <GitCompare
                 className={cn(

@@ -2,15 +2,17 @@
 
 import { useMemo } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Plus, ArrowRight, Lightbulb, Trophy } from 'lucide-react'
+import { X, Plus, ArrowRight, Lightbulb, Trophy, GitCompare } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { EmptyState } from '@/components/EmptyState'
 import { useComparisonStore } from '@/stores/useComparisonStore'
 import { getRoleById, getRoleSummaries } from '@/data/roles'
 import { cn } from '@/lib/utils'
 import { Role } from '@/types/role'
-import { springs, stagger } from '@/lib/motion'
+import { springs } from '@/lib/motion'
 import { difficultyColors, stressColors } from '@/lib/icons'
 
 // Metric bar component for salary visualization
@@ -44,6 +46,7 @@ function MetricBar({
 type CompareRole = Role | undefined
 
 export default function ComparePage() {
+  const router = useRouter()
   const { selectedRoles, removeRole, clearRoles } = useComparisonStore()
 
   const roles = useMemo((): CompareRole[] => {
@@ -178,53 +181,60 @@ export default function ComparePage() {
 
   if (selectedRoles.length === 0) {
     return (
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="text-6xl mb-6">⚖️</div>
-          <h1 className="text-2xl md:text-3xl font-bold mb-4">
-            Compare Career Roles
-          </h1>
-          <p className="text-muted-foreground mb-8">
-            Select 2-3 roles to compare them side-by-side on salary, skills,
-            stress level, and more.
-          </p>
-          <Button asChild size="lg">
-            <Link href="/browse">
-              Browse Roles
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </Button>
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-2xl mx-auto">
+          <EmptyState
+            icon={GitCompare}
+            title="Compare Career Roles"
+            description="Select 2-3 roles to compare them side-by-side on salary, skills, stress level, and more."
+            action={{
+              label: 'Browse Roles',
+              onClick: () => router.push('/browse'),
+            }}
+            size="lg"
+          />
 
           {/* Popular Comparisons */}
-          <div className="mt-12">
-            <h2 className="text-lg font-semibold mb-4">Popular Comparisons</h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="mt-8"
+          >
+            <h2 className="text-lg font-semibold mb-4 text-center">Popular Comparisons</h2>
             <div className="grid gap-3">
               {[
                 ['frontend-engineer-developer', 'backend-engineer-developer'],
                 ['data-scientist', 'data-analyst'],
                 ['devops-engineer', 'site-reliability-engineer'],
               ].map((pair, index) => (
-                <Link
+                <motion.div
                   key={index}
-                  href={`/compare?roles=${pair.join(',')}`}
-                  className="flex items-center justify-between p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4 + index * 0.1 }}
                 >
-                  <div className="flex items-center gap-2">
-                    <span>{getRoleById(pair[0])?.icon}</span>
-                    <span className="font-medium">
-                      {getRoleById(pair[0])?.roleName}
-                    </span>
-                    <span className="text-muted-foreground">vs</span>
-                    <span>{getRoleById(pair[1])?.icon}</span>
-                    <span className="font-medium">
-                      {getRoleById(pair[1])?.roleName}
-                    </span>
-                  </div>
-                  <ArrowRight className="w-4 h-4 text-muted-foreground" />
-                </Link>
+                  <Link
+                    href={`/compare?roles=${pair.join(',')}`}
+                    className="flex items-center justify-between p-4 rounded-xl bg-muted/50 hover:bg-muted transition-colors group"
+                  >
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span>{getRoleById(pair[0])?.icon}</span>
+                      <span className="font-medium">
+                        {getRoleById(pair[0])?.roleName}
+                      </span>
+                      <span className="text-muted-foreground">vs</span>
+                      <span>{getRoleById(pair[1])?.icon}</span>
+                      <span className="font-medium">
+                        {getRoleById(pair[1])?.roleName}
+                      </span>
+                    </div>
+                    <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     )
@@ -513,14 +523,16 @@ export default function ComparePage() {
       )}
 
       {roles.length === 1 && (
-        <div className="text-center py-8">
-          <p className="text-muted-foreground mb-4">
-            Add at least one more role to start comparing
-          </p>
-          <Button asChild>
-            <Link href="/browse">Browse Roles</Link>
-          </Button>
-        </div>
+        <EmptyState
+          icon={Plus}
+          title="Add one more role"
+          description="You need at least 2 roles to compare. Add another role to see them side-by-side."
+          action={{
+            label: 'Browse Roles',
+            onClick: () => router.push('/browse'),
+          }}
+          size="sm"
+        />
       )}
     </div>
   )

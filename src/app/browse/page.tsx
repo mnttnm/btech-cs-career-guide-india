@@ -1,12 +1,13 @@
 'use client'
 
-import { useState, useMemo, Suspense } from 'react'
+import { useState, useMemo, Suspense, useRef, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Search, Filter, X, ArrowUpDown, SearchX } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { RoleCard } from '@/components/RoleCard'
+import { EmptyState } from '@/components/EmptyState'
 import {
   getRoleSummaries,
   getCategoriesWithCounts,
@@ -17,6 +18,7 @@ import {
 import { Category, RoleSummary } from '@/types/role'
 import { getCategoryIcon } from '@/lib/icons'
 import { BrowsePageSkeleton } from '@/components/ui/skeleton'
+import { staggerContainer, staggerChild } from '@/lib/motion'
 
 const difficulties = ['Easy', 'Moderate', 'Hard', 'Steep']
 const stressLevels = ['Low', 'Low-Medium', 'Medium', 'Medium-High', 'High']
@@ -56,6 +58,7 @@ function sortRoles(roles: RoleSummary[], sortBy: SortOption): RoleSummary[] {
 function BrowseContent() {
   const searchParams = useSearchParams()
   const initialCategory = searchParams.get('category') as Category | null
+  const searchInputRef = useRef<HTMLInputElement>(null)
 
   const [filters, setFilters] = useState<RoleFilters>({
     category: initialCategory || undefined,
@@ -65,6 +68,32 @@ function BrowseContent() {
   const [sortBy, setSortBy] = useState<SortOption>('default')
 
   const categories = getCategoriesWithCounts()
+
+  // Keyboard shortcut: "/" to focus search
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't trigger if user is typing in an input
+      if (
+        e.target instanceof HTMLInputElement ||
+        e.target instanceof HTMLTextAreaElement
+      ) {
+        return
+      }
+
+      if (e.key === '/') {
+        e.preventDefault()
+        searchInputRef.current?.focus()
+      }
+
+      if (e.key === 'Escape') {
+        searchInputRef.current?.blur()
+        setSearchQuery('')
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
 
   const filteredRoles = useMemo(() => {
     const filtered = filterRoles({ ...filters, search: searchQuery })
@@ -140,20 +169,30 @@ function BrowseContent() {
         <div className="relative flex-1 group">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground transition-colors group-focus-within:text-primary" />
           <input
+            ref={searchInputRef}
             type="text"
             placeholder="Search frontend, ML, DevOps..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all placeholder:text-muted-foreground/60"
+            className="w-full pl-11 pr-16 py-3 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all placeholder:text-muted-foreground/60"
+            aria-label="Search roles"
           />
-          {searchQuery && (
-            <button
-              onClick={() => setSearchQuery('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-md hover:bg-muted transition-colors"
-            >
-              <X className="w-4 h-4 text-muted-foreground" />
-            </button>
-          )}
+          {/* Keyboard hint or clear button */}
+          <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1">
+            {searchQuery ? (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="p-1 rounded-md hover:bg-muted transition-colors"
+                aria-label="Clear search"
+              >
+                <X className="w-4 h-4 text-muted-foreground" />
+              </button>
+            ) : (
+              <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-xs font-mono text-muted-foreground bg-muted rounded border">
+                /
+              </kbd>
+            )}
+          </div>
         </div>
         <div className="flex gap-2">
           <div className="relative">
@@ -342,34 +381,38 @@ function BrowseContent() {
         {(searchQuery || activeFilterCount > 0) && ' matching your criteria'}
       </div>
 
-      {/* Role Grid */}
+      {/* Role Grid with staggered animation */}
       {filteredRoles.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <motion.div
+          variants={staggerContainer(0.04)}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
+        >
           {filteredRoles.map((role, index) => (
-            <RoleCard key={role.roleId} role={role} index={index} />
+            <motion.div key={role.roleId} variants={staggerChild}>
+              <RoleCard role={role} index={index} />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       )}
 
       {/* Empty State */}
       {filteredRoles.length === 0 && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center py-20"
-        >
-          <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 rounded-2xl bg-muted/50">
-            <SearchX className="w-10 h-10 text-muted-foreground" />
-          </div>
-          <h3 className="text-xl font-semibold mb-2">No roles found</h3>
-          <p className="text-muted-foreground mb-6 max-w-sm mx-auto">
-            We couldn't find any careers matching your criteria. Try adjusting your filters or search query.
-          </p>
-          <Button variant="outline" onClick={clearFilters} className="gap-2">
-            <X className="w-4 h-4" />
-            Clear all filters
-          </Button>
-        </motion.div>
+        <EmptyState
+          icon={SearchX}
+          title="No roles found"
+          description={
+            searchQuery
+              ? `We couldn't find any careers matching "${searchQuery}". Try different search terms or adjust your filters.`
+              : "We couldn't find any careers matching your filters. Try removing some filters to see more results."
+          }
+          action={{
+            label: 'Clear all filters',
+            onClick: clearFilters,
+            variant: 'outline',
+          }}
+        />
       )}
     </div>
   )
