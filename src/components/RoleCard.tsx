@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils'
 import { useFavoritesStore } from '@/stores/useFavoritesStore'
 import { useComparisonStore } from '@/stores/useComparisonStore'
 import { getRoleIcon, difficultyColors, stressColors } from '@/lib/icons'
+import { toggleFavoriteWithToast, addToComparisonWithToast, removeFromComparisonWithToast } from '@/lib/toast-actions'
 
 interface RoleCardProps {
   role: RoleSummary
@@ -32,8 +33,8 @@ const cardVariants = {
 }
 
 export function RoleCard({ role, variant = 'default', index = 0 }: RoleCardProps) {
-  const { toggleFavorite, isFavorite } = useFavoritesStore()
-  const { addRole, removeRole, isSelected, selectedRoles } = useComparisonStore()
+  const { isFavorite } = useFavoritesStore()
+  const { isSelected, selectedRoles } = useComparisonStore()
 
   const isRoleFavorite = isFavorite(role.roleId)
   const isRoleSelected = isSelected(role.roleId)
@@ -42,16 +43,16 @@ export function RoleCard({ role, variant = 'default', index = 0 }: RoleCardProps
   const handleToggleFavorite = (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
-    toggleFavorite(role.roleId)
+    toggleFavoriteWithToast(role.roleId, role.roleName)
   }
 
   const handleToggleCompare = (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
     if (isRoleSelected) {
-      removeRole(role.roleId)
-    } else if (canAddToCompare) {
-      addRole(role.roleId)
+      removeFromComparisonWithToast(role.roleId, role.roleName)
+    } else {
+      addToComparisonWithToast(role.roleId, role.roleName)
     }
   }
 

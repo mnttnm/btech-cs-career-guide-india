@@ -25,46 +25,53 @@ export interface QuizResult {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 'q1',
-    question: 'What excites you most about working in tech?',
+    question: 'Which part of working with technology sounds most interesting to you?',
     type: 'multiple-choice',
     category: 'work-style',
     options: [
       {
         value: 'visual',
-        label: 'Building things people can see and interact with',
+        label: 'Designing how websites or apps look and feel',
         weights: {
           'frontend-engineer-developer': 3,
           'ux-ui-designer': 3,
           'mobile-developer': 2,
           'game-developer': 2,
           'ar-vr-developer': 2,
+          'developer-advocate': 2,
         },
       },
       {
         value: 'data',
-        label: 'Analyzing data to find patterns and insights',
+        label: 'Working with data and numbers to find patterns',
         weights: {
           'data-scientist': 3,
           'data-analyst': 3,
           'machine-learning-engineer': 2,
           'ai-engineer': 2,
           'business-analyst-technical': 2,
+          'data-engineer': 3,
         },
       },
       {
         value: 'systems',
-        label: 'Building robust, scalable backend systems',
+        label: 'Building the behind-the-scenes systems that power apps',
         weights: {
           'backend-engineer-developer': 3,
           'devops-engineer': 2,
           'site-reliability-engineer': 2,
           'cloud-engineer-architect': 2,
           'platform-engineer': 2,
+          'startup-founder': 2,
+          'solution-architect': 2,
+          'sales-engineer': 2,
+          'blockchain-developer': 2,
+          'developer-advocate': 2,
         },
       },
       {
         value: 'security',
-        label: 'Finding vulnerabilities and protecting systems',
+        label: 'Keeping systems and data safe from attacks',
         weights: {
           'cybersecurity-analyst': 3,
           'security-engineer': 3,
@@ -75,46 +82,51 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 'q2',
-    question: 'How do you feel about working with visual design and aesthetics?',
+    question: 'What kind of career path appeals to you most right now?',
     type: 'multiple-choice',
-    category: 'work-style',
+    category: 'values',
     options: [
       {
-        value: 'love',
-        label: 'I love it - design and UX are fascinating',
+        value: 'standard',
+        label: 'Standard technical tracks (Software Engineer, Data Scientist, etc.)',
         weights: {
-          'frontend-engineer-developer': 3,
-          'ux-ui-designer': 3,
-          'mobile-developer': 2,
-          'game-developer': 2,
-        },
-      },
-      {
-        value: 'appreciate',
-        label: 'I appreciate good design but prefer building logic',
-        weights: {
+          'frontend-engineer-developer': 2,
+          'backend-engineer-developer': 2,
           'full-stack-engineer-developer': 2,
-          'product-manager-technical': 2,
+          'data-scientist': 2,
           'software-engineer-general': 2,
         },
       },
       {
-        value: 'neutral',
-        label: "I'm neutral - I focus more on functionality",
+        value: 'specialized',
+        label: 'Specialized or emerging tech (Blockchain, AI, AR/VR, Security)',
         weights: {
-          'backend-engineer-developer': 2,
-          'data-engineer': 2,
-          'devops-engineer': 2,
+          'blockchain-developer': 3,
+          'ai-engineer': 3,
+          'ar-vr-developer': 3,
+          'security-engineer': 2,
+          'quantum-computing-engineer': 3,
         },
       },
       {
-        value: 'avoid',
-        label: "I prefer to avoid design work entirely",
+        value: 'hybrid',
+        label: 'Roles that mix tech with business or people (Product, Sales, DevRel)',
         weights: {
-          'data-scientist': 2,
-          'machine-learning-engineer': 2,
-          'infrastructure-it-engineer': 2,
-          'security-engineer': 2,
+          'product-manager-technical': 3,
+          'technical-program-manager': 3,
+          'sales-engineer': 3,
+          'developer-advocate': 3,
+          'solution-architect': 2,
+        },
+      },
+      {
+        value: 'unconventional',
+        label: 'Unconventional paths (Founder, Freelance, Writer, Research)',
+        weights: {
+          'startup-founder': 3,
+          'freelancer': 3,
+          'technical-writer': 3,
+          'research-scientist-industry': 3,
         },
       },
     ],
@@ -143,6 +155,7 @@ export const quizQuestions: QuizQuestion[] = [
           'data-analyst': 2,
           'backend-engineer-developer': 2,
           'software-engineer-general': 2,
+          'data-engineer': 2,
         },
       },
       {
@@ -180,6 +193,7 @@ export const quizQuestions: QuizQuestion[] = [
           'devops-engineer': 2,
           'penetration-tester': 2,
           'startup-founder': 3,
+          'game-developer': 2,
         },
       },
       {
@@ -221,10 +235,12 @@ export const quizQuestions: QuizQuestion[] = [
         value: 'team',
         label: 'I love collaborating with teams',
         weights: {
-          'product-manager-technical': 3,
-          'technical-program-manager': 3,
+          'product-manager-technical': 2,
+          'technical-program-manager': 2,
           'developer-advocate': 2,
           'full-stack-engineer-developer': 2,
+          'sales-engineer': 3,
+          'solution-architect': 3,
         },
       },
       {
@@ -316,8 +332,7 @@ export const quizQuestions: QuizQuestion[] = [
           'frontend-engineer-developer': 3,
           'devops-engineer': 2,
           'ai-engineer': 2,
-          'blockchain-developer': 2,
-          'ar-vr-developer': 2,
+          'ar-vr-developer': 1,
         },
       },
       {
@@ -340,7 +355,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         value: 'minimal',
-        label: 'I prefer roles with minimal tech churn',
+        label: "I prefer roles where tools and technologies don't change often",
         weights: {
           'business-analyst-technical': 2,
           'technical-writer': 2,
@@ -363,6 +378,7 @@ export const quizQuestions: QuizQuestion[] = [
           'mobile-developer': 3,
           'product-manager-technical': 2,
           'ux-ui-designer': 3,
+          'developer-advocate': 2,
         },
       },
       {
@@ -373,6 +389,9 @@ export const quizQuestions: QuizQuestion[] = [
           'data-analyst': 2,
           'business-analyst-technical': 3,
           'growth-hacker': 3,
+          'startup-founder': 3,
+          'sales-engineer': 3,
+          'solution-architect': 2,
         },
       },
       {
@@ -383,6 +402,7 @@ export const quizQuestions: QuizQuestion[] = [
           'devops-engineer': 3,
           'site-reliability-engineer': 3,
           'platform-engineer': 2,
+          'solution-architect': 2,
         },
       },
       {
@@ -393,6 +413,7 @@ export const quizQuestions: QuizQuestion[] = [
           'machine-learning-engineer': 3,
           'research-scientist-industry': 3,
           'quantum-computing-engineer': 3,
+          'startup-founder': 2,
         },
       },
     ],
@@ -438,7 +459,7 @@ export const quizQuestions: QuizQuestion[] = [
           'developer-advocate': 2,
           'open-source-maintainer': 3,
           'academic-researcher': 2,
-          'game-developer': 2,
+          'game-developer': 1,
         },
       },
     ],
@@ -457,6 +478,8 @@ export const quizQuestions: QuizQuestion[] = [
           'product-manager-technical': 3,
           'technical-program-manager': 2,
           'sales-engineer': 3,
+          'growth-hacker': 3,
+          'startup-founder': 2,
         },
       },
       {
@@ -466,6 +489,7 @@ export const quizQuestions: QuizQuestion[] = [
           'solution-architect': 2,
           'business-analyst-technical': 2,
           'ux-researcher': 2,
+          'startup-founder': 2,
         },
       },
       {
@@ -536,42 +560,48 @@ export const quizQuestions: QuizQuestion[] = [
   },
   {
     id: 'q12',
-    question: 'What kind of problems do you enjoy solving?',
+    question: 'When you work on a problem, what style of thinking feels most natural?',
     type: 'multiple-choice',
     category: 'technical',
     options: [
       {
         value: 'creative',
-        label: 'Creative problems - design, UX, visual solutions',
+        label: 'Coming up with creative ideas, layouts or experiences people use',
         weights: {
           'frontend-engineer-developer': 3,
           'ux-ui-designer': 3,
           'game-developer': 3,
           'ar-vr-developer': 2,
+          'startup-founder': 2,
+          'developer-advocate': 2,
         },
       },
       {
         value: 'analytical',
-        label: 'Analytical problems - data, patterns, optimization',
+        label: 'Digging into numbers and patterns to understand what is happening',
         weights: {
           'data-scientist': 3,
           'data-analyst': 3,
           'machine-learning-engineer': 3,
+          'data-engineer': 2,
         },
       },
       {
         value: 'systems',
-        label: 'Systems problems - architecture, scalability, reliability',
+        label: 'Figuring out how all the parts of a system should work together reliably',
         weights: {
           'backend-engineer-developer': 3,
           'devops-engineer': 3,
           'site-reliability-engineer': 3,
           'cloud-engineer-architect': 3,
+          'startup-founder': 2,
+          'solution-architect': 3,
+          'data-engineer': 3,
         },
       },
       {
         value: 'security',
-        label: 'Security problems - vulnerabilities, protection',
+        label: 'Thinking like an attacker to find weak spots and keep things safe',
         weights: {
           'cybersecurity-analyst': 3,
           'security-engineer': 3,
@@ -581,6 +611,44 @@ export const quizQuestions: QuizQuestion[] = [
     ],
   },
 ]
+
+// Pre-compute per-role stats used for scoring and confidence
+const roleStats = (() => {
+  const maxScores: Record<string, number> = {}
+  const coverageCounts: Record<string, number> = {}
+
+  quizQuestions.forEach((question) => {
+    if (question.type !== 'multiple-choice' || !question.options) return
+
+    const perQuestionMax: Record<string, number> = {}
+    const rolesInQuestion = new Set<string>()
+
+    question.options.forEach((option) => {
+      Object.entries(option.weights).forEach(([roleId, weight]) => {
+        if (weight > 0) {
+          perQuestionMax[roleId] = Math.max(perQuestionMax[roleId] ?? 0, weight)
+          rolesInQuestion.add(roleId)
+        }
+      })
+    })
+
+    Object.entries(perQuestionMax).forEach(([roleId, weight]) => {
+      maxScores[roleId] = (maxScores[roleId] ?? 0) + weight
+    })
+
+    rolesInQuestion.forEach((roleId) => {
+      coverageCounts[roleId] = (coverageCounts[roleId] ?? 0) + 1
+    })
+  })
+
+  return {
+    roleMaxScores: maxScores,
+    roleCoverageCounts: coverageCounts,
+  }
+})()
+
+const roleMaxScores = roleStats.roleMaxScores
+const roleCoverageCounts = roleStats.roleCoverageCounts
 
 // Calculate quiz results
 export function calculateQuizResults(answers: QuizAnswer[]): QuizResult[] {
@@ -612,13 +680,24 @@ export function calculateQuizResults(answers: QuizAnswer[]): QuizResult[] {
   })
 
   // Convert to results array and sort by score
-  const maxPossibleScore = quizQuestions.length * 3 // Max weight of 3 per question
   const results: QuizResult[] = Object.entries(roleScores)
-    .map(([roleId, score]) => ({
-      roleId,
-      matchScore: Math.round((score / maxPossibleScore) * 100),
-      reasons: roleReasons[roleId]?.slice(0, 3) || [],
-    }))
+    .map(([roleId, score]) => {
+      const maxPossibleScore = roleMaxScores[roleId] || 1
+      const normalized = score / maxPossibleScore
+
+      const coverageCount = roleCoverageCounts[roleId] ?? 0
+      const coverageFraction = Math.min(1, coverageCount / quizQuestions.length)
+      const confidence = 0.8 + 0.2 * coverageFraction // 0.8–1.0 based on how many questions touch this role
+
+      const rawPercent = normalized * 100 * confidence
+      const matchScore = Math.min(95, Math.round(rawPercent))
+
+      return {
+        roleId,
+        matchScore,
+        reasons: roleReasons[roleId]?.slice(0, 3) || [],
+      }
+    })
     .sort((a, b) => b.matchScore - a.matchScore)
     .slice(0, 5) // Top 5 matches
 

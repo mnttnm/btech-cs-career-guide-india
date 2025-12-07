@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award, Check } from 'lucide-react'
+import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award, Check, PlayCircle, TrendingUp, AlertTriangle, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { quizQuestions, calculateQuizResults } from '@/data/quiz'
 import { useQuizStore } from '@/stores/useQuizStore'
@@ -13,10 +13,46 @@ import { cn } from '@/lib/utils'
 import { getRoleIcon } from '@/lib/icons'
 import { springs, stagger, easings } from '@/lib/motion'
 
+// Explicit question order: start from high-level values, then work style, then technical fit
+const QUESTION_ORDER = [
+  // 1. High-level Career Direction (The "North Star")
+  'q2',  // Broad career path shape (Standard vs Hybrid/Business vs Specialized)
+  'q1',  // Domain interest (Visual vs Data vs Systems vs Security)
+  'q8',  // Impact type (User vs Business vs Technical)
+
+  // 2. Cognitive & Hard Skills (The "Toolbox")
+  'q12', // Natural thinking style (Creative vs Analytical vs Systems)
+  'q3',  // Math/Stats comfort (Critical constraint for Data/AI)
+  'q7',  // Continuous learning (Pace of technology change)
+
+  // 3. Work Style & Personality (The "Environment")
+  'q5',  // Team vs Independent work
+  'q10', // Communication/Presentation comfort
+  'q4',  // Handling pressure and deadlines
+
+  // 4. Practical Constraints & Future (The "Guardrails")
+  'q6',  // Work-life balance
+  'q9',  // Salary/compensation importance
+  'q11', // Leadership interest
+] as const
+
+const orderedQuestions = QUESTION_ORDER
+  .map((id) => quizQuestions.find((q) => q.id === id))
+  .filter((q) => Boolean(q))
+
+const TOTAL_QUIZ_QUESTIONS = orderedQuestions.length
+
 // Progress dots component
 function QuizProgress({ current, total }: { current: number; total: number }) {
   return (
-    <div className="flex items-center justify-center gap-1.5">
+    <div
+      className="flex items-center justify-center gap-1.5"
+      role="progressbar"
+      aria-valuenow={current + 1}
+      aria-valuemin={1}
+      aria-valuemax={total}
+      aria-label={`Question ${current + 1} of ${total}`}
+    >
       {Array.from({ length: total }).map((_, i) => (
         <motion.div
           key={i}
@@ -26,6 +62,7 @@ function QuizProgress({ current, total }: { current: number; total: number }) {
             backgroundColor: i < current ? 'var(--primary)' : i === current ? 'var(--primary)' : 'var(--muted)',
           }}
           transition={springs.snappy}
+          aria-hidden="true"
           className={cn(
             'w-2 h-2 rounded-full',
             i <= current ? 'bg-primary' : 'bg-muted'
@@ -45,6 +82,7 @@ export default function QuizPage() {
     setAnswer,
     nextQuestion,
     prevQuestion,
+    goToQuestion,
     setResults,
     resetQuiz,
     getAnswer,
@@ -52,10 +90,42 @@ export default function QuizPage() {
 
   const [isCalculating, setIsCalculating] = useState(false)
   const [direction, setDirection] = useState<'forward' | 'backward'>('forward')
+  const [showResumePrompt, setShowResumePrompt] = useState(false)
+  const [hasMounted, setHasMounted] = useState(false)
 
-  const question = quizQuestions[currentQuestion]
-  const progress = ((currentQuestion + 1) / quizQuestions.length) * 100
+  // Check if there's saved progress on mount
+  useEffect(() => {
+    setHasMounted(true)
+    // Check for in-progress quiz (has answers but not completed)
+    const hasProgress = answers.length > 0 && !isCompleted
+    if (hasProgress) {
+      setShowResumePrompt(true)
+    }
+  }, [])
+
+  const question = orderedQuestions[currentQuestion]
+  const progress = ((currentQuestion + 1) / TOTAL_QUIZ_QUESTIONS) * 100
   const currentAnswer = question ? getAnswer(question.id) : undefined
+
+  // Count actual question answers (excluding 'start')
+  const answeredQuestions = answers.filter(a => a.questionId !== 'start').length
+
+  // Calculate live preview after 6 questions
+  const livePreview = useMemo(() => {
+    const actualAnswers = answers.filter(a => a.questionId !== 'start')
+    if (actualAnswers.length < 6) return null
+
+    const previewResults = calculateQuizResults(actualAnswers)
+    if (previewResults.length === 0) return null
+
+    // Count potential matches (score >= 60%)
+    const potentialMatches = previewResults.filter(r => r.matchScore >= 50)
+
+    return {
+      count: potentialMatches.length,
+      topScore: potentialMatches[0]?.matchScore || 0
+    }
+  }, [answers])
 
   const handleSelectOption = (value: string) => {
     if (!question) return
@@ -63,7 +133,7 @@ export default function QuizPage() {
 
     // Auto-advance after short delay
     setTimeout(() => {
-      if (currentQuestion < quizQuestions.length - 1) {
+      if (currentQuestion < TOTAL_QUIZ_QUESTIONS - 1) {
         setDirection('forward')
         nextQuestion()
       }
@@ -73,11 +143,6 @@ export default function QuizPage() {
   const handlePrevQuestion = () => {
     setDirection('backward')
     prevQuestion()
-  }
-
-  const handleNextQuestion = () => {
-    setDirection('forward')
-    nextQuestion()
   }
 
   const handleFinishQuiz = async () => {
@@ -93,6 +158,78 @@ export default function QuizPage() {
 
   const handleRetakeQuiz = () => {
     resetQuiz()
+  }
+
+  // Handle resume or start over
+  const handleContinue = () => {
+    setShowResumePrompt(false)
+    // Go to the next unanswered question
+    goToQuestion(answeredQuestions)
+  }
+
+  const handleStartOver = () => {
+    resetQuiz()
+    setShowResumePrompt(false)
+  }
+
+  // Resume prompt for returning users with in-progress quiz
+  if (showResumePrompt && hasMounted) {
+    return (
+      <div className="container mx-auto px-4 py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-xl mx-auto text-center"
+        >
+          <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 rounded-2xl bg-primary/10">
+            <PlayCircle className="w-10 h-10 text-primary" />
+          </div>
+          <h1 className="text-2xl md:text-3xl font-bold mb-4">
+            Continue your quiz?
+          </h1>
+          <p className="text-muted-foreground mb-2">
+            You completed {answeredQuestions} of {TOTAL_QUIZ_QUESTIONS} questions.
+          </p>
+          <p className="text-sm text-muted-foreground mb-8">
+            Your progress was saved automatically.
+          </p>
+
+          {/* Progress indicator */}
+          <div className="w-full max-w-xs mx-auto mb-8">
+            <div className="h-2 rounded-full bg-muted overflow-hidden">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${(answeredQuestions / TOTAL_QUIZ_QUESTIONS) * 100}%` }}
+                transition={{ duration: 0.5 }}
+                className="h-full rounded-full bg-primary"
+              />
+            </div>
+            <p className="text-xs text-muted-foreground mt-2">
+              {Math.round((answeredQuestions / TOTAL_QUIZ_QUESTIONS) * 100)}% complete
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button
+              variant="outline"
+              onClick={handleStartOver}
+              className="gap-2"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Start over
+            </Button>
+            <Button
+              size="lg"
+              onClick={handleContinue}
+              className="gap-2"
+            >
+              <ArrowRight className="w-4 h-4" />
+              Continue where I left off
+            </Button>
+          </div>
+        </motion.div>
+      </div>
+    )
   }
 
   // Quiz intro screen
@@ -131,8 +268,8 @@ export default function QuizPage() {
             onClick={() => setAnswer('start', 'true')}
             className="gap-2"
           >
-            <Sparkles className="w-5 h-5" />
-            Start Quiz
+            <Sparkles className="w-5 h-5" aria-hidden="true" />
+            Find your career match
           </Button>
         </motion.div>
       </div>
@@ -164,8 +301,8 @@ export default function QuizPage() {
 
   // Results screen
   if (isCompleted && results) {
-    const medalIcons = [Trophy, Medal, Award]
-    const medalColors = ['text-yellow-500', 'text-gray-400', 'text-amber-600']
+    const medalIcons = [Trophy, Medal, Award, Star, Sparkles];
+    const medalColors = ['text-yellow-500', 'text-gray-400', 'text-amber-600', 'text-blue-500', 'text-purple-500'];
 
     return (
       <div className="container relative mx-auto px-4 py-8 overflow-hidden">
@@ -187,7 +324,7 @@ export default function QuizPage() {
           className="relative max-w-2xl mx-auto"
         >
           {/* Header */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-4">
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
@@ -212,11 +349,29 @@ export default function QuizPage() {
             >
               Based on your personality and preferences
             </motion.p>
+            <div className="mt-4 inline-flex items-start gap-3 px-3 py-2 rounded-lg border border-amber-500/40 bg-amber-500/5 text-left max-w-xl mx-auto">
+              <AlertTriangle className="w-4 h-4 text-amber-500 mt-0.5" aria-hidden="true" />
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                This quiz is a starting point, not a final verdict. Please read the full role
+                details to understand each path deeply and decide if it is the right fit for you.
+              </p>
+            </div>
+          </div>
+
+          {/* Primary actions */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
+            <Button onClick={handleRetakeQuiz} variant="outline" className="gap-2 sm:w-auto">
+              <RotateCcw className="w-4 h-4" />
+              Retake Quiz
+            </Button>
+            <Button asChild className="flex-1 sm:flex-none">
+              <Link href="/browse">Explore All Roles</Link>
+            </Button>
           </div>
 
           {/* Results */}
           <div className="space-y-4">
-            {results.slice(0, 3).map((result, index) => {
+            {results.slice(0, 5).map((result, index) => {
               const role = getRoleById(result.roleId)
               if (!role) return null
 
@@ -297,9 +452,9 @@ export default function QuizPage() {
                       </div>
 
                       <Button asChild className="mt-4" variant="outline">
-                        <Link href={`/role/${result.roleId}`}>
-                          View Details
-                          <ArrowRight className="w-4 h-4 ml-2" />
+                        <Link href={`/role/${result.roleId}?from=quiz`}>
+                          Explore {role.roleName}
+                          <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
                         </Link>
                       </Button>
                     </div>
@@ -309,16 +464,6 @@ export default function QuizPage() {
             })}
           </div>
 
-          {/* Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <Button onClick={handleRetakeQuiz} variant="outline" className="gap-2">
-              <RotateCcw className="w-4 h-4" />
-              Retake Quiz
-            </Button>
-            <Button asChild className="flex-1">
-              <Link href="/browse">Explore All Roles</Link>
-            </Button>
-          </div>
         </motion.div>
       </div>
     )
@@ -347,21 +492,56 @@ export default function QuizPage() {
         {/* Progress */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={handlePrevQuestion}
-              disabled={currentQuestion === 0}
-              className="gap-2"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handlePrevQuestion}
+                disabled={currentQuestion === 0}
+                className="gap-2"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Back
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleStartOver}
+                className="text-xs text-muted-foreground px-2"
+              >
+                Restart
+              </Button>
+            </div>
             <span className="text-sm text-muted-foreground">
-              {currentQuestion + 1} of {quizQuestions.length}
+              {currentQuestion + 1} of {TOTAL_QUIZ_QUESTIONS}
             </span>
           </div>
-          <QuizProgress current={currentQuestion} total={quizQuestions.length} />
+          <QuizProgress current={currentQuestion} total={TOTAL_QUIZ_QUESTIONS} />
+
+          {/* Live Preview (after 6 questions) */}
+          <AnimatePresence>
+            {livePreview && livePreview.count > 0 && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="mt-4 overflow-hidden"
+              >
+                <div className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 border border-primary/20">
+                  <TrendingUp className="w-4 h-4 text-primary shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <span className="text-xs text-muted-foreground">Analysis in progress: </span>
+                    <span className="text-sm font-medium">
+                      {livePreview.count} potential career {livePreview.count === 1 ? 'path' : 'paths'} identified
+                    </span>
+                  </div>
+                  <Badge variant="secondary" className="shrink-0">
+                    {livePreview.count} matches
+                  </Badge>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Question */}
@@ -440,19 +620,10 @@ export default function QuizPage() {
         {/* Navigation */}
         <div className="flex justify-between">
           <div />
-          {currentQuestion === quizQuestions.length - 1 && currentAnswer ? (
+          {currentQuestion === TOTAL_QUIZ_QUESTIONS - 1 && currentAnswer && (
             <Button onClick={handleFinishQuiz} className="gap-2">
               See Results
               <Sparkles className="w-4 h-4" />
-            </Button>
-          ) : (
-            <Button
-              onClick={handleNextQuestion}
-              disabled={!currentAnswer}
-              className="gap-2"
-            >
-              Next
-              <ArrowRight className="w-4 h-4" />
             </Button>
           )}
         </div>

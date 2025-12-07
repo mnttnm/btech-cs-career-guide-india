@@ -56,8 +56,16 @@ export function Navigation() {
                   <Icon className="w-4 h-4" />
                   {item.label}
                   {showBadge && (
-                    <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                      {selectedRoles.length}
+                    <span
+                      className={cn(
+                        "absolute -top-1 -right-1 text-xs min-w-5 h-5 px-1 rounded-full flex items-center justify-center font-medium",
+                        selectedRoles.length >= 3
+                          ? "bg-amber-500 text-white"
+                          : "bg-primary text-primary-foreground"
+                      )}
+                      title={selectedRoles.length >= 3 ? "Comparison full - remove a role to add another" : `${selectedRoles.length} of 3 roles selected`}
+                    >
+                      {selectedRoles.length}/3
                     </span>
                   )}
                 </Link>
@@ -91,8 +99,15 @@ export function Navigation() {
                 <Icon className="w-5 h-5" />
                 <span className="text-xs font-medium">{item.label}</span>
                 {showBadge && (
-                  <span className="absolute top-0 right-2 bg-primary text-primary-foreground text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                    {selectedRoles.length}
+                  <span
+                    className={cn(
+                      "absolute top-0 right-2 text-xs min-w-5 h-5 px-1 rounded-full flex items-center justify-center font-medium",
+                      selectedRoles.length >= 3
+                        ? "bg-amber-500 text-white"
+                        : "bg-primary text-primary-foreground"
+                    )}
+                  >
+                    {selectedRoles.length}/3
                   </span>
                 )}
               </Link>
@@ -116,8 +131,11 @@ export function Navigation() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg hover:bg-muted"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-5 h-5" aria-hidden="true" /> : <Menu className="w-5 h-5" aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -127,16 +145,18 @@ export function Navigation() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="md:hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-lg pt-14"
           >
-            <motion.div
+            <motion.nav
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 20, opacity: 0 }}
               className="p-4 space-y-2"
+              aria-label="Mobile navigation"
             >
               {navItems.map((item) => {
                 const Icon = item.icon
@@ -147,12 +167,12 @@ export function Navigation() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-3 p-4 rounded-xl bg-muted/50 hover:bg-muted"
                   >
-                    <Icon className="w-5 h-5" />
+                    <Icon className="w-5 h-5" aria-hidden="true" />
                     <span className="font-medium">{item.label}</span>
                   </Link>
                 )
               })}
-            </motion.div>
+            </motion.nav>
           </motion.div>
         )}
       </AnimatePresence>
