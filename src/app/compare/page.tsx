@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, Suspense } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -46,7 +46,7 @@ function MetricBar({
 
 type CompareRole = Role | undefined
 
-export default function ComparePage() {
+function CompareContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const { selectedRoles, addRole, clearRoles } = useComparisonStore()
@@ -307,8 +307,10 @@ export default function ComparePage() {
     <div className="container mx-auto px-4 py-6">
       {/* Header */}
       <div className="mb-6">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2">Compare Roles</h1>
-        <p className="text-muted-foreground">
+        <h1 className="text-2xl md:text-3xl font-medium tracking-tight mb-1">
+          Compare Roles
+        </h1>
+        <p className="text-muted-foreground text-sm md:text-base">
           See how these roles stack up against each other
         </p>
       </div>
@@ -389,11 +391,13 @@ export default function ComparePage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mb-8 p-4 rounded-xl bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800"
+              className="mb-8 p-4 rounded-2xl bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/20 backdrop-blur-sm"
             >
               <div className="flex items-center gap-2 mb-3">
-                <Lightbulb className="w-5 h-5 text-blue-600" />
-                <h3 className="font-semibold text-blue-900 dark:text-blue-100">
+                <div className="p-1.5 rounded-lg bg-primary/10 dark:bg-primary/5">
+                  <Lightbulb className="w-4 h-4 text-primary" />
+                </div>
+                <h3 className="font-medium text-foreground">
                   Key Insights
                 </h3>
               </div>
@@ -401,9 +405,9 @@ export default function ComparePage() {
                 {insights.map((insight, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-2 text-sm text-blue-800 dark:text-blue-200"
+                    className="flex items-start gap-2.5 text-sm text-muted-foreground"
                   >
-                    <span>💡</span>
+                    <span className="text-primary/70 mt-0.5">•</span>
                     {insight}
                   </li>
                 ))}
@@ -594,11 +598,13 @@ export default function ComparePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mt-8 p-6 rounded-xl bg-gradient-to-br from-yellow-50 to-amber-50 dark:from-yellow-950/30 dark:to-amber-950/30 border border-yellow-200 dark:border-yellow-800"
+            className="mt-8 p-5 md:p-6 rounded-2xl bg-amber-50/50 dark:bg-amber-900/10 border border-amber-100 dark:border-amber-900/20 backdrop-blur-sm"
           >
-            <div className="flex items-center gap-2 mb-4">
-              <Trophy className="w-5 h-5 text-yellow-600" />
-              <h2 className="text-lg font-semibold text-yellow-900 dark:text-yellow-100">Winner Summary</h2>
+            <div className="flex items-center gap-2 mb-5">
+              <div className="p-1.5 rounded-lg bg-amber-500/10 dark:bg-amber-500/5">
+                <Trophy className="w-4 h-4 text-amber-500" />
+              </div>
+              <h2 className="font-medium text-foreground">Winner Summary</h2>
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
               {[
@@ -610,9 +616,9 @@ export default function ComparePage() {
                 const winnerRole = roles.find(r => r?.roleId === item.winner)
                 if (!winnerRole) return null
                 return (
-                  <div key={item.label} className="text-center">
-                    <div className="text-xs text-muted-foreground mb-1">{item.label}</div>
-                    <div className="flex items-center justify-center gap-1">
+                  <div key={item.label} className="text-center p-3 rounded-xl bg-muted/30 dark:bg-muted/10">
+                    <div className="text-xs text-muted-foreground mb-2">{item.label}</div>
+                    <div className="flex items-center justify-center gap-1.5">
                       <span className="text-lg">{winnerRole.icon}</span>
                       <span className="text-sm font-medium truncate">{winnerRole.roleName}</span>
                     </div>
@@ -660,5 +666,29 @@ export default function ComparePage() {
         />
       )}
     </div>
+  )
+}
+
+// Loading skeleton for the compare page
+function ComparePageSkeleton() {
+  return (
+    <div className="container mx-auto px-4 py-6">
+      <div className="mb-6">
+        <div className="h-8 w-48 bg-muted rounded animate-pulse mb-2" />
+        <div className="h-4 w-72 bg-muted rounded animate-pulse" />
+      </div>
+      <div className="flex flex-wrap gap-3 mb-6">
+        <div className="h-10 w-40 bg-muted rounded-full animate-pulse" />
+        <div className="h-10 w-40 bg-muted rounded-full animate-pulse" />
+      </div>
+    </div>
+  )
+}
+
+export default function ComparePage() {
+  return (
+    <Suspense fallback={<ComparePageSkeleton />}>
+      <CompareContent />
+    </Suspense>
   )
 }

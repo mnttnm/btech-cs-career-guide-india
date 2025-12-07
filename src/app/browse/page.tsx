@@ -119,84 +119,85 @@ function BrowseContent() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-2xl md:text-3xl font-bold mb-2">Explore careers</h1>
-        <p className="text-muted-foreground">
+      <div className="mb-6">
+        <h1 className="text-2xl md:text-3xl font-medium tracking-tight mb-1">Explore careers</h1>
+        <p className="text-muted-foreground text-sm md:text-base">
           {getRoleSummaries().length} career paths across {categories.length} domains
         </p>
       </div>
 
-      {/* Category Pills (Horizontal Scroll) */}
-      <nav aria-label="Filter by category" className="mb-6 -mx-4 px-4 overflow-x-auto scrollbar-hide">
-        <div className="flex gap-2 pb-2" role="group" aria-label="Category filters">
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => updateFilter('category', undefined)}
-            aria-pressed={!category}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-              !category
-                ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
-                : 'bg-muted hover:bg-muted/80'
-            }`}
-          >
-            All
-          </motion.button>
-          {categories.map((cat) => {
-            const Icon = getCategoryIcon(cat.category)
-            const isActive = category === cat.category
-            return (
-              <motion.button
-                key={cat.category}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => updateFilter('category', isActive ? undefined : cat.category)}
-                aria-pressed={isActive}
-                aria-label={`Filter by ${cat.label} (${cat.count} roles)`}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-                  isActive
-                    ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
-                    : 'bg-muted hover:bg-muted/80'
+      {/* Combined Category + Filters Row */}
+      <div className="flex flex-col lg:flex-row lg:items-center gap-4 mb-6">
+        {/* Category Pills (Horizontal Scroll) */}
+        <nav aria-label="Filter by category" className="flex-1 min-w-0 -mx-4 px-4 lg:mx-0 lg:px-0 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-2 pb-2 lg:pb-0" role="group" aria-label="Category filters">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => updateFilter('category', undefined)}
+              aria-pressed={!category}
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${!category
+                  ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
+                  : 'bg-muted hover:bg-muted/80'
                 }`}
-              >
-                <Icon className="w-4 h-4" aria-hidden="true" />
-                {cat.label}
-              </motion.button>
-            )
-          })}
-        </div>
-      </nav>
+            >
+              All
+            </motion.button>
+            {categories.map((cat) => {
+              const Icon = getCategoryIcon(cat.category)
+              const isActive = category === cat.category
+              return (
+                <motion.button
+                  key={cat.category}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => updateFilter('category', isActive ? undefined : cat.category)}
+                  aria-pressed={isActive}
+                  aria-label={`Filter by ${cat.label} (${cat.count} roles)`}
+                  className={`flex items-center gap-2 px-3.5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${isActive
+                      ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
+                      : 'bg-muted hover:bg-muted/80'
+                    }`}
+                >
+                  <Icon className="w-4 h-4" aria-hidden="true" />
+                  {cat.label}
+                </motion.button>
+              )
+            })}
+          </div>
+        </nav>
 
-      {/* Filter Bar */}
-      <div className="flex justify-end gap-2 mb-6">
-        <div className="relative">
-          <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" aria-hidden="true" />
-          <select
-            value={sortBy}
-            onChange={(e) => updateFilter('sort', e.target.value)}
-            aria-label="Sort roles by"
-            className="pl-10 pr-8 py-3 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer"
+        {/* Filter & Sort Controls */}
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <div className="relative">
+            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" aria-hidden="true" />
+            <select
+              value={sortBy}
+              onChange={(e) => updateFilter('sort', e.target.value)}
+              aria-label="Sort roles by"
+              className="pl-9 pr-7 py-2 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer"
+            >
+              {sortOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <Button
+            variant={showFilters ? 'default' : 'outline'}
+            className="gap-2 h-9"
+            onClick={() => setShowFilters(!showFilters)}
           >
-            {sortOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
+            <Filter className="w-4 h-4" />
+            <span className="hidden sm:inline">Filters</span>
+            {activeFilterCount > 0 && (
+              <Badge variant={showFilters ? 'secondary' : 'default'} className="ml-1 h-5 px-1.5 min-w-[20px]">
+                {activeFilterCount}
+              </Badge>
+            )}
+          </Button>
         </div>
-        <Button
-          variant={showFilters ? 'default' : 'outline'}
-          className="gap-2 h-[46px]"
-          onClick={() => setShowFilters(!showFilters)}
-        >
-          <Filter className="w-4 h-4" />
-          <span className="hidden sm:inline">Filters</span>
-          {activeFilterCount > 0 && (
-            <Badge variant={showFilters ? 'secondary' : 'default'} className="ml-1 h-5 px-1.5 min-w-[20px]">
-              {activeFilterCount}
-            </Badge>
-          )}
-        </Button>
       </div>
 
       {/* Active Filters */}
