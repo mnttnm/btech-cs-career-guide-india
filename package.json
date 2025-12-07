@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test:algo": "npx tsx src/scripts/random-test.ts",
     "lint": "eslint"
   },
   "dependencies": {
