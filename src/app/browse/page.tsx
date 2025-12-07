@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useMemo, Suspense, useRef, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useState, useMemo, Suspense, useRef, useCallback } from 'react'
+import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Search, Filter, X, ArrowUpDown, SearchX } from 'lucide-react'
+import { Filter, X, ArrowUpDown, SearchX } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { RoleCard } from '@/components/RoleCard'
@@ -56,60 +56,65 @@ function sortRoles(roles: RoleSummary[], sortBy: SortOption): RoleSummary[] {
 }
 
 function BrowseContent() {
+  const router = useRouter()
+  const pathname = usePathname()
   const searchParams = useSearchParams()
-  const initialCategory = searchParams.get('category') as Category | null
-  const searchInputRef = useRef<HTMLInputElement>(null)
+  const resultsRef = useRef<HTMLDivElement>(null)
 
-  const [filters, setFilters] = useState<RoleFilters>({
-    category: initialCategory || undefined,
-  })
-  const [searchQuery, setSearchQuery] = useState('')
+  // Derive state from URL
+  const category = (searchParams.get('category') as Category) || undefined
+  const difficulty = searchParams.get('difficulty') || undefined
+  const stressLevel = searchParams.get('stressLevel') || undefined
+  const sortBy = (searchParams.get('sort') as SortOption) || 'default'
+
+  // Local state for UI
   const [showFilters, setShowFilters] = useState(false)
-  const [sortBy, setSortBy] = useState<SortOption>('default')
 
   const categories = getCategoriesWithCounts()
 
-  // Keyboard shortcut: "/" to focus search
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Don't trigger if user is typing in an input
-      if (
-        e.target instanceof HTMLInputElement ||
-        e.target instanceof HTMLTextAreaElement
-      ) {
-        return
+  // Helper to update URL params
+  const updateFilter = useCallback(
+    (key: string, value: string | undefined) => {
+      const params = new URLSearchParams(searchParams.toString())
+      if (value) {
+        params.set(key, value)
+      } else {
+        params.delete(key)
       }
 
-      if (e.key === '/') {
-        e.preventDefault()
-        searchInputRef.current?.focus()
+      // Reset page to 1 if we had pagination (not applicable here but good practice)
+      // Update URL without scroll jump (we handle scroll manually)
+      router.push(`${pathname}?${params.toString()}`, { scroll: false })
+
+      // Scroll to top of results if they are out of view
+      if (resultsRef.current) {
+        const rect = resultsRef.current.getBoundingClientRect()
+        if (rect.top < 0 || rect.top > window.innerHeight) {
+          resultsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
       }
-
-      if (e.key === 'Escape') {
-        searchInputRef.current?.blur()
-        setSearchQuery('')
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [])
-
-  const filteredRoles = useMemo(() => {
-    const filtered = filterRoles({ ...filters, search: searchQuery })
-    return sortRoles(filtered, sortBy)
-  }, [filters, searchQuery, sortBy])
-
-  const activeFilterCount = [
-    filters.category,
-    filters.difficulty,
-    filters.stressLevel,
-  ].filter(Boolean).length
+    },
+    [searchParams, pathname, router]
+  )
 
   const clearFilters = () => {
-    setFilters({})
-    setSearchQuery('')
+    router.push(pathname, { scroll: false })
+    if (resultsRef.current) {
+      resultsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
+
+  const activeFilterCount = [category, difficulty, stressLevel].filter(Boolean).length
+
+  // Memoize filtered results
+  const filteredRoles = useMemo(() => {
+    const filtered = filterRoles({
+      category,
+      difficulty,
+      stressLevel,
+    })
+    return sortRoles(filtered, sortBy)
+  }, [category, difficulty, stressLevel, sortBy])
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -127,10 +132,10 @@ function BrowseContent() {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => setFilters({ ...filters, category: undefined })}
-            aria-pressed={!filters.category}
+            onClick={() => updateFilter('category', undefined)}
+            aria-pressed={!category}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-              !filters.category
+              !category
                 ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
                 : 'bg-muted hover:bg-muted/80'
             }`}
@@ -139,18 +144,13 @@ function BrowseContent() {
           </motion.button>
           {categories.map((cat) => {
             const Icon = getCategoryIcon(cat.category)
-            const isActive = filters.category === cat.category
+            const isActive = category === cat.category
             return (
               <motion.button
                 key={cat.category}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() =>
-                  setFilters({
-                    ...filters,
-                    category: isActive ? undefined : cat.category,
-                  })
-                }
+                onClick={() => updateFilter('category', isActive ? undefined : cat.category)}
                 aria-pressed={isActive}
                 aria-label={`Filter by ${cat.label} (${cat.count} roles)`}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
@@ -167,98 +167,68 @@ function BrowseContent() {
         </div>
       </nav>
 
-      {/* Search and Filter Bar */}
-      <div className="flex flex-col sm:flex-row gap-3 mb-6">
-        <div className="relative flex-1 group">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground transition-colors group-focus-within:text-primary" />
-          <input
-            ref={searchInputRef}
-            type="text"
-            placeholder="Search frontend, ML, DevOps..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-11 pr-16 py-3 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all placeholder:text-muted-foreground/60"
-            aria-label="Search roles"
-          />
-          {/* Keyboard hint or clear button */}
-          <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1">
-            {searchQuery ? (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="p-1 rounded-md hover:bg-muted transition-colors"
-                aria-label="Clear search"
-              >
-                <X className="w-4 h-4 text-muted-foreground" />
-              </button>
-            ) : (
-              <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-xs font-mono text-muted-foreground bg-muted rounded border">
-                /
-              </kbd>
-            )}
-          </div>
-        </div>
-        <div className="flex gap-2">
-          <div className="relative">
-            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" aria-hidden="true" />
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as SortOption)}
-              aria-label="Sort roles by"
-              className="pl-10 pr-8 py-3 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer"
-            >
-              {sortOptions.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          </div>
-          <Button
-            variant={showFilters ? 'default' : 'outline'}
-            className="gap-2 h-[46px]"
-            onClick={() => setShowFilters(!showFilters)}
+      {/* Filter Bar */}
+      <div className="flex justify-end gap-2 mb-6">
+        <div className="relative">
+          <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" aria-hidden="true" />
+          <select
+            value={sortBy}
+            onChange={(e) => updateFilter('sort', e.target.value)}
+            aria-label="Sort roles by"
+            className="pl-10 pr-8 py-3 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer"
           >
-            <Filter className="w-4 h-4" />
-            <span className="hidden sm:inline">Filters</span>
-            {activeFilterCount > 0 && (
-              <Badge variant={showFilters ? 'secondary' : 'default'} className="ml-1 h-5 px-1.5 min-w-[20px]">
-                {activeFilterCount}
-              </Badge>
-            )}
-          </Button>
+            {sortOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
         </div>
+        <Button
+          variant={showFilters ? 'default' : 'outline'}
+          className="gap-2 h-[46px]"
+          onClick={() => setShowFilters(!showFilters)}
+        >
+          <Filter className="w-4 h-4" />
+          <span className="hidden sm:inline">Filters</span>
+          {activeFilterCount > 0 && (
+            <Badge variant={showFilters ? 'secondary' : 'default'} className="ml-1 h-5 px-1.5 min-w-[20px]">
+              {activeFilterCount}
+            </Badge>
+          )}
+        </Button>
       </div>
 
       {/* Active Filters */}
       {activeFilterCount > 0 && (
         <div className="flex flex-wrap gap-2 mb-4">
-          {filters.category && (
+          {category && (
             <Badge variant="secondary" className="gap-1 pl-2 pr-1 py-1">
-              {categoryLabels[filters.category]}
+              {categoryLabels[category]}
               <button
-                onClick={() => setFilters({ ...filters, category: undefined })}
+                onClick={() => updateFilter('category', undefined)}
                 className="ml-1 hover:bg-muted rounded p-0.5"
               >
                 <X className="w-3 h-3" />
               </button>
             </Badge>
           )}
-          {filters.difficulty && (
+          {difficulty && (
             <Badge variant="secondary" className="gap-1 pl-2 pr-1 py-1">
-              {filters.difficulty}
+              {difficulty}
               <button
-                onClick={() => setFilters({ ...filters, difficulty: undefined })}
+                onClick={() => updateFilter('difficulty', undefined)}
                 className="ml-1 hover:bg-muted rounded p-0.5"
               >
                 <X className="w-3 h-3" />
               </button>
             </Badge>
           )}
-          {filters.stressLevel && (
+          {stressLevel && (
             <Badge variant="secondary" className="gap-1 pl-2 pr-1 py-1">
-              {filters.stressLevel} Stress
+              {stressLevel} Stress
               <button
-                onClick={() => setFilters({ ...filters, stressLevel: undefined })}
+                onClick={() => updateFilter('stressLevel', undefined)}
                 className="ml-1 hover:bg-muted rounded p-0.5"
               >
                 <X className="w-3 h-3" />
@@ -291,18 +261,13 @@ function BrowseContent() {
               <h3 className="font-medium mb-3 text-sm text-muted-foreground uppercase tracking-wide">Category</h3>
               <div className="flex flex-wrap gap-2">
                 {categories.map((cat) => {
-                  const isActive = filters.category === cat.category
+                  const isActive = category === cat.category
                   return (
                     <motion.button
                       key={cat.category}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      onClick={() =>
-                        setFilters({
-                          ...filters,
-                          category: isActive ? undefined : cat.category,
-                        })
-                      }
+                      onClick={() => updateFilter('category', isActive ? undefined : cat.category)}
                       className={`px-3 py-1.5 rounded-lg text-sm transition-all ${
                         isActive
                           ? 'bg-primary text-primary-foreground shadow-sm'
@@ -321,18 +286,13 @@ function BrowseContent() {
               <h3 className="font-medium mb-3 text-sm text-muted-foreground uppercase tracking-wide">Difficulty</h3>
               <div className="flex flex-wrap gap-2">
                 {difficulties.map((diff) => {
-                  const isActive = filters.difficulty === diff
+                  const isActive = difficulty === diff
                   return (
                     <motion.button
                       key={diff}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      onClick={() =>
-                        setFilters({
-                          ...filters,
-                          difficulty: isActive ? undefined : diff,
-                        })
-                      }
+                      onClick={() => updateFilter('difficulty', isActive ? undefined : diff)}
                       className={`px-3 py-1.5 rounded-lg text-sm transition-all ${
                         isActive
                           ? 'bg-primary text-primary-foreground shadow-sm'
@@ -351,18 +311,13 @@ function BrowseContent() {
               <h3 className="font-medium mb-3 text-sm text-muted-foreground uppercase tracking-wide">Stress Level</h3>
               <div className="flex flex-wrap gap-2">
                 {stressLevels.map((stress) => {
-                  const isActive = filters.stressLevel === stress
+                  const isActive = stressLevel === stress
                   return (
                     <motion.button
                       key={stress}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      onClick={() =>
-                        setFilters({
-                          ...filters,
-                          stressLevel: isActive ? undefined : stress,
-                        })
-                      }
+                      onClick={() => updateFilter('stressLevel', isActive ? undefined : stress)}
                       className={`px-3 py-1.5 rounded-lg text-sm transition-all ${
                         isActive
                           ? 'bg-primary text-primary-foreground shadow-sm'
@@ -380,14 +335,15 @@ function BrowseContent() {
       )}
 
       {/* Results Count */}
-      <div className="mb-6 text-sm text-muted-foreground">
+      <div className="mb-6 text-sm text-muted-foreground" ref={resultsRef}>
         Showing <span className="font-medium text-foreground">{filteredRoles.length}</span> roles
-        {(searchQuery || activeFilterCount > 0) && ' matching your criteria'}
+        {activeFilterCount > 0 && ' matching your criteria'}
       </div>
 
       {/* Role Grid with staggered animation */}
       {filteredRoles.length > 0 && (
         <motion.div
+          key={`${category}-${difficulty}-${stressLevel}-${sortBy}`}
           variants={staggerContainer(0.04)}
           initial="hidden"
           animate="visible"
@@ -406,11 +362,7 @@ function BrowseContent() {
         <EmptyState
           icon={SearchX}
           title="No roles found"
-          description={
-            searchQuery
-              ? `We couldn't find any careers matching "${searchQuery}". Try different search terms or adjust your filters.`
-              : "We couldn't find any careers matching your filters. Try removing some filters to see more results."
-          }
+          description="We couldn't find any careers matching your filters. Try removing some filters to see more results."
           action={{
             label: 'Clear all filters',
             onClick: clearFilters,
