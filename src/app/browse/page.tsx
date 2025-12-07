@@ -127,18 +127,18 @@ function BrowseContent() {
       </div>
 
       {/* Combined Category + Filters Row */}
-      <div className="flex flex-col lg:flex-row lg:items-center gap-4 mb-6">
+      <div className="flex flex-col lg:flex-row lg:items-center gap-4 mb-6 sticky top-20 z-30 pt-4 pb-2 -mt-4 bg-background/5 backdrop-blur-sm">
         {/* Category Pills (Horizontal Scroll) */}
-        <nav aria-label="Filter by category" className="flex-1 min-w-0 -mx-4 px-4 lg:mx-0 lg:px-0 overflow-x-auto scrollbar-hide">
-          <div className="flex gap-2 pb-2 lg:pb-0" role="group" aria-label="Category filters">
+        <nav aria-label="Filter by category" className="flex-1 min-w-0 -mx-4 px-4 lg:mx-0 lg:px-0 overflow-x-auto scrollbar-hide py-1">
+          <div className="flex gap-2" role="group" aria-label="Category filters">
             <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={() => updateFilter('category', undefined)}
               aria-pressed={!category}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${!category
-                  ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
-                  : 'bg-muted hover:bg-muted/80'
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all border ${!category
+                ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/20 border-primary'
+                : 'bg-background/50 border-border hover:bg-muted hover:border-muted-foreground/20'
                 }`}
             >
               All
@@ -149,14 +149,14 @@ function BrowseContent() {
               return (
                 <motion.button
                   key={cat.category}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => updateFilter('category', isActive ? undefined : cat.category)}
                   aria-pressed={isActive}
                   aria-label={`Filter by ${cat.label} (${cat.count} roles)`}
-                  className={`flex items-center gap-2 px-3.5 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${isActive
-                      ? 'bg-primary text-primary-foreground shadow-md shadow-primary/20'
-                      : 'bg-muted hover:bg-muted/80'
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all border ${isActive
+                    ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/20 border-primary'
+                    : 'bg-background/50 border-border hover:bg-muted hover:border-muted-foreground/20'
                     }`}
                 >
                   <Icon className="w-4 h-4" aria-hidden="true" />
@@ -169,13 +169,13 @@ function BrowseContent() {
 
         {/* Filter & Sort Controls */}
         <div className="flex items-center gap-2 flex-shrink-0">
-          <div className="relative">
-            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" aria-hidden="true" />
+          <div className="relative group">
+            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none group-hover:text-primary transition-colors" aria-hidden="true" />
             <select
               value={sortBy}
               onChange={(e) => updateFilter('sort', e.target.value)}
               aria-label="Sort roles by"
-              className="pl-9 pr-7 py-2 rounded-xl border bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer"
+              className="pl-9 pr-8 py-2 rounded-xl border border-border/60 bg-background/50 backdrop-blur-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer hover:bg-muted/50 transition-colors"
             >
               {sortOptions.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -186,13 +186,13 @@ function BrowseContent() {
           </div>
           <Button
             variant={showFilters ? 'default' : 'outline'}
-            className="gap-2 h-9"
+            className={showFilters ? "shadow-lg shadow-primary/20" : "bg-background/50 backdrop-blur-sm border-border/60 hover:bg-muted/50"}
             onClick={() => setShowFilters(!showFilters)}
           >
-            <Filter className="w-4 h-4" />
+            <Filter className="w-4 h-4 mr-2" />
             <span className="hidden sm:inline">Filters</span>
             {activeFilterCount > 0 && (
-              <Badge variant={showFilters ? 'secondary' : 'default'} className="ml-1 h-5 px-1.5 min-w-[20px]">
+              <Badge variant={showFilters ? 'secondary' : 'default'} className="ml-2 h-5 px-1.5 min-w-[20px] rounded-full text-[10px]">
                 {activeFilterCount}
               </Badge>
             )}
@@ -202,37 +202,37 @@ function BrowseContent() {
 
       {/* Active Filters */}
       {activeFilterCount > 0 && (
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-2 mb-6 animate-fade-up">
           {category && (
-            <Badge variant="secondary" className="gap-1 pl-2 pr-1 py-1">
+            <Badge variant="secondary" className="gap-1 pl-3 pr-1.5 py-1.5 rounded-lg text-sm bg-muted/50 border border-border/50">
               {categoryLabels[category]}
               <button
                 onClick={() => updateFilter('category', undefined)}
-                className="ml-1 hover:bg-muted rounded p-0.5"
+                className="ml-1.5 hover:bg-background rounded-full p-0.5 transition-colors"
               >
-                <X className="w-3 h-3" />
+                <X className="w-3.5 h-3.5" />
               </button>
             </Badge>
           )}
           {difficulty && (
-            <Badge variant="secondary" className="gap-1 pl-2 pr-1 py-1">
+            <Badge variant="secondary" className="gap-1 pl-3 pr-1.5 py-1.5 rounded-lg text-sm bg-muted/50 border border-border/50">
               {difficulty}
               <button
                 onClick={() => updateFilter('difficulty', undefined)}
-                className="ml-1 hover:bg-muted rounded p-0.5"
+                className="ml-1.5 hover:bg-background rounded-full p-0.5 transition-colors"
               >
-                <X className="w-3 h-3" />
+                <X className="w-3.5 h-3.5" />
               </button>
             </Badge>
           )}
           {stressLevel && (
-            <Badge variant="secondary" className="gap-1 pl-2 pr-1 py-1">
+            <Badge variant="secondary" className="gap-1 pl-3 pr-1.5 py-1.5 rounded-lg text-sm bg-muted/50 border border-border/50">
               {stressLevel} Stress
               <button
                 onClick={() => updateFilter('stressLevel', undefined)}
-                className="ml-1 hover:bg-muted rounded p-0.5"
+                className="ml-1.5 hover:bg-background rounded-full p-0.5 transition-colors"
               >
-                <X className="w-3 h-3" />
+                <X className="w-3.5 h-3.5" />
               </button>
             </Badge>
           )}
@@ -240,7 +240,7 @@ function BrowseContent() {
             variant="ghost"
             size="sm"
             onClick={clearFilters}
-            className="text-muted-foreground"
+            className="text-muted-foreground hover:text-destructive h-8 px-2"
           >
             Clear all
           </Button>
@@ -250,32 +250,35 @@ function BrowseContent() {
       {/* Filter Panel */}
       {showFilters && (
         <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-6 p-5 rounded-2xl border bg-card shadow-sm"
+          initial={{ opacity: 0, height: 0, scale: 0.98 }}
+          animate={{ opacity: 1, height: 'auto', scale: 1 }}
+          exit={{ opacity: 0, height: 0, scale: 0.98 }}
+          transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-8 p-6 rounded-2xl glass border border-primary/10 bg-primary/5 overflow-hidden"
         >
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3">
             {/* Category Filter */}
             <div>
-              <h3 className="font-medium mb-3 text-sm text-muted-foreground uppercase tracking-wide">Category</h3>
+              <h3 className="font-semibold mb-3 text-sm text-foreground uppercase tracking-wider flex items-center gap-2">
+                <span className="w-1 h-4 bg-primary rounded-full" />
+                Category
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {categories.map((cat) => {
                   const isActive = category === cat.category
                   return (
                     <motion.button
                       key={cat.category}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                       onClick={() => updateFilter('category', isActive ? undefined : cat.category)}
-                      className={`px-3 py-1.5 rounded-lg text-sm transition-all ${
+                      className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
                         isActive
-                          ? 'bg-primary text-primary-foreground shadow-sm'
-                          : 'bg-muted hover:bg-muted/80'
+                        ? 'bg-primary/20 text-primary border border-primary/30'
+                        : 'bg-background/60 hover:bg-background border border-transparent hover:border-border/50'
                       }`}
                     >
-                      {cat.label} ({cat.count})
+                      {cat.label} <span className="text-xs opacity-60 ml-1">({cat.count})</span>
                     </motion.button>
                   )
                 })}
@@ -284,20 +287,23 @@ function BrowseContent() {
 
             {/* Difficulty Filter */}
             <div>
-              <h3 className="font-medium mb-3 text-sm text-muted-foreground uppercase tracking-wide">Difficulty</h3>
+              <h3 className="font-semibold mb-3 text-sm text-foreground uppercase tracking-wider flex items-center gap-2">
+                <span className="w-1 h-4 bg-blue-500 rounded-full" />
+                Difficulty
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {difficulties.map((diff) => {
                   const isActive = difficulty === diff
                   return (
                     <motion.button
                       key={diff}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                       onClick={() => updateFilter('difficulty', isActive ? undefined : diff)}
-                      className={`px-3 py-1.5 rounded-lg text-sm transition-all ${
+                      className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
                         isActive
-                          ? 'bg-primary text-primary-foreground shadow-sm'
-                          : 'bg-muted hover:bg-muted/80'
+                        ? 'bg-blue-500/20 text-blue-600 dark:text-blue-400 border border-blue-500/30'
+                        : 'bg-background/60 hover:bg-background border border-transparent hover:border-border/50'
                       }`}
                     >
                       {diff}

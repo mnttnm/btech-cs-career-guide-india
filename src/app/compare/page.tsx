@@ -391,24 +391,27 @@ function CompareContent() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mb-8 p-4 rounded-2xl bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/20 backdrop-blur-sm"
+              className="mb-8 p-6 rounded-2xl glass border border-primary/10 bg-primary/5 relative overflow-hidden"
             >
-              <div className="flex items-center gap-2 mb-3">
-                <div className="p-1.5 rounded-lg bg-primary/10 dark:bg-primary/5">
-                  <Lightbulb className="w-4 h-4 text-primary" />
+              <div className="absolute top-0 right-0 p-4 opacity-5">
+                <Lightbulb className="w-24 h-24" />
+              </div>
+              <div className="flex items-center gap-3 mb-4 relative z-10">
+                <div className="p-2 rounded-xl bg-primary/10 text-primary">
+                  <Lightbulb className="w-5 h-5" />
                 </div>
-                <h3 className="font-medium text-foreground">
+                <h3 className="font-semibold text-lg text-foreground">
                   Key Insights
                 </h3>
               </div>
-              <ul className="space-y-2">
+              <ul className="space-y-3 relative z-10">
                 {insights.map((insight, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-2.5 text-sm text-muted-foreground"
+                    className="flex items-start gap-3 text-base text-muted-foreground"
                   >
-                    <span className="text-primary/70 mt-0.5">•</span>
-                    {insight}
+                    <Check className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                    <span>{insight}</span>
                   </li>
                 ))}
               </ul>
@@ -416,25 +419,22 @@ function CompareContent() {
           )}
 
           {/* Comparison Table */}
-          <div className="relative">
+          <div className="relative rounded-2xl border bg-card shadow-sm overflow-hidden mb-12">
             {/* Scroll hint for mobile */}
             <div className="sm:hidden absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent pointer-events-none z-10" />
-            <div className="overflow-x-auto -mx-4 px-4 pb-2">
+            <div className="overflow-x-auto">
               <table className="w-full min-w-[600px]">
                 <thead>
-                  <tr>
-                    <th className="text-left p-4 bg-muted rounded-tl-xl sticky left-0 z-10 bg-muted">Metric</th>
+                  <tr className="border-b">
+                    <th className="text-left p-6 bg-muted/30 font-medium text-muted-foreground w-1/4 sticky left-0 z-20 backdrop-blur-md">Metric</th>
                     {roles.map((role, i) => (
                       <th
                         key={role?.roleId}
-                        className={cn(
-                          "text-left p-4 bg-muted",
-                          i === roles.length - 1 && "rounded-tr-xl"
-                        )}
+                        className="text-left p-6 bg-muted/10 min-w-[200px]"
                       >
-                        <div className="flex items-center gap-2">
-                          <span>{role?.icon}</span>
-                          <span className="font-semibold">{role?.roleName}</span>
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl p-2 bg-muted/50 rounded-lg">{role?.icon}</span>
+                          <span className="font-bold text-lg leading-tight">{role?.roleName}</span>
                         </div>
                       </th>
                     ))}
@@ -459,12 +459,9 @@ function CompareContent() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.05 }}
-                      className={cn(
-                        'transition-colors hover:bg-muted/50',
-                        index % 2 === 0 && 'bg-muted/30'
-                      )}
+                      className="border-b last:border-0 hover:bg-muted/20 transition-colors"
                     >
-                      <td className="p-4 font-medium sticky left-0 bg-background z-10">{metric.label}</td>
+                      <td className="p-6 font-medium text-sm text-muted-foreground sticky left-0 bg-background/95 backdrop-blur-sm z-10 border-r">{metric.label}</td>
                       {roles.map((role, roleIndex) => {
                         const isBest = bestRoleId === role?.roleId
                         const value = metric.getValue(role)
@@ -483,14 +480,14 @@ function CompareContent() {
                         const stressValue = role?.stressLevel?.level as keyof typeof stressColors
 
                         return (
-                          <td key={role?.roleId} className="p-4">
-                            <div className="space-y-2">
+                          <td key={role?.roleId} className="p-6 align-top">
+                            <div className="space-y-3">
                               <div className="flex items-center gap-2">
                                 {isDifficulty ? (
                                   <Badge
                                     variant="secondary"
                                     className={cn(
-                                      'text-xs',
+                                      'px-3 py-1 text-xs',
                                       difficultyColors[difficultyValue]?.bg,
                                       difficultyColors[difficultyValue]?.text
                                     )}
@@ -501,7 +498,7 @@ function CompareContent() {
                                   <Badge
                                     variant="secondary"
                                     className={cn(
-                                      'text-xs',
+                                      'px-3 py-1 text-xs',
                                       stressColors[stressValue]?.bg,
                                       stressColors[stressValue]?.text
                                     )}
@@ -511,7 +508,8 @@ function CompareContent() {
                                 ) : (
                                   <span
                                     className={cn(
-                                      isBest && 'font-semibold text-green-600'
+                                      "text-lg",
+                                      isBest ? 'font-bold text-green-600 dark:text-green-400' : 'text-foreground'
                                     )}
                                   >
                                     {value}
@@ -522,6 +520,7 @@ function CompareContent() {
                                     initial={{ scale: 0 }}
                                     animate={{ scale: 1 }}
                                     transition={springs.bouncy}
+                                    title="Best in category"
                                   >
                                     <Trophy className="w-4 h-4 text-yellow-500" />
                                   </motion.div>
@@ -547,102 +546,64 @@ function CompareContent() {
           </div>
           </div>
 
-          {/* Skills Comparison */}
-          <div className="mt-8">
-            <h2 className="text-lg font-semibold mb-4">Skills Comparison</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {roles.map((role) => (
-                <div key={role?.roleId} className="p-4 rounded-xl border bg-card">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-2xl">{role?.icon}</span>
-                    <h3 className="font-semibold">{role?.roleName}</h3>
-                  </div>
-                  <div className="space-y-3">
-                    <div>
-                      <h4 className="text-sm text-muted-foreground mb-2">
-                        Primary Languages
-                      </h4>
-                      <div className="flex flex-wrap gap-1">
-                        {role?.skills?.programmingLanguages
-                          ?.filter((s) => s.priority === 'Primary')
-                          .map((skill) => (
-                            <Badge key={skill.name} variant="secondary">
-                              {skill.name}
-                            </Badge>
-                          ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-sm text-muted-foreground mb-2">
-                        Key Frameworks
-                      </h4>
-                      <div className="flex flex-wrap gap-1">
-                        {role?.skills?.frameworks
-                          ?.filter((f) => f.popularity === 'High')
-                          .slice(0, 3)
-                          .map((fw) => (
-                            <Badge key={fw.name} variant="outline">
-                              {fw.name}
-                            </Badge>
-                          ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Winner Summary */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mt-8 p-5 md:p-6 rounded-2xl bg-amber-50/50 dark:bg-amber-900/10 border border-amber-100 dark:border-amber-900/20 backdrop-blur-sm"
+            className="mt-12"
           >
-            <div className="flex items-center gap-2 mb-5">
-              <div className="p-1.5 rounded-lg bg-amber-500/10 dark:bg-amber-500/5">
-                <Trophy className="w-4 h-4 text-amber-500" />
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 rounded-xl bg-amber-500/10 text-amber-600">
+                <Trophy className="w-6 h-6" />
               </div>
-              <h2 className="font-medium text-foreground">Winner Summary</h2>
+              <h2 className="text-xl font-bold text-foreground">Winner Summary</h2>
             </div>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { label: 'Highest Salary', winner: metrics.find(m => m.label === 'Fresher Salary')?.getBest(roles), metric: 'Fresher Salary' },
                 { label: 'Easiest to Learn', winner: metrics.find(m => m.label === 'Difficulty')?.getBest(roles), metric: 'Difficulty' },
                 { label: 'Quickest Start', winner: metrics.find(m => m.label === 'Time to Job')?.getBest(roles), metric: 'Time to Job' },
                 { label: 'Best Work-Life', winner: metrics.find(m => m.label === 'Stress Level')?.getBest(roles), metric: 'Stress Level' },
-              ].map((item) => {
+              ].map((item, i) => {
                 const winnerRole = roles.find(r => r?.roleId === item.winner)
                 if (!winnerRole) return null
                 return (
-                  <div key={item.label} className="text-center p-3 rounded-xl bg-muted/30 dark:bg-muted/10">
-                    <div className="text-xs text-muted-foreground mb-2">{item.label}</div>
-                    <div className="flex items-center justify-center gap-1.5">
-                      <span className="text-lg">{winnerRole.icon}</span>
-                      <span className="text-sm font-medium truncate">{winnerRole.roleName}</span>
+                  <motion.div
+                    key={item.label}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.3 + i * 0.1 }}
+                    className="p-5 rounded-xl border bg-card hover:shadow-lg hover:border-border/80 transition-all duration-300 group"
+                  >
+                    <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">{item.label}</div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-3xl filter grayscale group-hover:grayscale-0 transition-all duration-300">{winnerRole.icon}</span>
+                      <span className="text-base font-bold leading-tight">{winnerRole.roleName}</span>
                     </div>
-                  </div>
+                  </motion.div>
                 )
               })}
             </div>
           </motion.div>
 
           {/* Bottom Line */}
-          <div className="mt-8 p-6 rounded-xl bg-muted/50">
-            <h2 className="text-lg font-semibold mb-4">Bottom Line</h2>
+          <div className="mt-16">
+            <h2 className="text-xl font-bold mb-6">Bottom Line Recommendation</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {roles.map((role) => (
-                <div key={role?.roleId}>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xl">{role?.icon}</span>
-                    <h3 className="font-medium">Choose {role?.roleName} if...</h3>
+                <div key={role?.roleId} className="p-6 rounded-2xl bg-muted/30 border border-transparent hover:border-primary/20 transition-colors">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-3xl">{role?.icon}</span>
+                    <h3 className="text-lg font-bold">Choose {role?.roleName} if...</h3>
                   </div>
-                  <ul className="space-y-1 text-sm text-muted-foreground">
+                  <ul className="space-y-3">
                     {role?.personalityFit?.thriveIf?.slice(0, 3).map((item, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-green-600">✓</span>
-                        {item}
+                      <li key={i} className="flex items-start gap-3 text-sm">
+                        <div className="mt-1 p-1 rounded-full bg-green-500/10 dark:bg-green-500/20">
+                          <Check className="w-3 h-3 text-green-600 dark:text-green-400" />
+                        </div>
+                        <span className="text-muted-foreground">{item}</span>
                       </li>
                     ))}
                   </ul>
