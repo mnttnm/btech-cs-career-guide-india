@@ -1,8 +1,8 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Plus, ArrowRight, Lightbulb, Trophy, GitCompare, Share2, Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -48,8 +48,38 @@ type CompareRole = Role | undefined
 
 export default function ComparePage() {
   const router = useRouter()
-  const { selectedRoles } = useComparisonStore()
+  const searchParams = useSearchParams()
+  const { selectedRoles, addRole, clearRoles } = useComparisonStore()
   const [copied, setCopied] = useState(false)
+
+  // Sync roles from URL query (?roles=role-a,role-b) into comparison store
+  useEffect(() => {
+    const rolesParam = searchParams.get('roles')
+    if (!rolesParam) return
+
+    // Parse, de-duplicate, and validate role IDs from query
+    const queriedRoleIds = rolesParam
+      .split(',')
+      .map((id) => id.trim())
+      .filter(Boolean)
+
+    const uniqueRoleIds = Array.from(new Set(queriedRoleIds))
+    const validRoleIds = uniqueRoleIds.filter((id) => getRoleById(id))
+
+    // Enforce the same max-3 constraint as the store
+    const normalizedRoleIds = validRoleIds.slice(0, 3)
+
+    // Avoid unnecessary store updates if already in sync
+    const isSameSelection =
+      normalizedRoleIds.length === selectedRoles.length &&
+      normalizedRoleIds.every((id, index) => id === selectedRoles[index])
+
+    if (isSameSelection) return
+
+    // Update store to match URL
+    clearRoles()
+    normalizedRoleIds.forEach((id) => addRole(id))
+  }, [searchParams, selectedRoles, addRole, clearRoles])
 
   const roles = useMemo((): CompareRole[] => {
     return selectedRoles.map((id) => getRoleById(id)).filter(Boolean) as CompareRole[]
