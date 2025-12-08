@@ -39,7 +39,7 @@ export const COLOR_SCHEMES: { id: ColorScheme; name: string; description: string
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('system')
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light')
-  const [colorScheme, setColorScheme] = useState<ColorScheme>('indigo')
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('sage')
 
   useEffect(() => {
     // Get stored preferences

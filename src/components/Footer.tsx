@@ -1,5 +1,19 @@
 import Link from "next/link";
-import { Compass, Github, Linkedin, Twitter } from "lucide-react";
+import { Compass, Github, Linkedin } from "lucide-react";
+
+// Custom X (formerly Twitter) icon - lucide doesn't include brand logos
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
 
 export function Footer() {
   return (
@@ -24,26 +38,30 @@ export function Footer() {
               
               {/* Built by with social links */}
               <div className="flex items-center gap-4 pt-4">
-                <Link
-                  href="https://www.linkedin.com/in/tatermohit/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm text-zinc-400 hover:text-white transition-colors"
-                >
+                <span className="text-sm text-zinc-400">
                   Built by Mohit Tater
-                </Link>
+                </span>
                 <div className="flex items-center gap-3">
                   <Link
-                    href="https://twitter.com/tatermohit"
+                    href="https://www.linkedin.com/in/tatermohit/"
                     target="_blank"
                     rel="noreferrer"
-                    aria-label="Twitter"
+                    aria-label="LinkedIn"
                     className="text-zinc-500 hover:text-white transition-colors"
                   >
-                    <Twitter className="h-4 w-4" />
+                    <Linkedin className="h-4 w-4" />
                   </Link>
                   <Link
-                    href="https://github.com/mnttnm/btech-cs-career-guide-india"
+                    href="https://x.com/tatermohit"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="X (formerly Twitter)"
+                    className="text-zinc-500 hover:text-white transition-colors"
+                  >
+                    <XIcon className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    href="https://github.com/mnttnm/"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="GitHub"
@@ -78,6 +96,21 @@ export function Footer() {
                   className="text-zinc-300 hover:text-white transition-colors"
                 >
                   Compare
+                </Link>
+                <Link
+                  href="https://github.com/mnttnm/btech-cs-career-guide-india"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-zinc-300 hover:text-white transition-colors inline-flex items-center gap-1.5"
+                >
+                  GitHub
+                  <Github className="h-3.5 w-3.5" />
+                </Link>
+                <Link
+                  href="/disclaimer"
+                  className="text-zinc-300 hover:text-white transition-colors"
+                >
+                  Disclaimer
                 </Link>
               </div>
             </div>
