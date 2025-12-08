@@ -7,8 +7,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { useComparisonStore } from '@/stores/useComparisonStore'
-import { ThemeToggle, ThemeToggleCompact } from './ThemeToggle'
-import { ColorSchemeSelector } from './ColorSchemeSelector'
+import { ThemeWidget } from './ThemeWidget'
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
@@ -72,8 +71,7 @@ export function Navigation() {
               )
             })}
             <div className="ml-2 pl-2 border-l border-border/50 flex items-center gap-1">
-              <ColorSchemeSelector />
-              <ThemeToggle />
+              <ThemeWidget />
             </div>
           </div>
         </nav>
@@ -126,8 +124,7 @@ export function Navigation() {
             <span className="font-bold text-lg tracking-tight">CareerGuide</span>
           </Link>
           <div className="flex items-center gap-1">
-            <ColorSchemeSelector />
-            <ThemeToggleCompact />
+            <ThemeWidget />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg hover:bg-muted/50 transition-colors"
