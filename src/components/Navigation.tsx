@@ -30,9 +30,14 @@ export function Navigation() {
             <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-primary-foreground group-hover:scale-105 transition-transform shadow-md">
               <Compass className="w-5 h-5" />
             </div>
-            <span className="font-bold text-xl text-foreground tracking-tight group-hover:text-primary transition-colors">
-              CareerGuide
-            </span>
+            <div className="flex flex-col">
+              <span className="font-bold text-xl text-foreground tracking-tight group-hover:text-primary transition-colors leading-tight">
+                CareerGuide
+              </span>
+              <span className="text-[10px] text-muted-foreground tracking-wide">
+                CS & IT Careers
+              </span>
+            </div>
           </Link>
 
           <div className="flex items-center gap-1">
@@ -121,7 +126,12 @@ export function Navigation() {
             <div className="flex items-center justify-center w-7 h-7 rounded-lg bg-primary text-primary-foreground">
               <Compass className="w-4 h-4" />
             </div>
-            <span className="font-bold text-lg tracking-tight">CareerGuide</span>
+            <div className="flex flex-col">
+              <span className="font-bold text-lg tracking-tight leading-tight">CareerGuide</span>
+              <span className="text-[9px] text-muted-foreground tracking-wide">
+                CS & IT Careers
+              </span>
+            </div>
           </Link>
           <div className="flex items-center gap-1">
             <ThemeWidget />
