@@ -571,7 +571,7 @@ export default function QuizPage() {
             </Button>
           </div>
 
-          <SuccessFormula />
+          {/* <SuccessFormula /> */}
         </motion.div>
       </div>
     )

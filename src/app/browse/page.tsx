@@ -3,9 +3,10 @@
 import { useState, useMemo, Suspense, useRef, useCallback } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Filter, X, ArrowUpDown, SearchX } from 'lucide-react'
+import { Filter, X, ArrowUpDown, SearchX, ChevronDown, Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { RoleCard } from '@/components/RoleCard'
 import { EmptyState } from '@/components/EmptyState'
 import {
@@ -128,62 +129,90 @@ function BrowseContent() {
 
       {/* Combined Category + Filters Row */}
       <div className="flex flex-col lg:flex-row lg:items-center gap-4 mb-6 sticky top-20 z-30 pt-4 pb-2 -mt-4 bg-background/5 backdrop-blur-sm">
-        {/* Category Pills (Horizontal Scroll) */}
-        <nav aria-label="Filter by category" className="flex-1 min-w-0 -mx-4 px-4 lg:mx-0 lg:px-0 overflow-x-auto scrollbar-hide py-1">
-          <div className="flex gap-2" role="group" aria-label="Category filters">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => updateFilter('category', undefined)}
-              aria-pressed={!category}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all border ${!category
-                ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/20 border-primary'
-                : 'bg-background/50 border-border hover:bg-muted hover:border-muted-foreground/20'
-                }`}
-            >
-              All
-            </motion.button>
-            {categories.map((cat) => {
-              const Icon = getCategoryIcon(cat.category)
-              const isActive = category === cat.category
-              return (
-                <motion.button
-                  key={cat.category}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => updateFilter('category', isActive ? undefined : cat.category)}
-                  aria-pressed={isActive}
-                  aria-label={`Filter by ${cat.label} (${cat.count} roles)`}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all border ${isActive
-                    ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/20 border-primary'
-                    : 'bg-background/50 border-border hover:bg-muted hover:border-muted-foreground/20'
-                    }`}
-                >
-                  <Icon className="w-4 h-4" aria-hidden="true" />
-                  {cat.label}
-                </motion.button>
-              )
-            })}
+        {/* Category Pills (Horizontal Scroll with Gradient Fade) */}
+        <nav aria-label="Filter by category" className="flex-1 min-w-0 relative">
+          {/* Left gradient fade indicator */}
+          <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none lg:hidden" />
+          {/* Right gradient fade indicator */}
+          <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none lg:hidden" />
+          
+          <div className="-mx-4 px-4 lg:mx-0 lg:px-0 overflow-x-auto scrollbar-hide py-1">
+            <div className="flex gap-2 px-4 lg:px-0" role="group" aria-label="Category filters">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => updateFilter('category', undefined)}
+                aria-pressed={!category}
+                className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all border ${!category
+                  ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/20 border-primary'
+                  : 'bg-background/50 border-border hover:bg-muted hover:border-muted-foreground/20'
+                  }`}
+              >
+                All
+              </motion.button>
+              {categories.map((cat) => {
+                const Icon = getCategoryIcon(cat.category)
+                const isActive = category === cat.category
+                return (
+                  <motion.button
+                    key={cat.category}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => updateFilter('category', isActive ? undefined : cat.category)}
+                    aria-pressed={isActive}
+                    aria-label={`Filter by ${cat.label} (${cat.count} roles)`}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all border ${isActive
+                      ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/20 border-primary'
+                      : 'bg-background/50 border-border hover:bg-muted hover:border-muted-foreground/20'
+                      }`}
+                  >
+                    <Icon className="w-4 h-4" aria-hidden="true" />
+                    {cat.label}
+                  </motion.button>
+                )
+              })}
+            </div>
           </div>
         </nav>
 
         {/* Filter & Sort Controls */}
         <div className="flex items-center gap-2 flex-shrink-0">
-          <div className="relative group">
-            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none group-hover:text-primary transition-colors" aria-hidden="true" />
-            <select
-              value={sortBy}
-              onChange={(e) => updateFilter('sort', e.target.value)}
-              aria-label="Sort roles by"
-              className="pl-9 pr-8 py-2 rounded-xl border border-border/60 bg-background/50 backdrop-blur-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none cursor-pointer hover:bg-muted/50 transition-colors"
-            >
-              {sortOptions.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          </div>
+          {/* Custom Sort Dropdown using Popover */}
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                className="gap-2 bg-background/50 backdrop-blur-sm border-border/60 hover:bg-muted/50"
+                aria-label="Sort roles by"
+              >
+                <ArrowUpDown className="w-4 h-4 text-muted-foreground" aria-hidden="true" />
+                <span className="hidden sm:inline text-sm font-medium">
+                  {sortOptions.find(opt => opt.value === sortBy)?.label || 'Sort'}
+                </span>
+                <ChevronDown className="w-3.5 h-3.5 text-muted-foreground" />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-48 p-1.5" align="end">
+              <div className="space-y-0.5">
+                {sortOptions.map((option) => (
+                  <button
+                    key={option.value}
+                    onClick={() => updateFilter('sort', option.value)}
+                    className={`w-full flex items-center justify-between px-3 py-2 text-sm rounded-lg transition-colors ${
+                      sortBy === option.value
+                        ? 'bg-primary/10 text-primary font-medium'
+                        : 'hover:bg-muted text-foreground'
+                    }`}
+                  >
+                    {option.label}
+                    {sortBy === option.value && (
+                      <Check className="w-4 h-4" />
+                    )}
+                  </button>
+                ))}
+              </div>
+            </PopoverContent>
+          </Popover>
           <Button
             variant={showFilters ? 'default' : 'outline'}
             className={showFilters ? "shadow-lg shadow-primary/20" : "bg-background/50 backdrop-blur-sm border-border/60 hover:bg-muted/50"}
@@ -209,8 +238,9 @@ function BrowseContent() {
               <button
                 onClick={() => updateFilter('category', undefined)}
                 className="ml-1.5 hover:bg-background rounded-full p-0.5 transition-colors"
+                aria-label={`Remove ${categoryLabels[category]} filter`}
               >
-                <X className="w-3.5 h-3.5" />
+                <X className="w-3.5 h-3.5" aria-hidden="true" />
               </button>
             </Badge>
           )}
@@ -220,8 +250,9 @@ function BrowseContent() {
               <button
                 onClick={() => updateFilter('difficulty', undefined)}
                 className="ml-1.5 hover:bg-background rounded-full p-0.5 transition-colors"
+                aria-label={`Remove ${difficulty} difficulty filter`}
               >
-                <X className="w-3.5 h-3.5" />
+                <X className="w-3.5 h-3.5" aria-hidden="true" />
               </button>
             </Badge>
           )}
@@ -231,8 +262,9 @@ function BrowseContent() {
               <button
                 onClick={() => updateFilter('stressLevel', undefined)}
                 className="ml-1.5 hover:bg-background rounded-full p-0.5 transition-colors"
+                aria-label={`Remove ${stressLevel} stress level filter`}
               >
-                <X className="w-3.5 h-3.5" />
+                <X className="w-3.5 h-3.5" aria-hidden="true" />
               </button>
             </Badge>
           )}
