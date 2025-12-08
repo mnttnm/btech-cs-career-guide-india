@@ -15,7 +15,6 @@ import {
   CheckCircle2,
   XCircle,
   ChevronRight,
-  ChevronLeft,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -33,8 +32,17 @@ import { cn } from '@/lib/utils'
 import { getRoleIcon, difficultyColors, stressColors } from '@/lib/icons'
 import { RoleCard } from '@/components/RoleCard'
 import { Breadcrumb } from '@/components/Breadcrumb'
-import { springs } from '@/lib/motion'
 import { toggleFavoriteWithToast, addToComparisonWithToast, removeFromComparisonWithToast } from '@/lib/toast-actions'
+
+// Tab color variants for visual distinction (subtle but visible)
+const tabColorVariants = {
+  overview: 'border-blue-200/40 bg-blue-50/25 dark:border-blue-800/25 dark:bg-blue-950/15',
+  skills: 'border-emerald-200/40 bg-emerald-50/25 dark:border-emerald-800/25 dark:bg-emerald-950/15',
+  career: 'border-amber-200/40 bg-amber-50/25 dark:border-amber-800/25 dark:bg-amber-950/15',
+  strategy: 'border-purple-200/40 bg-purple-50/25 dark:border-purple-800/25 dark:bg-purple-950/15',
+} as const
+
+type TabValue = keyof typeof tabColorVariants
 
 // Hook to track scroll progress
 function useScrollProgress() {
@@ -71,6 +79,7 @@ export default function RoleDetailPage({ params }: PageProps) {
   const { isFavorite } = useFavoritesStore()
   const { isSelected, selectedRoles } = useComparisonStore()
   const { addRecentRole } = useRecentlyViewedStore()
+  const [activeTab, setActiveTab] = useState<TabValue>('overview')
 
   // Track this role as recently viewed
   useEffect(() => {
@@ -290,7 +299,11 @@ export default function RoleDetailPage({ params }: PageProps) {
         )}
 
         {/* Tabbed Sections */}
-        <Tabs defaultValue="overview" className="mt-8">
+        <Tabs 
+          defaultValue="overview" 
+          className="mt-8"
+          onValueChange={(value) => setActiveTab(value as TabValue)}
+        >
           <TabsList className="grid w-full grid-cols-4 h-auto p-1">
             <TabsTrigger value="overview" className="text-xs sm:text-sm py-2">Overview</TabsTrigger>
             <TabsTrigger value="skills" className="text-xs sm:text-sm py-2">Skills</TabsTrigger>
@@ -298,8 +311,19 @@ export default function RoleDetailPage({ params }: PageProps) {
             <TabsTrigger value="strategy" className="text-xs sm:text-sm py-2">Strategy</TabsTrigger>
           </TabsList>
 
-          {/* Overview Tab: What You'll Do + Is This For You */}
-          <TabsContent value="overview" className="mt-6 space-y-8">
+          {/* Tab Content Container with subtle boundary and color tint */}
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+            className={cn(
+              'mt-4 rounded-xl border p-5 md:p-8 transition-colors duration-300',
+              tabColorVariants[activeTab]
+            )}
+          >
+            {/* Overview Tab: What You'll Do + Is This For You */}
+            <TabsContent value="overview" className="mt-0 space-y-8 data-[state=active]:animate-none">
             {/* Daily Work */}
             <div>
               <h3 className="text-lg font-semibold mb-4">What You&apos;ll Do Daily</h3>
@@ -347,10 +371,10 @@ export default function RoleDetailPage({ params }: PageProps) {
                 </div>
               </div>
             </div>
-          </TabsContent>
+            </TabsContent>
 
-          {/* Skills Tab: Programming + Frameworks + Concepts + Tools */}
-          <TabsContent value="skills" className="mt-6 space-y-6">
+            {/* Skills Tab: Programming + Frameworks + Concepts + Tools */}
+            <TabsContent value="skills" className="mt-0 space-y-6 data-[state=active]:animate-none">
             {/* Programming Languages */}
             {role.skills?.programmingLanguages?.length > 0 && (
               <div>
@@ -413,10 +437,10 @@ export default function RoleDetailPage({ params }: PageProps) {
                 </div>
               </div>
             )}
-          </TabsContent>
+            </TabsContent>
 
-          {/* Career Tab: Progression + Salary */}
-          <TabsContent value="career" className="mt-6 space-y-8">
+            {/* Career Tab: Progression + Salary */}
+            <TabsContent value="career" className="mt-0 space-y-8 data-[state=active]:animate-none">
             {/* Career Progression */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Growth Timeline</h3>
@@ -516,10 +540,10 @@ export default function RoleDetailPage({ params }: PageProps) {
                 )}
               </div>
             </div>
-          </TabsContent>
+            </TabsContent>
 
-          {/* Strategy Tab: College Roadmap + First Job */}
-          <TabsContent value="strategy" className="mt-6 space-y-8">
+            {/* Strategy Tab: College Roadmap + First Job */}
+            <TabsContent value="strategy" className="mt-0 space-y-8 data-[state=active]:animate-none">
             {/* College Strategy */}
             <div>
               <h3 className="text-lg font-semibold mb-4">College Roadmap</h3>
@@ -593,7 +617,8 @@ export default function RoleDetailPage({ params }: PageProps) {
                 )}
               </div>
             </div>
-          </TabsContent>
+            </TabsContent>
+          </motion.div>
         </Tabs>
 
         {/* Related Roles Carousel */}
