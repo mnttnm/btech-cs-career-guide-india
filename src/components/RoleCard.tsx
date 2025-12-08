@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Heart, GitCompare, ArrowRight, Clock, TrendingUp, Check } from 'lucide-react'
@@ -33,12 +34,18 @@ const cardVariants = {
 }
 
 export function RoleCard({ role, variant = 'default', index = 0 }: RoleCardProps) {
+  const [mounted, setMounted] = useState(false)
   const { isFavorite } = useFavoritesStore()
   const { isSelected, selectedRoles } = useComparisonStore()
 
-  const isRoleFavorite = isFavorite(role.roleId)
-  const isRoleSelected = isSelected(role.roleId)
-  const canAddToCompare = selectedRoles.length < 3 || isRoleSelected
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const isRoleFavorite = mounted ? isFavorite(role.roleId) : false
+  const isRoleSelected = mounted ? isSelected(role.roleId) : false
+  const currentSelectedRoles = mounted ? selectedRoles : []
+  const canAddToCompare = currentSelectedRoles.length < 3 || isRoleSelected
 
   const handleToggleFavorite = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -187,7 +194,7 @@ export function RoleCard({ role, variant = 'default', index = 0 }: RoleCardProps
                 isRoleSelected
                   ? `Remove ${role.roleName} from comparison`
                   : canAddToCompare
-                    ? `Add ${role.roleName} to comparison (${selectedRoles.length}/3 selected)`
+                    ? `Add ${role.roleName} to comparison (${currentSelectedRoles.length}/3 selected)`
                     : 'Comparison full (3/3)'
               }
               aria-pressed={isRoleSelected}

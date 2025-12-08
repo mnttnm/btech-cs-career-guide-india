@@ -268,7 +268,7 @@ export default function QuizPage() {
           </div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70 text-balance">
             Find your perfect career fit
           </h1>
 

@@ -395,6 +395,11 @@
     transform: translateY(-6px);
     box-shadow: var(--shadow-card-hover);
   }
+  
+  /* Text Balance */
+  .text-balance {
+    text-wrap: balance;
+  }
 }
 
 /* Keyframes */
