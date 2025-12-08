@@ -425,11 +425,11 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-primary-foreground">
-              Not sure what fits you?
+              Still figuring things out?
             </h2>
 
             <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto text-lg">
-              Most students don&apos;t know — that&apos;s normal. The quiz helps you narrow 45+ options down to 3-5 that actually make sense for you.
+              It&apos;s okay — most students in 2nd or 3rd year don&apos;t have it figured out either. Take a quick quiz and we&apos;ll suggest 3-5 roles that match how you like to work.
             </p>
             <Button
               asChild

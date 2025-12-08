@@ -88,7 +88,7 @@ export const quizQuestions: QuizQuestion[] = [
     options: [
       {
         value: 'standard',
-        label: 'Standard technical tracks (Software Engineer, Data Scientist, etc.)',
+        label: 'Building and maintaining software that powers everyday applications',
         weights: {
           'frontend-engineer-developer': 2,
           'backend-engineer-developer': 2,
@@ -99,7 +99,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         value: 'specialized',
-        label: 'Specialized or emerging tech (Blockchain, AI, AR/VR, Security)',
+        label: 'Working on cutting-edge technologies that feel like the future',
         weights: {
           'blockchain-developer': 3,
           'ai-engineer': 3,
@@ -110,7 +110,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         value: 'hybrid',
-        label: 'Roles that mix tech with business or people (Product, Sales, DevRel)',
+        label: 'Combining technical skills with communication, strategy, or working closely with people',
         weights: {
           'product-manager-technical': 3,
           'technical-program-manager': 3,
@@ -121,7 +121,7 @@ export const quizQuestions: QuizQuestion[] = [
       },
       {
         value: 'unconventional',
-        label: 'Unconventional paths (Founder, Freelance, Writer, Research)',
+        label: 'Charting my own course with flexibility and independence',
         weights: {
           'startup-founder': 3,
           'freelancer': 3,
