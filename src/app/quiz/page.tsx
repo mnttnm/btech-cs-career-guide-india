@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award, Check, PlayCircle, TrendingUp, AlertTriangle, Star } from 'lucide-react'
+import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award, Check, PlayCircle, TrendingUp, AlertTriangle, Star, MessageSquare, BarChart3 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { quizQuestions, calculateQuizResults } from '@/data/quiz'
 import { useQuizStore } from '@/stores/useQuizStore'
@@ -12,6 +12,7 @@ import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
 import { getRoleIcon } from '@/lib/icons'
 import { springs, stagger, easings } from '@/lib/motion'
+import { SuccessFormula } from '@/components/SuccessFormula'
 
 // Explicit question order: start from high-level values, then work style, then technical fit
 const QUESTION_ORDER = [
@@ -259,44 +260,102 @@ export default function QuizPage() {
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="max-w-xl mx-auto text-center"
+          className="max-w-2xl mx-auto"
         >
-          <div className="relative mb-8">
-            <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full opacity-50 animate-pulse" />
-            <div className="relative flex items-center justify-center w-24 h-24 mx-auto rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 shadow-xl shadow-primary/10">
-              <Target className="w-12 h-12 text-primary drop-shadow-md" />
-          </div>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70 text-balance">
-            Find your perfect career fit
-          </h1>
-
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Answer 12 quick questions about your interests, work style, and values.
-            We&apos;ll match you with the best career paths in tech.
-          </p>
-
-          <div className="flex items-center justify-center gap-6 text-sm font-medium text-muted-foreground mb-10 bg-muted/30 p-4 rounded-full w-fit mx-auto border border-border/50">
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-primary" />
-              <span>2-3 minutes</span>
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="relative mb-8">
+              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full opacity-50 animate-pulse" />
+              <div className="relative flex items-center justify-center w-24 h-24 mx-auto rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 shadow-xl shadow-primary/10">
+                <Target className="w-12 h-12 text-primary drop-shadow-md" />
+              </div>
             </div>
-            <div className="w-px h-4 bg-border" />
-            <div className="flex items-center gap-2">
-              <Lock className="w-4 h-4 text-primary" />
-              <span>100% private</span>
+
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70 text-balance">
+              Let&apos;s find your matches
+            </h1>
+
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-lg mx-auto">
+              In 2 minutes, you&apos;ll discover roles that match how you think and what you value.
+            </p>
+
+            <div className="flex items-center justify-center gap-6 text-sm font-medium text-muted-foreground mt-6 bg-muted/30 p-4 rounded-full w-fit mx-auto border border-border/50">
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-primary" />
+                <span>2-3 minutes</span>
+              </div>
+              <div className="w-px h-4 bg-border" />
+              <div className="flex items-center gap-2">
+                <Lock className="w-4 h-4 text-primary" />
+                <span>100% private</span>
+              </div>
             </div>
           </div>
 
-          <Button
-            size="lg"
-            onClick={() => setAnswer('start', 'true')}
-            className="px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-primary/25 hover:-translate-y-1 transition-all duration-300"
-          >
-            <Sparkles className="w-5 h-5 mr-2" aria-hidden="true" />
-            Start Career Quiz
-          </Button>
+          {/* How It Works */}
+          <div className="mb-10">
+            <h2 className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-6">
+              How it works
+            </h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              {[
+                {
+                  step: 1,
+                  title: 'Share Preferences',
+                  description: 'Tell us about your interests, work style, and what matters to you.',
+                  icon: MessageSquare,
+                },
+                {
+                  step: 2,
+                  title: 'Get Matched',
+                  description: 'We score you against 45+ tech roles based on personality fit.',
+                  icon: BarChart3,
+                },
+                {
+                  step: 3,
+                  title: 'Explore Results',
+                  description: 'See detailed breakdowns with salary, skills, and next steps.',
+                  icon: Target,
+                },
+              ].map((item, index) => {
+                const Icon = item.icon
+                return (
+                  <motion.div
+                    key={item.step}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 + index * 0.1, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                    className="p-5 rounded-2xl bg-card border"
+                  >
+                    <div className="flex items-center justify-center w-10 h-10 mx-auto mb-3 rounded-xl bg-primary/10">
+                      <Icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div className="text-left">
+                      <h3 className="font-semibold mb-1 text-sm flex items-center gap-2 whitespace-nowrap">
+                        <span className="inline-flex items-center justify-center w-5 h-5 shrink-0 rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                          {item.step}
+                        </span>
+                        {item.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed pl-7">{item.description}</p>
+                    </div>
+                  </motion.div>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Start Button */}
+          <div className="text-center">
+            <Button
+              size="lg"
+              onClick={() => setAnswer('start', 'true')}
+              className="px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-primary/25 hover:-translate-y-1 transition-all duration-300"
+            >
+              <Sparkles className="w-5 h-5 mr-2" aria-hidden="true" />
+              Start Career Quiz
+            </Button>
+          </div>
         </motion.div>
       </div>
     )
@@ -511,6 +570,8 @@ export default function QuizPage() {
               </Link>
             </Button>
           </div>
+
+          <SuccessFormula />
         </motion.div>
       </div>
     )

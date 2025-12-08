@@ -5,6 +5,7 @@ import { Navigation } from "@/components/Navigation";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Toaster } from "@/components/ui/sonner";
 import { CommandPalette } from "@/components/CommandPalette";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -44,6 +45,7 @@ export default function RootLayout({
           <main id="main-content" className="min-h-screen pt-14 pb-20 md:pt-16 md:pb-0">
             {children}
           </main>
+          <Footer />
           <Toaster position="bottom-center" richColors closeButton />
           <CommandPalette />
         </ThemeProvider>
