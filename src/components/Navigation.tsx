@@ -25,7 +25,8 @@ export function Navigation() {
     <>
       {/* Desktop Navigation */}
       <header className="hidden md:flex fixed top-0 left-0 right-0 z-50 glass border-b-0">
-        <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <nav className="container mx-auto px-4 h-16 flex items-center">
+          {/* Logo - Left */}
           <Link href="/" className="flex items-center gap-2 group">
             <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-primary-foreground group-hover:scale-105 transition-transform shadow-md">
               <Compass className="w-5 h-5" />
@@ -40,7 +41,8 @@ export function Navigation() {
             </div>
           </Link>
 
-          <div className="flex items-center gap-1">
+          {/* Nav Items - Center */}
+          <div className="flex-1 flex items-center justify-center gap-1">
             {navItems.map((item) => {
               const isActive = pathname === item.href
               const Icon = item.icon
@@ -75,9 +77,11 @@ export function Navigation() {
                 </Link>
               )
             })}
-            <div className="ml-2 pl-2 border-l border-border/50 flex items-center gap-1">
-              <ThemeWidget />
-            </div>
+          </div>
+
+          {/* Theme Widget - Right */}
+          <div className="flex items-center">
+            <ThemeWidget />
           </div>
         </nav>
       </header>

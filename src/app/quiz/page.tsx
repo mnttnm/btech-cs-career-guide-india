@@ -3,45 +3,15 @@
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Medal, Award, Check, PlayCircle, TrendingUp, AlertTriangle, Star, MessageSquare, BarChart3 } from 'lucide-react'
+import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, Target, Clock, Lock, Zap, PartyPopper, Trophy, Check, PlayCircle, TrendingUp, AlertTriangle, MessageSquare, BarChart3, CircleCheck, Circle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { quizQuestions, calculateQuizResults } from '@/data/quiz'
+import { calculateQuizResults, calculateTieredResults, TieredResult } from '@/data/quiz'
 import { useQuizStore } from '@/stores/useQuizStore'
 import { getRoleById, categoryLabels } from '@/data/roles'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
 import { getRoleIcon } from '@/lib/icons'
-import { springs, stagger, easings } from '@/lib/motion'
-import { SuccessFormula } from '@/components/SuccessFormula'
-
-// Explicit question order: start from high-level values, then work style, then technical fit
-const QUESTION_ORDER = [
-  // 1. High-level Career Direction (The "North Star")
-  'q2',  // Broad career path shape (Standard vs Hybrid/Business vs Specialized)
-  'q1',  // Domain interest (Visual vs Data vs Systems vs Security)
-  'q8',  // Impact type (User vs Business vs Technical)
-
-  // 2. Cognitive & Hard Skills (The "Toolbox")
-  'q12', // Natural thinking style (Creative vs Analytical vs Systems)
-  'q3',  // Math/Stats comfort (Critical constraint for Data/AI)
-  'q7',  // Continuous learning (Pace of technology change)
-
-  // 3. Work Style & Personality (The "Environment")
-  'q5',  // Team vs Independent work
-  'q10', // Communication/Presentation comfort
-  'q4',  // Handling pressure and deadlines
-
-  // 4. Practical Constraints & Future (The "Guardrails")
-  'q6',  // Work-life balance
-  'q9',  // Salary/compensation importance
-  'q11', // Leadership interest
-] as const
-
-const orderedQuestions = QUESTION_ORDER
-  .map((id) => quizQuestions.find((q) => q.id === id))
-  .filter((q) => Boolean(q))
-
-const TOTAL_QUIZ_QUESTIONS = orderedQuestions.length
+import { springs } from '@/lib/motion'
 
 // Progress dots component
 function QuizProgress({ current, total }: { current: number; total: number }) {
@@ -77,7 +47,7 @@ function QuizProgress({ current, total }: { current: number; total: number }) {
 export default function QuizPage() {
   const {
     answers,
-    results,
+    tieredResults,
     currentQuestion,
     isCompleted,
     setAnswer,
@@ -85,14 +55,24 @@ export default function QuizPage() {
     prevQuestion,
     goToQuestion,
     setResults,
+    setTieredResults,
     resetQuiz,
     getAnswer,
+    getActiveQuestionList,
+    canEarlyExit,
+    dismissEarlyExit,
+    earlyExitDismissed,
   } = useQuizStore()
 
   const [isCalculating, setIsCalculating] = useState(false)
   const [direction, setDirection] = useState<'forward' | 'backward'>('forward')
   const [showResumePrompt, setShowResumePrompt] = useState(false)
+  const [showEarlyExitPrompt, setShowEarlyExitPrompt] = useState(false)
   const [hasMounted, setHasMounted] = useState(false)
+
+  // Get dynamic question list based on answers (handles gating)
+  const activeQuestions = useMemo(() => getActiveQuestionList(), [getActiveQuestionList])
+  const totalQuestions = activeQuestions.length
 
   // Check if there's saved progress on mount
   useEffect(() => {
@@ -102,29 +82,30 @@ export default function QuizPage() {
     if (hasProgress) {
       setShowResumePrompt(true)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const question = orderedQuestions[currentQuestion]
-  const progress = ((currentQuestion + 1) / TOTAL_QUIZ_QUESTIONS) * 100
+  const question = activeQuestions[currentQuestion]
   const currentAnswer = question ? getAnswer(question.id) : undefined
 
   // Count actual question answers (excluding 'start')
   const answeredQuestions = answers.filter(a => a.questionId !== 'start').length
 
-  // Calculate live preview after 6 questions
+  // Check for early exit eligibility
+  const earlyExitStatus = useMemo(() => canEarlyExit(), [canEarlyExit])
+
+  // Calculate live preview after 5 questions (updated for tiered results)
   const livePreview = useMemo(() => {
     const actualAnswers = answers.filter(a => a.questionId !== 'start')
-    if (actualAnswers.length < 6) return null
+    if (actualAnswers.length < 5) return null
 
-    const previewResults = calculateQuizResults(actualAnswers)
-    if (previewResults.length === 0) return null
-
-    // Count potential matches (score >= 60%)
-    const potentialMatches = previewResults.filter(r => r.matchScore >= 50)
+    const previewResults = calculateTieredResults(actualAnswers)
+    const totalMatches = previewResults.strongMatches.length + previewResults.goodMatches.length
 
     return {
-      count: potentialMatches.length,
-      topScore: potentialMatches[0]?.matchScore || 0
+      strongCount: previewResults.strongMatches.length,
+      goodCount: previewResults.goodMatches.length,
+      totalCount: totalMatches,
     }
   }, [answers])
 
@@ -134,7 +115,7 @@ export default function QuizPage() {
 
     // Auto-advance after short delay, but not on the last question
     setTimeout(() => {
-      if (currentQuestion < TOTAL_QUIZ_QUESTIONS - 1) {
+      if (currentQuestion < totalQuestions - 1) {
         setDirection('forward')
         nextQuestion()
       }
@@ -143,7 +124,7 @@ export default function QuizPage() {
   }
 
   // Check if all questions are answered
-  const allQuestionsAnswered = answeredQuestions === TOTAL_QUIZ_QUESTIONS
+  const allQuestionsAnswered = answeredQuestions >= totalQuestions
 
   const handlePrevQuestion = () => {
     setDirection('backward')
@@ -156,9 +137,22 @@ export default function QuizPage() {
     // Simulate calculation time for effect
     await new Promise((resolve) => setTimeout(resolve, 1500))
 
-    const results = calculateQuizResults(answers)
-    setResults(results)
+    // Calculate both legacy and tiered results
+    const legacyResults = calculateQuizResults(answers)
+    const tiered = calculateTieredResults(answers)
+    setResults(legacyResults)
+    setTieredResults(tiered)
     setIsCalculating(false)
+  }
+
+  const handleEarlyExit = async () => {
+    setShowEarlyExitPrompt(false)
+    await handleFinishQuiz()
+  }
+
+  const handleContinueQuiz = () => {
+    setShowEarlyExitPrompt(false)
+    dismissEarlyExit()
   }
 
   const handleRetakeQuiz = () => {
@@ -177,8 +171,20 @@ export default function QuizPage() {
     setShowResumePrompt(false)
   }
 
+  // Don't render until mounted (prevents hydration mismatch from localStorage)
+  if (!hasMounted) {
+    return (
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-xl mx-auto text-center">
+          <div className="flex items-center justify-center w-24 h-24 mx-auto mb-8 rounded-full bg-primary/10 animate-pulse" />
+          <div className="h-8 w-48 mx-auto bg-muted rounded animate-pulse" />
+        </div>
+      </div>
+    )
+  }
+
   // Resume prompt for returning users with in-progress quiz
-  if (showResumePrompt && hasMounted) {
+  if (showResumePrompt) {
     return (
       <div className="container mx-auto px-4 py-12">
         <motion.div
@@ -193,7 +199,7 @@ export default function QuizPage() {
             Continue your quiz?
           </h1>
           <p className="text-muted-foreground mb-2">
-            You completed {answeredQuestions} of {TOTAL_QUIZ_QUESTIONS} questions.
+            You completed {answeredQuestions} of {totalQuestions} questions.
           </p>
           <p className="text-sm text-muted-foreground mb-8">
             Your progress was saved automatically.
@@ -204,13 +210,13 @@ export default function QuizPage() {
             <div className="h-2 rounded-full bg-muted overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
-                animate={{ width: `${(answeredQuestions / TOTAL_QUIZ_QUESTIONS) * 100}%` }}
+                animate={{ width: `${(answeredQuestions / totalQuestions) * 100}%` }}
                 transition={{ duration: 0.5 }}
                 className="h-full rounded-full bg-primary"
               />
             </div>
             <p className="text-xs text-muted-foreground mt-2">
-              {Math.round((answeredQuestions / TOTAL_QUIZ_QUESTIONS) * 100)}% complete
+              {Math.round((answeredQuestions / totalQuestions) * 100)}% complete
             </p>
           </div>
 
@@ -385,10 +391,163 @@ export default function QuizPage() {
     )
   }
 
-  // Results screen
-  if (isCompleted && results && !isCalculating) {
-    const medalIcons = [Trophy, Medal, Award, Star, Sparkles];
-    const medalColors = ['text-yellow-500', 'text-gray-400', 'text-amber-600', 'text-blue-500', 'text-purple-500'];
+  // Results screen with tiered display
+  if (isCompleted && tieredResults && !isCalculating) {
+    const { strongMatches, goodMatches, possibleMatches, totalAnswered } = tieredResults
+
+    // Tier configuration
+    const tierConfig = {
+      strong: {
+        label: 'Strong Matches',
+        description: 'High alignment with your preferences',
+        icon: CircleCheck,
+        badgeClass: 'bg-green-500/10 text-green-600 border-green-500/30',
+        cardClass: 'border-green-500/20 bg-gradient-to-br from-green-500/5 to-transparent',
+      },
+      good: {
+        label: 'Good Matches',
+        description: 'Solid fit with several key factors',
+        icon: Circle,
+        badgeClass: 'bg-amber-500/10 text-amber-600 border-amber-500/30',
+        cardClass: 'border-amber-500/20',
+      },
+      possible: {
+        label: 'Worth Exploring',
+        description: 'Could be a fit — explore further',
+        icon: Circle,
+        badgeClass: 'bg-slate-500/10 text-slate-600 border-slate-500/30',
+        cardClass: 'border-border/50',
+      },
+    }
+
+    // Render a single result card
+    const renderResultCard = (result: TieredResult, tier: 'strong' | 'good' | 'possible', index: number) => {
+      const role = getRoleById(result.roleId)
+      if (!role) return null
+
+      const config = tierConfig[tier]
+      const RoleIcon = getRoleIcon(role.roleId, role.category)
+      const isFirstStrong = tier === 'strong' && index === 0
+
+      return (
+        <motion.div
+          key={result.roleId}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1 }}
+          className={cn(
+            'group relative p-5 md:p-6 rounded-2xl border transition-all duration-300 hover:shadow-lg',
+            config.cardClass,
+            isFirstStrong && 'ring-1 ring-green-500/20 shadow-lg shadow-green-500/5'
+          )}
+        >
+          {isFirstStrong && (
+            <div className="absolute -top-2.5 -right-2 md:-right-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-lg flex items-center gap-1">
+              <Trophy className="w-3 h-3" />
+              BEST MATCH
+            </div>
+          )}
+
+          <div className="flex items-start gap-4">
+            {/* Icon */}
+            <div className={cn(
+              'flex items-center justify-center w-12 h-12 rounded-xl shrink-0',
+              tier === 'strong' ? 'bg-green-500/10' : tier === 'good' ? 'bg-amber-500/10' : 'bg-muted/50'
+            )}>
+              <RoleIcon className={cn(
+                'w-6 h-6',
+                tier === 'strong' ? 'text-green-600' : tier === 'good' ? 'text-amber-600' : 'text-muted-foreground'
+              )} />
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-start justify-between gap-3 mb-2">
+                <div>
+                  <h3 className="font-bold text-lg leading-tight">{role.roleName}</h3>
+                  <Badge variant="outline" className="mt-1.5 text-xs">
+                    {categoryLabels[role.category]}
+                  </Badge>
+                </div>
+                <Badge className={cn('shrink-0 text-xs font-medium border', config.badgeClass)}>
+                  {tier === 'strong' ? 'Strong' : tier === 'good' ? 'Good' : 'Possible'}
+                </Badge>
+              </div>
+
+              {/* Key reasons */}
+              {role.personalityFit?.thriveIf && role.personalityFit.thriveIf.length > 0 && (
+                <div className="mt-3 space-y-1.5">
+                  {role.personalityFit.thriveIf.slice(0, 2).map((reason, i) => (
+                    <div key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <Check className={cn(
+                        'w-4 h-4 mt-0.5 shrink-0',
+                        tier === 'strong' ? 'text-green-500' : tier === 'good' ? 'text-amber-500' : 'text-slate-400'
+                      )} />
+                      <span className="line-clamp-1">{reason}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Based on answers + CTA */}
+              <div className="mt-4 flex items-center justify-between gap-3">
+                <span className="text-xs text-muted-foreground">
+                  Based on {result.answeredQuestions} of your answers
+                </span>
+                <Button asChild size="sm" variant={tier === 'strong' ? 'default' : 'outline'} className="gap-1.5">
+                  <Link href={`/role/${result.roleId}?from=quiz`}>
+                    Explore
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      )
+    }
+
+    // Render a tier section
+    const renderTierSection = (
+      matches: TieredResult[],
+      tier: 'strong' | 'good' | 'possible',
+      delay: number
+    ) => {
+      if (matches.length === 0) return null
+      const config = tierConfig[tier]
+      const TierIcon = config.icon
+
+      return (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay }}
+          className="space-y-4"
+        >
+          <div className="flex items-center gap-3">
+            <div className={cn(
+              'flex items-center justify-center w-8 h-8 rounded-lg',
+              tier === 'strong' ? 'bg-green-500/10' : tier === 'good' ? 'bg-amber-500/10' : 'bg-slate-500/10'
+            )}>
+              <TierIcon className={cn(
+                'w-4 h-4',
+                tier === 'strong' ? 'text-green-600' : tier === 'good' ? 'text-amber-600' : 'text-slate-500'
+              )} />
+            </div>
+            <div>
+              <h2 className="font-semibold text-lg">{config.label}</h2>
+              <p className="text-xs text-muted-foreground">{config.description}</p>
+            </div>
+            <Badge variant="secondary" className="ml-auto">
+              {matches.length} {matches.length === 1 ? 'role' : 'roles'}
+            </Badge>
+          </div>
+          <div className="grid gap-4">
+            {matches.map((result, index) => renderResultCard(result, tier, index))}
+          </div>
+        </motion.div>
+      )
+    }
 
     return (
       <div className="container relative mx-auto px-4 py-8 overflow-hidden">
@@ -424,7 +583,7 @@ export default function QuizPage() {
               transition={{ delay: 0.2 }}
               className="text-3xl md:text-4xl font-bold mb-3 tracking-tight"
             >
-              Your Perfect Career Matches
+              Your Career Matches
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 10 }}
@@ -432,129 +591,52 @@ export default function QuizPage() {
               transition={{ delay: 0.3 }}
               className="text-lg text-muted-foreground max-w-lg mx-auto"
             >
-              Based on your personality, cognitive style, and preferences
+              Based on {totalAnswered} answers about your preferences and style
             </motion.p>
 
+            {/* Summary badges */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
+              className="mt-6 flex flex-wrap items-center justify-center gap-3"
+            >
+              {strongMatches.length > 0 && (
+                <Badge className="bg-green-500/10 text-green-600 border border-green-500/30 px-3 py-1">
+                  <CircleCheck className="w-3.5 h-3.5 mr-1.5" />
+                  {strongMatches.length} Strong
+                </Badge>
+              )}
+              {goodMatches.length > 0 && (
+                <Badge className="bg-amber-500/10 text-amber-600 border border-amber-500/30 px-3 py-1">
+                  {goodMatches.length} Good
+                </Badge>
+              )}
+              {possibleMatches.length > 0 && (
+                <Badge variant="secondary" className="px-3 py-1">
+                  {possibleMatches.length} Worth Exploring
+                </Badge>
+              )}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
               className="mt-6 inline-flex items-start gap-3 px-4 py-3 rounded-xl border border-amber-500/30 bg-amber-500/10 text-left max-w-xl mx-auto"
             >
               <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" aria-hidden="true" />
               <p className="text-sm text-muted-foreground">
-                These matches are a starting point. Explore the detailed role pages to fully understand what each path entails.
+                These matches are a starting point. Explore each role to fully understand what the path entails.
               </p>
             </motion.div>
           </div>
 
-          {/* Results Grid */}
-          <div className="space-y-6">
-            {results.slice(0, 5).map((result, index) => {
-              const role = getRoleById(result.roleId)
-              if (!role) return null
-
-              const MedalIcon = medalIcons[index]
-              const RoleIcon = getRoleIcon(role.roleId, role.category)
-              const isTopMatch = index === 0
-
-              return (
-                <motion.div
-                  key={result.roleId}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.15 }}
-                  className={cn(
-                  'group relative p-6 md:p-8 rounded-3xl border transition-all duration-300',
-                  isTopMatch
-                    ? 'bg-gradient-to-br from-card via-card to-background border-primary/20 shadow-xl shadow-primary/5 ring-1 ring-primary/10'
-                    : 'bg-card border-border/50 hover:border-primary/20 hover:shadow-lg'
-                )}
-                >
-                  {isTopMatch && (
-                    <div className="absolute -top-3 -right-3 md:-right-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1 animate-pulse">
-                      <Trophy className="w-3 h-3" />
-                      TOP MATCH
-                    </div>
-                  )}
-
-                  <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-                    {/* Left: Score & Icon */}
-                    <div className="flex flex-row md:flex-col items-center md:items-start gap-4 md:gap-6 md:w-32 shrink-0">
-                      <div className={cn(
-                        'flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl shadow-inner',
-                        isTopMatch ? 'bg-primary/10 text-primary' : 'bg-muted/50 text-muted-foreground'
-                      )}>
-                        {isTopMatch ? (
-                          <div className="text-center">
-                            <span className="block text-2xl md:text-3xl font-bold">{result.matchScore}%</span>
-                        </div>
-                        ) : (
-                          <RoleIcon className="w-8 h-8 md:w-10 md:h-10" />
-                        )}
-                      </div>
-
-                      <div className="flex-1 md:w-full md:text-center">
-                        <div className="flex items-center md:justify-center gap-1.5 text-sm font-medium text-muted-foreground mb-1">
-                          <span>Match</span>
-                        </div>
-                        <div className="h-2 w-full rounded-full bg-muted overflow-hidden">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={{ width: `${result.matchScore}%` }}
-                            transition={{ delay: index * 0.15 + 0.5, duration: 1, ease: "circOut" }}
-                            className={cn(
-                              'h-full rounded-full',
-                            result.matchScore >= 80 ? 'bg-green-500' :
-                              result.matchScore >= 60 ? 'bg-amber-500' : 'bg-orange-500'
-                          )}
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Right: Content */}
-                    <div className="flex-1 space-y-4">
-                      <div>
-                        <div className="flex items-center gap-3 mb-2">
-                          <h2 className="text-2xl font-bold">{role.roleName}</h2>
-                          {isTopMatch && <MedalIcon className="w-6 h-6 text-amber-500" />}
-                        </div>
-                        <Badge variant="secondary" className="px-2.5 py-0.5 text-xs font-medium">
-                          {categoryLabels[role.category]}
-                        </Badge>
-                      </div>
-
-                      <div>
-                        <h4 className="flex items-center gap-2 text-sm font-semibold mb-2 text-foreground/80">
-                          <Sparkles className="w-3.5 h-3.5 text-primary" />
-                          Why it fits you
-                        </h4>
-                        <div className="grid sm:grid-cols-2 gap-2">
-                          {role.personalityFit?.thriveIf
-                            ?.slice(0, 4)
-                            .map((reason, i) => (
-                            <div key={i} className="flex items-start gap-2 text-sm text-muted-foreground bg-muted/30 p-2 rounded-lg">
-                              <Check className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                              <span>{reason}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="pt-2 flex justify-end">
-                        <Button asChild className="w-full sm:w-auto gap-2 group/btn" variant={isTopMatch ? "default" : "outline"}>
-                        <Link href={`/role/${result.roleId}?from=quiz`}>
-                            Explore Role
-                            <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                        </Link>
-                      </Button>
-                    </div>
-                  </div>
-                  </div>
-                </motion.div>
-              )
-            })}
+          {/* Tiered Results */}
+          <div className="space-y-10">
+            {renderTierSection(strongMatches, 'strong', 0.3)}
+            {renderTierSection(goodMatches, 'good', 0.5)}
+            {renderTierSection(possibleMatches.slice(0, 5), 'possible', 0.7)}
           </div>
 
           {/* Actions */}
@@ -570,8 +652,51 @@ export default function QuizPage() {
               </Link>
             </Button>
           </div>
+        </motion.div>
+      </div>
+    )
+  }
 
-          {/* <SuccessFormula /> */}
+  // Early exit prompt
+  if (showEarlyExitPrompt && earlyExitStatus.eligible) {
+    return (
+      <div className="container mx-auto px-4 py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-xl mx-auto text-center"
+        >
+          <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 rounded-2xl bg-green-500/10">
+            <CircleCheck className="w-10 h-10 text-green-600" />
+          </div>
+          <h1 className="text-2xl md:text-3xl font-bold mb-4">
+            We&apos;ve found {earlyExitStatus.strongCount} Strong Matches!
+          </h1>
+          <p className="text-muted-foreground mb-2">
+            Based on your {answeredQuestions} answers, we&apos;ve identified clear career fits.
+          </p>
+          <p className="text-sm text-muted-foreground mb-8">
+            You can see your results now or continue for more precision.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <Button
+              variant="outline"
+              onClick={handleContinueQuiz}
+              className="gap-2"
+            >
+              <ArrowRight className="w-4 h-4" />
+              Continue Quiz
+            </Button>
+            <Button
+              size="lg"
+              onClick={handleEarlyExit}
+              className="gap-2 bg-green-600 hover:bg-green-700"
+            >
+              <Sparkles className="w-4 h-4" />
+              See Results Now
+            </Button>
+          </div>
         </motion.div>
       </div>
     )
@@ -594,30 +719,48 @@ export default function QuizPage() {
             Back
           </Button>
           <span className="text-sm font-medium text-muted-foreground bg-muted/50 px-3 py-1 rounded-full">
-            Step {currentQuestion + 1} of {TOTAL_QUIZ_QUESTIONS}
+            Step {currentQuestion + 1} of {totalQuestions}
           </span>
         </div>
-        <QuizProgress current={currentQuestion} total={TOTAL_QUIZ_QUESTIONS} />
+        <QuizProgress current={currentQuestion} total={totalQuestions} />
 
-        {/* Live Preview Notification */}
+        {/* Live Preview Notification - Updated for tiered results */}
         <AnimatePresence>
-          {livePreview && livePreview.count > 0 && (
+          {livePreview && livePreview.totalCount > 0 && (
             <motion.div
               initial={{ opacity: 0, height: 0, y: -10 }}
               animate={{ opacity: 1, height: 'auto', y: 0 }}
               exit={{ opacity: 0, height: 0, y: -10 }}
               className="mt-6 overflow-hidden"
             >
-              <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-primary/10 to-transparent border border-primary/20">
-                <div className="p-1.5 bg-primary/20 rounded-lg">
-                  <TrendingUp className="w-4 h-4 text-primary" />
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-green-500/10 to-transparent border border-green-500/20">
+                <div className="p-1.5 bg-green-500/20 rounded-lg">
+                  <TrendingUp className="w-4 h-4 text-green-600" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <span className="text-xs font-semibold text-primary uppercase tracking-wider">Live Analysis</span>
+                  <span className="text-xs font-semibold text-green-600 uppercase tracking-wider">Live Analysis</span>
                   <p className="text-sm font-medium text-foreground/80">
-                    {livePreview.count} potential career matches identified so far
+                    {livePreview.strongCount > 0 && (
+                      <span className="text-green-600 font-semibold">{livePreview.strongCount} strong</span>
+                    )}
+                    {livePreview.strongCount > 0 && livePreview.goodCount > 0 && ' + '}
+                    {livePreview.goodCount > 0 && (
+                      <span className="text-amber-600">{livePreview.goodCount} good</span>
+                    )}
+                    {' matches identified'}
                   </p>
                 </div>
+                {/* Early exit button in preview */}
+                {earlyExitStatus.eligible && !earlyExitDismissed && (
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => setShowEarlyExitPrompt(true)}
+                    className="shrink-0 text-green-600 border-green-500/30 hover:bg-green-500/10"
+                  >
+                    See Results
+                  </Button>
+                )}
               </div>
             </motion.div>
           )}
@@ -701,7 +844,7 @@ export default function QuizPage() {
                     <ArrowRight className="w-5 h-5" />
                   </Button>
                   <p className="text-xs text-center text-muted-foreground mt-3">
-                    You've answered all {TOTAL_QUIZ_QUESTIONS} questions!
+                    You&apos;ve answered all {totalQuestions} questions!
                   </p>
                 </motion.div>
               )}

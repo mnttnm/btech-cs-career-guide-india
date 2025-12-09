@@ -1,13 +1,27 @@
 export type QuestionType = 'multiple-choice' | 'slider' | 'yes-no'
 
+// Question tiers for ordering and gating
+export type QuestionTier = 'direction' | 'cognitive' | 'work-style' | 'values' | 'future'
+
+export interface QuizOption {
+  value: string
+  label: string
+  weights: Record<string, number>
+}
+
 export interface QuizQuestion {
   id: string
   question: string
   type: QuestionType
-  options?: { value: string; label: string; weights: Record<string, number> }[]
+  options?: QuizOption[]
   minLabel?: string
   maxLabel?: string
   category: 'work-style' | 'stress' | 'learning' | 'technical' | 'values'
+  tier: QuestionTier
+  dependsOn?: {
+    questionId: string
+    skipIf: string[] // Skip this question if answer is one of these
+  }
 }
 
 export interface QuizAnswer {
@@ -15,10 +29,29 @@ export interface QuizAnswer {
   answer: string | number
 }
 
+// Legacy result type for backwards compatibility
 export interface QuizResult {
   roleId: string
   matchScore: number
   reasons: string[]
+}
+
+// New tiered result structure
+export type MatchTier = 'strong' | 'good' | 'possible'
+
+export interface TieredResult {
+  roleId: string
+  tier: MatchTier
+  signalStrength: number // Internal score (0-100)
+  answeredQuestions: number // How many Q's touched this role
+  keyReasons: string[]
+}
+
+export interface TieredQuizResults {
+  strongMatches: TieredResult[]
+  goodMatches: TieredResult[]
+  possibleMatches: TieredResult[]
+  totalAnswered: number
 }
 
 // Quiz questions with weighted scoring
@@ -28,6 +61,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'Which part of working with technology sounds most interesting to you?',
     type: 'multiple-choice',
     category: 'work-style',
+    tier: 'direction',
     options: [
       {
         value: 'visual',
@@ -85,6 +119,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'What kind of career path appeals to you most right now?',
     type: 'multiple-choice',
     category: 'values',
+    tier: 'direction',
     options: [
       {
         value: 'standard',
@@ -136,6 +171,12 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'How comfortable are you with mathematics and statistics?',
     type: 'multiple-choice',
     category: 'technical',
+    tier: 'cognitive',
+    // Skip this question if user selected hybrid (business-focused) career path
+    dependsOn: {
+      questionId: 'q2',
+      skipIf: ['hybrid'],
+    },
     options: [
       {
         value: 'expert',
@@ -184,6 +225,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'How do you handle high-pressure situations and urgent deadlines?',
     type: 'multiple-choice',
     category: 'stress',
+    tier: 'work-style',
     options: [
       {
         value: 'thrive',
@@ -230,6 +272,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'Do you prefer working independently or in teams?',
     type: 'multiple-choice',
     category: 'work-style',
+    tier: 'work-style',
     options: [
       {
         value: 'team',
@@ -279,6 +322,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'How important is work-life balance to you?',
     type: 'multiple-choice',
     category: 'values',
+    tier: 'values',
     options: [
       {
         value: 'critical',
@@ -324,6 +368,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'How do you feel about continuously learning new technologies?',
     type: 'multiple-choice',
     category: 'learning',
+    tier: 'future',
     options: [
       {
         value: 'love',
@@ -369,6 +414,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'What type of impact do you want your work to have?',
     type: 'multiple-choice',
     category: 'values',
+    tier: 'values',
     options: [
       {
         value: 'user',
@@ -423,6 +469,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'How important is salary/compensation in your career decision?',
     type: 'multiple-choice',
     category: 'values',
+    tier: 'values',
     options: [
       {
         value: 'top',
@@ -469,6 +516,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'Do you enjoy communicating and presenting to others?',
     type: 'multiple-choice',
     category: 'work-style',
+    tier: 'work-style',
     options: [
       {
         value: 'love',
@@ -518,6 +566,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'Are you interested in management/leadership roles?',
     type: 'multiple-choice',
     category: 'values',
+    tier: 'future',
     options: [
       {
         value: 'yes',
@@ -563,6 +612,7 @@ export const quizQuestions: QuizQuestion[] = [
     question: 'When you work on a problem, what style of thinking feels most natural?',
     type: 'multiple-choice',
     category: 'technical',
+    tier: 'cognitive',
     options: [
       {
         value: 'creative',
@@ -713,4 +763,160 @@ function getReasonFromAnswer(question: QuizQuestion, answerLabel: string): strin
     learning: `Your approach to ${answerLabel.toLowerCase().slice(0, 50)}...`,
   }
   return categoryReasons[question.category] || ''
+}
+
+// Question order for the quiz flow
+export const QUESTION_ORDER = [
+  // 1. High-level Career Direction (The "North Star")
+  'q2', // Broad career path shape
+  'q1', // Domain interest
+  'q8', // Impact type
+  // 2. Cognitive & Hard Skills (The "Toolbox")
+  'q12', // Natural thinking style
+  'q3', // Math/Stats comfort (conditional)
+  'q7', // Continuous learning
+  // 3. Work Style & Personality (The "Environment")
+  'q5', // Team vs Independent
+  'q10', // Communication comfort
+  'q4', // Handling pressure
+  // 4. Practical Constraints & Future (The "Guardrails")
+  'q6', // Work-life balance
+  'q9', // Salary importance
+  'q11', // Leadership interest
+] as const
+
+/**
+ * Check if a question should be shown based on previous answers (gating logic)
+ */
+export function shouldShowQuestion(questionId: string, answers: QuizAnswer[]): boolean {
+  const question = quizQuestions.find((q) => q.id === questionId)
+  if (!question) return false
+
+  // If no dependencies, always show
+  if (!question.dependsOn) return true
+
+  // Find the answer to the dependent question
+  const dependentAnswer = answers.find((a) => a.questionId === question.dependsOn!.questionId)
+
+  // If dependent question not answered yet, show this question
+  if (!dependentAnswer) return true
+
+  // Skip if answer matches any of the skipIf values
+  const shouldSkip = question.dependsOn.skipIf.includes(String(dependentAnswer.answer))
+  return !shouldSkip
+}
+
+/**
+ * Get the list of active questions based on current answers (filters out gated questions)
+ */
+export function getActiveQuestions(answers: QuizAnswer[]): QuizQuestion[] {
+  return QUESTION_ORDER
+    .filter((id) => shouldShowQuestion(id, answers))
+    .map((id) => quizQuestions.find((q) => q.id === id))
+    .filter((q): q is QuizQuestion => q !== undefined)
+}
+
+/**
+ * Check if early exit is available (minimum questions answered with strong matches)
+ */
+export function canShowEarlyResults(answers: QuizAnswer[]): {
+  eligible: boolean
+  strongMatchCount: number
+} {
+  // Filter out 'start' marker
+  const actualAnswers = answers.filter((a) => a.questionId !== 'start')
+
+  // Need at least 5 questions answered
+  if (actualAnswers.length < 5) {
+    return { eligible: false, strongMatchCount: 0 }
+  }
+
+  // Calculate current tiered results
+  const results = calculateTieredResults(actualAnswers)
+
+  // Need at least 2 strong matches for early exit
+  const strongMatchCount = results.strongMatches.length
+  return {
+    eligible: strongMatchCount >= 2,
+    strongMatchCount,
+  }
+}
+
+/**
+ * Calculate tiered quiz results with Strong/Good/Possible groupings
+ */
+export function calculateTieredResults(answers: QuizAnswer[]): TieredQuizResults {
+  const roleScores: Record<string, number> = {}
+  const roleQuestionCount: Record<string, number> = {}
+  const roleReasons: Record<string, string[]> = {}
+
+  // Filter out 'start' marker
+  const actualAnswers = answers.filter((a) => a.questionId !== 'start')
+
+  // Calculate scores based on answers
+  actualAnswers.forEach((answer) => {
+    const question = quizQuestions.find((q) => q.id === answer.questionId)
+    if (!question || question.type !== 'multiple-choice') return
+
+    const selectedOption = question.options?.find((o) => o.value === answer.answer)
+    if (!selectedOption) return
+
+    // Add weights to role scores and track question coverage
+    Object.entries(selectedOption.weights).forEach(([roleId, weight]) => {
+      roleScores[roleId] = (roleScores[roleId] || 0) + weight
+      roleQuestionCount[roleId] = (roleQuestionCount[roleId] || 0) + 1
+
+      // Track reasons for high weights
+      if (weight >= 2) {
+        if (!roleReasons[roleId]) roleReasons[roleId] = []
+        const reason = getReasonFromAnswer(question, selectedOption.label)
+        if (reason && !roleReasons[roleId].includes(reason)) {
+          roleReasons[roleId].push(reason)
+        }
+      }
+    })
+  })
+
+  // Convert to results and categorize into tiers
+  const allResults: TieredResult[] = Object.entries(roleScores)
+    .map(([roleId, score]) => {
+      const maxPossibleScore = roleMaxScores[roleId] || 1
+      const normalizedScore = (score / maxPossibleScore) * 100
+      const questionsTouched = roleQuestionCount[roleId] || 0
+
+      // Determine tier based on score and question coverage
+      let tier: MatchTier
+      if (normalizedScore >= 70 && questionsTouched >= 6) {
+        tier = 'strong'
+      } else if (normalizedScore >= 50 && questionsTouched >= 4) {
+        tier = 'good'
+      } else if (normalizedScore >= 30) {
+        tier = 'possible'
+      } else {
+        // Below threshold, won't be included
+        tier = 'possible'
+      }
+
+      return {
+        roleId,
+        tier,
+        signalStrength: Math.round(normalizedScore),
+        answeredQuestions: questionsTouched,
+        keyReasons: roleReasons[roleId]?.slice(0, 3) || [],
+      }
+    })
+    .filter((r) => r.signalStrength >= 30) // Only include results above threshold
+    .sort((a, b) => b.signalStrength - a.signalStrength)
+
+  // Group by tier
+  const strongMatches = allResults.filter((r) => r.tier === 'strong')
+  const goodMatches = allResults.filter((r) => r.tier === 'good')
+  const possibleMatches = allResults.filter((r) => r.tier === 'possible')
+
+  return {
+    strongMatches,
+    goodMatches,
+    possibleMatches,
+    totalAnswered: actualAnswers.length,
+  }
 }
