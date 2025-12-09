@@ -35,85 +35,97 @@ export function Footer() {
               <p className="text-sm text-white/80 leading-relaxed">
                 Helping B.Tech CS/IT students explore 45+ tech careers with real salary data, skill roadmaps, and personality-based recommendations.
               </p>
-            </div>
 
-            {/* Built by - Center */}
-            <div className="flex flex-col items-center text-center space-y-3">
-              <span className="text-sm text-zinc-400">
-                Built by Mohit Tater
-              </span>
-              <div className="flex items-center gap-4">
-                <Link
-                  href="https://www.linkedin.com/in/tatermohit/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="LinkedIn"
-                  className="text-zinc-500 hover:text-white transition-colors"
-                >
-                  <Linkedin className="h-4 w-4" />
-                </Link>
-                <Link
-                  href="https://x.com/tatermohit"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="X (formerly Twitter)"
-                  className="text-zinc-500 hover:text-white transition-colors"
-                >
-                  <XIcon className="h-4 w-4" />
-                </Link>
-                <Link
-                  href="https://github.com/mnttnm/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="GitHub"
-                  className="text-zinc-500 hover:text-white transition-colors"
-                >
-                  <Github className="h-4 w-4" />
-                </Link>
+              {/* Subtle separator */}
+              <div className="w-12 h-px bg-white/20 dark:bg-white/10" />
+
+              {/* Built by */}
+              <div className="flex flex-col space-y-3">
+                <span className="text-sm text-zinc-400">
+                  Built by Mohit Tater
+                </span>
+                <div className="flex items-center gap-4">
+                  <Link
+                    href="https://www.linkedin.com/in/tatermohit/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="LinkedIn"
+                    className="text-zinc-500 hover:text-white transition-colors"
+                  >
+                    <Linkedin className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    href="https://x.com/tatermohit"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="X (formerly Twitter)"
+                    className="text-zinc-500 hover:text-white transition-colors"
+                  >
+                    <XIcon className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    href="https://github.com/mnttnm/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="GitHub"
+                    className="text-zinc-500 hover:text-white transition-colors"
+                  >
+                    <Github className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
             </div>
+
 
             {/* Explore links column */}
             <div className="text-sm">
               <p className="text-xs font-medium uppercase tracking-wider text-zinc-500 mb-4">
                 Explore
               </p>
-              <div className="flex flex-col gap-3">
-                <Link
-                  href="/browse"
-                  className="text-zinc-300 hover:text-white transition-colors"
-                >
-                  Browse Roles
-                </Link>
-                <Link
-                  href="/quiz"
-                  className="text-zinc-300 hover:text-white transition-colors"
-                >
-                  Take Quiz
-                </Link>
-                <Link
-                  href="/compare"
-                  className="text-zinc-300 hover:text-white transition-colors"
-                >
-                  Compare
-                </Link>
-                <Link
-                  href="https://github.com/mnttnm/btech-cs-career-guide-india"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-zinc-300 hover:text-white transition-colors inline-flex items-center gap-1.5"
-                >
-                  GitHub
-                  <Github className="h-3.5 w-3.5" />
-                </Link>
-                <Link
-                  href="/disclaimer"
-                  className="text-zinc-300 hover:text-white transition-colors"
-                >
-                  Disclaimer
-                </Link>
+              <div className="flex gap-8">
+                <div className="flex flex-col gap-3">
+                  <Link
+                    href="/browse"
+                    className="text-zinc-300 hover:text-white transition-colors"
+                  >
+                    Browse Roles
+                  </Link>
+                  <Link
+                    href="/quiz"
+                    className="text-zinc-300 hover:text-white transition-colors"
+                  >
+                    Take Quiz
+                  </Link>
+                  <Link
+                    href="/compare"
+                    className="text-zinc-300 hover:text-white transition-colors"
+                  >
+                    Compare
+                  </Link>
+
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Link
+                    href="https://github.com/mnttnm/btech-cs-career-guide-india"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-zinc-300 hover:text-white transition-colors inline-flex items-center gap-1.5"
+                  >
+                    GitHub
+                    <Github className="h-3.5 w-3.5" />
+                  </Link>
+                  <Link
+                    href="/disclaimer"
+                    className="text-zinc-300 hover:text-white transition-colors"
+                  >
+                    Disclaimer
+                  </Link>
+
+                </div>
               </div>
+
             </div>
+
           </div>
         </div>
 
